@@ -11,7 +11,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,100 +26,154 @@
                         'muted-stone': '#746C61',
                     },
                     fontFamily: {
-                        poppins: ['Poppins', 'sans-serif'],
-                        lato: ['Lato', 'sans-serif'],
+                        poppins:  ['Poppins', 'sans-serif'],
+                        display:  ['"Libre Baskerville"', 'Georgia', 'serif'],
+                        body:     ['Lato', 'sans-serif'],
+                        lato:     ['Lato', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     <style>
-        ::selection {
-            background-color: #C8996C;
-            color: #1A1110;
+        ::selection { background-color: #C8996C; color: #1A1110; }
+        html { scroll-behavior: smooth; }
+
+        /* Mobile nav toggle */
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: flex; }
+
+        /* Service card hover lift */
+        .service-card {
+            transition: transform 0.2s ease, border-color 0.2s ease;
         }
-        html {
-            scroll-behavior: smooth;
+        .service-card:hover {
+            transform: translateY(-4px);
+            border-color: #C8996C;
         }
     </style>
 </head>
 <body class="font-lato antialiased flex flex-col min-h-screen">
 
-    <!-- 1. HEADER NAVIGATION BAR (Dark) -->
+    <!-- ===================== HEADER ===================== -->
     <header class="w-full border-b border-muted-stone/20 bg-primary-dark text-neutral-light sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-8 lg:px-12 py-5 flex justify-between items-center">
-            <!-- Left side: Logo & Branding -->
-            <div class="flex items-center gap-4">
-                <img src="logo.png" alt="The Automate Stack Logo" class="h-10 w-auto object-contain">
-                <span class="font-poppins font-bold tracking-widest text-xl md:text-2xl lowercase">theautomatestack</span>
-            </div>
-            <!-- Right side: Quick Action Menu -->
-            <nav class="hidden md:flex gap-8 font-poppins font-bold text-sm uppercase tracking-widest items-center">
-                <a href="#audit" class="text-accent-bronze hover:text-neutral-light transition-colors">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
+
+            <!-- Branding -->
+            <a href="#" class="flex items-center gap-3 shrink-0">
+                <img src="logo.png" alt="The Automate Stack Logo" class="h-9 w-auto object-contain">
+                <span class="font-poppins font-bold tracking-widest text-lg md:text-xl lowercase">theautomatestack</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-sans font-medium text-xs uppercase tracking-widest">
+                <a href="#services"         class="text-neutral-light/70 hover:text-neutral-light transition-colors">Services</a>
+                <a href="#about"            class="text-neutral-light/70 hover:text-neutral-light transition-colors">About</a>
+                <a href="#checklist-teaser" class="text-neutral-light/70 hover:text-neutral-light transition-colors">Checklist</a>
+                <a href="#audit" class="bg-accent-bronze text-primary-dark py-2 px-5 rounded-lg hover:opacity-90 transition-opacity">
                     Book Audit
                 </a>
             </nav>
+
+            <!-- Mobile Hamburger -->
+            <button id="hamburger" aria-label="Open menu" class="md:hidden flex flex-col gap-1.5 p-2" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+                <span class="block w-6 h-0.5 bg-neutral-light"></span>
+                <span class="block w-6 h-0.5 bg-neutral-light"></span>
+                <span class="block w-4 h-0.5 bg-neutral-light"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="flex-col gap-1 px-6 pb-5 bg-primary-dark border-t border-muted-stone/20 font-sans font-medium text-xs uppercase tracking-widest md:hidden">
+            <a href="#services"         onclick="document.getElementById('mobile-menu').classList.remove('open')" class="block py-3 text-neutral-light/70 hover:text-neutral-light border-b border-muted-stone/10">Services</a>
+            <a href="#about"            onclick="document.getElementById('mobile-menu').classList.remove('open')" class="block py-3 text-neutral-light/70 hover:text-neutral-light border-b border-muted-stone/10">About</a>
+            <a href="#checklist-teaser" onclick="document.getElementById('mobile-menu').classList.remove('open')" class="block py-3 text-neutral-light/70 hover:text-neutral-light border-b border-muted-stone/10">Checklist</a>
+            <a href="#audit"            onclick="document.getElementById('mobile-menu').classList.remove('open')" class="block mt-3 bg-accent-bronze text-primary-dark py-3 px-5 rounded-lg text-center hover:opacity-90 transition-opacity">Book Audit</a>
         </div>
     </header>
 
     <main class="flex-grow">
-        <!-- 2. HERO FOCUS ZONE (Dark) -->
-        <section class="bg-primary-dark text-neutral-light pt-16 pb-24 md:pt-24 md:pb-32">
-            <div class="max-w-7xl mx-auto px-8 lg:px-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    
-                    <!-- Text Content -->
-                    <div class="flex flex-col items-center md:items-start text-center md:text-left z-10">
-                        <h1 class="font-poppins font-bold tracking-tight text-4xl md:text-5xl lg:text-6xl leading-[1.15] mb-8">
+
+        <!-- ===================== HERO ===================== -->
+        <section class="bg-primary-dark text-neutral-light pt-20 pb-28 md:pt-28 md:pb-36">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-center">
+
+                    <!-- Text -->
+                    <div class="flex flex-col items-start text-left z-10">
+                        <!-- Eyebrow label -->
+                        <span class="inline-flex items-center gap-2 text-accent-bronze font-sans font-semibold text-xs uppercase tracking-widest mb-6">
+                            <span class="block w-8 h-px bg-accent-bronze"></span>
+                            Backend Automation for Growing Businesses
+                        </span>
+
+                        <h1 class="font-display font-bold tracking-tight text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6">
                             Take back your time.<br>
-                            Elevate your operational growth.
+                            Elevate your<br>
+                            operational growth.
                         </h1>
-                        <p class="font-lato text-lg leading-loose text-neutral-light/85 max-w-xl mb-10">
-                            Your business is generating great revenue, but your daily operations are capping your time. You are losing up to 20 hours every single week to repetitive data entry and disjointed apps that do not speak to each other. We build secure, automated backend infrastructure to connect your tech stack cleanly. You can step away from the administrative chaos and focus entirely on leading your company.
+
+                        <p class="font-lato text-base md:text-lg leading-relaxed text-neutral-light/75 max-w-lg mb-10">
+                            You have built something real. But the backend is not keeping up. Leads slip through, admin eats your day, and your tools do not talk to each other. The Automate Stack builds the infrastructure that fixes all of that fast and efficiently.
                         </p>
-                        <div class="flex flex-col sm:flex-row gap-4 items-center w-full sm:w-auto">
-                            <a href="https://forms.gle/ZZAd3YgaRwJ4HZyT9" target="_blank" rel="noopener noreferrer" class="inline-block bg-accent-bronze text-primary-dark font-poppins font-bold text-sm md:text-base uppercase tracking-wide py-4 px-8 rounded-lg hover:opacity-90 transition-opacity text-center w-full sm:w-auto">
-                                Request Backend Leak Assessment
+
+                        <!-- CTA group -->
+                        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                            <a href="https://forms.gle/ZZAd3YgaRwJ4HZyT9" target="_blank" rel="noopener noreferrer"
+                               class="bg-accent-bronze text-primary-dark font-sans font-bold text-sm uppercase tracking-wide py-4 px-7 rounded-lg hover:opacity-90 transition-opacity text-center">
+                                Request Leak Assessment
                             </a>
-                            <a href="#checklist-teaser" class="inline-block border border-neutral-light/30 text-neutral-light font-poppins font-bold text-sm md:text-base uppercase tracking-wide py-4 px-8 rounded-lg hover:bg-neutral-light/10 transition-colors text-center w-full sm:w-auto">
+                            <a href="#checklist-teaser"
+                               class="border border-neutral-light/25 text-neutral-light font-sans font-bold text-sm uppercase tracking-wide py-4 px-7 rounded-lg hover:bg-neutral-light/10 transition-colors text-center">
                                 Download Free Checklist
                             </a>
                         </div>
                     </div>
 
-                    <!-- Image Content -->
-                    <div class="relative w-full h-[350px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                        <!-- Black female professional working confidently -->
-                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Professional workspace" class="absolute inset-0 w-full h-full object-cover">
-                        <!-- Solid overlay for blending -->
-                        <div class="absolute inset-0 bg-primary-dark/10 mix-blend-multiply"></div>
+                    <!-- Image -->
+                    <div class="relative w-full h-[380px] md:h-[480px] lg:h-[580px] rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                             alt="Professional working confidently at a clean modern desk"
+                             class="absolute inset-0 w-full h-full object-cover object-top">
+                        <div class="absolute inset-0 bg-primary-dark/30 mix-blend-multiply"></div>
+                        <!-- Bronze accent bar -->
+                        <div class="absolute bottom-0 left-0 right-0 h-1 bg-accent-bronze/70"></div>
                     </div>
 
                 </div>
             </div>
         </section>
 
-        <!-- 4. THE BRIDGE STRATEGY (Light) -->
-        <section class="bg-neutral-light text-primary-dark py-24 border-y border-muted-stone/20">
-            <div class="max-w-7xl mx-auto px-8 lg:px-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    
-                    <!-- Image Content -->
-                    <div class="relative w-full h-[350px] lg:h-[450px] rounded-2xl overflow-hidden shadow-xl lg:order-1 order-2">
-                        <!-- Black male developer / tech professional -->
-                        <img src="https://images.unsplash.com/photo-1531104985437-602d73af45bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Technical expertise" class="absolute inset-0 w-full h-full object-cover">
+        <!-- ===================== ABOUT ===================== -->
+        <section id="about" class="bg-neutral-light text-primary-dark py-24 md:py-32 border-y border-muted-stone/15">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-center">
+
+                    <!-- Image -->
+                    <div class="relative w-full h-[340px] lg:h-[520px] rounded-2xl overflow-hidden shadow-xl order-2 lg:order-1">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                             alt="Technical expertise"
+                             class="absolute inset-0 w-full h-full object-cover">
                         <div class="absolute inset-0 bg-accent-bronze/10 mix-blend-multiply"></div>
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-accent-bronze/50"></div>
                     </div>
 
-                    <!-- Text Content -->
-                    <div class="lg:order-2 order-1">
-                        <h2 class="font-poppins font-bold tracking-tight text-4xl md:text-5xl mb-8">
-                            The structural middle ground.
+                    <!-- Text -->
+                    <div class="order-1 lg:order-2">
+                        <span class="inline-flex items-center gap-2 text-accent-bronze font-lato font-bold text-xs uppercase tracking-widest mb-5">
+                            <span class="block w-8 h-px bg-accent-bronze"></span>
+                            Why The Automate Stack
+                        </span>
+                        <h2 class="font-display font-bold tracking-tight text-4xl md:text-5xl lg:text-6xl mb-8 leading-tight">
+                            Built for businesses<br>that are serious<br>about scaling.
                         </h2>
-                        <div class="space-y-6 font-lato text-lg text-muted-stone leading-loose border-l-4 border-accent-bronze pl-8">
-                            <p>Systems fail when they are built without business context. Since 2020, I have engineered high-performing email marketing systems for growing companies. I have also worked directly as a software developer, writing complex code pipelines from scratch.</p>
-                            <p class="font-bold text-primary-dark">I eventually found a balanced middle ground in automation.</p>
-                            <p>Many email marketing specialists do not understand the deeply technical backend infrastructure. Many technical developers do not understand sales, business growth, or daily operations. I understand both sides of your business clearly. We bridge this gap to design secure backend engines that protect your data and scale your revenue safely.</p>
+                        <div class="space-y-5 font-lato text-base md:text-lg text-muted-stone leading-relaxed">
+                            <p>
+                                Most automation tools are built for simplicity. The Automate Stack builds for scale, designing backend systems that handle the complexity of a growing business without exposing it to risk.
+                            </p>
+                            <p class="text-primary-dark font-bold border-l-4 border-accent-bronze pl-5">
+                                Every system delivered is secure, documented, and built to run without you in the room.
+                            </p>
                         </div>
                     </div>
 
@@ -127,104 +181,232 @@
             </div>
         </section>
 
-        <!-- 5. OUR AUTOMATION SERVICES (Dark) -->
-        <section id="services" class="bg-primary-dark text-neutral-light py-24 border-y border-muted-stone/20">
-            <div class="max-w-7xl mx-auto px-8 lg:px-12">
-                <div class="text-center mb-16">
-                    <h2 class="font-poppins font-bold tracking-tight text-4xl md:text-5xl mb-4 text-accent-bronze">
-                        How We Automate Your Stack
+        <!-- ===================== SERVICES ===================== -->
+        <section id="services" class="bg-primary-dark text-neutral-light py-24 md:py-32 border-y border-muted-stone/15">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+                <!-- Section header -->
+                <div class="max-w-2xl mb-16 md:mb-20">
+                    <span class="inline-flex items-center gap-2 text-accent-bronze font-sans font-bold text-xs uppercase tracking-widest mb-5">
+                        <span class="block w-8 h-px bg-accent-bronze"></span>
+                        What We Build
+                    </span>
+                    <h2 class="font-display font-bold tracking-tight text-4xl md:text-5xl lg:text-6xl mb-5 leading-tight">
+                        How We Automate<br>Your Stack
                     </h2>
-                    <p class="font-lato text-lg text-neutral-light/80 max-w-2xl mx-auto">
-                        We build custom, secure backend infrastructure to plug the four major operational leaks in growing businesses.
+                    <p class="font-sans text-base md:text-lg text-neutral-light/70 leading-relaxed">
+                        Custom, secure backend infrastructure to plug the four major operational leaks in growing businesses.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Service cards grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
                     <!-- Service 1 -->
-                    <div class="border-l-2 border-accent-bronze pl-6">
-                        <div class="font-poppins font-bold text-xl mb-3">01 / Lead Capture Automation</div>
-                        <p class="font-lato text-neutral-light/70 leading-relaxed">
-                            Stop losing leads to manual tracking. We build automated capture systems that ensure every DM, comment, and form submission is instantly logged, tracked, and engaged. No lead is left behind.
-                        </p>
+                    <div class="service-card bg-neutral-light/5 border border-muted-stone/20 rounded-xl p-8">
+                        <div class="flex items-start gap-5">
+                            <span class="shrink-0 font-sans font-bold text-accent-bronze text-xs tracking-widest mt-1.5">01</span>
+                            <div>
+                                <h3 class="font-display font-bold text-xl mb-3">Lead Capture Automation</h3>
+                                <p class="font-lato text-neutral-light/65 leading-relaxed text-sm md:text-base">
+                                    Stop losing leads to manual tracking. We build automated capture systems that ensure every DM, comment, and form submission is instantly logged, tracked, and engaged. No lead is left behind.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+
                     <!-- Service 2 -->
-                    <div class="border-l-2 border-accent-bronze pl-6">
-                        <div class="font-poppins font-bold text-xl mb-3">02 / Seamless Follow-Up Workflows</div>
-                        <p class="font-lato text-neutral-light/70 leading-relaxed">
-                            Reclaim hours of administrative time. We engineer automated welcome sequences, invoice generation, and CRM tagging so your business operates smoothly without requiring your manual input.
-                        </p>
+                    <div class="service-card bg-neutral-light/5 border border-muted-stone/20 rounded-xl p-8">
+                        <div class="flex items-start gap-5">
+                            <span class="shrink-0 font-sans font-bold text-accent-bronze text-xs tracking-widest mt-1.5">02</span>
+                            <div>
+                                <h3 class="font-display font-bold text-xl mb-3">Seamless Follow-Up Workflows</h3>
+                                <p class="font-lato text-neutral-light/65 leading-relaxed text-sm md:text-base">
+                                    Reclaim hours of administrative time. We engineer automated welcome sequences, invoice generation, and CRM tagging so your business operates smoothly without requiring your manual input.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+
                     <!-- Service 3 -->
-                    <div class="border-l-2 border-accent-bronze pl-6">
-                        <div class="font-poppins font-bold text-xl mb-3">03 / Data Centralization & Security</div>
-                        <p class="font-lato text-neutral-light/70 leading-relaxed">
-                            Protect your most valuable asset. We unify your scattered customer data into a single, secure, and backed-up database with strict access limits and clear privacy protocols.
-                        </p>
+                    <div class="service-card bg-neutral-light/5 border border-muted-stone/20 rounded-xl p-8">
+                        <div class="flex items-start gap-5">
+                            <span class="shrink-0 font-sans font-bold text-accent-bronze text-xs tracking-widest mt-1.5">03</span>
+                            <div>
+                                <h3 class="font-display font-bold text-xl mb-3">Data Centralization &amp; Security</h3>
+                                <p class="font-lato text-neutral-light/65 leading-relaxed text-sm md:text-base">
+                                    Protect your most valuable asset. We unify your scattered customer data into a single, secure, and backed-up database with strict access limits and clear privacy protocols.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+
                     <!-- Service 4 -->
-                    <div class="border-l-2 border-accent-bronze pl-6">
-                        <div class="font-poppins font-bold text-xl mb-3">04 / Owned Audience Infrastructure</div>
-                        <p class="font-lato text-neutral-light/70 leading-relaxed">
-                            De-risk your business from rented platforms. We build robust email and contact list infrastructure so you maintain direct access to your audience, even if your social accounts are restricted.
-                        </p>
+                    <div class="service-card bg-neutral-light/5 border border-muted-stone/20 rounded-xl p-8">
+                        <div class="flex items-start gap-5">
+                            <span class="shrink-0 font-sans font-bold text-accent-bronze text-xs tracking-widest mt-1.5">04</span>
+                            <div>
+                                <h3 class="font-display font-bold text-xl mb-3">Owned Audience Infrastructure</h3>
+                                <p class="font-lato text-neutral-light/65 leading-relaxed text-sm md:text-base">
+                                    De-risk your business from rented platforms. We build robust email and contact list infrastructure so you maintain direct access to your audience, even if your social accounts are restricted.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- 6. THE CHECKLIST TEASER (Light) -->
-        <section id="checklist-teaser" class="py-24 bg-neutral-light text-primary-dark border-b border-muted-stone/20">
-            <div class="max-w-4xl mx-auto px-8 lg:px-12 text-center">
-                <span class="inline-block py-1 px-3 border border-accent-bronze text-accent-bronze text-xs font-poppins font-bold tracking-widest uppercase rounded-full mb-6">Free Resource</span>
-                <h2 class="font-poppins font-bold tracking-tight text-3xl md:text-5xl mb-6">
-                    The Backend Leak Assessment
-                </h2>
-                <p class="font-lato text-lg text-muted-stone mb-10 leading-loose">
-                    Are you leaking time and leads without realizing it? Download our self-guided walkthrough to discover your <strong class="text-primary-dark">Leak Score</strong> across lead capture, manual work, data storage, and platform dependency. Find out exactly where your business is losing money and what is actually fixable.
-                </p>
-                <a href="https://forms.gle/ZZAd3YgaRwJ4HZyT9" target="_blank" rel="noopener noreferrer" class="inline-block bg-accent-bronze text-primary-dark font-poppins font-bold text-lg uppercase tracking-wide py-5 px-10 rounded-lg hover:opacity-90 transition-opacity shadow-xl">
-                    Download The Free Checklist
-                </a>
+        <!-- ===================== CHECKLIST TEASER ===================== -->
+        <section id="checklist-teaser" class="py-24 md:py-32 bg-neutral-light text-primary-dark border-b border-muted-stone/15">
+            <div class="max-w-5xl mx-auto px-6 lg:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-center">
+
+                    <!-- Left: Copy -->
+                    <div>
+                        <span class="inline-flex items-center gap-2 font-sans font-bold text-xs uppercase tracking-widest text-accent-bronze mb-5">
+                            <span class="block w-8 h-px bg-accent-bronze"></span>
+                            Free Resource
+                        </span>
+                        <h2 class="font-display font-bold tracking-tight text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
+                            The Backend Leak<br>Assessment
+                        </h2>
+                        <p class="font-sans text-base md:text-lg text-muted-stone mb-8 leading-relaxed">
+                            Are you leaking time and leads without realizing it? Use our self-guided walkthrough to discover your <strong class="text-primary-dark">Leak Score</strong> across four critical areas and find out exactly what is fixable.
+                        </p>
+
+                        <!-- Four leak categories -->
+                        <ul class="space-y-3 mb-10">
+                            <li class="flex items-center gap-3 font-sans text-sm text-primary-dark">
+                                <span class="w-2 h-2 rounded-full bg-accent-bronze shrink-0"></span>
+                                Lead capture &amp; tracking gaps
+                            </li>
+                            <li class="flex items-center gap-3 font-sans text-sm text-primary-dark">
+                                <span class="w-2 h-2 rounded-full bg-accent-bronze shrink-0"></span>
+                                Manual work &amp; repetitive admin
+                            </li>
+                            <li class="flex items-center gap-3 font-sans text-sm text-primary-dark">
+                                <span class="w-2 h-2 rounded-full bg-accent-bronze shrink-0"></span>
+                                Data storage &amp; security risks
+                            </li>
+                            <li class="flex items-center gap-3 font-sans text-sm text-primary-dark">
+                                <span class="w-2 h-2 rounded-full bg-accent-bronze shrink-0"></span>
+                                Platform dependency &amp; audience risk
+                            </li>
+                        </ul>
+
+                        <a href="https://forms.gle/ZZAd3YgaRwJ4HZyT9" target="_blank" rel="noopener noreferrer"
+                           class="inline-block bg-accent-bronze text-primary-dark font-sans font-bold text-sm uppercase tracking-wide py-4 px-8 rounded-lg hover:opacity-90 transition-opacity shadow-lg">
+                            Download The Free Checklist
+                        </a>
+                    </div>
+
+                    <!-- Right: Visual accent card -->
+                    <div class="bg-primary-dark rounded-2xl p-10 flex flex-col justify-center border border-muted-stone/20">
+                        <div class="font-display font-bold text-accent-bronze text-7xl mb-4">?</div>
+                        <h3 class="font-display font-bold text-neutral-light text-2xl mb-4">What is your Leak Score?</h3>
+                        <p class="font-sans text-neutral-light/60 text-sm leading-relaxed mb-8">
+                            Most growing businesses score a leak in at least 3 of the 4 categories. The assessment takes under 10 minutes and gives you a clear, actionable picture.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center border border-muted-stone/20 rounded-lg py-4 px-3">
+                                <div class="font-display font-bold text-accent-bronze text-3xl">4</div>
+                                <div class="font-sans text-neutral-light/50 text-xs mt-1 uppercase tracking-widest">Categories</div>
+                            </div>
+                            <div class="text-center border border-muted-stone/20 rounded-lg py-4 px-3">
+                                <div class="font-display font-bold text-accent-bronze text-3xl">&lt;10</div>
+                                <div class="font-sans text-neutral-light/50 text-xs mt-1 uppercase tracking-widest">Minutes</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
 
-        <!-- 3. EMBEDDED SESSION CALENDAR (Dark) -->
-        <section id="audit" class="py-24 bg-primary-dark text-neutral-light">
-            <div class="max-w-5xl mx-auto px-8 lg:px-12">
-                <div class="text-center mb-12">
-                    <h2 class="font-poppins font-bold tracking-tight text-4xl md:text-5xl mb-4">
+        <!-- ===================== BOOK AUDIT / CALENDLY ===================== -->
+        <section id="audit" class="py-24 md:py-32 bg-primary-dark text-neutral-light">
+            <div class="max-w-5xl mx-auto px-6 lg:px-12">
+
+                <!-- Section header -->
+                <div class="text-center mb-14">
+                    <span class="inline-flex items-center gap-2 justify-center text-accent-bronze font-sans font-bold text-xs uppercase tracking-widest mb-5">
+                        <span class="block w-8 h-px bg-accent-bronze"></span>
+                        Get Started
+                        <span class="block w-8 h-px bg-accent-bronze"></span>
+                    </span>
+                    <h2 class="font-display font-bold tracking-tight text-4xl md:text-5xl lg:text-6xl mb-5 leading-tight">
                         Secure your system audit
                     </h2>
-                    <p class="font-lato text-neutral-light/80 text-lg max-w-2xl mx-auto">
-                        Pick a time below that works for you. We will analyze your current workflow and locate the operational bottlenecks capping your time.
+                    <p class="font-sans text-neutral-light/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                        Pick a time that works for you. We will analyze your current workflow and locate the operational bottlenecks capping your time and revenue.
                     </p>
                 </div>
-                
-                <!-- Calendly wrapper card -->
-                <div class="bg-primary-dark rounded-xl border border-muted-stone/30 overflow-hidden">
-                    <!-- Calendly inline widget begin -->
-                    <div class="calendly-inline-widget" data-url="https://calendly.com/chinenye-cysafepath/30min?hide_gdpr_banner=1&background_color=1a1110&text_color=fbf9f4&primary_color=c8996c" style="min-width:320px;height:700px;"></div>
+
+                <!-- Calendly card -->
+                <div class="rounded-2xl border border-muted-stone/25 overflow-hidden shadow-2xl">
+                    <div class="calendly-inline-widget"
+                         data-url="https://calendly.com/chinenye-cysafepath/30min?hide_gdpr_banner=1&background_color=1a1110&text_color=fbf9f4&primary_color=c8996c"
+                         style="min-width:320px;height:700px;"></div>
                     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                    <!-- Calendly inline widget end -->
                 </div>
+
             </div>
         </section>
 
     </main>
 
-    <!-- FOOTER (Light) -->
-    <footer class="w-full border-t border-muted-stone/20 py-12 text-center bg-neutral-light">
-        <div class="flex items-center justify-center gap-3 mb-6">
-            <img src="logo.png" alt="The Automate Stack Logo" class="h-6 w-auto object-contain opacity-70">
-            <span class="font-poppins font-bold tracking-widest text-sm lowercase text-primary-dark">theautomatestack</span>
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="w-full border-t border-muted-stone/20 bg-neutral-light">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-14">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 mb-12">
+
+                <!-- Brand column -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="logo.png" alt="The Automate Stack Logo" class="h-7 w-auto object-contain opacity-80">
+                        <span class="font-poppins font-bold tracking-widest text-sm lowercase text-primary-dark">theautomatestack</span>
+                    </div>
+                    <p class="font-sans text-sm text-muted-stone leading-relaxed max-w-xs">
+                        Secure, automated backend infrastructure for growing businesses ready to scale without the admin chaos.
+                    </p>
+                </div>
+
+                <!-- Nav column -->
+                <div class="md:text-center">
+                    <div class="font-sans font-bold text-xs uppercase tracking-widest text-primary-dark mb-4">Navigation</div>
+                    <ul class="space-y-2 font-sans text-sm text-muted-stone">
+                        <li><a href="#services"         class="hover:text-accent-bronze transition-colors">Services</a></li>
+                        <li><a href="#about"            class="hover:text-accent-bronze transition-colors">About</a></li>
+                        <li><a href="#checklist-teaser" class="hover:text-accent-bronze transition-colors">Free Checklist</a></li>
+                        <li><a href="#audit"            class="hover:text-accent-bronze transition-colors">Book Audit</a></li>
+                    </ul>
+                </div>
+
+                <!-- CTA column -->
+                <div class="md:text-right">
+                    <div class="font-sans font-bold text-xs uppercase tracking-widest text-primary-dark mb-4">Ready to start?</div>
+                    <a href="#audit" class="inline-block bg-accent-bronze text-primary-dark font-sans font-bold text-xs uppercase tracking-wide py-3 px-6 rounded-lg hover:opacity-90 transition-opacity mb-3">
+                        Book Your Audit
+                    </a>
+                    <p class="font-sans text-xs text-muted-stone">Free 30-minute strategy session</p>
+                </div>
+
+            </div>
+
+            <!-- Footer bottom bar -->
+            <div class="border-t border-muted-stone/15 pt-6 text-center">
+                <p class="font-sans text-xs text-muted-stone tracking-wide">
+                    &copy; <span id="current-year"></span> The Automate Stack. All rights reserved. Data pipelines secured.
+                </p>
+            </div>
         </div>
-        <p class="font-lato text-sm text-muted-stone tracking-wide">
-            © <span id="current-year"></span> The Automate Stack. All rights reserved. Data pipelines secured.
-        </p>
-        <script>
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-        </script>
     </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 
 </body>
 </html>
