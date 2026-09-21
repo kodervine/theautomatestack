@@ -1,0 +1,2280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The AutoStack Blueprint | 50 Done-For-You Automations</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../logo.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-dark": "#1A1110",
+              "neutral-light": "#FBF9F4",
+              "accent-bronze": "#C8996C",
+              "muted-stone": "#746C61",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              display: ['"Libre Baskerville"', "Georgia", "serif"],
+              body: ["Lato", "sans-serif"],
+              lato: ["Lato", "sans-serif"],
+              sans: ["Lato", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      ::selection {
+        background-color: #c8996c;
+        color: #1a1110;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .accent-border {
+        border-color: #c8996c;
+      }
+      .timer-box {
+        background-color: rgba(26, 17, 16, 0.05);
+      }
+      .dark-timer-box {
+        background-color: rgba(251, 249, 244, 0.1);
+        border: 1px solid rgba(251, 249, 244, 0.2);
+      }
+    </style>
+  </head>
+  <body
+    class="font-lato antialiased flex flex-col min-h-screen bg-neutral-light text-primary-dark pb-24 md:pb-0"
+  >
+    <!-- Header -->
+    <header
+      class="w-full border-b border-muted-stone/20 bg-primary-dark text-neutral-light sticky top-0 z-50"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="flex items-center gap-3 shrink-0">
+          <img
+            src="../logo.png"
+            alt="The AutoStack Blueprint Logo"
+            class="h-9 w-auto object-contain"
+          />
+          <span
+            class="font-poppins font-bold tracking-widest text-lg md:text-xl lowercase"
+            >theautomatestack</span
+          >
+        </a>
+        <div
+          class="hidden md:block font-lato font-bold text-xs uppercase tracking-widest text-accent-bronze"
+        >
+          🔥 Founding-buyer price ends soon &rarr;
+          <span class="dynamic-price">₦20,000</span>
+        </div>
+      </div>
+      <!-- Mobile Top Banner -->
+      <div
+        class="md:hidden bg-accent-bronze text-primary-dark text-center py-2 px-4 text-xs font-bold tracking-wide uppercase"
+      >
+        🔥 Founding-buyer price ends soon &rarr;
+        <span class="dynamic-price">₦20,000</span>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <!-- ===================== HERO ===================== -->
+      <section
+        class="bg-primary-dark text-neutral-light pt-20 pb-28 md:pt-28 md:pb-36"
+      >
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div
+            class="grid grid-cols-1 gap-12 xl:gap-20 max-w-5xl mx-auto px-6 lg:px-12 items-center"
+          >
+            <!-- Text -->
+            <div class="flex flex-col items-start text-left z-10">
+              <span
+                class="inline-flex items-center gap-2 text-accent-bronze font-lato font-bold text-xs uppercase tracking-widest mb-5"
+              >
+                <span class="block w-8 h-px bg-accent-bronze"></span>
+                The AutoStack Blueprint: Run Your Leads, Invoices, and Daily
+                Admin on Autopilot
+              </span>
+
+              <h1
+                class="font-display font-bold tracking-tight text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6"
+              >
+                Steal the
+                <span class="text-accent-bronze">50 Automations</span> Smart
+                Businesses Use to Run on Autopilot.
+              </h1>
+
+              <p
+                class="font-lato text-base md:text-lg leading-relaxed text-neutral-light/75 max-w-lg mb-10"
+              >
+                <strong>Live done-for-you automations.</strong> Copy, paste,
+                connect your accounts, live in under 10 minutes each.
+              </p>
+
+              <!-- CTA -->
+              <a
+                href="https://selar.com/4i6p171067"
+                class="w-full sm:w-auto bg-accent-bronze text-primary-dark font-lato font-bold text-sm md:text-base uppercase tracking-wide py-5 px-8 rounded-lg hover:opacity-90 transition-opacity text-center shadow-[0_0_20px_rgba(200,153,108,0.3)] mb-4"
+              >
+                Yes, I Want to Automate and Grow my Business &rarr;
+              </a>
+              <p
+                class="text-xs text-neutral-light/50 font-lato uppercase tracking-widest flex flex-wrap gap-x-4 gap-y-2 mt-2"
+              >
+                <span>Secure Payment</span>
+                <span>&middot;</span>
+                <span>Instant Access</span>
+                <span>&middot;</span>
+                <span>Zero Coding</span>
+              </p>
+            </div>
+
+            <!-- Image -->
+            <!-- <div class="relative w-full h-[380px] md:h-[480px] lg:h-[580px] rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                             alt="Professional working confidently at a clean modern desk"
+                             class="absolute inset-0 w-full h-full object-cover object-top">
+                        <div class="absolute inset-0 bg-primary-dark/30 mix-blend-multiply"></div>
+                        <div class="absolute bottom-0 left-0 right-0 h-1 bg-accent-bronze/70"></div>
+                    </div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== VIDEO DEMO ===================== -->
+      <section
+        class="bg-neutral-light text-primary-dark py-24 border-b border-muted-stone/15"
+      >
+        <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+          <span
+            class="inline-flex items-center gap-2 justify-center bg-accent-bronze/20 text-accent-bronze font-lato font-bold text-xs uppercase tracking-widest py-2 px-4 rounded-full mb-6"
+          >
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            Live Demonstration
+          </span>
+          <h2
+            class="font-display font-bold tracking-tight text-3xl md:text-5xl leading-tight mb-6"
+          >
+            Watch exactly how I automate my entire business in this short video.
+          </h2>
+          <p
+            class="font-lato text-muted-stone text-lg md:text-xl max-w-2xl mx-auto mb-10"
+          >
+            This 5-minute breakdown could completely change how you run your
+            business. <br /><strong class="text-accent-bronze"
+              >Click the PLAY button to watch now.</strong
+            >
+          </p>
+
+          <div
+            class="aspect-video bg-primary-dark rounded-2xl shadow-2xl overflow-hidden border-4 border-accent-bronze flex items-center justify-center relative"
+          >
+            <video
+              id="vsl-video"
+              src="sales_video.mp4"
+              class="absolute inset-0 w-full h-full bg-black"
+              controls
+              controlsList="nodownload"
+            ></video>
+          </div>
+          <p class="font-lato text-muted-stone text-sm mt-4 italic mb-10">
+            Press play to see my content engine, automated inbox, and AI DM
+            responder running on autopilot.
+          </p>
+          <a
+            href="#pricing"
+            class="inline-block bg-accent-bronze text-primary-dark font-lato font-bold text-sm md:text-base uppercase tracking-wide py-4 px-10 rounded-lg hover:opacity-90 transition-opacity text-center shadow-lg"
+          >
+            I want this running my business &rarr;
+          </a>
+
+          <div
+            class="mt-6 flex flex-col md:flex-row items-center justify-center gap-3 text-sm font-lato text-muted-stone"
+          >
+            <span class="flex items-center gap-1"
+              ><svg
+                class="w-4 h-4 text-accent-bronze"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              Zero Coding Required</span
+            >
+            <span class="hidden md:inline">&middot;</span>
+            <span class="flex items-center gap-1"
+              ><svg
+                class="w-4 h-4 text-accent-bronze"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              5-Minute Setup Video</span
+            >
+            <span class="hidden md:inline">&middot;</span>
+            <span class="flex items-center gap-1"
+              ><svg
+                class="w-4 h-4 text-accent-bronze"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              24/7 Community Support (I will fix it for you if you get
+              stuck)</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== PROBLEM ===================== -->
+      <section
+        class="bg-neutral-light text-primary-dark py-24 md:py-32 border-b border-muted-stone/15"
+      >
+        <div class="max-w-5xl mx-auto px-6 lg:px-12">
+          <div class="mb-14">
+            <h2
+              class="font-display font-bold tracking-tight text-3xl md:text-4xl lg:text-5xl mb-5 leading-tight"
+            >
+              Let me guess what your week actually looks like...
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <ul
+              class="space-y-6 font-lato text-base md:text-lg text-muted-stone"
+            >
+              <li class="flex items-start gap-4">
+                <span
+                  class="font-display font-bold text-accent-bronze text-xl shrink-0"
+                  >01.</span
+                >
+                <span
+                  >You started your business for freedom, but now you are
+                  drowning. You feel like you must be everywhere all at once,
+                  and if you stop working, the money stops flowing.</span
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <span
+                  class="font-display font-bold text-accent-bronze text-xl shrink-0"
+                  >02.</span
+                >
+                <span
+                  >You are losing sales to competitors simply because they
+                  replied to a DM 10 minutes faster than you did.</span
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <span
+                  class="font-display font-bold text-accent-bronze text-xl shrink-0"
+                  >03.</span
+                >
+                <span
+                  >You are exhausted. You spend 14 hours a day working, but half
+                  of that time is spent doing manual work of mindless
+                  copy-pasting, sending receipts, and sorting spam.</span
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <span
+                  class="font-display font-bold text-accent-bronze text-xl shrink-0"
+                  >04.</span
+                >
+                <span
+                  >You sit with a calculator counting bank transfer alerts just
+                  to figure out how much you actually made this month.</span
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <span
+                  class="font-display font-bold text-accent-bronze text-xl shrink-0"
+                  >05.</span
+                >
+                <span
+                  >You know you need to automate, but every time you try, you
+                  fall down a 6-hour YouTube rabbit hole about different tools
+                  and give up.</span
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <span
+                  class="font-display font-bold text-accent-bronze text-xl shrink-0"
+                  >06.</span
+                >
+                <span
+                  >Or if you're a Virtual Assistant, you are stuck charging low
+                  hourly rates for manual data entry because you don't have a
+                  premium, high-tech service to offer your clients.</span
+                >
+              </li>
+            </ul>
+
+            <div
+              class="bg-primary-dark text-neutral-light rounded-2xl p-8 md:p-10 border-l-4 border-accent-bronze shadow-xl"
+            >
+              <h3 class="font-display font-bold text-2xl mb-4">
+                Here's the truth nobody tells you:
+              </h3>
+              <p class="text-neutral-light/75 mb-5 leading-relaxed">
+                It's not that you're bad with tech. It's not that automation is
+                "too advanced" for your business.
+              </p>
+              <p
+                class="font-bold text-lg text-accent-bronze mb-5 leading-relaxed"
+              >
+                It's that nobody's ever handed you the finished thing. You just
+                get tutorials on how to maybe build it yourself, someday, if you
+                had the time.
+              </p>
+              <p class="text-neutral-light/75 leading-relaxed">
+                You don't have the time. That's the whole problem. And every day
+                without a system, you're doing work a workflow could do for
+                free, forever, while you sleep.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== AGITATION ===================== -->
+      <section
+        class="bg-primary-dark text-neutral-light py-24 md:py-32 relative overflow-hidden"
+      >
+        <!-- Background Image overlay -->
+        <div class="absolute inset-0 opacity-10">
+          <img
+            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
+            class="w-full h-full object-cover"
+            alt="Background pattern"
+          />
+        </div>
+
+        <div class="max-w-4xl mx-auto px-6 lg:px-12 relative z-10">
+          <div class="text-center mb-16">
+            <span
+              class="inline-flex items-center gap-2 justify-center text-accent-bronze font-lato font-bold text-xs uppercase tracking-widest mb-5"
+            >
+              <span class="block w-8 h-px bg-accent-bronze"></span>
+              The True Cost
+              <span class="block w-8 h-px bg-accent-bronze"></span>
+            </span>
+            <h2
+              class="font-display font-bold tracking-tight text-3xl md:text-5xl leading-tight"
+            >
+              Think about what this is actually costing you
+            </h2>
+          </div>
+
+          <div class="space-y-6">
+            <div
+              class="bg-neutral-light/5 border border-muted-stone/20 rounded-xl p-6 flex items-start gap-4 hover:border-accent-bronze/50 transition-colors"
+            >
+              <span class="text-accent-bronze font-bold text-2xl shrink-0"
+                >&times;</span
+              >
+              <p class="text-neutral-light/80 leading-relaxed">
+                <span class="text-neutral-light font-bold"
+                  >You don't know how much you actually make.</span
+                >
+                Because your bank transfers are buried under spam emails, you
+                have to spend hours on your phone with a calculator just to
+                guess your monthly revenue.
+                <span class="text-accent-bronze font-bold"
+                  >Zero financial clarity.</span
+                >
+              </p>
+            </div>
+            <div
+              class="bg-neutral-light/5 border border-muted-stone/20 rounded-xl p-6 flex items-start gap-4 hover:border-accent-bronze/50 transition-colors"
+            >
+              <span class="text-accent-bronze font-bold text-2xl shrink-0"
+                >&times;</span
+              >
+              <p class="text-neutral-light/80 leading-relaxed">
+                <span class="text-neutral-light font-bold"
+                  >You spend 45 minutes every morning</span
+                >
+                just sorting your inbox before you can start real work.
+                <span class="text-accent-bronze font-bold"
+                  >Lost hours, every single day.</span
+                >
+              </p>
+            </div>
+            <div
+              class="bg-neutral-light/5 border border-muted-stone/20 rounded-xl p-6 flex items-start gap-4 hover:border-accent-bronze/50 transition-colors"
+            >
+              <span class="text-accent-bronze font-bold text-2xl shrink-0"
+                >&times;</span
+              >
+              <p class="text-neutral-light/80 leading-relaxed">
+                <span class="text-neutral-light font-bold"
+                  >You don't have a budget for a Virtual Assistant</span
+                >
+                to copy-paste data, organize spreadsheets, and send follow-ups.
+                <span class="text-accent-bronze font-bold"
+                  >Lost profit you could be keeping.</span
+                >
+              </p>
+            </div>
+
+            <div
+              class="bg-neutral-light/5 border border-muted-stone/20 rounded-xl p-6 flex items-start gap-4 hover:border-accent-bronze/50 transition-colors"
+            >
+              <span class="text-accent-bronze font-bold text-2xl shrink-0"
+                >&times;</span
+              >
+              <p class="text-neutral-light/80 leading-relaxed">
+                <span class="text-neutral-light font-bold"
+                  >A lead sends you a DM asking about your product.</span
+                >
+                You don't see it for 6 hours. By then, they've bought from
+                someone who replied first.
+                <span class="text-accent-bronze font-bold">Lost money.</span>
+              </p>
+            </div>
+            <div
+              class="bg-neutral-light/5 border border-muted-stone/20 rounded-xl p-6 flex items-start gap-4 hover:border-accent-bronze/50 transition-colors"
+            >
+              <span class="text-accent-bronze font-bold text-2xl shrink-0"
+                >&times;</span
+              >
+              <p class="text-neutral-light/80 leading-relaxed">
+                <span class="text-neutral-light font-bold"
+                  >A client pays you.</span
+                >
+                You forget to log them in your tracker and send their onboarding
+                packet until 2 days later. First impression, gone.
+                <span class="text-accent-bronze font-bold"
+                  >Lost time and trust.</span
+                >
+              </p>
+            </div>
+            <div
+              class="bg-neutral-light/5 border border-muted-stone/20 rounded-xl p-6 flex items-start gap-4 hover:border-accent-bronze/50 transition-colors"
+            >
+              <span class="text-accent-bronze font-bold text-2xl shrink-0"
+                >&times;</span
+              >
+              <p class="text-neutral-light/80 leading-relaxed">
+                <span class="text-neutral-light font-bold"
+                  >An invoice sits unpaid for 2 weeks</span
+                >
+                because you never got around to the awkward follow-up message.
+                <span class="text-accent-bronze font-bold"
+                  >Lost cash flow.</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="mt-12 text-center text-lg md:text-xl font-display font-bold text-neutral-light border-l-4 border-accent-bronze pl-6 max-w-2xl mx-auto italic"
+          >
+            "None of this is a 'someday' problem. It's happening this week, and
+            it'll happen again next week, until something other than your own
+            memory is doing the following up."
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SOLUTION ===================== -->
+      <section
+        class="bg-neutral-light text-primary-dark py-24 md:py-32 border-b border-muted-stone/15"
+      >
+        <div class="max-w-5xl mx-auto px-6 lg:px-12">
+          <div class="text-center mb-16">
+            <span
+              class="inline-flex items-center gap-2 justify-center text-accent-bronze font-lato font-bold text-xs uppercase tracking-widest mb-5"
+            >
+              <span class="block w-8 h-px bg-accent-bronze"></span>
+              The Fix
+              <span class="block w-8 h-px bg-accent-bronze"></span>
+            </span>
+            <h2
+              class="font-display font-bold tracking-tight text-3xl md:text-5xl leading-tight mb-6"
+            >
+              What 50 done-for-you automations actually buys you back
+            </h2>
+            <p class="font-lato text-muted-stone text-lg max-w-2xl mx-auto">
+              Every one of these is a task you're currently doing manually,
+              running silently in the background instead:
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div
+              class="space-y-6 font-lato text-base md:text-lg text-muted-stone"
+            >
+              <div class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-accent-bronze shrink-0 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <p>
+                  A lead sends you a DM &rarr;
+                  <strong class="text-primary-dark"
+                    >they are automatically followed up with while you are
+                    spending time with your family/friends.</strong
+                  >
+                </p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-accent-bronze shrink-0 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <p>
+                  A client pays &rarr;
+                  <strong class="text-primary-dark"
+                    >they are instantly logged in your CRM and sent their
+                    onboarding details, giving you time to actually focus on
+                    delivering the service.</strong
+                  >
+                </p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-accent-bronze shrink-0 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <p>
+                  You need a month of content &rarr;
+                  <strong class="text-primary-dark"
+                    >your AI engine generates your calendar, so you can spend
+                    that saved time working on high-level business
+                    strategy.</strong
+                  >
+                </p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-accent-bronze shrink-0 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <p>
+                  An unpaid invoice sits for a week &rarr;
+                  <strong class="text-primary-dark"
+                    >a polite reminder goes out on its own, recovering lost cash
+                    flow without any awkward manual follow-ups.</strong
+                  >
+                </p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-accent-bronze shrink-0 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <p>
+                  Your inbox fills up overnight &rarr;
+                  <strong class="text-primary-dark"
+                    >you wake up to a clean, sorted summary, so you can finally
+                    step away from your phone and enjoy your weekend.</strong
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                alt="Person enjoying free time while systems run"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-primary-dark/20 mix-blend-multiply"
+              ></div>
+              <div
+                class="absolute top-0 left-0 right-0 h-1 bg-accent-bronze/50"
+              ></div>
+
+              <div
+                class="absolute inset-0 flex items-center justify-center p-8"
+              >
+                <div
+                  class="bg-primary-dark/90 backdrop-blur-sm border border-accent-bronze p-6 rounded-xl text-center shadow-2xl"
+                >
+                  <h3
+                    class="font-display font-bold text-xl text-neutral-light mb-2"
+                  >
+                    This isn't daily work.
+                  </h3>
+                  <p class="text-neutral-light/80 text-sm leading-relaxed">
+                    You set each one up once. It runs every day after that,
+                    whether you're working, resting, or asleep.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== TESTIMONIALS ===================== -->
+      <!-- Todo - Update later with real testimonials -->
+      <!-- <section class="bg-neutral-light text-primary-dark py-24 border-b border-muted-stone/15">
+            <div class="max-w-5xl mx-auto px-6 lg:px-12">
+                <div class="text-center mb-16">
+                    <span class="inline-flex items-center gap-2 justify-center text-accent-bronze font-lato font-bold text-xs uppercase tracking-widest mb-5">
+                        <span class="block w-8 h-px bg-accent-bronze"></span>
+                        Proof
+                        <span class="block w-8 h-px bg-accent-bronze"></span>
+                    </span>
+                    <h2 class="font-display font-bold tracking-tight text-3xl md:text-5xl leading-tight">
+                        Real proof, real reason it works
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white border border-muted-stone/20 rounded-xl p-8 shadow-sm relative">
+                        <div class="text-accent-bronze text-4xl font-display leading-none absolute top-6 left-6 opacity-30">"</div>
+                        <p class="font-lato text-muted-stone italic mb-6 relative z-10 mt-4">
+                            "Helped me setup"
+                        </p>
+                        <div class="flex items-center gap-4 border-t border-muted-stone/10 pt-4">
+                            <div class="w-10 h-10 bg-primary-dark rounded-full"></div>
+                            <div>
+                                <h4 class="font-bold text-sm text-primary-dark">— Miyyah O.</h4>
+                                <p class="text-xs text-muted-stone uppercase tracking-wider">The Girls Manual</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+                    <div class="bg-white border border-muted-stone/20 rounded-xl p-8 shadow-sm relative">
+                        <div class="text-accent-bronze text-4xl font-display leading-none absolute top-6 left-6 opacity-30">"</div>
+                        <p class="font-lato text-muted-stone italic mb-6 relative z-10 mt-4">
+                            "I am now able to keep up to date on my emails. Easy peasy"
+                        </p>
+                        <div class="flex items-center gap-4 border-t border-muted-stone/10 pt-4">
+                            <div class="w-10 h-10 bg-primary-dark rounded-full"></div>
+                            <div>
+                                <h4 class="font-bold text-sm text-primary-dark">— Adaeze N.</h4>
+                                <p class="text-xs text-muted-stone uppercase tracking-wider">Freelancer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+      <!-- ===================== WHAT'S INSIDE ===================== -->
+      <section
+        class="bg-primary-dark text-neutral-light py-24 md:py-32 border-b border-muted-stone/15"
+      >
+        <div class="max-w-5xl mx-auto px-6 lg:px-12">
+          <div class="text-center mb-16">
+            <span
+              class="inline-flex items-center gap-2 justify-center text-accent-bronze font-lato font-bold text-xs uppercase tracking-widest mb-5"
+            >
+              <span class="block w-8 h-px bg-accent-bronze"></span>
+              The Blueprint
+              <span class="block w-8 h-px bg-accent-bronze"></span>
+            </span>
+            <h2
+              class="font-display font-bold tracking-tight text-3xl md:text-5xl leading-tight mb-6"
+            >
+              What's actually inside
+            </h2>
+            <p
+              class="font-lato text-neutral-light/70 text-lg max-w-2xl mx-auto"
+            >
+              <strong class="text-neutral-light"
+                >50 pre-built, pre-tested automation blueprints</strong
+              >, organized into 5 categories so you're never digging through a
+              mess:
+            </p>
+          </div>
+
+          <div
+            class="overflow-hidden rounded-xl border border-muted-stone/20 bg-neutral-light/5 shadow-2xl"
+          >
+            <div class="grid grid-cols-1 divide-y divide-muted-stone/20">
+              <div
+                class="p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-4 hover:bg-neutral-light/10 transition-colors"
+              >
+                <div class="md:w-1/3">
+                  <h3 class="font-display font-bold text-xl text-accent-bronze">
+                    Email &amp; Comms
+                  </h3>
+                  <p
+                    class="text-xs uppercase tracking-widest text-neutral-light/50 mt-1"
+                  >
+                    10 Automations
+                  </p>
+                </div>
+                <div
+                  class="md:w-2/3 text-neutral-light/80 font-lato text-sm md:text-base"
+                >
+                  Sorts priority emails, drafts replies, saves attachments,
+                  pings you for VIP senders.
+                </div>
+              </div>
+
+              <div
+                class="p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-4 hover:bg-neutral-light/10 transition-colors"
+              >
+                <div class="md:w-1/3">
+                  <h3 class="font-display font-bold text-xl text-accent-bronze">
+                    Lead Gen &amp; Social
+                  </h3>
+                  <p
+                    class="text-xs uppercase tracking-widest text-neutral-light/50 mt-1"
+                  >
+                    10 Automations
+                  </p>
+                </div>
+                <div
+                  class="md:w-2/3 text-neutral-light/80 font-lato text-sm md:text-base"
+                >
+                  Auto-delivers resources, syncs leads to your sheet, scores
+                  lead quality with AI.
+                </div>
+              </div>
+
+              <div
+                class="p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-4 hover:bg-neutral-light/10 transition-colors"
+              >
+                <div class="md:w-1/3">
+                  <h3 class="font-display font-bold text-xl text-accent-bronze">
+                    Client Ops &amp; Bookings
+                  </h3>
+                  <p
+                    class="text-xs uppercase tracking-widest text-neutral-light/50 mt-1"
+                  >
+                    10 Automations
+                  </p>
+                </div>
+                <div
+                  class="md:w-2/3 text-neutral-light/80 font-lato text-sm md:text-base"
+                >
+                  Sends welcome packs, creates client information, logs
+                  bookings, collects feedback automatically.
+                </div>
+              </div>
+
+              <div
+                class="p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-4 hover:bg-neutral-light/10 transition-colors"
+              >
+                <div class="md:w-1/3">
+                  <h3 class="font-display font-bold text-xl text-accent-bronze">
+                    Payments &amp; Invoices
+                  </h3>
+                  <p
+                    class="text-xs uppercase tracking-widest text-neutral-light/50 mt-1"
+                  >
+                    10 Automations
+                  </p>
+                </div>
+                <div
+                  class="md:w-2/3 text-neutral-light/80 font-lato text-sm md:text-base"
+                >
+                  Automated Bank Alert Logger, daily revenue summaries, instant
+                  payment receipts, one-click PDF invoices.
+                </div>
+              </div>
+
+              <div
+                class="p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-4 hover:bg-neutral-light/10 transition-colors"
+              >
+                <div class="md:w-1/3">
+                  <h3 class="font-display font-bold text-xl text-accent-bronze">
+                    Daily Ops &amp; Tools
+                  </h3>
+                  <p
+                    class="text-xs uppercase tracking-widest text-neutral-light/50 mt-1"
+                  >
+                    10 Automations
+                  </p>
+                </div>
+                <div
+                  class="md:w-2/3 text-neutral-light/80 font-lato text-sm md:text-base"
+                >
+                  Morning calendar briefings, focus-time calendar buffers,
+                  website uptime monitoring.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mt-16 bg-neutral-light rounded-xl p-8 md:p-12 text-center shadow-[0_0_40px_rgba(200,153,108,0.2)] border-4 border-accent-bronze relative overflow-hidden"
+          >
+            <h3
+              class="font-display font-bold text-2xl md:text-4xl text-primary-dark mb-4"
+            >
+              Zero Guesswork. Zero Empty Spreadsheets.
+            </h3>
+            <p
+              class="font-lato text-muted-stone text-lg leading-relaxed max-w-3xl mx-auto font-bold mb-8"
+            >
+              Never waste hours figuring out what columns to create. You get a
+              direct link to duplicate our pre-built Master Google Sheet with
+              every lead tracker, invoice database, and client log already
+              mapped.
+            </p>
+            <p
+              class="font-lato text-muted-stone text-lg leading-relaxed max-w-3xl mx-auto font-bold mb-8"
+            >
+              Connect your accounts, follow the 5-minute configuration
+              walkthrough, and watch your systems run.
+              <strong
+                >And if you get stuck? Drop a message in the private community
+                and I will personally get on a call to fix your specific
+                setup.</strong
+              >
+            </p>
+            <a
+              href="#pricing"
+              class="inline-block bg-primary-dark text-neutral-light font-lato font-bold text-sm md:text-base uppercase tracking-wide py-4 px-10 rounded-lg hover:opacity-90 transition-opacity shadow-lg"
+            >
+              I Want The Master Sheet &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ABOUT THE CREATOR ===================== -->
+      <section
+        class="bg-neutral-light text-primary-dark py-24 border-b border-muted-stone/15"
+      >
+        <div class="max-w-5xl mx-auto px-6 lg:px-12">
+          <div class="flex flex-col md:flex-row gap-12 items-center">
+            <!-- Text -->
+            <div class="flex-1 space-y-6">
+              <span
+                class="inline-flex items-center gap-2 text-accent-bronze font-lato font-bold text-xs uppercase tracking-widest mb-2"
+              >
+                <span class="block w-8 h-px bg-accent-bronze"></span>
+                Who built this?
+              </span>
+
+              <h2
+                class="font-display font-bold tracking-tight text-3xl md:text-4xl leading-tight"
+              >
+                Hi, I'm Chinenye.
+              </h2>
+
+              <p class="font-lato text-muted-stone text-lg leading-relaxed">
+                I'm not selling this just for the sake of it. Nope, it's
+                actually a method I use to survive. In my day job, I'm a
+                Software Engineer. Outside of that, I build and maintain
+                automated operations for 6 and 7-figure businesses.
+              </p>
+
+              <p class="font-lato text-muted-stone text-lg leading-relaxed">
+                The only reason I can balance a full-time engineering career
+                with high-level client work is because I use these exact same
+                automations on myself and for my clients. I built these systems
+                to handle my own heavy lifting so I wouldn't burn out.
+              </p>
+
+              <p class="font-lato text-muted-stone text-lg leading-relaxed">
+                I was recently featured by the Association for Computing
+                Machinery (ACM), the largest computer science organization, as
+                an
+                <a
+                  href="https://women.acm.org/u-rise-chinenye-anikwenze-from-an-academic-in-history-to-an-unconventional-advocate-for-responsible-and-inclusive-ai/"
+                  target="_blank"
+                  class="text-accent-bronze font-bold hover:underline"
+                  >advocate for responsible AI</a
+                >. I've also
+                <a
+                  href="https://www.tonative.org/indaba-2026#:~:text=LinkedIn-,Chinenye%20Anikwenze,-Engineering%20Lead%2C%20Tonative"
+                  target="_blank"
+                  class="text-accent-bronze font-bold hover:underline"
+                  >organized workshops</a
+                >
+                at the biggest AI conference in Africa, the Deep Learning
+                Indaba.
+              </p>
+
+              <p
+                class="font-lato text-primary-dark font-bold text-lg leading-relaxed border-l-4 border-accent-bronze pl-4"
+              >
+                I packaged The AutoStack Blueprint because I saw too many smart
+                entrepreneurs drowning in the exact same manual busywork that I
+                have successfully automated away with AI-powered workflows.
+              </p>
+            </div>
+
+            <!-- Image / Visual -->
+            <div class="w-full md:w-5/12">
+              <div
+                class="relative rounded-2xl overflow-hidden shadow-2xl border border-muted-stone/20"
+              >
+                <!-- Professional portrait placeholder. Feel free to replace with your actual headshot (e.g., profile.png) -->
+                <img
+                  src="./chinenye_image.png"
+                  alt="Chinenye Anikwenze"
+                  class="w-full h-auto object-cover aspect-[4/5] filter grayscale hover:grayscale-0 transition-all duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-accent-bronze/10 mix-blend-multiply"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===================== PROOF ===================== -->
+      <section
+        class="bg-primary-dark text-neutral-light py-24 border-b border-muted-stone/15"
+      >
+        <div class="max-w-5xl mx-auto px-6 lg:px-12">
+          <div class="text-center mb-16">
+            <span
+              class="inline-flex items-center gap-2 justify-center text-accent-bronze font-lato font-bold text-xs uppercase tracking-widest mb-5"
+            >
+              <span class="block w-8 h-px bg-accent-bronze"></span>
+              The Receipts
+              <span class="block w-8 h-px bg-accent-bronze"></span>
+            </span>
+            <h2
+              class="font-display font-bold tracking-tight text-3xl md:text-5xl leading-tight max-w-3xl mx-auto"
+            >
+              This isn't theory. These are systems running live right now.
+            </h2>
+          </div>
+
+          <div class="space-y-12">
+            <!-- Proof 1: Time saved -->
+            <div
+              class="bg-neutral-light/5 border border-muted-stone/20 rounded-2xl p-6 md:p-8 max-w-4xl mx-auto"
+            >
+              <p
+                class="font-lato text-neutral-light/80 text-lg mb-6 text-center"
+              >
+                <strong>145 hours of execution time saved</strong> in a single
+                week by the workflows inside this blueprint. That is the
+                equivalent of having
+                <strong>5 Virtual Assistants</strong> working around the clock
+                in your business.
+              </p>
+              <img
+                src="n8n_time_saved.png"
+                alt="145 hours saved in n8n dashboard"
+                class="w-full rounded-xl shadow-2xl border border-muted-stone/30"
+              />
+            </div>
+
+            <!-- Proof 2: Folders running for months -->
+            <div
+              class="bg-neutral-light/5 border border-muted-stone/20 rounded-2xl p-6 md:p-8 max-w-4xl mx-auto"
+            >
+              <p
+                class="font-lato text-neutral-light/80 text-lg mb-6 text-center"
+              >
+                Dozens of automated systems running silently for over 7 months
+                without a single manual edit needed since they were built.
+              </p>
+              <img
+                src="workflows.png"
+                alt="n8n folders running for 7 months"
+                class="w-full rounded-xl shadow-2xl border border-muted-stone/30"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== VALUE STACK ===================== -->
+      <section
+        class="bg-neutral-light text-primary-dark py-24 md:py-32 border-b border-muted-stone/15"
+      >
+        <div class="max-w-4xl mx-auto px-6 lg:px-12">
+          <div class="text-center mb-16">
+            <h2
+              class="font-display font-bold tracking-tight text-3xl md:text-5xl leading-tight"
+            >
+              Everything you get today
+            </h2>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-xl border border-muted-stone/20 overflow-hidden"
+          >
+            <div class="p-8 md:p-10 space-y-6">
+              <!-- HEADER -->
+              <div
+                class="flex justify-between items-center pb-4 mb-4 border-b-2 border-primary-dark"
+              >
+                <span
+                  class="font-display font-bold text-sm md:text-base uppercase tracking-widest text-primary-dark w-3/4"
+                  >What You Get</span
+                >
+                <span
+                  class="font-display font-bold text-sm md:text-base uppercase tracking-widest text-primary-dark w-1/4 text-right"
+                  >Real-World Value</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center pb-6 border-b border-muted-stone/10"
+              >
+                <span class="font-lato text-sm md:text-base font-bold w-3/4"
+                  >50 Pre-Built, Pre-Tested Automation Blueprints (covering
+                  Payments, Content Engines, Lead Capture &amp; Daily
+                  Operations)</span
+                >
+                <span
+                  class="font-display font-bold text-muted-stone w-1/4 text-right"
+                  >₦150,000</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center pb-6 border-b border-muted-stone/10"
+              >
+                <span class="font-lato text-sm md:text-base font-bold w-3/4"
+                  >The Plug-and-Play Master Google Sheet (pre-formatted tabs for
+                  leads, invoices, and operations)</span
+                >
+                <span
+                  class="font-display font-bold text-muted-stone w-1/4 text-right"
+                  ><span class="dynamic-price">₦20,000</span></span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center pb-6 border-b border-muted-stone/10"
+              >
+                <span class="font-lato text-sm md:text-base font-bold w-3/4"
+                  >The 5-Minute Master Config Video (watch once, link
+                  credentials, activate any workflow)</span
+                >
+                <span
+                  class="font-display font-bold text-muted-stone w-1/4 text-right"
+                  >₦15,000</span
+                >
+              </div>
+              <div class="mt-8 mb-4 border-t border-muted-stone/10 pt-8">
+                <span
+                  class="inline-block bg-accent-bronze text-primary-dark font-bold text-xs uppercase tracking-widest py-1.5 px-3 rounded"
+                >
+                  Exclusive Bonuses
+                </span>
+              </div>
+              <div
+                class="flex justify-between items-center pb-6 border-b border-muted-stone/10"
+              >
+                <span class="font-lato text-sm md:text-base font-bold w-3/4"
+                  >BONUS 1: The Client Pitch &amp; Proposal Script (the exact
+                  message to sell a ₦150k+ setup)</span
+                >
+                <span
+                  class="font-display font-bold text-muted-stone w-1/4 text-right"
+                  ><span class="dynamic-price">₦20,000</span></span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center pb-6 border-b border-muted-stone/10"
+              >
+                <span class="font-lato text-sm md:text-base font-bold w-3/4"
+                  >BONUS 2: The Zero-Cost Software Guide (run workflows without
+                  expensive monthly tools)</span
+                >
+                <span
+                  class="font-display font-bold text-muted-stone w-1/4 text-right"
+                  >₦15,000</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center pb-6 border-b border-muted-stone/10"
+              >
+                <span
+                  class="font-lato text-sm md:text-base font-bold w-3/4 text-accent-bronze"
+                  >BONUS 3: Full Commercial Resell Rights (keep 100% of what you
+                  charge clients)</span
+                >
+                <span
+                  class="font-display font-bold text-muted-stone w-1/4 text-right"
+                  ><span class="dynamic-regular-price">₦50,000</span></span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center pb-6 border-b border-muted-stone/10"
+              >
+                <span class="font-lato text-sm md:text-base font-bold w-3/4"
+                  >BONUS 4: The Inner Circle Community (I will personally hold
+                  your hand and fix any tech issues you get stuck on, plus I
+                  drop brand-new custom blueprints based on members' specific
+                  use-cases)</span
+                >
+                <span
+                  class="font-display font-bold text-muted-stone w-1/4 text-right"
+                  >₦25,000</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center pb-6 border-b border-muted-stone/10"
+              >
+                <span
+                  class="font-lato text-sm md:text-base font-bold w-3/4 text-accent-bronze"
+                  >BONUS 5: The Partner Side-Gig Program (Get just 2 people to
+                  use your link and yours is free. Every referral after that is
+                  unlimited pure profit)</span
+                >
+                <span
+                  class="font-display font-bold text-muted-stone w-1/4 text-right"
+                  >Priceless</span
+                >
+              </div>
+
+              <div class="flex flex-col pt-4 gap-4">
+                <div class="flex justify-between items-center">
+                  <span class="font-display font-bold text-lg md:text-xl"
+                    >Total real value</span
+                  >
+                  <span
+                    class="font-display font-bold text-lg md:text-xl line-through text-muted-stone/60"
+                    ><span class="dynamic-value-price">₦295,000</span></span
+                  >
+                </div>
+                <div
+                  class="bg-accent-bronze/10 rounded-lg p-4 md:p-6 border border-accent-bronze/20 text-center mt-2"
+                >
+                  <p
+                    class="font-lato text-primary-dark text-lg md:text-xl mb-2"
+                  >
+                    However you are not going to pay
+                    <span class="dynamic-value-price">₦295,000</span>. Not even
+                    half of it at 150k.
+                  </p>
+                  <p
+                    class="font-lato text-muted-stone text-base md:text-lg mb-2"
+                  >
+                    Now, the regular price is
+                    <strong class="text-primary-dark line-through"
+                      ><span class="dynamic-regular-price"
+                        >₦50,000</span
+                      ></strong
+                    >.
+                  </p>
+                  <p class="font-lato text-muted-stone text-base md:text-lg">
+                    But, if you take action today, you get it all for just
+                    <strong class="text-primary-dark text-2xl"
+                      ><span class="dynamic-price">₦20,000</span></strong
+                    >.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-primary-dark p-8 md:p-10 flex flex-col">
+              <div
+                class="flex flex-col md:flex-row justify-between items-center mb-8"
+              >
+                <span
+                  class="font-display font-bold text-2xl md:text-3xl text-neutral-light uppercase tracking-wide mb-4 md:mb-0"
+                  >You pay today</span
+                >
+                <span
+                  class="font-display font-bold text-4xl md:text-5xl text-accent-bronze"
+                  ><span class="dynamic-price">₦20,000</span></span
+                >
+              </div>
+              <a
+                href="https://selar.com/4i6p171067"
+                class="block w-full text-center bg-accent-bronze text-primary-dark font-lato font-bold text-base md:text-lg uppercase tracking-wide py-5 rounded-lg hover:opacity-90 transition-opacity shadow-[0_0_20px_rgba(200,153,108,0.3)]"
+              >
+                Give Me The 50 Blueprints &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-16 text-center">
+            <h3
+              class="font-display font-bold text-2xl md:text-3xl text-primary-dark mb-4"
+            >
+              "But what if I buy this and can't figure it out?"
+            </h3>
+            <p
+              class="font-lato text-lg text-muted-stone max-w-2xl mx-auto mb-8"
+            >
+              That is exactly why I don't just hand you the files and disappear.
+              You are fully protected by...
+            </p>
+
+            <div
+              class="bg-accent-bronze/10 rounded-xl p-8 border border-accent-bronze/30 max-w-3xl mx-auto shadow-sm text-left mb-10"
+            >
+              <h4 class="font-display font-bold text-xl text-primary-dark mb-3">
+                ⚡️ The "Zero-Tech-Stress" Guarantee
+              </h4>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                The whole point of the Blueprint is that you can easily plug
+                these in yourself. But if you get stuck? You drop a message in
+                the private community and
+                <strong
+                  >I will personally get on a call, hold your hand, and fix your
+                  specific setup.</strong
+                >
+                Plus, as the community grows, I build and share brand-new custom
+                blueprints based exactly on what you ask for.
+              </p>
+            </div>
+            <a
+              href="https://selar.com/4i6p171067"
+              class="inline-block bg-primary-dark text-neutral-light font-lato font-bold text-sm md:text-base uppercase tracking-wide py-5 px-10 rounded-xl hover:opacity-90 transition-opacity shadow-2xl"
+            >
+              Yes, I want to be in the community &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== THE REAL REASON ===================== -->
+      <section
+        class="bg-neutral-light text-primary-dark py-24 md:py-32 border-b border-muted-stone/15"
+      >
+        <div class="max-w-3xl mx-auto px-6 lg:px-12">
+          <h2
+            class="font-display font-bold tracking-tight text-3xl md:text-5xl leading-tight mb-12 text-center"
+          >
+            Wait... why is this so cheap?
+          </h2>
+
+          <div
+            class="space-y-6 font-lato text-lg md:text-xl text-muted-stone leading-relaxed"
+          >
+            <p>
+              As you can see, I've put a massive amount of work into building,
+              testing, and documenting these blueprints.
+            </p>
+
+            <p>
+              I could easily charge
+              <strong class="text-primary-dark font-bold">₦300,000</strong> for
+              this entire stack. I do charge my clients more than that to
+              implement individual workflows.
+            </p>
+
+            <p>
+              And agencies charge ten times that just to build one or two of
+              these workflows for you.
+            </p>
+
+            <p>
+              Yet, I'm making it available for a fraction of that. For less than
+              10% of that price...
+            </p>
+
+            <p>
+              I already have a full-time job as a software engineer, and I build
+              high-end automation systems for private clients on the side.
+            </p>
+
+            <p>
+              I don't need to rely on selling courses to pay my bills. My goal
+              here is simply to take the exact same enterprise-grade systems I
+              build for my private clients, and hand them to everyday business
+              owners... Without you ever needing to write a single line of code,
+              and without paying expensive agency fees.
+            </p>
+
+            <p>
+              Why? Because I know that many people buy courses but don't have
+              the time to learn, much less implement them one-by-one.
+            </p>
+
+            <p>
+              That's exactly why I didn't build a course.
+              <strong class="text-accent-bronze font-bold"
+                >I built a plug-and-play Blueprint.</strong
+              >
+            </p>
+
+            <p>
+              You don't have to lift a finger to build these from scratch. I
+              have unshakable confidence in what I've built here. If you just
+              copy my systems, plug them in, and follow the onboarding video, I
+              am confident it will transform how you run your business.
+            </p>
+
+            <p class="italic border-l-4 border-accent-bronze pl-4">
+              And honestly?
+              <strong
+                ><span class="dynamic-price">₦20,000</span> is less than what
+                you'd casually spend on pizza and Coldstone on a random
+                weekend.</strong
+              >
+              But unlike a sugar rush, this will actually buy you back hours of
+              your life every single week.
+            </p>
+
+            <p class="text-primary-dark font-bold mt-8">
+              You will finally get your time back.
+            </p>
+            <p class="text-primary-dark font-bold">
+              You will make more money without burning out.
+            </p>
+            <p class="text-primary-dark font-bold">
+              You will take better care of yourself and your loved ones... and
+              you will finally have a business that actually runs itself, even
+              when you step away.
+            </p>
+          </div>
+
+          <!-- Repeated Call to Action -->
+          <div
+            class="mt-16 bg-white rounded-2xl border-4 border-accent-bronze shadow-[0_0_40px_rgba(200,153,108,0.2)] overflow-hidden max-w-2xl mx-auto"
+          >
+            <div class="p-8 md:p-10 text-center border-b border-muted-stone/10">
+              <span
+                class="block font-lato font-bold text-muted-stone uppercase tracking-widest text-sm mb-3"
+                >Total real value:
+                <span class="line-through"
+                  ><span class="dynamic-value-price">₦295,000</span></span
+                ></span
+              >
+              <span
+                class="block font-display font-bold text-3xl md:text-5xl text-primary-dark mb-8"
+                >You pay today:
+                <span class="text-accent-bronze"
+                  ><span class="dynamic-price">₦20,000</span></span
+                ></span
+              >
+
+              <a
+                href="https://selar.com/4i6p171067"
+                class="block w-full text-center bg-accent-bronze text-primary-dark font-lato font-bold text-base md:text-lg uppercase tracking-wide py-5 rounded-lg hover:opacity-90 transition-opacity shadow-[0_0_20px_rgba(200,153,108,0.3)]"
+              >
+                Yes, Give Me The 50 Blueprints &rarr;
+              </a>
+            </div>
+            <div class="p-6 md:p-8 bg-primary-dark/5 text-center">
+              <p
+                class="font-lato text-base text-muted-stone leading-relaxed italic"
+              >
+                You're not merely paying for 50 templates. You're investing in
+                the hundreds of hours you would have spent building and testing
+                each one yourself. Saved hours you can now spend making money or
+                resting.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== THE ROI MATH ===================== -->
+      <section
+        class="bg-neutral-light text-primary-dark py-24 md:py-32 border-b border-muted-stone/15"
+      >
+        <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+          <div class="mb-16">
+            <span
+              class="inline-flex items-center gap-2 justify-center text-accent-bronze font-lato font-bold text-xs uppercase tracking-widest mb-5"
+            >
+              <span class="block w-8 h-px bg-accent-bronze"></span>
+              The Brutal Math
+              <span class="block w-8 h-px bg-accent-bronze"></span>
+            </span>
+            <h2
+              class="font-display font-bold tracking-tight text-3xl md:text-5xl leading-tight"
+            >
+              Let's do the brutal math of manual labor.
+            </h2>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 text-left items-stretch"
+          >
+            <div
+              class="bg-primary-dark text-neutral-light p-8 md:p-10 rounded-2xl border border-muted-stone/20 shadow-xl flex flex-col justify-center"
+            >
+              <h3
+                class="font-display font-bold text-2xl mb-4 text-accent-bronze"
+              >
+                The Cost of Doing Nothing
+              </h3>
+              <p class="font-lato text-neutral-light/80 leading-relaxed mb-4">
+                Let's say your time is worth just ₦5,000 an hour. If you spend 1
+                hour a day (5 days a week) doing boring tasks like sending
+                invoices or replying to messages, you lose ₦25,000 every week.
+              </p>
+              <p class="font-lato font-bold text-xl text-neutral-light mb-4">
+                That is ₦100,000 lost every single month.
+              </p>
+              <p class="font-lato text-neutral-light/80 leading-relaxed">
+                You are losing over a million naira a year just to do robot work
+                that a computer will do for free.
+              </p>
+            </div>
+
+            <div
+              class="bg-white text-primary-dark p-8 md:p-10 rounded-2xl border-4 border-accent-bronze shadow-2xl relative overflow-hidden flex flex-col justify-center"
+            >
+              <div
+                class="absolute -right-10 -bottom-10 text-accent-bronze/10 text-[180px] font-display font-bold leading-none select-none"
+              >
+                &infin;
+              </div>
+              <h3
+                class="font-display font-bold text-2xl mb-4 text-primary-dark relative z-10"
+              >
+                The AutoStack Blueprint
+              </h3>
+              <p
+                class="font-lato text-muted-stone leading-relaxed mb-4 relative z-10"
+              >
+                You pay just
+                <strong><span class="dynamic-price">₦20,000</span></strong> one
+                time.
+              </p>
+              <p
+                class="font-lato text-muted-stone leading-relaxed mb-4 relative z-10"
+              >
+                You load these systems today. By tomorrow, you get those 5 hours
+                of work back.
+              </p>
+              <p
+                class="font-lato font-bold text-xl text-primary-dark relative z-10"
+              >
+                The systems pay for themselves in less than a week.
+              </p>
+              <p
+                class="font-lato text-muted-stone leading-relaxed relative z-10"
+              >
+                For the rest of the year, all the extra time you save is pure
+                profit.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-accent-bronze/10 border border-accent-bronze/30 rounded-2xl p-8 md:p-10 max-w-3xl mx-auto shadow-sm"
+          >
+            <p
+              class="font-lato text-xl text-primary-dark font-bold leading-relaxed mb-4"
+            >
+              You started your business for freedom, but now you're drowning in
+              doing a dozen things at once. When do you actually make time to
+              enjoy the freedom you started this business for?
+            </p>
+            <p class="font-lato text-lg text-muted-stone leading-relaxed mb-8">
+              In this age of AI, doing boring digital chores by hand isn't a
+              badge of honor, it's a full blown bottleneck. Smart business
+              owners let software do the boring work. This lets them spend all
+              their time getting more clients, making more money, and actually
+              enjoying their lives. Walking away from an entire blueprint of
+              systems for the price of a nice dinner is a bad choice. Your
+              future self will wish you bought this.
+            </p>
+            <a
+              href="#pricing"
+              class="inline-block bg-primary-dark text-neutral-light font-lato font-bold text-sm md:text-base uppercase tracking-wide py-4 px-10 rounded-lg hover:opacity-90 transition-opacity text-center shadow-lg"
+            >
+              I'm Ready To Stop Doing Robot Work &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== WHO IT'S FOR ===================== -->
+      <section
+        class="bg-primary-dark text-neutral-light py-24 border-b border-muted-stone/15"
+      >
+        <div class="max-w-5xl mx-auto px-6 lg:px-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+              <h3
+                class="font-display font-bold text-2xl mb-8 text-accent-bronze border-b border-accent-bronze/30 pb-4"
+              >
+                Who this is actually for
+              </h3>
+              <ul class="space-y-6 font-lato text-neutral-light/80">
+                <li class="flex items-start gap-4">
+                  <span class="text-accent-bronze mt-1">&rarr;</span>
+                  <span
+                    ><strong>Virtual assistants and freelancers</strong> tired
+                    of unpaid manual busywork.</span
+                  >
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="text-accent-bronze mt-1">&rarr;</span>
+                  <span
+                    ><strong>Coaches and consultants</strong> losing leads
+                    because replies take hours.</span
+                  >
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="text-accent-bronze mt-1">&rarr;</span>
+                  <span
+                    ><strong>Small business owners</strong> still doing
+                    spreadsheet entry themselves.</span
+                  >
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="text-accent-bronze mt-1">&rarr;</span>
+                  <span
+                    >Anyone who's said "I should really automate this" more than
+                    twice.</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3
+                class="font-display font-bold text-2xl mb-8 text-muted-stone border-b border-muted-stone/30 pb-4"
+              >
+                Who this is <em>not</em> for
+              </h3>
+              <ul class="space-y-6 font-lato text-neutral-light/60">
+                <li class="flex items-start gap-4">
+                  <span class="text-muted-stone mt-1">&times;</span>
+                  <span
+                    >If you already have an automated system running your whole
+                    business, you probably don't need this.</span
+                  >
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="text-muted-stone mt-1">&times;</span>
+                  <span
+                    >If you want a course that teaches automation theory from
+                    scratch, this is templates for immediate implementation, not
+                    a course.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== GUARANTEE ===================== -->
+      <section class="bg-neutral-light text-primary-dark py-24 md:py-32">
+        <div class="max-w-4xl mx-auto px-6 lg:px-12">
+          <div
+            class="bg-white border-2 border-accent-bronze rounded-2xl p-10 md:p-14 text-center shadow-2xl relative overflow-hidden"
+          >
+            <!-- Decor -->
+            <div
+              class="absolute -top-10 -right-10 text-accent-bronze/10 text-[150px] font-display font-bold leading-none select-none"
+            >
+              &#10003;
+            </div>
+
+            <span
+              class="inline-block bg-accent-bronze text-primary-dark font-bold text-xs uppercase tracking-widest py-1.5 px-4 rounded-full mb-6 relative z-10"
+            >
+              Risk-Free
+            </span>
+            <h2
+              class="font-display font-bold tracking-tight text-3xl md:text-4xl mb-8 relative z-10"
+            >
+              The "Live Call Setup" Guarantee
+            </h2>
+
+            <div
+              class="font-lato text-lg text-muted-stone space-y-4 max-w-2xl mx-auto relative z-10 mb-8"
+            >
+              <p>
+                Import any workflow. Follow the setup video. Connect your
+                accounts.
+              </p>
+              <p>
+                If something breaks or you get stuck, drop a message in the
+                private WhatsApp group. Send what you have, and I will
+                personally hop on a live video call with you to fix it.
+              </p>
+              <p
+                class="font-bold text-primary-dark bg-neutral-light p-4 rounded-lg border border-muted-stone/20 mt-6"
+              >
+                I will stay on the call with you, look at your screen, and
+                troubleshoot the workflow until it is running perfectly. You are
+                never left alone to figure it out.
+              </p>
+            </div>
+
+            <p
+              class="font-display font-bold text-xl text-primary-dark relative z-10"
+            >
+              You are not buying an empty promise. You are buying a system that
+              is guaranteed to work for your business.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== CLOSE & PRICING ===================== -->
+      <section
+        id="pricing"
+        class="bg-primary-dark text-neutral-light py-24 md:py-32 border-t border-muted-stone/15"
+      >
+        <div class="max-w-5xl mx-auto px-6 lg:px-12">
+          <div class="text-center mb-16 max-w-3xl mx-auto">
+            <h2
+              class="font-display font-bold tracking-tight text-3xl md:text-4xl mb-8"
+            >
+              Six months from now, one of two things will be true.
+            </h2>
+            <p class="font-lato text-lg text-neutral-light/75 mb-6">
+              Either you're still doing the same manual tasks by hand, every
+              single day, the exact same way you are right now...
+            </p>
+            <p class="font-lato text-xl font-bold text-accent-bronze mb-8">
+              Or you flipped a switch once, and 50 small jobs have been running
+              themselves in the background ever since while you were busy doing
+              the work only you can do.
+            </p>
+            <p class="font-lato text-base text-neutral-light/60">
+              Same business. Same client list. The only difference is whether
+              something else is doing the busywork for you.
+            </p>
+          </div>
+
+          <!-- Pricing Card -->
+          <div
+            class="max-w-xl mx-auto bg-neutral-light text-primary-dark rounded-2xl shadow-2xl p-10 text-center relative border-4 border-accent-bronze"
+          >
+            <div
+              class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-accent-bronze text-primary-dark font-bold px-6 py-2 rounded-full uppercase tracking-widest text-xs shadow-lg w-max"
+            >
+              Launch Offer
+            </div>
+
+            <h3 class="font-display font-bold text-2xl mb-2 mt-4">
+              Simple pricing
+            </h3>
+            <div class="font-display font-bold text-6xl text-primary-dark mb-4">
+              <span class="dynamic-price">₦20,000</span>
+            </div>
+            <p class="font-lato text-muted-stone font-bold mb-2">
+              one-time payment, instant access
+            </p>
+            <p
+              class="font-lato text-sm text-accent-bronze font-bold italic mb-8"
+            >
+              (Founding-buyer price. It goes up to
+              <span class="dynamic-regular-price">₦50,000</span> after launch
+              week)
+            </p>
+
+            <!-- Countdown -->
+            <!-- Countdown (Commented out) -->
+            <!--
+                    <div class="mb-10 p-4 border border-muted-stone/20 rounded-xl bg-white shadow-sm">
+                        <p class="font-lato text-xs uppercase tracking-widest text-muted-stone font-bold mb-3">⏰ Offer ends in:</p>
+                        <div class="flex justify-center gap-3 text-center font-display">
+                            <div class="timer-box rounded-lg px-3 py-2 w-16">
+                                <span id="days" class="text-2xl font-bold block">03</span>
+                                <span class="text-[10px] uppercase font-lato tracking-wider text-muted-stone">Days</span>
+                            </div>
+                            <div class="text-2xl font-bold text-muted-stone mt-2">:</div>
+                            <div class="timer-box rounded-lg px-3 py-2 w-16">
+                                <span id="hours" class="text-2xl font-bold block">00</span>
+                                <span class="text-[10px] uppercase font-lato tracking-wider text-muted-stone">Hrs</span>
+                            </div>
+                            <div class="text-2xl font-bold text-muted-stone mt-2">:</div>
+                            <div class="timer-box rounded-lg px-3 py-2 w-16">
+                                <span id="minutes" class="text-2xl font-bold block">00</span>
+                                <span class="text-[10px] uppercase font-lato tracking-wider text-muted-stone">Min</span>
+                            </div>
+                            <div class="text-2xl font-bold text-muted-stone mt-2">:</div>
+                            <div class="timer-box rounded-lg px-3 py-2 w-16">
+                                <span id="seconds" class="text-2xl font-bold block">00</span>
+                                <span class="text-[10px] uppercase font-lato tracking-wider text-muted-stone">Sec</span>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+
+            <!-- Subtle Urgency Banner -->
+            <div
+              class="mb-8 p-4 bg-accent-bronze/10 border border-accent-bronze/30 rounded-xl text-center"
+            >
+              <p
+                class="font-lato text-sm text-primary-dark font-bold uppercase tracking-wide"
+              >
+                <span class="mr-2">⏳</span> Early-Bird Pricing Active
+              </p>
+              <p class="font-lato text-xs text-muted-stone mt-1">
+                This heavily discounted price will rise to
+                <strong class="text-primary-dark"
+                  ><span class="dynamic-regular-price">₦50,000</span></strong
+                >
+                shortly.
+              </p>
+            </div>
+
+            <a
+              href="https://selar.com/4i6p171067"
+              class="block w-full bg-accent-bronze text-primary-dark text-center font-lato font-bold uppercase tracking-wide text-lg py-5 rounded-lg shadow-[0_4px_14px_0_rgba(200,153,108,0.39)] hover:opacity-90 transition-opacity mb-6"
+            >
+              Give Me The 50 Blueprints &rarr;
+            </a>
+
+            <div
+              class="font-lato text-xs text-muted-stone flex flex-wrap justify-center items-center gap-x-3 gap-y-2 uppercase tracking-wide"
+            >
+              <span>Secure Payment</span>
+              <span class="hidden sm:inline">&middot;</span>
+              <span>Instant Access</span>
+              <span class="hidden sm:inline">&middot;</span>
+              <span>Live Call Guarantee</span>
+            </div>
+          </div>
+
+          <!-- Partnership & Referral Angle -->
+          <div
+            class="mt-16 bg-neutral-light/5 border border-accent-bronze/30 rounded-xl p-8 md:p-12 text-center max-w-3xl mx-auto"
+          >
+            <h3
+              class="font-display font-bold text-2xl md:text-3xl text-neutral-light mb-6"
+            >
+              Get yours completely free. (Literally)
+            </h3>
+            <p
+              class="font-lato text-neutral-light/80 text-lg leading-relaxed mb-6"
+            >
+              When you buy today, you get a custom partner link. If you just get
+              <strong>two people</strong> to use your link, yours is completely
+              free (you make your money back). Everything you get after those
+              two people is pure unlimited side-gig income for you. Plus, you
+              get lifetime access to the community to ask any automation
+              questions for free.
+            </p>
+            <p
+              class="font-lato text-neutral-light/80 text-lg leading-relaxed mb-6"
+            >
+              This is about giving you the leverage that big companies have,
+              without the big company budget. You get the templates, you get the
+              support, and you get a way to build a brand new income stream—all
+              in one place.
+            </p>
+            <p
+              class="font-lato font-bold text-2xl text-accent-bronze leading-relaxed mb-4"
+            >
+              Take back your time.
+            </p>
+            <p class="font-lato text-neutral-light/80 text-lg leading-relaxed">
+              Even if you only use 5 of these 50 templates, you're instantly
+              cutting hours of grunt work out of your week. Ask yourself:
+              <em
+                >What is an extra 5 hours of free time every single week worth
+                to you?</em
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FAQ ===================== -->
+      <section class="bg-neutral-light text-primary-dark py-24 md:py-32">
+        <div class="max-w-3xl mx-auto px-6 lg:px-12">
+          <div class="text-center mb-16">
+            <h2
+              class="font-display font-bold tracking-tight text-3xl md:text-5xl"
+            >
+              Questions you probably have
+            </h2>
+          </div>
+
+          <div class="space-y-6">
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                I'm not good with tech. Do I need to know how to code?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                No. If you can Fill a Google Form, use Google Sheets, and your
+                Gmail account, you are basically set. Everything is simple
+                drag-and-drop, and I am with you every step of the way in the
+                community to make sure you succeed.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                What software do I need?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                You can use the free versions of Google Sheets, Gmail, Telegram.
+                That covers almost everything you need.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                Can I use these for paying clients?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                Yes. You can reach out to clients and offer to set these up for
+                them and charge them whatever you want to implement it for them.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                How fast do I get access?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                Instantly. Right after you pay, you get sent straight to your
+                private access hub.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                Can't I just ask Claude or ChatGPT to build this?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                Claude will just give you text telling you <em>how</em> to build
+                it. But you still have to know how to code. I give you the
+                actual, finished files. You don't have to build anything. You
+                just import the file and it works.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                Do I need an expensive Zapier subscription to run these?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                No. Our templates are built for n8n. You can run n8n on their
+                generous cloud tier for incredibly cheap, or you can host it
+                yourself completely for free. I will include a "Zero-Cost Guide"
+                showing you how to bypass expensive monthly Zapier subscriptions
+                altogether.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                Do I need to pay a $20/month ChatGPT or Claude subscription?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                No. I will show you how to connect pay-as-you-go API keys (like
+                OpenAI) which only cost literal pennies to execute. I will also
+                show you how to connect entirely free AI models using platforms
+                like OpenRouter, meaning you completely skip the expensive
+                $20/month consumer fees.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                Will this actually work for my specific business?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                Yes. Every business has the same basic needs. Whether you are a
+                coach, a freelancer, or an agency, you still need to grab leads,
+                take payments, and send invoices. These systems handle the
+                boring work every business has to do.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                What if I buy this and get completely stuck?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                You are covered by my "Live Call Guarantee." Just drop a message
+                in the private WhatsApp group, and I will personally hop on a
+                live video call with you, look at your screen, and help you fix
+                it until it's running perfectly.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                I've bought "templates" before and never used them. Why is this
+                different?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                Most templates are just PDFs you have to read. These are real,
+                working files. You drag and drop them into your software,
+                connect your accounts, and turn them on. The actual work is
+                already done for you.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                Is it hard to make the emails sound like me?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                Not at all. Every file is clearly labeled. If a system sends a
+                welcome email, you will see a text box. You just delete our text
+                and type what you want to say instead.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                Can't I just find free templates online?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                Most "free" templates online are either too hard to use without
+                a developer, or they are just tricks to make you buy expensive
+                software. Our 50 systems are hand-picked for exactly what real
+                businesses need. No fluff, just plug-and-play.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                I'm overwhelmed. I don't have time to set this up.
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                That is exactly why you need this. If you don't have 10 minutes
+                to set up a file that saves you 5 hours a week, you are trapped.
+                You don't have to set up all 50 today. Just pick the ONE task
+                you hate most, follow the short video, and get your time back
+                tomorrow.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                What if I use different tools?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                The rules of automation are the same everywhere. If you use
+                Outlook instead of Gmail, or Airtable instead of Google Sheets,
+                it only takes a few clicks to swap them out. The systems still
+                work exactly the same way.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                I am bad with tech. Will I break my business?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                No. These run in the background. If you make a mistake setting
+                it up, the worst thing that happens is the automation just
+                doesn't work. Your normal, manual business will still work
+                exactly like it did before.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                Do I need to check these every week?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                Set it and forget it. Once you turn it on, it runs quietly in
+                the background. You never have to fix it or check it every week.
+                You only touch it if you want to change what your emails say.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-muted-stone/20"
+            >
+              <h3 class="font-display font-bold text-xl mb-3">
+                Is my client data safe?
+              </h3>
+              <p class="font-lato text-muted-stone leading-relaxed">
+                Yes. You run these systems on your own private accounts. You
+                never give your data to anyone else. You keep 100% control, so
+                your client info stays totally safe and private.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FINAL CTA ===================== -->
+      <section
+        class="bg-primary-dark text-neutral-light py-24 md:py-32 border-t border-muted-stone/20 relative overflow-hidden"
+      >
+        <!-- Background Glow Decor -->
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-bronze/10 blur-[100px] rounded-full pointer-events-none"
+        ></div>
+
+        <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center relative z-10">
+          <h2
+            class="font-display font-bold tracking-tight text-4xl md:text-6xl mb-6 leading-tight"
+          >
+            Take Back Your Time.
+          </h2>
+          <p
+            class="font-lato text-lg md:text-xl text-neutral-light/80 mb-12 max-w-2xl mx-auto leading-relaxed"
+          >
+            Stop working like a robot. Get 50 production-ready blueprints, the
+            setup guide, and the private community for one single payment of
+            <strong><span class="dynamic-price">₦20,000</span></strong
+            >.
+          </p>
+
+          <a
+            href="https://selar.com/4i6p171067"
+            class="inline-block w-full sm:w-auto bg-accent-bronze text-primary-dark font-lato font-bold text-base md:text-lg uppercase tracking-widest py-6 px-12 rounded-xl hover:opacity-90 transition-all shadow-[0_0_30px_rgba(200,153,108,0.3)] hover:shadow-[0_0_40px_rgba(200,153,108,0.5)] hover:-translate-y-1"
+          >
+            I Want To Grow Without Burnout &rarr;
+          </a>
+
+          <p
+            class="text-xs md:text-sm text-neutral-light/50 font-lato uppercase tracking-widest flex flex-wrap justify-center gap-x-6 gap-y-2 mt-8"
+          >
+            <span>Live Call Setup Guarantee</span>
+            <span class="hidden sm:inline">&middot;</span>
+            <span>Instant Delivery</span>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer
+      class="w-full bg-primary-dark text-neutral-light border-t border-muted-stone/20 py-16"
+    >
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-6 mb-12"
+        >
+          <a
+            href="#"
+            class="flex items-center gap-3 opacity-80 hover:opacity-100 transition-opacity"
+          >
+            <img
+              src="../logo.png"
+              alt="The Automate Stack Logo"
+              class="h-7 w-auto object-contain"
+            />
+            <span
+              class="font-poppins font-bold tracking-widest text-sm lowercase"
+              >theautomatestack</span
+            >
+          </a>
+          <p class="font-lato text-xs text-neutral-light/50 tracking-wide">
+            &copy; <span id="current-year"></span> The Automate Stack. All
+            rights reserved. Data pipelines secured.
+          </p>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="border-t border-muted-stone/20 pt-8 text-center">
+          <h4
+            class="font-lato font-bold text-neutral-light/50 text-xs uppercase tracking-widest mb-4"
+          >
+            Disclaimer
+          </h4>
+          <p
+            class="font-lato text-[11px] leading-relaxed text-neutral-light/40 max-w-4xl mx-auto mb-4 text-justify md:text-center"
+          >
+            Any earnings or income statements, or earnings or income examples,
+            are only estimates of what you could earn. If you rely upon my
+            figures, you accept the risk of not doing the exact figures
+            aforementioned. Where specific income figures are used, and
+            attributed to an individual or business, those persons or businesses
+            have earned that amount. Individual results will always vary and
+            yours will depend entirely on your individual capacity, work ethic,
+            business skills and experience, level of motivation, diligence in
+            applying the The AutoStack Blueprint systems, the economy, the
+            normal and unforeseen risks of doing business, and other factors.
+          </p>
+          <p class="font-lato text-[11px] text-neutral-light/40">
+            This site is not a part of the Facebook website or Meta Platforms,
+            Inc. Additionally, This site is NOT endorsed by Facebook in any way.
+            FACEBOOK is a trademark of Meta Platforms, Inc
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Fixed Bottom CTA (Thumb Zone) -->
+    <!-- <div class="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-primary-dark/95 backdrop-blur-sm border-t border-accent-bronze/30 z-[100]">
+        <a href="#pricing" class="flex items-center justify-center w-full bg-accent-bronze text-primary-dark font-lato font-bold text-sm uppercase tracking-wide py-4 px-6 rounded-lg shadow-[0_0_15px_rgba(200,153,108,0.3)]">
+          I want to Automate & Grow My Business - <span class="dynamic-price">₦20,000</span> &rarr;
+        </a>
+    </div> -->
+
+    <!-- Scripts -->
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      /*
+        // Countdown Logic (Fixed Date to avoid dark patterns)
+        const deadline = new Date("2026-10-15T23:59:59").getTime(); 
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const t = deadline - now;
+            
+            if (t >= 0) {
+                const days = Math.floor(t / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((t % (1000 * 60)) / 1000);
+                
+                // document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+                // document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+                // document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+                // document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+            } else {
+                clearInterval(timer);
+            }
+        }, 1000);
+        */
+
+      // VSL Anti-Skimming Logic (Prevents fast-forwarding)
+      const vslVideo = document.getElementById("vsl-video");
+      if (vslVideo) {
+        let supposedCurrentTime = 0;
+        vslVideo.addEventListener("timeupdate", function () {
+          if (!vslVideo.seeking) {
+            supposedCurrentTime = vslVideo.currentTime;
+          }
+        });
+        vslVideo.addEventListener("seeking", function () {
+          let delta = vslVideo.currentTime - supposedCurrentTime;
+          // If they try to scrub forward more than 1 second, snap them back.
+          // They can scrub backwards fine.
+          if (delta > 0.5) {
+            vslVideo.currentTime = supposedCurrentTime;
+          }
+        });
+      }
+
+      // Dynamic Pricing Logic based on Geolocation
+      async function fetchDynamicPricing() {
+        try {
+          const response = await fetch("https://ipapi.co/json/");
+          if (!response.ok) return;
+
+          const data = await response.json();
+
+          let currentPrice = "₦20,000";
+          let regularPrice = "₦50,000";
+          let totalValue = "₦295,000";
+
+          if (data.country === "GB") {
+            // UK Pricing
+            currentPrice = "£12";
+            regularPrice = "£30";
+            totalValue = "£180";
+          } else if (data.country !== "NG") {
+            // US / Global Pricing
+            currentPrice = "$15";
+            regularPrice = "$35";
+            totalValue = "$195";
+          }
+
+          // Update DOM if not Nigerian IP
+          if (data.country !== "NG") {
+            document
+              .querySelectorAll(".dynamic-price")
+              .forEach((el) => (el.innerHTML = currentPrice));
+            document
+              .querySelectorAll(".dynamic-regular-price")
+              .forEach((el) => (el.innerHTML = regularPrice));
+            document
+              .querySelectorAll(".dynamic-value-price")
+              .forEach((el) => (el.innerHTML = totalValue));
+          }
+        } catch (error) {
+          console.log("Dynamic pricing could not be loaded, defaulting to NGN");
+        }
+      }
+
+      // Execute dynamic pricing check
+      fetchDynamicPricing();
+    </script>
+  </body>
+</html>
