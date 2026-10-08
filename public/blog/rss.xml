@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>The Automate Stack Blog</title>
+    <link>https://www.theautomatestack.com/blog/</link>
+    <description>Straight answers on automating your sales inbox, DMs and backend, from The Automate Stack.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 08 Oct 2026 08:00:00 GMT</lastBuildDate>
+    <atom:link href="https://www.theautomatestack.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>How do I know which tasks in my business to automate first?</title>
+      <link>https://www.theautomatestack.com/blog/how-do-i-know-which-tasks-in-my-business-to-automate-first/</link>
+      <guid isPermaLink="true">https://www.theautomatestack.com/blog/how-do-i-know-which-tasks-in-my-business-to-automate-first/</guid>
+      <pubDate>Thu, 08 Oct 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Chinenye</dc:creator>
+      <category>automation</category>
+      <category>getting started</category>
+      <description>Start with the task you repeat most that needs no real thinking. Write down what you actually do for one week, then pick the one that eats the most time. Automate that one, test it, and only then pick the next.</description>
+      <content:encoded><![CDATA[<p>Do not start with the tool. Start with the task.</p>
+<p>Most people do it the other way round. They hear about a new tool, get excited, and go looking for something to point it at. Three weeks later it is sitting there, half set up, and nothing has changed.</p>
+<p>So here is a better order.</p>
+<p>Picture a normal Tuesday. You answer the same three questions in your DMs. You copy a customer&#39;s details into a sheet. You type the same payment details again for someone new. By evening you have done a lot, and none of it grew the business.</p>
+<p>And the question you would ask is: which of those do I fix first?</p>
+<h2>Look at where the hours leak</h2>
+<p>There are four places time usually leaks in a small business.</p>
+<ul>
+<li><strong>Lead capture and tracking.</strong> Someone shows interest and their details end up nowhere.</li>
+<li><strong>Manual work and repeated admin.</strong> The same copy, paste and retype, every day.</li>
+<li><strong>Data storage and security.</strong> Customer details sitting in places you would not want to explain.</li>
+<li><strong>Platform and audience risk.</strong> Your whole audience lives on one app you do not own.</li>
+</ul>
+<p>You do not need to fix all four. You need to see which one is costing you most.</p>
+<h2>Pick the boring one</h2>
+<p>The best first task to automate is boring. You repeat it often, it needs no real thinking, and you would not miss doing it.</p>
+<p>The worst first task is the one that needs your judgement. A difficult customer. A price you have to decide on the spot. Leave those with you.</p>
+<p>Say you sell fabric online. Your week list might look like this: answering &quot;is this still available?&quot; in your DMs, sending the same delivery details to every buyer, copying each order into a sheet, posting on Instagram, choosing new stock, and calming a buyer who got the wrong colour.</p>
+<p>Cross out choosing new stock and the wrong-colour complaint. Both need your judgement. What is left is repeat work. Of those, the DM questions and the delivery details come back every single day, so they cost you the most time.</p>
+<p>That is your first task. Not the clever one. The one that keeps coming back.</p>
+<h2>Why one at a time</h2>
+<p>It is tempting to fix everything in one weekend. Please do not.</p>
+<p>When you automate one task, you learn how it behaves. Where it breaks. What it does with a typo or a half-finished message. When you automate five, you learn none of that, and you will not know which one is causing the problem.</p>
+<p>There is also trust. You will only let a system run unwatched once you have seen it get the small things right. That takes a few days of checking it yourself. Do that for one task before you add another.</p>
+<h2>The steps</h2>
+<ol>
+<li><strong>Write down what you actually do for one week.</strong> Not what you think you do. Keep a running list.</li>
+<li><strong>Mark everything you repeat.</strong> If you did it more than twice, mark it.</li>
+<li><strong>Cross out anything that needs your judgement.</strong> That stays with you.</li>
+<li><strong>Pick the one that costs the most time.</strong> Only one.</li>
+<li><strong>Set it up, then test it with messy input.</strong> Typos, half sentences, odd requests. If it breaks, fix the setup before you trust it.</li>
+<li><strong>Move to the next one only when the first one holds.</strong></li>
+</ol>
+<p>It sounds slow. It is faster than setting up five things and trusting none of them.</p>
+<p>If you want a worksheet for the first step, the free AutoStack Checklist is called Get Your Lost Hours Back. You can <a href="https://www.theautomatestack.com/freebies/">get it here</a>.</p>
+<p>Pick the boring task. It is never the exciting one that gives you your hours back.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>How do I reply to Instagram DMs at night without staying awake?</title>
+      <link>https://www.theautomatestack.com/blog/how-do-i-reply-to-instagram-dms-at-night-without-staying-awake/</link>
+      <guid isPermaLink="true">https://www.theautomatestack.com/blog/how-do-i-reply-to-instagram-dms-at-night-without-staying-awake/</guid>
+      <pubDate>Thu, 08 Oct 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Chinenye</dc:creator>
+      <category>instagram dms</category>
+      <category>automation</category>
+      <description>Set up an automated DM system that reads the customer's actual message, answers it, and sends the checkout link. It runs on a server, not your phone, so a flat battery or a power cut does not stop it. You write the answers. The system delivers them.</description>
+      <content:encoded><![CDATA[<p>Most business owners answer DMs at night because they are scared of losing the sale. I get it.</p>
+<p>But think about what that costs you.</p>
+<p>Picture it. A customer sees your ad late at night. She asks if she can pay in two parts. Your phone is on 4%, the power is out, and you are asleep. She waits a while, then messages someone else.</p>
+<p>That is the problem. It is not that you are lazy. A person cannot be awake all night, and your ad does not stop running when you sleep.</p>
+<h2>Why the usual fix does not work</h2>
+<p>The usual fix is a comment-to-DM button. Someone comments a word, a menu pops up, and they tap a number.</p>
+<p>It works until a customer types a normal sentence. Or a typo. Or slang. Then the menu does not know what to do, and the customer is talking to a wall.</p>
+<p>And the question you would ask is: so what is the better way?</p>
+<h2>What to set up instead</h2>
+<p>You want a system that reads the message the way a person would. It answers the question, then moves the customer to checkout. It has to live on a server, so it does not depend on your phone, your battery or your generator.</p>
+<p>Say you run a fashion brand. The messages you get most are probably: &quot;How much is this one?&quot;, &quot;Is it available?&quot;, &quot;Do you deliver to Abuja?&quot;, &quot;How long will delivery take?&quot; and &quot;Can I pay half now?&quot;</p>
+<p>You already know the answers. The system&#39;s job is to send them, in your words, the moment the message lands. For &quot;Can I pay half now?&quot;, it sends your payment plan and then the checkout link. For &quot;Do you deliver to Abuja?&quot;, it answers and asks which item they want.</p>
+<p>The customer gets a reply while they are still looking. You wake up to a sale, not an apology.</p>
+<h2>Decide what happens when it does not know</h2>
+<p>No system answers everything. So decide, before you switch it on, what happens when a customer asks something you did not plan for.</p>
+<p>The simplest answer is honest. The system tells the customer you will reply in the morning, saves the message, and you pick it up when you wake. That is far better than a made-up answer, or silence.</p>
+<p>This is also the part people skip. They test the easy questions, see it work, and go to sleep. Then the odd question comes in at 2 AM.</p>
+<h2>Why your phone should not be the system</h2>
+<p>If your customer chats live on your own phone, you depend on your battery, your network and your power. A flat phone, a light out, a generator that is not running, and your sales funnel goes quiet while your ad keeps spending.</p>
+<p>Moving the replies to a server is not about being fancy. It is about taking the weakest part, your phone, out of the chain.</p>
+<h2>The steps</h2>
+<ol>
+<li><strong>Write down the ten questions customers ask most.</strong> Price, delivery, payment plans, refunds. Your own inbox already has them.</li>
+<li><strong>Write the answer to each one yourself.</strong> The system sends your words, not its own guesses.</li>
+<li><strong>Connect your checkout link and a backup payment option.</strong> If a card fails, the customer should see another way to pay right away.</li>
+<li><strong>Save the customer&#39;s contact details before sending the link.</strong> Then you can follow up later.</li>
+<li><strong>Test it with messy messages.</strong> Typos, half sentences, the way people really type. If it breaks, fix the answer, not the customer.</li>
+</ol>
+<p>Do not rush step five. This is where most setups fail, and it is the cheapest place to catch it.</p>
+<p>If you want to understand it first, you can <a href="https://www.theautomatestack.com/dm-automation/#consultation">book a one-on-one consultation</a>. If you want it built for your business, <a href="https://www.theautomatestack.com/dm-automation/">see how the DM system works</a>.</p>
+<p>I would rather spend an hour setting this up once than lose a sale every night.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Why does everything I write with AI sound like AI?</title>
+      <link>https://www.theautomatestack.com/blog/why-does-everything-i-write-with-ai-sound-like-ai/</link>
+      <guid isPermaLink="true">https://www.theautomatestack.com/blog/why-does-everything-i-write-with-ai-sound-like-ai/</guid>
+      <pubDate>Thu, 08 Oct 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Chinenye</dc:creator>
+      <category>ai writing</category>
+      <category>content</category>
+      <description>Because AI can only reshape what you give it. Give it a thin idea and it hands back a thin, generic post. Feed it your own words, your own example and a few plain rules, then edit what comes back before you post.</description>
+      <content:encoded><![CDATA[<p>Your AI does not sound like you because you did not give it you.</p>
+<p>That is the whole answer. The rest of this post is how to fix it.</p>
+<p>Here is what usually happens. You open Claude or ChatGPT and type: &quot;Write me a post about time management.&quot; The tool has nothing of yours to work with. So it reaches for the average of everything it has read. Polite. Tidy. A bit like a brochure.</p>
+<p>You read it and think, who wrote this?</p>
+<p>And the question you would ask is: so how do I make it sound like me?</p>
+<h2>Start with your own words, not an empty box</h2>
+<p>An AI tool can only reshape what you give it. Thin input gives thin posts.</p>
+<p>So give it something real. One lesson you teach, in three to six sentences. If typing feels slow, speak it into a voice note and paste the transcript. Your rhythm is in there. Your odd little phrases too.</p>
+<p>Say you coach freelancers on pricing. Here is the thin version you might type: &quot;Write a post about pricing.&quot;</p>
+<p>Here is the real version: &quot;Most freelancers price by guessing what the client can afford. I price by how long the work takes and what it has to cover. If a client says it is too much, I do not drop the price. I drop the scope.&quot;</p>
+<p>The first gives the tool nothing to hold on to. The second gives it a view, a rule and a reason. Same tool. Very different post.</p>
+<h2>Tell it your rules</h2>
+<p>Most of the &quot;AI sound&quot; is habits. Long sentences. Words nobody says out loud. Neat little lists of three adjectives. Cheerful endings that wrap everything up.</p>
+<p>Write your rules once and paste them in with every request. Plain words. Short sentences. No invented stories, numbers or client results. Say the thing, then stop.</p>
+<p>Now you want to know if the rules matter that much. They do. Without them the tool goes back to its defaults, and its defaults are what you are trying to escape.</p>
+<h2>Edit like it is your own draft</h2>
+<p>This part is not optional.</p>
+<p>Read what comes back out loud. Anything you would never say to a friend, cross it out. Anything that sounds too sure about a result you have not had, cross it out. What is left is closer to you than anything you could get in one click.</p>
+<p>Then add your own example from a real client or a real day. That is the line no tool can write for you, and it is the line people remember.</p>
+<h2>Four mistakes that make it worse</h2>
+<p><strong>Asking for everything at once.</strong> One request for a newsletter, ten captions and a video script gets you one flat blob. Ask for less and you get more of you.</p>
+<p><strong>Pasting a topic instead of a lesson.</strong> &quot;Productivity&quot; is a topic. &quot;Why I stopped checking my phone before I wrote&quot; is a lesson. The tool needs the second one.</p>
+<p><strong>Taking the first draft.</strong> The first draft is a rough cut. Treat it like one.</p>
+<p><strong>Letting it add stories.</strong> If a story did not happen, it should not be in your post. Say so in your rules, in plain words, every time.</p>
+<p>I know it feels slower than clicking once. But the post you edit for ten minutes is the post people reply to, and the one you click once is the one they scroll past.</p>
+<h2>The steps</h2>
+<ol>
+<li><strong>Write or speak one lesson you teach.</strong> Three to six sentences is enough.</li>
+<li><strong>Paste it in with your rules.</strong> Ask for your voice, plain words, and no invented stories, numbers or results.</li>
+<li><strong>Read the result out loud.</strong> Cross out anything you would never say.</li>
+<li><strong>Add one real example.</strong> A real client or a real day, never a made-up one.</li>
+<li><strong>Post one version and watch the response.</strong> Change one hook next time and compare.</li>
+</ol>
+<p>The full setup for this is in the Starter Kit, in the Create layer. This post is only the reason it works.</p>
+<p>I would rather post something plain that sounds like me than something polished that sounds like nobody.</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>
