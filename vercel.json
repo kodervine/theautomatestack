@@ -3,13 +3,70 @@
   "installCommand": "echo \"No install needed. The site is pre-built.\"",
   "buildCommand": "echo \"No build needed. Run npm run build before you push.\"",
   "redirects": [
-    { "source": "/home", "destination": "/services/", "permanent": true },
-    { "source": "/home/", "destination": "/services/", "permanent": true },
-    { "source": "/logo.png", "destination": "/assets/img/logo.png", "permanent": true },
-    { "source": "/hero.png", "destination": "/assets/img/hero.png", "permanent": true },
-    { "source": "/chinenye_image.png", "destination": "/assets/img/chinenye_image.png", "permanent": true },
-    { "source": "/workflows.png", "destination": "/assets/img/workflows.png", "permanent": true },
-    { "source": "/n8n_time_saved.png", "destination": "/assets/img/n8n_time_saved.png", "permanent": true },
-    { "source": "/sales_video.mp4", "destination": "/assets/video/sales_video.mp4", "permanent": true }
+    {
+      "source": "/home",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/home/",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/logo.png",
+      "destination": "/assets/img/logo.png",
+      "permanent": true
+    },
+    {
+      "source": "/hero.png",
+      "destination": "/assets/img/hero.png",
+      "permanent": true
+    },
+    {
+      "source": "/chinenye_image.png",
+      "destination": "/assets/img/chinenye_image.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/workflows.png",
+      "destination": "/assets/img/workflows.png",
+      "permanent": true
+    },
+    {
+      "source": "/n8n_time_saved.png",
+      "destination": "/assets/img/n8n_time_saved.png",
+      "permanent": true
+    },
+    {
+      "source": "/sales_video.mp4",
+      "destination": "/assets/video/sales_video.mp4",
+      "permanent": true
+    },
+    {
+      "source": "/assets/img/chinenye_image.png",
+      "destination": "/assets/img/chinenye_image.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/freebie",
+      "destination": "/freebies/",
+      "permanent": false
+    },
+    {
+      "source": "/free",
+      "destination": "/freebies/",
+      "permanent": false
+    },
+    {
+      "source": "/resources",
+      "destination": "/freebies/",
+      "permanent": false
+    },
+    {
+      "source": "/resources/",
+      "destination": "/freebies/",
+      "permanent": false
+    }
   ]
 }

@@ -60,8 +60,9 @@ http.createServer((req, res) => {
   }
   const file = resolveFile(req.url);
   if (!file || file.startsWith(path.join(ROOT, "node_modules")) || file.startsWith(path.join(ROOT, ".git"))) {
-    res.writeHead(404, { "content-type": "text/plain" });
-    return res.end("Not found");
+    const notFound = [OUT, PUBLIC].map((b) => path.join(b, "404.html")).find((f) => fs.existsSync(f));
+    res.writeHead(404, { "content-type": notFound ? "text/html; charset=utf-8" : "text/plain" });
+    return res.end(notFound ? fs.readFileSync(notFound) : "Not found");
   }
   res.writeHead(200, { "content-type": TYPES[path.extname(file).toLowerCase()] || "application/octet-stream", "cache-control": "no-store" });
   fs.createReadStream(file).pipe(res);

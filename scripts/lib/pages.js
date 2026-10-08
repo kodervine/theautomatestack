@@ -59,6 +59,15 @@ export function buildPages({ out, site, posts, drafts }) {
       title: `The AutoStack Starter Kit | ${site.publisher_name}`,
       description: "36 ready-to-run AI setups for your content, inbox, DMs and video editing, with prompts, a test checklist and community access.",
     },
+    {
+      path: "/404/",
+      file: "404.html",
+      template: "pages/404.html",
+      title: `Page not found | ${site.publisher_name}`,
+      description: "This page could not be found.",
+      noindex: true,
+      canonicalPath: "/",
+    },
   ];
 
   return pages.map((pg) => {
@@ -69,11 +78,11 @@ export function buildPages({ out, site, posts, drafts }) {
       page_title: pg.title,
       og_title: pg.title,
       description: pg.description,
-      canonical: `${site.site_url}${pg.path}`,
+      canonical: `${site.site_url}${pg.canonicalPath || pg.path}`,
       jsonld: pg.jsonld || "",
       robots: pg.noindex ? "noindex, nofollow" : base.robots,
     });
-    writeFile(path.join(out, pg.path.slice(1), "index.html"), html);
+    writeFile(pg.file ? path.join(out, pg.file) : path.join(out, pg.path.slice(1), "index.html"), html);
     return { path: pg.path, title: pg.title, description: pg.description, indexable: !pg.noindex };
   });
 }

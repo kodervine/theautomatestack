@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">Starter Kit or Blueprint</title>
+  <desc id="d">A decision chart. If you do not build with n8n, choose the Starter Kit. If you do, choose the Blueprint.</desc>
+  <rect width="1200" height="630" fill="#FBF9F4"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#C8996C"/>
+
+  <text x="60" y="84" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="52" fill="#1A1110">Starter Kit or Blueprint?</text>
+  <text x="60" y="124" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#746C61">One question decides it.</text>
+
+  <rect x="380" y="152" width="440" height="72" rx="10" fill="#1A1110"/>
+  <text x="600" y="198" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="32" fill="#FBF9F4">Do you build with n8n?</text>
+
+  <path d="M600 224 V252 H320 V292" fill="none" stroke="#C8996C" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M600 224 V252 H880 V292" fill="none" stroke="#C8996C" stroke-width="4" stroke-linejoin="round"/>
+  <polygon points="320,300 308,282 332,282" fill="#C8996C"/>
+  <polygon points="880,300 868,282 892,282" fill="#C8996C"/>
+  <text x="450" y="244" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="24" fill="#1A1110">No</text>
+  <text x="750" y="244" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="24" fill="#1A1110">Yes</text>
+
+  <rect x="60" y="304" width="520" height="270" rx="14" fill="#1A1110"/>
+  <text x="92" y="358" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="34" fill="#C8996C">The AutoStack Starter Kit</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#FBF9F4">
+    <tspan x="92" y="410">For business owners, creators</tspan>
+    <tspan x="92" y="444">and operators.</tspan>
+    <tspan x="92" y="492">AI does the work. 36 setups.</tspan>
+    <tspan x="92" y="526">No n8n needed.</tspan>
+  </text>
+
+  <rect x="620" y="304" width="520" height="270" rx="14" fill="#1A1110"/>
+  <text x="652" y="358" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="34" fill="#C8996C">The AutoStack Blueprint</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#FBF9F4">
+    <tspan x="652" y="410">For builders, VAs and DIY</tspan>
+    <tspan x="652" y="444">operators who use n8n.</tspan>
+    <tspan x="652" y="492">50 ready workflows, a client pitch</tspan>
+    <tspan x="652" y="526">script and a commercial license.</tspan>
+  </text>
+
+  <text x="60" y="610" font-family="Poppins, Arial, Helvetica, sans-serif" font-weight="700" font-size="20" letter-spacing="3" fill="#746C61">THEAUTOMATESTACK</text>
+</svg>
