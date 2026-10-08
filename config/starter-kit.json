@@ -1,0 +1,44 @@
+{
+  "faqs": [
+    {
+      "question": "I am not technical.",
+      "answer": "Every step is written. Layers 1 to 3 need no code, and the one advanced setup in Layer 4 is optional."
+    },
+    {
+      "question": "I tried AI tools and got overwhelmed.",
+      "answer": "The kit is built for that. It tells you what to do first: one pain, one setup, one week."
+    },
+    {
+      "question": "I do not have time.",
+      "answer": "Most setups take 10 to 30 minutes."
+    },
+    {
+      "question": "What if I get stuck?",
+      "answer": "Bring your screen to the weekend live class, or ask in the private community."
+    },
+    {
+      "question": "Do I need paid tools?",
+      "answer": "Some setups do. Each page says what it needs, and free options come first where they exist."
+    },
+    {
+      "question": "Is this the same as the AutoStack Blueprint?",
+      "answer": "No. The Starter Kit teaches you to set things up yourself with AI and no-code tools. The AutoStack Blueprint is a separate product of n8n engine automations for people who want more control."
+    },
+    {
+      "question": "Will it work for my business in Nigeria?",
+      "answer": "The examples use naira and bank alerts. A few tools are not available in every country. The setup page tells you when that matters."
+    },
+    {
+      "question": "What if a tool changes?",
+      "answer": "Tools change their menus and free limits often. When that happens, the setup page is updated and the change is logged on the New This Week page. You can also ask in the community."
+    },
+    {
+      "question": "How do I get the kit?",
+      "answer": "After payment, you get a link to the kit and an invite to the community. Open it on your phone or your laptop."
+    },
+    {
+      "question": "Can I share the kit with someone?",
+      "answer": "No. The kit is for the person who bought it. You can share your affiliate link and earn 30% when they buy their own."
+    }
+  ]
+}

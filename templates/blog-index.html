@@ -1,18 +1,128 @@
-<div class="wrap">
-  <header class="page-head">
+<section class="hero hero--short blog-hero">
+  <div class="wrap">
     <p class="eyebrow">Blog</p>
     <h1>{{heading}}</h1>
-    <p>{{blog_description}}</p>
-    {{#if tags}}<ul class="tag-list" aria-label="Topics">
-{{#each tags}}      <li><a href="{{url}}">{{name}}</a></li>
-{{/each}}    </ul>{{/if}}
-  </header>
-  <ul class="cards">
-{{#each posts}}    <li class="card">
-      <h2><a href="{{url}}">{{title}}</a></h2>
-      <p>{{summary}}</p>
-      <p class="meta"><time datetime="{{date}}">{{date_display}}</time> &middot; {{reading_time}} min read</p>
-    </li>
-{{/each}}  </ul>
-  {{{pager}}}
-</div>
+    <p class="lead">{{blog_description}}</p>
+
+    <form id="blog-search" class="search" role="search" hidden>
+      <label for="q" class="visually-hidden">Search posts</label>
+      <input id="q" name="q" type="search" placeholder="Search posts by keyword or topic" autocomplete="off">
+    </form>
+
+    <div class="topic-row">
+      <ul class="tag-list tag-list--row" aria-label="Topics">
+        <li><a class="chip" href="/blog/" data-tag="" aria-current="page">All <span>{{total_posts}}</span></a></li>
+{{#each tags_top}}        <li><a class="chip" href="{{url}}" data-tag="{{name}}">{{name}} <span>{{count}}</span></a></li>
+{{/each}}      </ul>
+{{#if tags_rest}}      <details class="more-tags">
+        <summary>More topics ({{tags_rest_count}})</summary>
+        <ul class="tag-list tag-list--row">
+{{#each tags_rest}}          <li><a class="chip" href="{{url}}" data-tag="{{name}}">{{name}} <span>{{count}}</span></a></li>
+{{/each}}        </ul>
+      </details>
+{{/if}}    </div>
+  </div>
+</section>
+
+<section class="section blog-list">
+  <div class="wrap">
+    <p id="blog-status" class="blog-status" role="status" aria-live="polite" hidden></p>
+    <div id="blog-results" hidden></div>
+    <div id="blog-default">
+      <ul class="cards" id="post-list">
+{{#each posts}}        <li class="card card--post">
+          {{{thumb}}}
+          <div class="card-body">
+            {{{label_html}}}
+            <h2><a href="{{url}}">{{title}}</a></h2>
+            <p>{{summary}}</p>
+            <p class="meta"><time datetime="{{date}}">{{date_display}}</time> &middot; {{reading_time}} min read</p>
+          </div>
+        </li>
+{{/each}}      </ul>
+      {{{pager}}}
+    </div>
+  </div>
+</section>
+<script>
+(function () {
+  var form = document.getElementById("blog-search");
+  if (!form || !window.fetch) return;
+  form.hidden = false;
+  var input = document.getElementById("q"), status = document.getElementById("blog-status");
+  var results = document.getElementById("blog-results"), normal = document.getElementById("blog-default");
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
+  var more = document.querySelector(".more-tags");
+  var data = null, ticket = 0, state = { q: "", tag: "" };
+
+  function load() {
+    if (data) return Promise.resolve(data);
+    return fetch("/blog/search.json").then(function (r) { return r.json(); }).then(function (d) { data = d; return d; });
+  }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
+  function matches(p) {
+    if (state.tag && p.tags.indexOf(state.tag) < 0) return false;
+    var words = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+    var hay = (p.title + " " + p.summary + " " + p.tags.join(" ")).toLowerCase();
+    return words.every(function (w) { return hay.indexOf(w) >= 0; });
+  }
+  function sync() {
+    var qs = [];
+    if (state.q) qs.push("q=" + encodeURIComponent(state.q));
+    if (state.tag) qs.push("tag=" + encodeURIComponent(state.tag));
+    history.replaceState(null, "", location.pathname + (qs.length ? "?" + qs.join("&") : ""));
+    chips.forEach(function (c) {
+      var on = c.getAttribute("data-tag") === state.tag;
+      c.setAttribute("aria-pressed", on ? "true" : "false");
+      if (on) c.setAttribute("aria-current", "true"); else c.removeAttribute("aria-current");
+      if (on && more && more.contains(c)) more.open = true;
+    });
+  }
+  function card(p) {
+    var li = el("li", "card card--post");
+    if (p.image) {
+      var ta = el("a", "card-thumb"); ta.href = p.url; ta.tabIndex = -1; ta.setAttribute("aria-hidden", "true");
+      var im = el("img"); im.src = p.image; im.alt = ""; im.width = 1200; im.height = 630; im.loading = "lazy";
+      ta.appendChild(im); li.appendChild(ta);
+    }
+    var body = el("div", "card-body");
+    if (p.tags[0]) body.appendChild(el("p", "label", p.tags[0]));
+    var h = el("h2"), a = el("a", "", p.title); a.href = p.url; h.appendChild(a);
+    body.appendChild(h);
+    body.appendChild(el("p", "", p.summary));
+    body.appendChild(el("p", "meta", p.date_display + " · " + p.reading_time + " min read"));
+    li.appendChild(body);
+    return li;
+  }
+  function render() {
+    var mine = ++ticket;
+    sync();
+    if (!state.q && !state.tag) { results.hidden = true; status.hidden = true; normal.hidden = false; return; }
+    load().then(function (posts) {
+      if (mine !== ticket) return; // a newer search or filter replaced this one
+      var found = posts.filter(matches);
+      results.textContent = "";
+      var ul = el("ul", "cards");
+      found.forEach(function (p) { ul.appendChild(card(p)); });
+      results.appendChild(ul);
+      var what = (state.tag ? "“" + state.tag + "”" : "") + (state.tag && state.q ? " and " : "") + (state.q ? "“" + state.q + "”" : "");
+      status.textContent = found.length ? found.length + (found.length === 1 ? " post for " : " posts for ") + what + "." : "No posts match " + what + ". Try fewer words or pick All.";
+      status.hidden = false; results.hidden = false; normal.hidden = true;
+    }).catch(function () { normal.hidden = false; });
+  }
+  form.addEventListener("submit", function (e) { e.preventDefault(); });
+  input.addEventListener("input", function () { state.q = input.value.trim(); render(); });
+  chips.forEach(function (c) {
+    c.addEventListener("click", function (e) {
+      e.preventDefault();
+      var t = c.getAttribute("data-tag");
+      state.tag = state.tag === t ? "" : t;
+      render();
+    });
+  });
+  var params = new URLSearchParams(location.search);
+  state.q = params.get("q") || ""; state.tag = params.get("tag") || "";
+  input.value = state.q;
+  render();
+})();
+</script>

@@ -10,7 +10,7 @@ import {
 } from "./lib/util.js";
 import { loadAllPosts, sitePosts, tagSlug } from "./lib/posts.js";
 import { renderPage } from "./lib/template.js";
-import { renderMarkdown, ctaItems, faqHtml, articleJsonLd, faqJsonLd, jsonLdScripts, navItems } from "./lib/render.js";
+import { renderMarkdown, ctaItems, faqHtml, articleJsonLd, faqJsonLd, jsonLdScripts, navMarkup } from "./lib/render.js";
 import { buildPages } from "./lib/pages.js";
 
 const KEEP_IN_BLOG = new Set(["images"]); // downloaded Notion images must survive rebuilds
@@ -45,7 +45,8 @@ export function build({ out = PUBLIC, drafts = false, quiet = false } = {}) {
     author_initial: site.author_name.charAt(0).toUpperCase(),
     cta_items: ctaItems(site),
     draft_banner: drafts,
-    nav: navItems("/blog/", posts.length > 0),
+    nav_desktop: navMarkup("/blog/", posts.length > 0).desktop,
+    nav_mobile: navMarkup("/blog/", posts.length > 0).mobile,
     has_blog: posts.length > 0,
   };
 
@@ -82,6 +83,8 @@ export function build({ out = PUBLIC, drafts = false, quiet = false } = {}) {
   const card = (p) => ({
     url: `/blog/${p.slug}/`, title: p.title, summary: p.summary,
     date: p.date, date_display: displayDate(p.date), reading_time: p.reading_time,
+    thumb: p.image ? `<a class="card-thumb" href="/blog/${p.slug}/" tabindex="-1" aria-hidden="true"><img src="${esc(p.image)}" alt="" width="1200" height="630" loading="lazy"></a>` : "",
+    label_html: p.tags[0] ? `<p class="label">${esc(p.tags[0])}</p>` : "",
   });
   const noindex = drafts ? "noindex, nofollow" : "";
   const pageCommon = (extra) => ({
@@ -101,6 +104,7 @@ export function build({ out = PUBLIC, drafts = false, quiet = false } = {}) {
       .slice(0, 3)
       .map((x) => card(x.o));
     const desc = metaDescription(p.summary);
+    if (!p.image) warnings.push(`${p.filename}: no cover image. Add "image:" to the front matter (see CLAUDE.md).`);
     if (p.title.length > 110) warnings.push(`${p.filename}: title is over 110 characters, search engines may cut it`);
     const articleMeta = [
       `<meta property="article:published_time" content="${p.date}">`,
@@ -134,6 +138,14 @@ export function build({ out = PUBLIC, drafts = false, quiet = false } = {}) {
     writeFile(path.join(blogDir, p.slug, "index.html"), html);
   }
 
+  // Search data for the blog page (title, summary, tags). The page fetches it only when someone searches or filters.
+  writeFile(path.join(blogDir, "search.json"), JSON.stringify(posts.map((p) => ({
+    title: p.title, url: `/blog/${p.slug}/`, summary: p.summary, date: p.date,
+    date_display: displayDate(p.date), reading_time: p.reading_time, tags: p.tags, image: p.image || "",
+  }))));
+  const TOP_TAGS = 6;
+  const tagChip = (t) => ({ url: `/blog/tags/${t.slug}/`, name: t.name, count: t.posts.length });
+
   // Blog index (paginated)
   const per = site.posts_per_page || 10;
   const pages = Math.ceil(posts.length / per);
@@ -154,7 +166,10 @@ export function build({ out = PUBLIC, drafts = false, quiet = false } = {}) {
       canonical: `${site.site_url}${pageUrl(n)}`,
       prev_next_links: links.join("\n  "),
       heading: site.blog_title,
-      tags: n === 1 ? tags.map((t) => ({ url: `/blog/tags/${t.slug}/`, name: t.name })) : [],
+      tags_top: tags.slice(0, TOP_TAGS).map(tagChip),
+      tags_rest: tags.slice(TOP_TAGS).map(tagChip),
+      tags_rest_count: Math.max(0, tags.length - TOP_TAGS),
+      total_posts: posts.length,
       posts: slice,
       pager,
     });

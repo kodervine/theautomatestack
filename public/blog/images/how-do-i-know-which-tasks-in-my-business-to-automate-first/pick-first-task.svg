@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">Which task do you automate first?</title>
+  <desc id="d">Four steps. Write down everything you do for one week. Mark what you repeat more than twice. Cross out what needs your judgement. Pick the one that costs the most time. Automate that one first.</desc>
+  <rect width="1200" height="630" fill="#FBF9F4"/>
+  <rect width="1200" height="8" fill="#C8996C"/>
+  <text x="60" y="84" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="52" fill="#1A1110">Which task do you automate first?</text>
+  <text x="60" y="124" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#746C61">Start with the task, not the tool.</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#1A1110">
+    <rect x="60" y="170" width="240" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+    <text x="84" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">1</text>
+    <text><tspan x="84" y="280">Write down</tspan><tspan x="84" y="312">everything you</tspan><tspan x="84" y="344">do for one week</tspan></text>
+
+    <rect x="340" y="170" width="240" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+    <text x="364" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">2</text>
+    <text><tspan x="364" y="280">Mark what you</tspan><tspan x="364" y="312">repeat more</tspan><tspan x="364" y="344">than twice</tspan></text>
+
+    <rect x="620" y="170" width="240" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+    <text x="644" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">3</text>
+    <text><tspan x="644" y="280">Cross out what</tspan><tspan x="644" y="312">needs your</tspan><tspan x="644" y="344">judgement</tspan></text>
+
+    <rect x="900" y="170" width="240" height="230" rx="12" fill="#1A1110"/>
+    <text x="924" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">4</text>
+    <text fill="#FBF9F4"><tspan x="924" y="280">Pick the one</tspan><tspan x="924" y="312">that costs the</tspan><tspan x="924" y="344">most time</tspan></text>
+  </g>
+  <g fill="#C8996C">
+    <polygon points="312,285 332,285 322,272" transform="rotate(90 322 285)"/>
+    <polygon points="592,285 612,285 602,272" transform="rotate(90 602 285)"/>
+    <polygon points="872,285 892,285 882,272" transform="rotate(90 882 285)"/>
+  </g>
+
+  <rect x="60" y="440" width="1080" height="96" rx="12" fill="#C8996C"/>
+  <text x="600" y="499" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="32" fill="#1A1110">Automate that one. Test it. Then pick the next.</text>
+  <text x="60" y="590" font-family="Poppins, Arial, Helvetica, sans-serif" font-weight="700" font-size="16" letter-spacing="3" fill="#746C61">THEAUTOMATESTACK</text>
+</svg>

@@ -89,7 +89,7 @@ function checkHtml(file) {
       }
       if (j["@type"] === "FAQPage") {
         if (!j.mainEntity?.length) fail(rel, "FAQPage has no questions");
-        const faqCount = (html.match(/<h3>/g) || []).length;
+        const faqCount = (html.match(/<h3>/g) || []).length + (html.match(/<summary>/g) || []).length;
         if (j.mainEntity.length > faqCount) fail(rel, "FAQPage lists questions not visible on the page");
       }
     } catch (err) {

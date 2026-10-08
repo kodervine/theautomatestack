@@ -41,55 +41,193 @@
     </a>
     <nav class="site-nav" aria-label="Main">
       <a href="/freebies/">Start here</a>
-      <a href="/starter-kit/">Starter Kit</a>
-      <a href="/blueprint/">Blueprint</a>
-      <a href="/services/">Consulting</a>
-      <a href="/dm-automation/">DM Automation</a>
+      <div class="menu">
+        <button type="button" class="menu-btn" aria-haspopup="true">Products</button>
+        <ul class="menu-panel">
+          <li><a href="/starter-kit/"><strong>Starter Kit</strong><span>36 AI setups for your business</span></a></li>
+          <li><a href="/blueprint/"><strong>Blueprint</strong><span>50 ready n8n workflows</span></a></li>
+        </ul>
+      </div>
+      <div class="menu">
+        <button type="button" class="menu-btn" aria-haspopup="true">Work with me</button>
+        <ul class="menu-panel">
+          <li><a href="/services/"><strong>Consulting</strong><span>Process consultation and audits</span></a></li>
+          <li><a href="/dm-automation/"><strong>DM Automation</strong><span>Replies while you sleep</span></a></li>
+        </ul>
+      </div>
       <a href="/blog/" aria-current="page">Blog</a>
     </nav>
-    <a class="btn" href="/freebies/">Free Checklist</a>
+    <a class="btn header-cta" href="/freebies/">Free Checklist</a>
+    <details class="mobile-nav">
+      <summary>Menu</summary>
+      <nav aria-label="Mobile">
+        <a href="/freebies/">Start here</a>
+        <a href="/starter-kit/">Starter Kit</a>
+        <a href="/blueprint/">Blueprint</a>
+        <a href="/services/">Consulting</a>
+        <a href="/dm-automation/">DM Automation</a>
+        <a href="/blog/">Blog</a>
+        <a href="/freebies/" class="btn">Free Checklist</a>
+      </nav>
+    </details>
   </div>
 </header>
 
   <main id="main">
-<div class="wrap">
-  <header class="page-head">
+<section class="hero hero--short blog-hero">
+  <div class="wrap">
     <p class="eyebrow">Blog</p>
     <h1>The Automate Stack Blog</h1>
-    <p>Straight answers on automating your sales inbox, DMs and backend, from The Automate Stack.</p>
-    <ul class="tag-list" aria-label="Topics">
-      <li><a href="/blog/tags/automation/">automation</a></li>
-      <li><a href="/blog/tags/getting-started/">getting started</a></li>
-      <li><a href="/blog/tags/ai-writing/">ai writing</a></li>
-      <li><a href="/blog/tags/content/">content</a></li>
-      <li><a href="/blog/tags/instagram-dms/">instagram dms</a></li>
-      <li><a href="/blog/tags/starter-kit/">starter kit</a></li>
-    </ul>
-  </header>
-  <ul class="cards">
-    <li class="card">
-      <h2><a href="/blog/how-do-i-know-which-tasks-in-my-business-to-automate-first/">How do I know which tasks in my business to automate first?</a></h2>
-      <p>Start with the task you repeat most that needs no real thinking. Write down what you actually do for one week, then pick the one that eats the most time. Automate that one, test it, and only then pick the next.</p>
-      <p class="meta"><time datetime="2026-10-08">8 October 2026</time> &middot; 3 min read</p>
-    </li>
-    <li class="card">
-      <h2><a href="/blog/how-do-i-reply-to-instagram-dms-at-night-without-staying-awake/">How do I reply to Instagram DMs at night without staying awake?</a></h2>
-      <p>Set up an automated DM system that reads the customer&#39;s actual message, answers it, and sends the checkout link. It runs on a server, not your phone, so a flat battery or a power cut does not stop it. You write the answers. The system delivers them.</p>
-      <p class="meta"><time datetime="2026-10-08">8 October 2026</time> &middot; 3 min read</p>
-    </li>
-    <li class="card">
-      <h2><a href="/blog/starter-kit-or-blueprint-which-one-should-i-buy/">Starter Kit or Blueprint: which one should I buy?</a></h2>
-      <p>Buy the Starter Kit if you want AI to do real work in your business and you do not use n8n. Buy the Blueprint if you build with n8n and want 50 ready workflows. If you are not sure, start with the free Checklist.</p>
-      <p class="meta"><time datetime="2026-10-08">8 October 2026</time> &middot; 2 min read</p>
-    </li>
-    <li class="card">
-      <h2><a href="/blog/why-does-everything-i-write-with-ai-sound-like-ai/">Why does everything I write with AI sound like AI?</a></h2>
-      <p>Because AI can only reshape what you give it. Give it a thin idea and it hands back a thin, generic post. Feed it your own words, your own example and a few plain rules, then edit what comes back before you post.</p>
-      <p class="meta"><time datetime="2026-10-08">8 October 2026</time> &middot; 3 min read</p>
-    </li>
-  </ul>
-  
-</div>
+    <p class="lead">Straight answers on automating your sales inbox, DMs and backend, from The Automate Stack.</p>
+
+    <form id="blog-search" class="search" role="search" hidden>
+      <label for="q" class="visually-hidden">Search posts</label>
+      <input id="q" name="q" type="search" placeholder="Search posts by keyword or topic" autocomplete="off">
+    </form>
+
+    <div class="topic-row">
+      <ul class="tag-list tag-list--row" aria-label="Topics">
+        <li><a class="chip" href="/blog/" data-tag="" aria-current="page">All <span>4</span></a></li>
+        <li><a class="chip" href="/blog/tags/automation/" data-tag="automation">automation <span>2</span></a></li>
+        <li><a class="chip" href="/blog/tags/getting-started/" data-tag="getting started">getting started <span>2</span></a></li>
+        <li><a class="chip" href="/blog/tags/ai-writing/" data-tag="ai writing">ai writing <span>1</span></a></li>
+        <li><a class="chip" href="/blog/tags/content/" data-tag="content">content <span>1</span></a></li>
+        <li><a class="chip" href="/blog/tags/instagram-dms/" data-tag="instagram dms">instagram dms <span>1</span></a></li>
+        <li><a class="chip" href="/blog/tags/starter-kit/" data-tag="starter kit">starter kit <span>1</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section blog-list">
+  <div class="wrap">
+    <p id="blog-status" class="blog-status" role="status" aria-live="polite" hidden></p>
+    <div id="blog-results" hidden></div>
+    <div id="blog-default">
+      <ul class="cards" id="post-list">
+        <li class="card card--post">
+          <a class="card-thumb" href="/blog/how-do-i-know-which-tasks-in-my-business-to-automate-first/" tabindex="-1" aria-hidden="true"><img src="/blog/images/how-do-i-know-which-tasks-in-my-business-to-automate-first/pick-first-task.png" alt="" width="1200" height="630" loading="lazy"></a>
+          <div class="card-body">
+            <p class="label">automation</p>
+            <h2><a href="/blog/how-do-i-know-which-tasks-in-my-business-to-automate-first/">How do I know which tasks in my business to automate first?</a></h2>
+            <p>Start with the task you repeat most that needs no real thinking. Write down what you actually do for one week, then pick the one that eats the most time. Automate that one, test it, and only then pick the next.</p>
+            <p class="meta"><time datetime="2026-10-08">8 October 2026</time> &middot; 3 min read</p>
+          </div>
+        </li>
+        <li class="card card--post">
+          <a class="card-thumb" href="/blog/how-do-i-reply-to-instagram-dms-at-night-without-staying-awake/" tabindex="-1" aria-hidden="true"><img src="/blog/images/how-do-i-reply-to-instagram-dms-at-night-without-staying-awake/dm-flow.png" alt="" width="1200" height="630" loading="lazy"></a>
+          <div class="card-body">
+            <p class="label">instagram dms</p>
+            <h2><a href="/blog/how-do-i-reply-to-instagram-dms-at-night-without-staying-awake/">How do I reply to Instagram DMs at night without staying awake?</a></h2>
+            <p>Set up an automated DM system that reads the customer&#39;s actual message, answers it, and sends the checkout link. It runs on a server, not your phone, so a flat battery or a power cut does not stop it. You write the answers. The system delivers them.</p>
+            <p class="meta"><time datetime="2026-10-08">8 October 2026</time> &middot; 4 min read</p>
+          </div>
+        </li>
+        <li class="card card--post">
+          <a class="card-thumb" href="/blog/starter-kit-or-blueprint-which-one-should-i-buy/" tabindex="-1" aria-hidden="true"><img src="/blog/images/starter-kit-or-blueprint-which-one-should-i-buy/which-one.png" alt="" width="1200" height="630" loading="lazy"></a>
+          <div class="card-body">
+            <p class="label">starter kit</p>
+            <h2><a href="/blog/starter-kit-or-blueprint-which-one-should-i-buy/">Starter Kit or Blueprint: which one should I buy?</a></h2>
+            <p>Buy the Starter Kit if you want AI to do real work in your business and you do not use n8n. Buy the Blueprint if you build with n8n and want 50 ready workflows. If you are not sure, start with the free Checklist.</p>
+            <p class="meta"><time datetime="2026-10-08">8 October 2026</time> &middot; 2 min read</p>
+          </div>
+        </li>
+        <li class="card card--post">
+          <a class="card-thumb" href="/blog/why-does-everything-i-write-with-ai-sound-like-ai/" tabindex="-1" aria-hidden="true"><img src="/blog/images/why-does-everything-i-write-with-ai-sound-like-ai/thin-vs-real.png" alt="" width="1200" height="630" loading="lazy"></a>
+          <div class="card-body">
+            <p class="label">ai writing</p>
+            <h2><a href="/blog/why-does-everything-i-write-with-ai-sound-like-ai/">Why does everything I write with AI sound like AI?</a></h2>
+            <p>Because AI can only reshape what you give it. Give it a thin idea and it hands back a thin, generic post. Feed it your own words, your own example and a few plain rules, then edit what comes back before you post.</p>
+            <p class="meta"><time datetime="2026-10-08">8 October 2026</time> &middot; 4 min read</p>
+          </div>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</section>
+<script>
+(function () {
+  var form = document.getElementById("blog-search");
+  if (!form || !window.fetch) return;
+  form.hidden = false;
+  var input = document.getElementById("q"), status = document.getElementById("blog-status");
+  var results = document.getElementById("blog-results"), normal = document.getElementById("blog-default");
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
+  var more = document.querySelector(".more-tags");
+  var data = null, ticket = 0, state = { q: "", tag: "" };
+
+  function load() {
+    if (data) return Promise.resolve(data);
+    return fetch("/blog/search.json").then(function (r) { return r.json(); }).then(function (d) { data = d; return d; });
+  }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
+  function matches(p) {
+    if (state.tag && p.tags.indexOf(state.tag) < 0) return false;
+    var words = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+    var hay = (p.title + " " + p.summary + " " + p.tags.join(" ")).toLowerCase();
+    return words.every(function (w) { return hay.indexOf(w) >= 0; });
+  }
+  function sync() {
+    var qs = [];
+    if (state.q) qs.push("q=" + encodeURIComponent(state.q));
+    if (state.tag) qs.push("tag=" + encodeURIComponent(state.tag));
+    history.replaceState(null, "", location.pathname + (qs.length ? "?" + qs.join("&") : ""));
+    chips.forEach(function (c) {
+      var on = c.getAttribute("data-tag") === state.tag;
+      c.setAttribute("aria-pressed", on ? "true" : "false");
+      if (on) c.setAttribute("aria-current", "true"); else c.removeAttribute("aria-current");
+      if (on && more && more.contains(c)) more.open = true;
+    });
+  }
+  function card(p) {
+    var li = el("li", "card card--post");
+    if (p.image) {
+      var ta = el("a", "card-thumb"); ta.href = p.url; ta.tabIndex = -1; ta.setAttribute("aria-hidden", "true");
+      var im = el("img"); im.src = p.image; im.alt = ""; im.width = 1200; im.height = 630; im.loading = "lazy";
+      ta.appendChild(im); li.appendChild(ta);
+    }
+    var body = el("div", "card-body");
+    if (p.tags[0]) body.appendChild(el("p", "label", p.tags[0]));
+    var h = el("h2"), a = el("a", "", p.title); a.href = p.url; h.appendChild(a);
+    body.appendChild(h);
+    body.appendChild(el("p", "", p.summary));
+    body.appendChild(el("p", "meta", p.date_display + " · " + p.reading_time + " min read"));
+    li.appendChild(body);
+    return li;
+  }
+  function render() {
+    var mine = ++ticket;
+    sync();
+    if (!state.q && !state.tag) { results.hidden = true; status.hidden = true; normal.hidden = false; return; }
+    load().then(function (posts) {
+      if (mine !== ticket) return; // a newer search or filter replaced this one
+      var found = posts.filter(matches);
+      results.textContent = "";
+      var ul = el("ul", "cards");
+      found.forEach(function (p) { ul.appendChild(card(p)); });
+      results.appendChild(ul);
+      var what = (state.tag ? "“" + state.tag + "”" : "") + (state.tag && state.q ? " and " : "") + (state.q ? "“" + state.q + "”" : "");
+      status.textContent = found.length ? found.length + (found.length === 1 ? " post for " : " posts for ") + what + "." : "No posts match " + what + ". Try fewer words or pick All.";
+      status.hidden = false; results.hidden = false; normal.hidden = true;
+    }).catch(function () { normal.hidden = false; });
+  }
+  form.addEventListener("submit", function (e) { e.preventDefault(); });
+  input.addEventListener("input", function () { state.q = input.value.trim(); render(); });
+  chips.forEach(function (c) {
+    c.addEventListener("click", function (e) {
+      e.preventDefault();
+      var t = c.getAttribute("data-tag");
+      state.tag = state.tag === t ? "" : t;
+      render();
+    });
+  });
+  var params = new URLSearchParams(location.search);
+  state.q = params.get("q") || ""; state.tag = params.get("tag") || "";
+  input.value = state.q;
+  render();
+})();
+</script>
 
   </main>
   <footer class="site-footer">

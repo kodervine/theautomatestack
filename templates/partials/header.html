@@ -5,8 +5,14 @@
       <span>theautomatestack</span>
     </a>
     <nav class="site-nav" aria-label="Main">
-{{#each nav}}      <a href="{{url}}"{{{current}}}>{{label}}</a>
-{{/each}}    </nav>
-    <a class="btn" href="/freebies/">Free Checklist</a>
+      {{{nav_desktop}}}
+    </nav>
+    <a class="btn header-cta" href="/freebies/">Free Checklist</a>
+    <details class="mobile-nav">
+      <summary>Menu</summary>
+      <nav aria-label="Mobile">
+        {{{nav_mobile}}}
+      </nav>
+    </details>
   </div>
 </header>

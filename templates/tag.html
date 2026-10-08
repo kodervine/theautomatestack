@@ -1,15 +1,24 @@
-<div class="wrap">
-  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/blog/">Blog</a> / <span>{{tag_name}}</span></nav>
-  <header class="page-head">
-    <p class="eyebrow">Topic</p>
+<section class="hero hero--short blog-hero">
+  <div class="wrap">
+    <p class="eyebrow"><a href="/blog/">Blog</a> / Topic</p>
     <h1>{{tag_name}}</h1>
-    <p>{{count}} {{post_word}} tagged {{tag_name}}.</p>
-  </header>
-  <ul class="cards">
-{{#each posts}}    <li class="card">
-      <h2><a href="{{url}}">{{title}}</a></h2>
-      <p>{{summary}}</p>
-      <p class="meta"><time datetime="{{date}}">{{date_display}}</time> &middot; {{reading_time}} min read</p>
-    </li>
-{{/each}}  </ul>
-</div>
+    <p class="lead">{{count}} {{post_word}} tagged {{tag_name}}.</p>
+  </div>
+</section>
+
+<section class="section blog-list">
+  <div class="wrap">
+    <ul class="cards">
+{{#each posts}}      <li class="card card--post">
+        {{{thumb}}}
+        <div class="card-body">
+          {{{label_html}}}
+          <h2><a href="{{url}}">{{title}}</a></h2>
+          <p>{{summary}}</p>
+          <p class="meta"><time datetime="{{date}}">{{date_display}}</time> &middot; {{reading_time}} min read</p>
+        </div>
+      </li>
+{{/each}}    </ul>
+    <p class="more"><a href="/blog/">All posts</a></p>
+  </div>
+</section>

@@ -41,32 +41,63 @@
     </a>
     <nav class="site-nav" aria-label="Main">
       <a href="/freebies/">Start here</a>
-      <a href="/starter-kit/">Starter Kit</a>
-      <a href="/blueprint/">Blueprint</a>
-      <a href="/services/">Consulting</a>
-      <a href="/dm-automation/">DM Automation</a>
+      <div class="menu">
+        <button type="button" class="menu-btn" aria-haspopup="true">Products</button>
+        <ul class="menu-panel">
+          <li><a href="/starter-kit/"><strong>Starter Kit</strong><span>36 AI setups for your business</span></a></li>
+          <li><a href="/blueprint/"><strong>Blueprint</strong><span>50 ready n8n workflows</span></a></li>
+        </ul>
+      </div>
+      <div class="menu">
+        <button type="button" class="menu-btn" aria-haspopup="true">Work with me</button>
+        <ul class="menu-panel">
+          <li><a href="/services/"><strong>Consulting</strong><span>Process consultation and audits</span></a></li>
+          <li><a href="/dm-automation/"><strong>DM Automation</strong><span>Replies while you sleep</span></a></li>
+        </ul>
+      </div>
       <a href="/blog/" aria-current="page">Blog</a>
     </nav>
-    <a class="btn" href="/freebies/">Free Checklist</a>
+    <a class="btn header-cta" href="/freebies/">Free Checklist</a>
+    <details class="mobile-nav">
+      <summary>Menu</summary>
+      <nav aria-label="Mobile">
+        <a href="/freebies/">Start here</a>
+        <a href="/starter-kit/">Starter Kit</a>
+        <a href="/blueprint/">Blueprint</a>
+        <a href="/services/">Consulting</a>
+        <a href="/dm-automation/">DM Automation</a>
+        <a href="/blog/">Blog</a>
+        <a href="/freebies/" class="btn">Free Checklist</a>
+      </nav>
+    </details>
   </div>
 </header>
 
   <main id="main">
-<div class="wrap">
-  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/blog/">Blog</a> / <span>content</span></nav>
-  <header class="page-head">
-    <p class="eyebrow">Topic</p>
+<section class="hero hero--short blog-hero">
+  <div class="wrap">
+    <p class="eyebrow"><a href="/blog/">Blog</a> / Topic</p>
     <h1>content</h1>
-    <p>1 post tagged content.</p>
-  </header>
-  <ul class="cards">
-    <li class="card">
-      <h2><a href="/blog/why-does-everything-i-write-with-ai-sound-like-ai/">Why does everything I write with AI sound like AI?</a></h2>
-      <p>Because AI can only reshape what you give it. Give it a thin idea and it hands back a thin, generic post. Feed it your own words, your own example and a few plain rules, then edit what comes back before you post.</p>
-      <p class="meta"><time datetime="2026-10-08">8 October 2026</time> &middot; 3 min read</p>
-    </li>
-  </ul>
-</div>
+    <p class="lead">1 post tagged content.</p>
+  </div>
+</section>
+
+<section class="section blog-list">
+  <div class="wrap">
+    <ul class="cards">
+      <li class="card card--post">
+        <a class="card-thumb" href="/blog/why-does-everything-i-write-with-ai-sound-like-ai/" tabindex="-1" aria-hidden="true"><img src="/blog/images/why-does-everything-i-write-with-ai-sound-like-ai/thin-vs-real.png" alt="" width="1200" height="630" loading="lazy"></a>
+        <div class="card-body">
+          <p class="label">ai writing</p>
+          <h2><a href="/blog/why-does-everything-i-write-with-ai-sound-like-ai/">Why does everything I write with AI sound like AI?</a></h2>
+          <p>Because AI can only reshape what you give it. Give it a thin idea and it hands back a thin, generic post. Feed it your own words, your own example and a few plain rules, then edit what comes back before you post.</p>
+          <p class="meta"><time datetime="2026-10-08">8 October 2026</time> &middot; 4 min read</p>
+        </div>
+      </li>
+    </ul>
+    <p class="more"><a href="/blog/">All posts</a></p>
+  </div>
+</section>
 
   </main>
   <footer class="site-footer">

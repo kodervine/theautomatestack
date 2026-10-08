@@ -9,6 +9,7 @@ tags:
   - ai writing
   - content
 status: ready
+image: /blog/images/why-does-everything-i-write-with-ai-sound-like-ai/thin-vs-real.png
 source_post: ""
 medium_url: ""
 publish_location: both
@@ -30,6 +31,8 @@ Here is what usually happens. You open Claude or ChatGPT and type: "Write me a p
 You read it and think, who wrote this?
 
 And the question you would ask is: so how do I make it sound like me?
+
+![Two paths. A thin input, write me a post about pricing, gives a flat post that sounds like AI. Your own words and rules give a post that sounds like you.](/blog/images/why-does-everything-i-write-with-ai-sound-like-ai/thin-vs-real.png)
 
 ## Start with your own words, not an empty box
 

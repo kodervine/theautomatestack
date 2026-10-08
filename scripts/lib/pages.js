@@ -4,10 +4,14 @@ import fs from "node:fs";
 import path from "node:path";
 import { ROOT, writeFile } from "./util.js";
 import { renderPage } from "./template.js";
-import { ctaItems, navItems, socialLinks, jsonLdScripts } from "./render.js";
+import { ctaItems, navMarkup, socialLinks, jsonLdScripts } from "./render.js";
 
 export function readFreebies() {
   return JSON.parse(fs.readFileSync(path.join(ROOT, "config", "freebies.json"), "utf8")).freebies;
+}
+
+export function readStarterKit() {
+  return JSON.parse(fs.readFileSync(path.join(ROOT, "config", "starter-kit.json"), "utf8"));
 }
 
 export function buildPages({ out, site, posts, drafts }) {
@@ -37,6 +41,12 @@ export function buildPages({ out, site, posts, drafts }) {
     sameAs: socialLinks(site),
   };
 
+  const kit = readStarterKit();
+  const kitFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: kit.faqs.map((f) => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })),
+  };
   const pages = [
     {
       path: "/",
@@ -58,6 +68,8 @@ export function buildPages({ out, site, posts, drafts }) {
       template: "pages/starter-kit.html",
       title: `The AutoStack Starter Kit | ${site.publisher_name}`,
       description: "36 ready-to-run AI setups for your content, inbox, DMs and video editing, with prompts, a test checklist and community access.",
+      jsonld: jsonLdScripts(kitFaqSchema),
+      extra: { faqs: kit.faqs },
     },
     {
       path: "/404/",
@@ -74,7 +86,8 @@ export function buildPages({ out, site, posts, drafts }) {
     const html = renderPage(pg.template, {
       ...base,
       ...(pg.extra || {}),
-      nav: navItems(pg.path === "/" ? "/__home__" : pg.path, posts.length > 0),
+      nav_desktop: navMarkup(pg.path === "/" ? "/__home__" : pg.path, posts.length > 0).desktop,
+      nav_mobile: navMarkup(pg.path === "/" ? "/__home__" : pg.path, posts.length > 0).mobile,
       page_title: pg.title,
       og_title: pg.title,
       description: pg.description,

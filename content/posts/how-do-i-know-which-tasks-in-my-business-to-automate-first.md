@@ -9,6 +9,7 @@ tags:
   - automation
   - getting started
 status: ready
+image: /blog/images/how-do-i-know-which-tasks-in-my-business-to-automate-first/pick-first-task.png
 source_post: ""
 medium_url: ""
 publish_location: both
@@ -30,6 +31,8 @@ So here is a better order.
 Picture a normal Tuesday. You answer the same three questions in your DMs. You copy a customer's details into a sheet. You type the same payment details again for someone new. By evening you have done a lot, and none of it grew the business.
 
 And the question you would ask is: which of those do I fix first?
+
+![Four steps for picking the first task to automate: write down everything you do for one week, mark what you repeat more than twice, cross out what needs your judgement, and pick the one that costs the most time.](/blog/images/how-do-i-know-which-tasks-in-my-business-to-automate-first/pick-first-task.png)
 
 ## Look at where the hours leak
 

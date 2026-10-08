@@ -80,16 +80,36 @@ export function jsonLdScripts(...objects) {
     .join("\n  ");
 }
 
-export const NAV = [
-  { url: "/freebies/", label: "Start here" },
-  { url: "/starter-kit/", label: "Starter Kit" },
-  { url: "/blueprint/", label: "Blueprint" },
-  { url: "/services/", label: "Consulting" },
-  { url: "/dm-automation/", label: "DM Automation" },
-  { url: "/blog/", label: "Blog" },
+// Header navigation: four items, two with a floating menu. Built here so every generated page matches.
+const MENUS = [
+  { label: "Products", items: [
+    { url: "/starter-kit/", label: "Starter Kit", note: "36 AI setups for your business" },
+    { url: "/blueprint/", label: "Blueprint", note: "50 ready n8n workflows" },
+  ] },
+  { label: "Work with me", items: [
+    { url: "/services/", label: "Consulting", note: "Process consultation and audits" },
+    { url: "/dm-automation/", label: "DM Automation", note: "Replies while you sleep" },
+  ] },
 ];
 
-/** Main nav with the current section marked. */
-export function navItems(activePath = "", hasBlog = true) {
-  return NAV.filter((n) => hasBlog || n.url !== "/blog/").map((n) => ({ ...n, current: activePath.startsWith(n.url) ? ' aria-current="page"' : "" }));
+export function navMarkup(activePath = "", hasBlog = true) {
+  const on = (url) => (activePath.startsWith(url) ? ' aria-current="page"' : "");
+  const groupOn = (g) => (g.items.some((i) => activePath.startsWith(i.url)) ? " is-current" : "");
+  const desktop = [
+    `<a href="/freebies/"${on("/freebies/")}>Start here</a>`,
+    ...MENUS.map((g) => `<div class="menu${groupOn(g)}">
+        <button type="button" class="menu-btn" aria-haspopup="true">${g.label}</button>
+        <ul class="menu-panel">
+${g.items.map((i) => `          <li><a href="${i.url}"${on(i.url)}><strong>${i.label}</strong><span>${i.note}</span></a></li>`).join("\n")}
+        </ul>
+      </div>`),
+    hasBlog ? `<a href="/blog/"${on("/blog/")}>Blog</a>` : "",
+  ].filter(Boolean).join("\n      ");
+  const mobile = [
+    `<a href="/freebies/">Start here</a>`,
+    ...MENUS.flatMap((g) => g.items.map((i) => `<a href="${i.url}">${i.label}</a>`)),
+    hasBlog ? `<a href="/blog/">Blog</a>` : "",
+    `<a href="/freebies/" class="btn">Free Checklist</a>`,
+  ].filter(Boolean).join("\n        ");
+  return { desktop, mobile };
 }

@@ -9,6 +9,7 @@ tags:
   - instagram dms
   - automation
 status: ready
+image: /blog/images/how-do-i-reply-to-instagram-dms-at-night-without-staying-awake/dm-flow.png
 source_post: ""
 medium_url: ""
 publish_location: both
@@ -28,6 +29,8 @@ But think about what that costs you.
 Picture it. A customer sees your ad late at night. She asks if she can pay in two parts. Your phone is on 4%, the power is out, and you are asleep. She waits a while, then messages someone else.
 
 That is the problem. It is not that you are lazy. A person cannot be awake all night, and your ad does not stop running when you sleep.
+
+![Four steps: a customer messages you at night, the system reads the whole message, it sends the answer you wrote, then it sends the checkout link. It runs on a server, not your phone.](/blog/images/how-do-i-reply-to-instagram-dms-at-night-without-staying-awake/dm-flow.png)
 
 ## Why the usual fix does not work
 
