@@ -1,0 +1,103 @@
+<section class="hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">The Automate Stack</p>
+    <h1>Let a system do the work you keep doing by hand.</h1>
+    <p class="lead">I help business owners and creators use AI and automation for their content, their inbox and their DMs. Start free. Buy only when you are ready.</p>
+    <div class="actions">
+      <a class="btn" href="/freebies/">Get the free Checklist</a>
+      <a class="btn btn--ghost" href="/starter-kit/">See the Starter Kit</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Start where you are</p>
+    <h2>Which of these sounds like you?</h2>
+    <ul class="cards cards--3">
+      <li class="card">
+        <h3>I want to see if this is for me</h3>
+        <p>Grab the free Checklist and see where your time is going.</p>
+        <p class="card-link"><a href="/freebies/">Free resources</a></p>
+      </li>
+      <li class="card">
+        <h3>I want to set it up myself</h3>
+        <p>The Starter Kit gives you ready-to-run AI setups. The Blueprint gives builders 50 n8n workflows.</p>
+        <p class="card-link"><a href="/starter-kit/">Starter Kit</a> &middot; <a href="/blueprint/">Blueprint</a></p>
+      </li>
+      <li class="card">
+        <h3>I want help</h3>
+        <p>Book a consultation, or have a DM system built for your business.</p>
+        <p class="card-link"><a href="/services/">Consulting</a> &middot; <a href="/dm-automation/">DM Automation</a></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="wrap">
+    <p class="eyebrow">Do it yourself</p>
+    <h2>Two products. Two kinds of buyer.</h2>
+    <ul class="cards cards--2">
+      <li class="card card--dark">
+        <p class="label">For business owners, creators and operators</p>
+        <h3>The AutoStack Starter Kit</h3>
+        <p>36 setups for your content, inbox, DMs and video editing. Each one comes with the steps, the prompt and a test checklist. Community access is included.</p>
+        <p class="actions"><a class="btn" href="{{starter_kit_url}}" rel="noopener">Get the Starter Kit</a> <a class="btn btn--ghost" href="/starter-kit/">Learn more</a></p>
+      </li>
+      <li class="card card--dark">
+        <p class="label">For builders, VAs and DIY operators who use n8n</p>
+        <h3>The AutoStack Blueprint</h3>
+        <p>50 ready workflows to run your leads, invoices and daily admin. It comes with a client pitch script and a commercial license.</p>
+        <p class="actions"><a class="btn" href="{{blueprint_url}}" rel="noopener">Get the Blueprint</a> <a class="btn btn--ghost" href="/blueprint/">Learn more</a></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Get help</p>
+    <h2>Work with me</h2>
+    <ul class="cards cards--3">
+      <li class="card">
+        <h3>Automate Your DMs on Autopilot</h3>
+        <p>A one-on-one consultation on automating your DMs.</p>
+        <p class="card-link"><a href="{{dm_consultation_url}}" rel="noopener">Book on Selar</a></p>
+      </li>
+      <li class="card">
+        <h3>End-to-end process consultation</h3>
+        <p>I look into how your business runs today and tell you what to fix first.</p>
+        <p class="card-link"><a href="{{process_consultation_url}}" rel="noopener">Book on Selar</a></p>
+      </li>
+      <li class="card">
+        <h3>Done-for-you DM automation</h3>
+        <p>An automated DM system built for your business, so replies and checkout links go out while you sleep.</p>
+        <p class="card-link"><a href="/dm-automation/">See how it works</a></p>
+      </li>
+    </ul>
+    <p class="more"><a href="/services/">More about working together</a></p>
+  </div>
+</section>
+
+{{#if latest}}<section class="section section--tint">
+  <div class="wrap">
+    <p class="eyebrow">From the blog</p>
+    <h2>Straight answers</h2>
+    <ul class="cards cards--3">
+{{#each latest}}      <li class="card">
+        <h3><a href="{{url}}">{{title}}</a></h3>
+        <p>{{summary}}</p>
+      </li>
+{{/each}}    </ul>
+    <p class="more"><a href="/blog/">All posts</a></p>
+  </div>
+</section>{{/if}}
+
+<section class="section section--dark">
+  <div class="wrap band">
+    <h2>Not sure where to start?</h2>
+    <p>Start with the free Checklist. It is the easiest first step.</p>
+    <p class="actions"><a class="btn" href="/freebies/">Get the free Checklist</a></p>
+  </div>
+</section>

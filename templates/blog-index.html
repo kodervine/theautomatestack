@@ -1,0 +1,18 @@
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Blog</p>
+    <h1>{{heading}}</h1>
+    <p>{{blog_description}}</p>
+    {{#if tags}}<ul class="tag-list" aria-label="Topics">
+{{#each tags}}      <li><a href="{{url}}">{{name}}</a></li>
+{{/each}}    </ul>{{/if}}
+  </header>
+  <ul class="cards">
+{{#each posts}}    <li class="card">
+      <h2><a href="{{url}}">{{title}}</a></h2>
+      <p>{{summary}}</p>
+      <p class="meta"><time datetime="{{date}}">{{date_display}}</time> &middot; {{reading_time}} min read</p>
+    </li>
+{{/each}}  </ul>
+  {{{pager}}}
+</div>

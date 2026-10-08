@@ -1,0 +1,21 @@
+<div class="read">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/blog/">Blog</a> / <span>{{title}}</span></nav>
+  <article>
+    <header class="post-head">
+      {{#if tag_links}}<p class="eyebrow">{{{tag_links}}}</p>{{/if}}
+      <h1>{{title}}</h1>
+      <p class="meta">By {{author_name}} &middot; <time datetime="{{date}}">{{date_display}}</time>{{#if updated_display}} &middot; Updated <time datetime="{{updated}}">{{updated_display}}</time>{{/if}} &middot; {{reading_time}} min read</p>
+    </header>
+    <section class="answer" aria-labelledby="answer-heading">
+      <h2 id="answer-heading">The short answer</h2>
+      <p>{{summary}}</p>
+    </section>
+    <div class="post-body">
+{{{body}}}
+    </div>
+    {{{faq_html}}}
+    {{> cta-block}}
+    {{> author-box}}
+  </article>
+  {{> related-posts}}
+</div>

@@ -1,0 +1,14 @@
+{
+  "freebies": [
+    {
+      "id": "checklist",
+      "name": "Checklist",
+      "title": "The AutoStack Checklist",
+      "tagline": "Get your lost hours back",
+      "description": "A free worksheet to help you see where your hours are going and get them back.",
+      "download_url": "https://selar.com/t94191r128",
+      "source": "Checklist",
+      "button": "Send me the Checklist"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{page_title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="{{canonical}}">
+  {{#if robots}}<meta name="robots" content="{{robots}}">{{/if}}
+  {{{prev_next_links}}}
+  <link rel="icon" type="image/png" href="{{logo_path}}">
+  {{#if has_blog}}<link rel="alternate" type="application/rss+xml" title="{{blog_title}}" href="{{site_url}}/blog/rss.xml">{{/if}}
+
+  <meta property="og:site_name" content="{{publisher_name}}">
+  <meta property="og:type" content="{{og_type}}">
+  <meta property="og:title" content="{{og_title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{og_image}}">
+  {{{article_meta}}}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{og_title}}">
+  <meta name="twitter:description" content="{{description}}">
+  <meta name="twitter:image" content="{{og_image}}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Lato:wght@400;700&amp;family=Poppins:wght@700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/brand.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  {{{jsonld}}}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{#if draft_banner}}<div class="draft-banner">Draft preview. This page is not on the live site.</div>{{/if}}
+  {{> header}}
+  <main id="main">
+{{{content}}}
+  </main>
+  {{> footer}}
+</body>
+</html>

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://www.theautomatestack.com/services/" />
     <title>The Automate Stack | Business Automation Services</title>
 
     <!-- Business / SEO meta tags -->
@@ -23,7 +24,7 @@
       property="og:description"
       content="Secure, automated backend infrastructure for growing businesses."
     />
-    <meta property="og:url" content="https://www.theautomatestack.com/" />
+    <meta property="og:url" content="https://www.theautomatestack.com/services/" />
     <meta property="og:type" content="website" />
     <meta
       property="business:contact_data:email"
@@ -31,11 +32,11 @@
     />
     <meta
       property="business:contact_data:website"
-      content="https://www.theautomatestack.com/"
+      content="https://www.theautomatestack.com/services/"
     />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../logo.png" />
+    <link rel="icon" type="image/png" href="/assets/img/logo.png" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -105,9 +106,9 @@
         class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center"
       >
         <!-- Branding -->
-        <a href="#" class="flex items-center gap-3 shrink-0">
+        <a href="/" class="flex items-center gap-3 shrink-0">
           <img
-            src="../logo.png"
+            src="/assets/img/logo.png"
             alt="The Automate Stack Logo"
             class="h-9 w-auto object-contain"
           />
@@ -137,15 +138,20 @@
             >Checklist</a
           >
           <a
+            href="/freebies/"
+            class="text-neutral-light/70 hover:text-neutral-light transition-colors"
+            >Free Resources</a
+          >
+          <a
             href="#contact"
             class="text-neutral-light/70 hover:text-neutral-light transition-colors"
             >Contact</a
           >
           <a
-            href="#audit"
+            href="#consultation"
             class="bg-accent-bronze text-primary-dark py-2 px-5 rounded-lg hover:opacity-90 transition-opacity"
           >
-            Book Audit
+            Book a Consultation
           </a>
         </nav>
 
@@ -202,12 +208,12 @@
           >Contact</a
         >
         <a
-          href="#audit"
+          href="#consultation"
           onclick="
             document.getElementById('mobile-menu').classList.remove('open')
           "
           class="block mt-3 bg-accent-bronze text-primary-dark py-3 px-5 rounded-lg text-center hover:opacity-90 transition-opacity"
-          >Book Audit</a
+          >Book a Consultation</a
         >
       </div>
     </header>
@@ -604,52 +610,34 @@
         </div>
       </section>
 
-      <!-- ===================== BOOK AUDIT / CALENDLY ===================== -->
+      <!-- ===================== END-TO-END CONSULTATION ===================== -->
       <section
-        id="audit"
-        class="py-24 md:py-32 bg-primary-dark text-neutral-light"
+        id="consultation"
+        class="py-24 md:py-28 bg-neutral-light text-primary-dark border-t border-muted-stone/15"
       >
-        <div class="max-w-5xl mx-auto px-6 lg:px-12">
-          <!-- Section header -->
-          <div class="text-center mb-14">
-            <span
-              class="inline-flex items-center gap-2 justify-center text-accent-bronze font-sans font-bold text-xs uppercase tracking-widest mb-5"
-            >
-              <span class="block w-8 h-px bg-accent-bronze"></span>
-              Get Started
-              <span class="block w-8 h-px bg-accent-bronze"></span>
-            </span>
-            <h2
-              class="font-display font-bold tracking-tight text-4xl md:text-5xl lg:text-6xl mb-5 leading-tight"
-            >
-              Secure your system audit
-            </h2>
-            <p
-              class="font-sans text-neutral-light/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
-            >
-              Pick a time that works for you. We will analyze your current
-              workflow and locate the operational bottlenecks capping your time
-              and revenue.
-            </p>
-          </div>
-
-          <!-- Calendly card -->
-          <div
-            class="rounded-2xl border border-muted-stone/25 overflow-hidden shadow-2xl"
+        <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+          <h2
+            class="font-display font-bold tracking-tight text-3xl md:text-4xl leading-tight mb-5"
           >
-            <div
-              class="calendly-inline-widget"
-              data-url="https://calendly.com/chinenye-cysafepath/30min?hide_gdpr_banner=1&background_color=1a1110&text_color=fbf9f4&primary_color=c8996c"
-              style="min-width: 320px; height: 700px"
-            ></div>
-            <script
-              type="text/javascript"
-              src="https://assets.calendly.com/assets/external/widget.js"
-              async
-            ></script>
-          </div>
+            End-to-end process consultation
+          </h2>
+          <p
+            class="font-sans text-base md:text-lg text-muted-stone leading-relaxed max-w-2xl mx-auto mb-8"
+          >
+            I look into how your business runs today and tell you what to fix
+            first.
+          </p>
+          <a
+            href="https://selar.com/m/theautomatestack"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-accent-bronze text-primary-dark font-sans font-bold text-sm uppercase tracking-wide py-4 px-8 rounded-lg hover:opacity-90 transition-opacity"
+          >
+            Book on Selar
+          </a>
         </div>
       </section>
+
 
       <!-- ===================== CONTACT ===================== -->
       <section
@@ -707,7 +695,7 @@
           <div>
             <div class="flex items-center gap-3 mb-4">
               <img
-                src="../logo.png"
+                src="/assets/img/logo.png"
                 alt="The Automate Stack Logo"
                 class="h-7 w-auto object-contain opacity-80"
               />
@@ -762,9 +750,9 @@
               </li>
               <li>
                 <a
-                  href="#audit"
+                  href="#consultation"
                   class="hover:text-accent-bronze transition-colors"
-                  >Book Audit</a
+                  >Book a Consultation</a
                 >
               </li>
             </ul>
@@ -788,7 +776,7 @@
               </li>
             </ul>
             <a
-              href="#audit"
+              href="#consultation"
               class="inline-block bg-accent-bronze text-primary-dark font-sans font-bold text-xs uppercase tracking-wide py-3 px-6 rounded-lg hover:opacity-90 transition-opacity mb-3"
             >
               Book Your Audit

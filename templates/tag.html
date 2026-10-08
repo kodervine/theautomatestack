@@ -1,0 +1,15 @@
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/blog/">Blog</a> / <span>{{tag_name}}</span></nav>
+  <header class="page-head">
+    <p class="eyebrow">Topic</p>
+    <h1>{{tag_name}}</h1>
+    <p>{{count}} {{post_word}} tagged {{tag_name}}.</p>
+  </header>
+  <ul class="cards">
+{{#each posts}}    <li class="card">
+      <h2><a href="{{url}}">{{title}}</a></h2>
+      <p>{{summary}}</p>
+      <p class="meta"><time datetime="{{date}}">{{date_display}}</time> &middot; {{reading_time}} min read</p>
+    </li>
+{{/each}}  </ul>
+</div>
