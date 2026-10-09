@@ -9,6 +9,7 @@
   
   
   <link rel="icon" type="image/png" href="/assets/img/logo.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="alternate" type="application/rss+xml" title="The Automate Stack Blog" href="https://www.theautomatestack.com/blog/rss.xml">
 
   <meta property="og:site_name" content="The Automate Stack">
@@ -36,7 +37,7 @@
   <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">
-      <img src="/assets/img/logo.png" alt="" width="36" height="36">
+      <img src="/assets/img/logo.png" alt="The Automate Stack logo" width="36" height="36">
       <span>theautomatestack</span>
     </a>
     <nav class="site-nav" aria-label="Main">
@@ -106,7 +107,7 @@
     <div id="blog-default">
       <ul class="cards" id="post-list">
         <li class="card card--post">
-          <a class="card-thumb" href="/blog/how-do-i-know-which-tasks-in-my-business-to-automate-first/" tabindex="-1" aria-hidden="true"><img src="/blog/images/how-do-i-know-which-tasks-in-my-business-to-automate-first/pick-first-task.png" alt="" width="1200" height="630" loading="lazy"></a>
+          <a class="card-thumb" href="/blog/how-do-i-know-which-tasks-in-my-business-to-automate-first/" tabindex="-1" aria-hidden="true"><img src="/blog/images/how-do-i-know-which-tasks-in-my-business-to-automate-first/pick-first-task.png" alt="How do I know which tasks in my business to automate first?" width="1200" height="630" loading="lazy"></a>
           <div class="card-body">
             <p class="label">automation</p>
             <h2><a href="/blog/how-do-i-know-which-tasks-in-my-business-to-automate-first/">How do I know which tasks in my business to automate first?</a></h2>
@@ -115,7 +116,7 @@
           </div>
         </li>
         <li class="card card--post">
-          <a class="card-thumb" href="/blog/how-do-i-reply-to-instagram-dms-at-night-without-staying-awake/" tabindex="-1" aria-hidden="true"><img src="/blog/images/how-do-i-reply-to-instagram-dms-at-night-without-staying-awake/dm-flow.png" alt="" width="1200" height="630" loading="lazy"></a>
+          <a class="card-thumb" href="/blog/how-do-i-reply-to-instagram-dms-at-night-without-staying-awake/" tabindex="-1" aria-hidden="true"><img src="/blog/images/how-do-i-reply-to-instagram-dms-at-night-without-staying-awake/dm-flow.png" alt="How do I reply to Instagram DMs at night without staying awake?" width="1200" height="630" loading="lazy"></a>
           <div class="card-body">
             <p class="label">instagram dms</p>
             <h2><a href="/blog/how-do-i-reply-to-instagram-dms-at-night-without-staying-awake/">How do I reply to Instagram DMs at night without staying awake?</a></h2>
@@ -124,7 +125,7 @@
           </div>
         </li>
         <li class="card card--post">
-          <a class="card-thumb" href="/blog/starter-kit-or-blueprint-which-one-should-i-buy/" tabindex="-1" aria-hidden="true"><img src="/blog/images/starter-kit-or-blueprint-which-one-should-i-buy/which-one.png" alt="" width="1200" height="630" loading="lazy"></a>
+          <a class="card-thumb" href="/blog/starter-kit-or-blueprint-which-one-should-i-buy/" tabindex="-1" aria-hidden="true"><img src="/blog/images/starter-kit-or-blueprint-which-one-should-i-buy/which-one.png" alt="Starter Kit or Blueprint: which one should I buy?" width="1200" height="630" loading="lazy"></a>
           <div class="card-body">
             <p class="label">starter kit</p>
             <h2><a href="/blog/starter-kit-or-blueprint-which-one-should-i-buy/">Starter Kit or Blueprint: which one should I buy?</a></h2>
@@ -133,7 +134,7 @@
           </div>
         </li>
         <li class="card card--post">
-          <a class="card-thumb" href="/blog/why-does-everything-i-write-with-ai-sound-like-ai/" tabindex="-1" aria-hidden="true"><img src="/blog/images/why-does-everything-i-write-with-ai-sound-like-ai/thin-vs-real.png" alt="" width="1200" height="630" loading="lazy"></a>
+          <a class="card-thumb" href="/blog/why-does-everything-i-write-with-ai-sound-like-ai/" tabindex="-1" aria-hidden="true"><img src="/blog/images/why-does-everything-i-write-with-ai-sound-like-ai/thin-vs-real.png" alt="Why does everything I write with AI sound like AI?" width="1200" height="630" loading="lazy"></a>
           <div class="card-body">
             <p class="label">ai writing</p>
             <h2><a href="/blog/why-does-everything-i-write-with-ai-sound-like-ai/">Why does everything I write with AI sound like AI?</a></h2>
@@ -184,7 +185,7 @@
     var li = el("li", "card card--post");
     if (p.image) {
       var ta = el("a", "card-thumb"); ta.href = p.url; ta.tabIndex = -1; ta.setAttribute("aria-hidden", "true");
-      var im = el("img"); im.src = p.image; im.alt = ""; im.width = 1200; im.height = 630; im.loading = "lazy";
+      var im = el("img"); im.src = p.image; im.alt = p.title; im.width = 1200; im.height = 630; im.loading = "lazy";
       ta.appendChild(im); li.appendChild(ta);
     }
     var body = el("div", "card-body");

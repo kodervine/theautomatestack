@@ -67,6 +67,11 @@
       "source": "/resources/",
       "destination": "/freebies/",
       "permanent": false
+    },
+    {
+      "source": "/apple-touch-icon.png",
+      "destination": "/assets/img/apple-touch-icon.png",
+      "permanent": false
     }
   ]
 }

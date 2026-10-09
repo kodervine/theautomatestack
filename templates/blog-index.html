@@ -82,7 +82,7 @@
     var li = el("li", "card card--post");
     if (p.image) {
       var ta = el("a", "card-thumb"); ta.href = p.url; ta.tabIndex = -1; ta.setAttribute("aria-hidden", "true");
-      var im = el("img"); im.src = p.image; im.alt = ""; im.width = 1200; im.height = 630; im.loading = "lazy";
+      var im = el("img"); im.src = p.image; im.alt = p.title; im.width = 1200; im.height = 630; im.loading = "lazy";
       ta.appendChild(im); li.appendChild(ta);
     }
     var body = el("div", "card-body");

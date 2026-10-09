@@ -345,3 +345,9 @@ h3 { font-size: 1.25rem; margin: var(--space-8) 0 var(--space-3); }
 .card--post p { margin: 0 0 var(--space-3); }
 .card--post .meta { margin-top: auto; padding-top: var(--space-2); font-size: .8rem; }
 .card--post:hover { transform: translateY(-3px); }
+
+.section-intro { max-width: 40rem; color: var(--stone); margin: 0 0 var(--space-6); }
+
+/* No gap between a dark closing band and the dark footer */
+main:has(> section.section--dark:last-of-type) + .site-footer,
+main:has(> section.hero:last-of-type) + .site-footer { margin-top: 0; }

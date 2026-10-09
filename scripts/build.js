@@ -83,7 +83,7 @@ export function build({ out = PUBLIC, drafts = false, quiet = false } = {}) {
   const card = (p) => ({
     url: `/blog/${p.slug}/`, title: p.title, summary: p.summary,
     date: p.date, date_display: displayDate(p.date), reading_time: p.reading_time,
-    thumb: p.image ? `<a class="card-thumb" href="/blog/${p.slug}/" tabindex="-1" aria-hidden="true"><img src="${esc(p.image)}" alt="" width="1200" height="630" loading="lazy"></a>` : "",
+    thumb: p.image ? `<a class="card-thumb" href="/blog/${p.slug}/" tabindex="-1" aria-hidden="true"><img src="${esc(p.image)}" alt="${esc(p.title)}" width="1200" height="630" loading="lazy"></a>` : "",
     label_html: p.tags[0] ? `<p class="label">${esc(p.tags[0])}</p>` : "",
   });
   const noindex = drafts ? "noindex, nofollow" : "";
