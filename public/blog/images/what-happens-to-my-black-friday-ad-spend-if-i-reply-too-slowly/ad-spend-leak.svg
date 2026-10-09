@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">Where Black Friday ad spend leaks</title>
+  <desc id="d">Four steps. Your ad runs all night. A buyer messages you. Nobody replies for hours. The sale goes to a faster seller. Fix the reply first, then raise the budget.</desc>
+  <rect width="1200" height="630" fill="#FBF9F4"/>
+  <rect width="1200" height="8" fill="#C8996C"/>
+  <text x="60" y="84" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="52" fill="#1A1110">Where Black Friday ad spend leaks</text>
+  <text x="60" y="124" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#746C61">The ad works. Then nobody answers.</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#1A1110">
+    <rect x="60" y="170" width="240" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+    <text x="84" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">1</text>
+    <text><tspan x="84" y="280">Your ad runs</tspan><tspan x="84" y="312">all night</tspan></text>
+
+    <rect x="340" y="170" width="240" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+    <text x="364" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">2</text>
+    <text><tspan x="364" y="280">A buyer</tspan><tspan x="364" y="312">messages you</tspan></text>
+
+    <rect x="620" y="170" width="240" height="230" rx="12" fill="#746C61"/>
+    <text x="644" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#FBF9F4">3</text>
+    <text fill="#FBF9F4"><tspan x="644" y="280">Nobody replies</tspan><tspan x="644" y="312">for hours</tspan></text>
+
+    <rect x="900" y="170" width="240" height="230" rx="12" fill="#1A1110"/>
+    <text x="924" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">4</text>
+    <text fill="#FBF9F4"><tspan x="924" y="280">The sale goes</tspan><tspan x="924" y="312">to a faster</tspan><tspan x="924" y="344">seller</tspan></text>
+  </g>
+  <g fill="#C8996C">
+    <polygon points="312,285 332,285 322,272" transform="rotate(90 322 285)"/>
+    <polygon points="592,285 612,285 602,272" transform="rotate(90 602 285)"/>
+    <polygon points="872,285 892,285 882,272" transform="rotate(90 882 285)"/>
+  </g>
+
+  <rect x="60" y="440" width="1080" height="96" rx="12" fill="#C8996C"/>
+  <text x="600" y="499" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="32" fill="#1A1110">Fix the reply first. Then raise the budget.</text>
+  <text x="60" y="590" font-family="Poppins, Arial, Helvetica, sans-serif" font-weight="700" font-size="16" letter-spacing="3" fill="#746C61">THEAUTOMATESTACK</text>
+</svg>

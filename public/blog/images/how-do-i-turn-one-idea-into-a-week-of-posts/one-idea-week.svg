@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">One idea into a week of posts</title>
+  <desc id="d">One lesson goes in. A newsletter draft, three short captions and three hook options come out. You edit them, add one real example and post them across your week.</desc>
+  <rect width="1200" height="630" fill="#FBF9F4"/>
+  <rect width="1200" height="8" fill="#C8996C"/>
+  <text x="60" y="84" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="52" fill="#1A1110">One idea into a week of posts</text>
+  <text x="60" y="124" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#746C61">It can only reshape what you give it.</text>
+
+  <rect x="60" y="180" width="300" height="270" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+  <text x="84" y="226" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="18" letter-spacing="2" fill="#C8996C">GOES IN</text>
+  <text font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="30" fill="#1A1110">
+    <tspan x="84" y="282">One lesson</tspan>
+    <tspan x="84" y="320">you teach, in</tspan>
+    <tspan x="84" y="358">3 to 6</tspan>
+    <tspan x="84" y="396">sentences</tspan>
+  </text>
+
+  <g fill="#C8996C">
+    <polygon points="422,222 400,210 400,234"/>
+    <polygon points="422,315 400,303 400,327"/>
+    <polygon points="422,408 400,396 400,420"/>
+  </g>
+  <g stroke="#C8996C" stroke-width="4"><line x1="360" y1="222" x2="402" y2="222"/><line x1="360" y1="315" x2="402" y2="315"/><line x1="360" y1="408" x2="402" y2="408"/></g>
+
+  <g font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="30" fill="#1A1110">
+    <rect x="430" y="180" width="340" height="84" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+    <text x="456" y="232">1 newsletter draft</text>
+    <rect x="430" y="273" width="340" height="84" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+    <text x="456" y="325">3 short captions</text>
+    <rect x="430" y="366" width="340" height="84" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+    <text x="456" y="418">3 hook options</text>
+  </g>
+
+  <g stroke="#C8996C" stroke-width="4"><line x1="770" y1="222" x2="810" y2="222"/><line x1="770" y1="315" x2="810" y2="315"/><line x1="770" y1="408" x2="810" y2="408"/></g>
+  <g fill="#C8996C">
+    <polygon points="832,222 810,210 810,234"/>
+    <polygon points="832,315 810,303 810,327"/>
+    <polygon points="832,408 810,396 810,420"/>
+  </g>
+
+  <rect x="840" y="180" width="300" height="270" rx="12" fill="#1A1110"/>
+  <text x="864" y="226" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="18" letter-spacing="2" fill="#C8996C">THEN YOU</text>
+  <text font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="30" fill="#FBF9F4">
+    <tspan x="864" y="282">Edit it.</tspan>
+    <tspan x="864" y="320">Add one real</tspan>
+    <tspan x="864" y="358">example.</tspan>
+    <tspan x="864" y="396" fill="#C8996C">Post all week.</tspan>
+  </text>
+
+  <rect x="60" y="480" width="1080" height="70" rx="12" fill="#C8996C"/>
+  <text x="600" y="526" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="30" fill="#1A1110">Thin input gives thin posts. Start with a real lesson.</text>
+  <text x="60" y="598" font-family="Poppins, Arial, Helvetica, sans-serif" font-weight="700" font-size="16" letter-spacing="3" fill="#746C61">THEAUTOMATESTACK</text>
+</svg>

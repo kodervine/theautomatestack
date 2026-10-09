@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">Before Black Friday: your timeline</title>
+  <desc id="d">A timeline in five steps. Now: decide your offer and count your stock. Four weeks out: test payment and delivery. Two weeks out: plan your content and ready your DMs. The week of: run a final test and plan to rest. After: follow up with everyone who asked.</desc>
+  <rect width="1200" height="630" fill="#FBF9F4"/>
+  <rect width="1200" height="8" fill="#C8996C"/>
+  <text x="60" y="84" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="50" fill="#1A1110">Before Black Friday: your timeline</text>
+  <text x="60" y="124" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#746C61">Black Friday is on 27 November. Work in order.</text>
+
+  <line x1="60" y1="205" x2="1140" y2="205" stroke="#C8996C" stroke-width="4"/>
+  <g fill="#C8996C"><circle cx="160" cy="205" r="12"/><circle cx="380" cy="205" r="12"/><circle cx="600" cy="205" r="12"/><circle cx="820" cy="205" r="12"/><circle cx="1040" cy="205" r="12"/></g>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#1A1110">
+    <rect x="60" y="240" width="200" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+    <text x="80" y="282" font-weight="700" font-size="18" letter-spacing="2" fill="#C8996C">NOW</text>
+    <text><tspan x="80" y="334">Decide your</tspan><tspan x="80" y="366">offer and</tspan><tspan x="80" y="398">count stock</tspan></text>
+
+    <rect x="280" y="240" width="200" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+    <text x="300" y="282" font-weight="700" font-size="18" letter-spacing="2" fill="#C8996C">4 WEEKS OUT</text>
+    <text><tspan x="300" y="334">Test payment</tspan><tspan x="300" y="366">and delivery</tspan></text>
+
+    <rect x="500" y="240" width="200" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+    <text x="520" y="282" font-weight="700" font-size="18" letter-spacing="2" fill="#C8996C">2 WEEKS OUT</text>
+    <text><tspan x="520" y="334">Plan content</tspan><tspan x="520" y="366">and ready</tspan><tspan x="520" y="398">your DMs</tspan></text>
+
+    <rect x="720" y="240" width="200" height="230" rx="12" fill="#746C61"/>
+    <text x="740" y="282" font-weight="700" font-size="18" letter-spacing="2" fill="#FBF9F4">THE WEEK OF</text>
+    <text fill="#FBF9F4"><tspan x="740" y="334">Final test.</tspan><tspan x="740" y="366">Plan to</tspan><tspan x="740" y="398">rest.</tspan></text>
+
+    <rect x="940" y="240" width="200" height="230" rx="12" fill="#1A1110"/>
+    <text x="960" y="282" font-weight="700" font-size="18" letter-spacing="2" fill="#C8996C">AFTER</text>
+    <text fill="#FBF9F4"><tspan x="960" y="334">Follow up</tspan><tspan x="960" y="366">with everyone</tspan><tspan x="960" y="398">who asked</tspan></text>
+  </g>
+
+  <rect x="60" y="500" width="1080" height="58" rx="12" fill="#C8996C"/>
+  <text x="600" y="539" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="28" fill="#1A1110">Do the boring list now. The sale takes care of itself.</text>
+  <text x="60" y="600" font-family="Poppins, Arial, Helvetica, sans-serif" font-weight="700" font-size="16" letter-spacing="3" fill="#746C61">THEAUTOMATESTACK</text>
+</svg>

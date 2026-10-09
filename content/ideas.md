@@ -15,10 +15,23 @@ Status: `idea` = not written. `drafted` = post file exists. `live` = published. 
 | Starter Kit or Blueprint: which one should I buy? | live |
 | Why does my Instagram DM bot break when customers make typos? | drafted (sample, needs a real rewrite) |
 
+## Black Friday (27 November 2026): write these before the sale
+| Question | Leads to | Status |
+|---|---|---|
+| How do I get my Instagram DMs ready for Black Friday? | DM Automation, consultation | drafted |
+| What happens to my Black Friday ad spend if I reply too slowly? | DM Automation, consultation | drafted |
+| What should I do before Black Friday as an online seller? | DM Automation, Starter Kit, consultation | drafted |
+| What should my Black Friday auto-reply say? | DM Automation | idea |
+| How do I answer "is it still available?" quickly during a sale? | DM Automation | idea |
+| How do I handle a flood of DMs during a sale? | DM Automation | idea |
+| What do I do when a buyer's card payment fails on Black Friday? | DM Automation | idea |
+| How do I follow up with people who messaged but did not buy? | DM Automation, Starter Kit | idea |
+| How do I plan my content for Black Friday week? | Starter Kit (Create) | idea |
+
 ## Sounds like AI
 | Question | Leads to | Status |
 |---|---|---|
-| How do I turn one idea into a week of posts? | Starter Kit (Create) | idea |
+| How do I turn one idea into a week of posts? | Starter Kit (Create) | drafted |
 | How do I plan a month of Instagram posts in one sitting? | Starter Kit (Create) | idea |
 | How do I write hooks for my reels? | Starter Kit (Ask) | idea |
 

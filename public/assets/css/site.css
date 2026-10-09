@@ -351,3 +351,7 @@ h3 { font-size: 1.25rem; margin: var(--space-8) 0 var(--space-3); }
 /* No gap between a dark closing band and the dark footer */
 main:has(> section.section--dark:last-of-type) + .site-footer,
 main:has(> section.hero:last-of-type) + .site-footer { margin-top: 0; }
+
+/* Checklist items in posts: checkbox instead of a bullet */
+.post-body ul:has(> li > input[type="checkbox"]) { list-style: none; padding-left: 0; }
+.post-body li > input[type="checkbox"] { width: 1.05rem; height: 1.05rem; margin: 0 .65rem 0 0; vertical-align: -.15rem; accent-color: var(--bronze); }
