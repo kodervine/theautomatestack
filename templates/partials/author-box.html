@@ -1,12 +1,17 @@
 <aside class="author" aria-labelledby="author-heading">
-  <div class="avatar" aria-hidden="true">{{author_initial}}</div>
-  <div>
-    <h2 id="author-heading">{{author_name}}</h2>
-    <p>{{author_bio}}</p>
-    <div class="socials">
-      <a href="{{instagram_url}}" rel="noopener">Instagram</a>
-      <a href="{{tiktok_url}}" rel="noopener">TikTok</a>
-      <a href="{{youtube_url}}" rel="noopener">YouTube</a>
+  <img class="author-photo" src="/assets/img/chinenye-avatar.jpg" width="96" height="96" alt="{{author_full_name}}" loading="lazy">
+  <div class="author-body">
+    <p class="author-kicker">Written by</p>
+    <h2 id="author-heading">{{author_full_name}}</h2>
+    <p class="author-role">{{author_role}}</p>
+    <p class="author-bio">{{author_bio}}</p>
+    <div class="author-actions">
+      <a class="btn btn--small" href="/freebies/">Get the free Checklist</a>
+      <ul class="author-links" aria-label="Follow {{author_name}}">
+        <li><a href="{{instagram_url}}" rel="noopener">Instagram</a></li>
+        <li><a href="{{tiktok_url}}" rel="noopener">TikTok</a></li>
+        <li><a href="{{youtube_url}}" rel="noopener">YouTube</a></li>
+      </ul>
     </div>
   </div>
 </aside>

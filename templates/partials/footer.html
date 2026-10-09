@@ -1,22 +1,38 @@
 <footer class="site-footer">
-  <div class="wrap">
-    <div>
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
       <a class="brand" href="/"><span>theautomatestack</span></a>
-      <p>&copy; {{year}} {{publisher_name}}. All rights reserved.</p>
+      <p class="footer-tagline">AI setups, automation and consulting for business owners and creators.</p>
+      <a class="btn btn--small" href="/freebies/">Get the free Checklist</a>
     </div>
-    <nav class="footer-links" aria-label="Footer">
-      <a href="/freebies/">Free resources</a>
-      <a href="/starter-kit/">Starter Kit</a>
-      <a href="/blueprint/">Blueprint</a>
-      <a href="/services/">Consulting</a>
-      <a href="/dm-automation/">DM Automation</a>
-      {{#if has_blog}}<a href="/blog/">Blog</a>{{/if}}
+    <nav class="footer-col" aria-label="Explore">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="/freebies/">Free resources</a></li>
+        <li><a href="/starter-kit/">Starter Kit</a></li>
+        <li><a href="/blueprint/">Blueprint</a></li>
+        {{#if has_blog}}<li><a href="/blog/">Blog</a></li>{{/if}}
+      </ul>
     </nav>
-    <nav class="footer-links" aria-label="Social">
-      <a href="{{instagram_url}}" rel="noopener">Instagram</a>
-      <a href="{{tiktok_url}}" rel="noopener">TikTok</a>
-      <a href="{{youtube_url}}" rel="noopener">YouTube</a>
-      <a href="mailto:{{contact_email}}">{{contact_email}}</a>
+    <nav class="footer-col" aria-label="Work with me">
+      <h2>Work with me</h2>
+      <ul>
+        <li><a href="/services/">Consulting</a></li>
+        <li><a href="/dm-automation/">DM Automation</a></li>
+        <li><a href="{{dm_consultation_url}}" rel="noopener">Book a DM consultation</a></li>
+      </ul>
     </nav>
+    <nav class="footer-col" aria-label="Follow">
+      <h2>Follow</h2>
+      <ul>
+        <li><a href="{{instagram_url}}" rel="noopener">Instagram</a></li>
+        <li><a href="{{tiktok_url}}" rel="noopener">TikTok</a></li>
+        <li><a href="{{youtube_url}}" rel="noopener">YouTube</a></li>
+        <li><a href="mailto:{{contact_email}}">Email me</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>&copy; {{year}} {{publisher_name}}. All rights reserved.</p>
   </div>
 </footer>
