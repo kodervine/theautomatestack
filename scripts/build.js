@@ -166,6 +166,7 @@ export function build({ out = PUBLIC, drafts = false, quiet = false } = {}) {
       canonical: `${site.site_url}${pageUrl(n)}`,
       prev_next_links: links.join("\n  "),
       heading: site.blog_title,
+      tags_all: tags.map(tagChip),
       tags_top: tags.slice(0, TOP_TAGS).map(tagChip),
       tags_rest: tags.slice(TOP_TAGS).map(tagChip),
       tags_rest_count: Math.max(0, tags.length - TOP_TAGS),

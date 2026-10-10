@@ -81,29 +81,40 @@
     <h1>The Automate Stack Blog</h1>
     <p class="lead">Straight answers on using AI and automation to save time in your business, from The Automate Stack.</p>
 
-    <form id="blog-search" class="search" role="search" hidden>
-      <label for="q" class="visually-hidden">Search posts</label>
-      <input id="q" name="q" type="search" placeholder="Search posts by keyword or topic" autocomplete="off">
+    <form id="blog-search" class="filters" role="search" hidden>
+      <div class="field field--search">
+        <label for="q" class="visually-hidden">Search posts</label>
+        <input id="q" name="q" type="search" placeholder="Search posts by keyword or topic" autocomplete="off">
+      </div>
+      <div class="field field--topic">
+        <label for="topic" class="visually-hidden">Filter by topic</label>
+        <select id="topic" name="topic">
+          <option value="">All topics (8)</option>
+          <option value="automation">automation (4)</option>
+          <option value="black friday">black friday (3)</option>
+          <option value="getting started">getting started (3)</option>
+          <option value="instagram dms">instagram dms (3)</option>
+          <option value="ai writing">ai writing (2)</option>
+          <option value="content">content (2)</option>
+          <option value="online selling">online selling (1)</option>
+          <option value="starter kit">starter kit (1)</option>
+        </select>
+      </div>
+      <button type="button" id="clear-filters" class="clear-btn" hidden>Clear</button>
     </form>
 
-    <div class="topic-row">
+    <noscript>
       <ul class="tag-list tag-list--row" aria-label="Topics">
-        <li><a class="chip" href="/blog/" data-tag="" aria-current="page">All <span>8</span></a></li>
-        <li><a class="chip" href="/blog/tags/automation/" data-tag="automation">automation <span>4</span></a></li>
-        <li><a class="chip" href="/blog/tags/black-friday/" data-tag="black friday">black friday <span>3</span></a></li>
-        <li><a class="chip" href="/blog/tags/getting-started/" data-tag="getting started">getting started <span>3</span></a></li>
-        <li><a class="chip" href="/blog/tags/instagram-dms/" data-tag="instagram dms">instagram dms <span>3</span></a></li>
-        <li><a class="chip" href="/blog/tags/ai-writing/" data-tag="ai writing">ai writing <span>2</span></a></li>
-        <li><a class="chip" href="/blog/tags/content/" data-tag="content">content <span>2</span></a></li>
+        <li><a class="chip" href="/blog/tags/automation/">automation <span>4</span></a></li>
+        <li><a class="chip" href="/blog/tags/black-friday/">black friday <span>3</span></a></li>
+        <li><a class="chip" href="/blog/tags/getting-started/">getting started <span>3</span></a></li>
+        <li><a class="chip" href="/blog/tags/instagram-dms/">instagram dms <span>3</span></a></li>
+        <li><a class="chip" href="/blog/tags/ai-writing/">ai writing <span>2</span></a></li>
+        <li><a class="chip" href="/blog/tags/content/">content <span>2</span></a></li>
+        <li><a class="chip" href="/blog/tags/online-selling/">online selling <span>1</span></a></li>
+        <li><a class="chip" href="/blog/tags/starter-kit/">starter kit <span>1</span></a></li>
       </ul>
-      <details class="more-tags">
-        <summary>More topics (2)</summary>
-        <ul class="tag-list tag-list--row">
-          <li><a class="chip" href="/blog/tags/online-selling/" data-tag="online selling">online selling <span>1</span></a></li>
-          <li><a class="chip" href="/blog/tags/starter-kit/" data-tag="starter kit">starter kit <span>1</span></a></li>
-        </ul>
-      </details>
-    </div>
+    </noscript>
   </div>
 </section>
 
@@ -195,10 +206,9 @@
   var form = document.getElementById("blog-search");
   if (!form || !window.fetch) return;
   form.hidden = false;
-  var input = document.getElementById("q"), status = document.getElementById("blog-status");
+  var input = document.getElementById("q"), topic = document.getElementById("topic"), clear = document.getElementById("clear-filters");
+  var status = document.getElementById("blog-status");
   var results = document.getElementById("blog-results"), normal = document.getElementById("blog-default");
-  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
-  var more = document.querySelector(".more-tags");
   var data = null, ticket = 0, state = { q: "", tag: "" };
 
   function load() {
@@ -217,12 +227,8 @@
     if (state.q) qs.push("q=" + encodeURIComponent(state.q));
     if (state.tag) qs.push("tag=" + encodeURIComponent(state.tag));
     history.replaceState(null, "", location.pathname + (qs.length ? "?" + qs.join("&") : ""));
-    chips.forEach(function (c) {
-      var on = c.getAttribute("data-tag") === state.tag;
-      c.setAttribute("aria-pressed", on ? "true" : "false");
-      if (on) c.setAttribute("aria-current", "true"); else c.removeAttribute("aria-current");
-      if (on && more && more.contains(c)) more.open = true;
-    });
+    topic.value = state.tag;
+    clear.hidden = !(state.q || state.tag);
   }
   function card(p) {
     var li = el("li", "card card--post");
@@ -252,20 +258,14 @@
       found.forEach(function (p) { ul.appendChild(card(p)); });
       results.appendChild(ul);
       var what = (state.tag ? "“" + state.tag + "”" : "") + (state.tag && state.q ? " and " : "") + (state.q ? "“" + state.q + "”" : "");
-      status.textContent = found.length ? found.length + (found.length === 1 ? " post for " : " posts for ") + what + "." : "No posts match " + what + ". Try fewer words or pick All.";
+      status.textContent = found.length ? found.length + (found.length === 1 ? " post for " : " posts for ") + what + "." : "No posts match " + what + ". Try fewer words or clear the filters.";
       status.hidden = false; results.hidden = false; normal.hidden = true;
     }).catch(function () { normal.hidden = false; });
   }
   form.addEventListener("submit", function (e) { e.preventDefault(); });
   input.addEventListener("input", function () { state.q = input.value.trim(); render(); });
-  chips.forEach(function (c) {
-    c.addEventListener("click", function (e) {
-      e.preventDefault();
-      var t = c.getAttribute("data-tag");
-      state.tag = state.tag === t ? "" : t;
-      render();
-    });
-  });
+  topic.addEventListener("change", function () { state.tag = topic.value; render(); });
+  clear.addEventListener("click", function () { state.q = ""; state.tag = ""; input.value = ""; render(); input.focus(); });
   var params = new URLSearchParams(location.search);
   state.q = params.get("q") || ""; state.tag = params.get("tag") || "";
   input.value = state.q;

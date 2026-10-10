@@ -4,23 +4,26 @@
     <h1>{{heading}}</h1>
     <p class="lead">{{blog_description}}</p>
 
-    <form id="blog-search" class="search" role="search" hidden>
-      <label for="q" class="visually-hidden">Search posts</label>
-      <input id="q" name="q" type="search" placeholder="Search posts by keyword or topic" autocomplete="off">
+    <form id="blog-search" class="filters" role="search" hidden>
+      <div class="field field--search">
+        <label for="q" class="visually-hidden">Search posts</label>
+        <input id="q" name="q" type="search" placeholder="Search posts by keyword or topic" autocomplete="off">
+      </div>
+      <div class="field field--topic">
+        <label for="topic" class="visually-hidden">Filter by topic</label>
+        <select id="topic" name="topic">
+          <option value="">All topics ({{total_posts}})</option>
+{{#each tags_all}}          <option value="{{name}}">{{name}} ({{count}})</option>
+{{/each}}        </select>
+      </div>
+      <button type="button" id="clear-filters" class="clear-btn" hidden>Clear</button>
     </form>
 
-    <div class="topic-row">
+    <noscript>
       <ul class="tag-list tag-list--row" aria-label="Topics">
-        <li><a class="chip" href="/blog/" data-tag="" aria-current="page">All <span>{{total_posts}}</span></a></li>
-{{#each tags_top}}        <li><a class="chip" href="{{url}}" data-tag="{{name}}">{{name}} <span>{{count}}</span></a></li>
+{{#each tags_all}}        <li><a class="chip" href="{{url}}">{{name}} <span>{{count}}</span></a></li>
 {{/each}}      </ul>
-{{#if tags_rest}}      <details class="more-tags">
-        <summary>More topics ({{tags_rest_count}})</summary>
-        <ul class="tag-list tag-list--row">
-{{#each tags_rest}}          <li><a class="chip" href="{{url}}" data-tag="{{name}}">{{name}} <span>{{count}}</span></a></li>
-{{/each}}        </ul>
-      </details>
-{{/if}}    </div>
+    </noscript>
   </div>
 </section>
 
@@ -49,10 +52,9 @@
   var form = document.getElementById("blog-search");
   if (!form || !window.fetch) return;
   form.hidden = false;
-  var input = document.getElementById("q"), status = document.getElementById("blog-status");
+  var input = document.getElementById("q"), topic = document.getElementById("topic"), clear = document.getElementById("clear-filters");
+  var status = document.getElementById("blog-status");
   var results = document.getElementById("blog-results"), normal = document.getElementById("blog-default");
-  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
-  var more = document.querySelector(".more-tags");
   var data = null, ticket = 0, state = { q: "", tag: "" };
 
   function load() {
@@ -71,12 +73,8 @@
     if (state.q) qs.push("q=" + encodeURIComponent(state.q));
     if (state.tag) qs.push("tag=" + encodeURIComponent(state.tag));
     history.replaceState(null, "", location.pathname + (qs.length ? "?" + qs.join("&") : ""));
-    chips.forEach(function (c) {
-      var on = c.getAttribute("data-tag") === state.tag;
-      c.setAttribute("aria-pressed", on ? "true" : "false");
-      if (on) c.setAttribute("aria-current", "true"); else c.removeAttribute("aria-current");
-      if (on && more && more.contains(c)) more.open = true;
-    });
+    topic.value = state.tag;
+    clear.hidden = !(state.q || state.tag);
   }
   function card(p) {
     var li = el("li", "card card--post");
@@ -106,20 +104,14 @@
       found.forEach(function (p) { ul.appendChild(card(p)); });
       results.appendChild(ul);
       var what = (state.tag ? "“" + state.tag + "”" : "") + (state.tag && state.q ? " and " : "") + (state.q ? "“" + state.q + "”" : "");
-      status.textContent = found.length ? found.length + (found.length === 1 ? " post for " : " posts for ") + what + "." : "No posts match " + what + ". Try fewer words or pick All.";
+      status.textContent = found.length ? found.length + (found.length === 1 ? " post for " : " posts for ") + what + "." : "No posts match " + what + ". Try fewer words or clear the filters.";
       status.hidden = false; results.hidden = false; normal.hidden = true;
     }).catch(function () { normal.hidden = false; });
   }
   form.addEventListener("submit", function (e) { e.preventDefault(); });
   input.addEventListener("input", function () { state.q = input.value.trim(); render(); });
-  chips.forEach(function (c) {
-    c.addEventListener("click", function (e) {
-      e.preventDefault();
-      var t = c.getAttribute("data-tag");
-      state.tag = state.tag === t ? "" : t;
-      render();
-    });
-  });
+  topic.addEventListener("change", function () { state.tag = topic.value; render(); });
+  clear.addEventListener("click", function () { state.q = ""; state.tag = ""; input.value = ""; render(); input.focus(); });
   var params = new URLSearchParams(location.search);
   state.q = params.get("q") || ""; state.tag = params.get("tag") || "";
   input.value = state.q;

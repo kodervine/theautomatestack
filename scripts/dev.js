@@ -5,8 +5,7 @@ import fs from "node:fs";
 import http from "node:http";
 import path from "node:path";
 import { ROOT, PUBLIC, loadEnv } from "./lib/util.js";
-import { build } from "./build.js";
-import { clearTemplateCache } from "./lib/template.js";
+import { spawnSync } from "node:child_process";
 
 const args = process.argv.slice(2);
 const drafts = args.includes("--drafts");
@@ -22,12 +21,10 @@ const TYPES = {
 };
 
 function rebuild() {
-  clearTemplateCache();
-  try {
-    build({ out: OUT, drafts });
-  } catch (err) {
-    console.error(`Build failed: ${err.message}`);
-  }
+  // A fresh process every time, so changes to scripts, templates and config are always used.
+  const args = [path.join(ROOT, "scripts", "build.js"), "--out", OUT];
+  if (drafts) args.push("--drafts");
+  spawnSync(process.execPath, args, { stdio: "inherit" });
 }
 
 function resolveFile(urlPath) {
@@ -78,7 +75,7 @@ http.createServer((req, res) => {
 
 rebuild();
 let timer;
-for (const dir of ["content", "templates", "config", "public/assets/css"]) {
+for (const dir of ["content", "templates", "config", "scripts", "public/assets/css"]) {
   fs.watch(path.join(ROOT, dir), { recursive: true }, () => {
     clearTimeout(timer);
     timer = setTimeout(rebuild, 150);

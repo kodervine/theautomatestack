@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">What should you never paste into AI?</title>
+  <desc id="d">Never paste passwords, card details, full bank account numbers, ID numbers or private client contracts. Safer to paste your own lessons, public information and examples with names removed.</desc>
+  <rect width="1200" height="630" fill="#FBF9F4"/>
+  <rect width="1200" height="8" fill="#C8996C"/>
+  <text x="60" y="84" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="46" fill="#1A1110">What should you never paste into AI?</text>
+  <text x="60" y="124" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#746C61">When in doubt, leave it out.</text>
+  <rect x="60" y="160" width="520" height="380" rx="12" fill="#1A1110"/>
+  <text x="88" y="208" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="20" letter-spacing="3" fill="#C8996C">NEVER PASTE</text>
+  <text x="88" y="268" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="#FBF9F4">Passwords and card details</text>
+  <line x1="88" y1="284" x2="552" y2="284" stroke="rgba(251,249,244,0.18)" stroke-width="1"/>
+  <text x="88" y="322" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="#FBF9F4">Full bank account numbers</text>
+  <line x1="88" y1="338" x2="552" y2="338" stroke="rgba(251,249,244,0.18)" stroke-width="1"/>
+  <text x="88" y="376" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="#FBF9F4">ID numbers such as BVN or NIN</text>
+  <line x1="88" y1="392" x2="552" y2="392" stroke="rgba(251,249,244,0.18)" stroke-width="1"/>
+  <text x="88" y="430" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="#FBF9F4">API keys and login links</text>
+  <line x1="88" y1="446" x2="552" y2="446" stroke="rgba(251,249,244,0.18)" stroke-width="1"/>
+  <text x="88" y="484" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="#FBF9F4">Private client contracts</text>
+  <rect x="620" y="160" width="520" height="380" rx="12" fill="#FFFFFF" stroke="#C8996C" stroke-width="3"/>
+  <text x="648" y="208" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="20" letter-spacing="3" fill="#C8996C">SAFER TO PASTE</text>
+  <text x="648" y="268" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="#1A1110">Your own lessons and ideas</text>
+  <line x1="648" y1="284" x2="1112" y2="284" stroke="rgba(116,108,97,0.25)" stroke-width="1"/>
+  <text x="648" y="322" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="#1A1110">Public information</text>
+  <line x1="648" y1="338" x2="1112" y2="338" stroke="rgba(116,108,97,0.25)" stroke-width="1"/>
+  <text x="648" y="376" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="#1A1110">Examples with names removed</text>
+  <line x1="648" y1="392" x2="1112" y2="392" stroke="rgba(116,108,97,0.25)" stroke-width="1"/>
+  <text x="648" y="430" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="#1A1110">Amounts, no account numbers</text>
+  <line x1="648" y1="446" x2="1112" y2="446" stroke="rgba(116,108,97,0.25)" stroke-width="1"/>
+  <text x="648" y="484" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="#1A1110">Drafts you are happy to share</text>
+
+  <text x="60" y="600" font-family="Poppins, Arial, Helvetica, sans-serif" font-weight="700" font-size="16" letter-spacing="3" fill="#746C61">THEAUTOMATESTACK</text>
+</svg>

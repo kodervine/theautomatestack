@@ -384,3 +384,22 @@ main:has(> section.hero:last-of-type) + .site-footer { margin-top: 0; }
 .footer-col a:hover { color: var(--bronze); text-decoration: underline; text-underline-offset: 3px; }
 .site-footer .footer-bottom { display: block; margin-top: var(--space-8); padding-top: var(--space-4); border-top: 1px solid rgba(251,249,244,.12); }
 .footer-bottom p { margin: 0; font-size: .85rem; color: rgba(251,249,244,.6); }
+
+/* ---------- Blog filters: search box + topic dropdown ---------- */
+.blog-hero .filters { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; max-width: 46rem; margin: 0; }
+.blog-hero .field--search { flex: 1 1 18rem; min-width: 0; }
+.blog-hero .field--topic { flex: 0 1 15rem; }
+.blog-hero .filters input[type="search"], .blog-hero .filters select {
+  width: 100%; font: inherit; color: var(--alabaster); background: rgba(251,249,244,.08);
+  border: 1px solid rgba(200,153,108,.45); border-radius: 999px; padding: .85rem 1.1rem;
+}
+.blog-hero .filters select { appearance: none; -webkit-appearance: none; cursor: pointer; padding-right: 2.6rem;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'><path d='M1 1l6 6 6-6' fill='none' stroke='%23C8996C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat; background-position: right 1.1rem center; }
+.blog-hero .filters select option { color: var(--onyx); background: var(--white); }
+.blog-hero .filters input::placeholder { color: rgba(251,249,244,.55); }
+.blog-hero .filters input:focus-visible, .blog-hero .filters select:focus-visible { outline: 3px solid var(--bronze); outline-offset: 2px; background-color: rgba(251,249,244,.12); }
+.clear-btn { font: inherit; font-size: .85rem; font-weight: 700; color: var(--bronze); background: none; border: 0; padding: .5rem .25rem; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.blog-hero noscript .tag-list { margin-top: var(--space-4); }
+.blog-hero noscript .chip { border: 1px solid rgba(251,249,244,.3); color: var(--alabaster); }
+@media (max-width: 36rem) { .blog-hero .field--topic { flex: 1 1 100%; } }

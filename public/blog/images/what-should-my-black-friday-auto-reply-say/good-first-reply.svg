@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">What a good first reply does</title>
+  <desc id="d">A good first reply does three things: it answers the question that was asked, it gives the next step such as the checkout link, and it sounds like you.</desc>
+  <rect width="1200" height="630" fill="#FBF9F4"/>
+  <rect width="1200" height="8" fill="#C8996C"/>
+  <text x="60" y="84" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="50" fill="#1A1110">What a good first reply does</text>
+  <text x="60" y="124" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#746C61">Not a menu of buttons. A reply.</text>
+  <rect x="60" y="170" width="340" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+  <text x="84" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">1</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#1A1110"><tspan x="84" y="280">Answers the</tspan><tspan x="84" y="312">question they</tspan><tspan x="84" y="344">asked</tspan></text>
+  <polygon points="407,275 407,299 425,287" fill="#C8996C"/>
+  <rect x="430" y="170" width="340" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+  <text x="454" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">2</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#1A1110"><tspan x="454" y="280">Gives the</tspan><tspan x="454" y="312">next step, like</tspan><tspan x="454" y="344">the link</tspan></text>
+  <polygon points="777,275 777,299 795,287" fill="#C8996C"/>
+  <rect x="800" y="170" width="340" height="230" rx="12" fill="#1A1110"/>
+  <text x="824" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">3</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#FBF9F4"><tspan x="824" y="280">Sounds like you,</tspan><tspan x="824" y="312">not a form</tspan><tspan x="824" y="344">letter</tspan></text>
+  <rect x="60" y="440" width="1080" height="96" rx="12" fill="#C8996C"/>
+  <text x="600" y="499" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="30" fill="#1A1110">Fast, clear and yours.</text>
+  <text x="60" y="600" font-family="Poppins, Arial, Helvetica, sans-serif" font-weight="700" font-size="16" letter-spacing="3" fill="#746C61">THEAUTOMATESTACK</text>
+</svg>

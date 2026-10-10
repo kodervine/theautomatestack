@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">Why a keyword bot breaks</title>
+  <desc id="d">A buyer types a normal message. The bot looks for one exact word. It finds no match, so nobody replies and the buyer leaves. Read the whole message, not one word.</desc>
+  <rect width="1200" height="630" fill="#FBF9F4"/>
+  <rect width="1200" height="8" fill="#C8996C"/>
+  <text x="60" y="84" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="50" fill="#1A1110">Why a keyword bot breaks</text>
+  <text x="60" y="124" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#746C61">It looks for one word. People type sentences.</text>
+  <rect x="60" y="170" width="240" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+  <text x="84" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">1</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#1A1110"><tspan x="84" y="280">A buyer types</tspan><tspan x="84" y="312">a normal</tspan><tspan x="84" y="344">message</tspan></text>
+  <polygon points="312,275 312,299 330,287" fill="#C8996C"/>
+  <rect x="340" y="170" width="240" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+  <text x="364" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">2</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#1A1110"><tspan x="364" y="280">The bot looks</tspan><tspan x="364" y="312">for one exact</tspan><tspan x="364" y="344">word</tspan></text>
+  <polygon points="592,275 592,299 610,287" fill="#C8996C"/>
+  <rect x="620" y="170" width="240" height="230" rx="12" fill="#746C61"/>
+  <text x="644" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#FBF9F4">3</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#FBF9F4"><tspan x="644" y="280">No match,</tspan><tspan x="644" y="312">so no reply</tspan></text>
+  <polygon points="872,275 872,299 890,287" fill="#C8996C"/>
+  <rect x="900" y="170" width="240" height="230" rx="12" fill="#1A1110"/>
+  <text x="924" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">4</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#FBF9F4"><tspan x="924" y="280">The buyer</tspan><tspan x="924" y="312">leaves</tspan></text>
+  <rect x="60" y="440" width="1080" height="96" rx="12" fill="#C8996C"/>
+  <text x="600" y="499" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="30" fill="#1A1110">Read the whole message, not one word.</text>
+  <text x="60" y="600" font-family="Poppins, Arial, Helvetica, sans-serif" font-weight="700" font-size="16" letter-spacing="3" fill="#746C61">THEAUTOMATESTACK</text>
+</svg>
