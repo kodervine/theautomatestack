@@ -1,10 +1,10 @@
-// Builds the template-driven pages: home, Starter Kit, Freebies and one thank-you page per freebie.
+// Builds the template-driven pages: home, Starter Kit, Freebies, one lesson page per AutoStack Setup, and the shared before-you-go community upsell page (draft preview only).
 // The other pages (dm-automation, services, blueprint) are hand-written HTML in public/.
 import fs from "node:fs";
 import path from "node:path";
-import { ROOT, writeFile } from "./util.js";
+import { ROOT, writeFile, esc } from "./util.js";
 import { renderPage } from "./template.js";
-import { ctaItems, navMarkup, socialLinks, jsonLdScripts } from "./render.js";
+import { ctaItems, navMarkup, setSetupNav, socialLinks, jsonLdScripts } from "./render.js";
 
 export function readFreebies() {
   return JSON.parse(fs.readFileSync(path.join(ROOT, "config", "freebies.json"), "utf8")).freebies;
@@ -12,6 +12,30 @@ export function readFreebies() {
 
 export function readStarterKit() {
   return JSON.parse(fs.readFileSync(path.join(ROOT, "config", "starter-kit.json"), "utf8"));
+}
+
+export function readSetupsConfig() {
+  return JSON.parse(fs.readFileSync(path.join(ROOT, "config", "setups.json"), "utf8"));
+}
+
+/** ready = live (needs a video and a Selar link). draft = built only in the draft preview. */
+function visibleSetups(cfg, drafts) {
+  const setups = cfg.setups;
+  for (const s of setups) {
+    if (s.status === "ready") {
+      const missing = ["video_url", "buy_url"].filter((k) => !s[k]);
+      if (missing.length) throw new Error(`Setup "${s.slug}" is marked ready but has no ${missing.join(" or ")} in config/setups.json, so it will not build.`);
+    }
+  }
+  return setups.filter((s) => s.status === "ready" || (drafts && s.status === "draft"));
+}
+
+function videoHtml(s) {
+  if (s.video_url) {
+    return `<div class="video-single"><video controls playsinline preload="metadata" aria-label="${esc(s.short_name)}: the setup working, start to finish"><source src="${esc(s.video_url)}" type="video/mp4"></video></div>`;
+  }
+  // Only reachable in the draft preview: a ready setup cannot build without a video.
+  return `<div class="video-placeholder">Demo video goes here. Add video_url in config/setups.json.</div>`;
 }
 
 export function buildPages({ out, site, posts, drafts }) {
@@ -47,6 +71,12 @@ export function buildPages({ out, site, posts, drafts }) {
     "@type": "FAQPage",
     mainEntity: kit.faqs.map((f) => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })),
   };
+  const setupCfg = readSetupsConfig();
+  const setups = visibleSetups(setupCfg, drafts);
+  setSetupNav(setups.filter((s) => s.status === "ready").map((s) => ({ url: `/setups/${s.slug}/`, label: s.short_name, note: "One job done for " + setupCfg.price })));
+  // "<" is escaped so the JSON can sit safely inside a script tag.
+  const setupNamesJson = JSON.stringify(Object.fromEntries(setups.map((s) => [s.slug, s.name]))).replace(/</g, "\\u003c");
+  const setupNotionJson = JSON.stringify(Object.fromEntries(setups.filter((s) => /^https:\/\//.test(s.notion_url || "")).map((s) => [s.slug, s.notion_url]))).replace(/</g, "\\u003c");
   const pages = [
     {
       path: "/",
@@ -71,6 +101,44 @@ export function buildPages({ out, site, posts, drafts }) {
       jsonld: jsonLdScripts(kitFaqSchema),
       extra: { faqs: kit.faqs },
     },
+    ...setups.map((s) => ({
+      path: `/setups/${s.slug}/`,
+      template: "pages/setup.html",
+      layout: "base-sales.html",
+      title: `${s.name} | ${site.publisher_name}`,
+      description: s.lead,
+      jsonld: jsonLdScripts({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: s.faqs.map((f) => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })),
+      }),
+      extra: {
+        ...s,
+        trust: s.trust.map((label) => ({ label })),
+        price: setupCfg.price,
+        header_note: `${s.short_name} \u00b7 ${setupCfg.price} one time`,
+        buy_href: s.buy_url || "#",
+        video_html: videoHtml(s),
+      },
+    })),
+    // Draft for now: the Club upsell is built only in the draft preview until the founding buyers are in.
+    ...(drafts ? [{
+      path: "/before-you-go/",
+      template: "pages/before-you-go.html",
+      layout: "base-sales.html",
+      title: `Before you go | ${site.publisher_name}`,
+      description: "One more step: join the AutoStack community, from The Automate Stack.",
+      noindex: true,
+      extra: {
+        ...setupCfg.club,
+        trust: ["Secure payment", "Instant access"].map((label) => ({ label })),
+        header_note: `${setupCfg.club.name} · ${setupCfg.club.price} ${setupCfg.club.price_note}`,
+        buy_href: setupCfg.club.buy_url || "#",
+        annual_buy_href: setupCfg.club.annual_buy_url || "#",
+        setup_names_json: setupNamesJson,
+        setup_notion_json: setupNotionJson,
+      },
+    }] : []),
     {
       path: "/404/",
       file: "404.html",
@@ -94,7 +162,7 @@ export function buildPages({ out, site, posts, drafts }) {
       canonical: `${site.site_url}${pg.canonicalPath || pg.path}`,
       jsonld: pg.jsonld || "",
       robots: pg.noindex ? "noindex, nofollow" : base.robots,
-    });
+    }, pg.layout);
     writeFile(pg.file ? path.join(out, pg.file) : path.join(out, pg.path.slice(1), "index.html"), html);
     return { path: pg.path, title: pg.title, description: pg.description, indexable: !pg.noindex };
   });

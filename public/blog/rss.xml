@@ -5,8 +5,162 @@
     <link>https://www.theautomatestack.com/blog/</link>
     <description>Straight answers on using AI and automation to save time in your business, from The Automate Stack.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 09 Oct 2026 08:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 08:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.theautomatestack.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>How do I plan a month of Instagram posts in one sitting?</title>
+      <link>https://www.theautomatestack.com/blog/how-do-i-plan-a-month-of-instagram-posts-in-one-sitting/</link>
+      <guid isPermaLink="true">https://www.theautomatestack.com/blog/how-do-i-plan-a-month-of-instagram-posts-in-one-sitting/</guid>
+      <pubDate>Mon, 19 Oct 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Chinenye</dc:creator>
+      <category>content</category>
+      <category>instagram</category>
+      <description>Pick four lessons you already teach, one for each week. Give each week one job: a problem, a how-to, a real story, and an offer. Turn each lesson into a few posts with a hook and a call to action, then queue the whole month in one sitting.</description>
+      <content:encoded><![CDATA[<p>You stop deciding what to post at 9 PM when the deciding is already done.</p>
+<p>That is the whole idea behind planning a month at once. It is not about posting more. It is about not starting from zero every evening, when you are tired and nothing sounds good.</p>
+<p>Here is a simple way to do it in one sitting.</p>
+<p><img loading="lazy" decoding="async" src="https://www.theautomatestack.com/blog/images/how-do-i-plan-a-month-of-instagram-posts-in-one-sitting/month-of-posts.png" alt="A month of posts in four weeks. Week one, a problem your buyer has. Week two, a how-to that fixes it. Week three, a real story from your own work. Week four, an offer with a clear next step."></p>
+<h2>Start with four lessons, not thirty posts</h2>
+<p>Do not try to think of thirty ideas. You will stall.</p>
+<p>Pick four lessons you already teach. One for each week. A lesson is something you have really said to a client or a customer, not a topic.</p>
+<p>Say you run a small catering business. Your four lessons might be: why orders get missed, how to confirm an order in one message, what to do when a client changes the date, and how to book a tasting. Four lessons. A month of material.</p>
+<h2>Give each week one job</h2>
+<p>A month feels bigger than it is. Break it into jobs.</p>
+<p><strong>Week one: a problem your buyer has.</strong> Name the pain. People stop when they see their own problem.</p>
+<p><strong>Week two: a how-to that fixes it.</strong> Show the steps. This is where you earn trust.</p>
+<p><strong>Week three: a real story from your own work.</strong> This one has to be yours. A client you helped, a day that went wrong, something you learned. No tool can write it for you, and it is the post people remember.</p>
+<p><strong>Week four: an offer with a clear next step.</strong> Say what you sell and how to get it.</p>
+<h2>Cut each lesson into a few posts</h2>
+<p>One lesson can become a caption, a short video and a longer piece. You can read how in <a href="https://www.theautomatestack.com/blog/how-do-i-turn-one-idea-into-a-week-of-posts/">how to turn one idea into a week of posts</a>.</p>
+<p>Every post needs two things. A hook, which is the first line that stops the scroll. And a call to action, which tells people what to do next: comment a word, save the post, send a message.</p>
+<h2>Queue it, then leave room</h2>
+<p>Put every post on a calendar in one sitting, with a date for each. Then leave a gap or two.</p>
+<p>Real things happen. A customer says something funny. A sale comes up. A plan that has no room for those is a plan you will drop.</p>
+<h2>Three ways this goes wrong</h2>
+<p><strong>You plan thirty ideas.</strong> You will stall by the tenth. Start with four lessons.</p>
+<p><strong>You skip your own story.</strong> A month of how-tos with no real moment from your work reads like everyone else&#39;s page.</p>
+<p><strong>You leave no gap.</strong> Plans with no room for real life get dropped by week two.</p>
+<h2>The steps</h2>
+<ol>
+<li><strong>Pick four lessons you already teach.</strong> One for each week.</li>
+<li><strong>Give each week a job.</strong> Problem, how-to, real story, offer.</li>
+<li><strong>Turn each lesson into a few posts.</strong> A caption, a short video, a longer piece.</li>
+<li><strong>Write a hook and a call to action for every post.</strong></li>
+<li><strong>Edit it all in your own voice.</strong> Cross out anything you would not say.</li>
+<li><strong>Add your real story to week three.</strong> From your own work.</li>
+<li><strong>Put every post on the calendar in one sitting.</strong> Leave a gap or two.</li>
+</ol>
+<p>The Create layer of the <a href="https://www.theautomatestack.com/starter-kit/">Starter Kit</a> is built around this: four weeks of posts, each with a hook and a call to action, and your whole month queued in one sitting.</p>
+<p>Plan once. Then spend the month doing the work, not wondering what to post.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>What should I never paste into an AI tool?</title>
+      <link>https://www.theautomatestack.com/blog/what-should-i-never-paste-into-an-ai-tool/</link>
+      <guid isPermaLink="true">https://www.theautomatestack.com/blog/what-should-i-never-paste-into-an-ai-tool/</guid>
+      <pubDate>Fri, 16 Oct 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Chinenye</dc:creator>
+      <category>ai tools</category>
+      <category>getting started</category>
+      <description>Never paste passwords, card details, full bank account numbers, ID numbers like your BVN or NIN, API keys, or private client contracts. Paste your own lessons, public information, and examples with the names and numbers removed. When in doubt, leave it out.</description>
+      <content:encoded><![CDATA[<p>Before you ask what AI can do for you, ask what you are about to hand it.</p>
+<p>This is the question people forget. The tool is fast and friendly, so you paste in whatever is in front of you: a customer&#39;s message, a bank alert, a contract. It feels like a private chat. It is not always as private as it feels.</p>
+<p>You do not need to be scared of AI tools. You need a few rules.</p>
+<p><img loading="lazy" decoding="async" src="https://www.theautomatestack.com/blog/images/what-should-i-never-paste-into-an-ai-tool/never-paste.png" alt="What to never paste into an AI tool, on the left: passwords and card details, full bank account numbers, ID numbers such as BVN or NIN, API keys and login links, private client contracts. Safer to paste, on the right: your own lessons and ideas, public information, examples with names removed, amounts without account numbers, drafts you are happy to share."></p>
+<h2>What to never paste</h2>
+<p><strong>Passwords and card details.</strong> There is no task where an AI tool needs these. If something asks for them, stop.</p>
+<p><strong>Full bank account numbers.</strong> You can paste an amount and a short note. You do not need the account number.</p>
+<p><strong>ID numbers.</strong> In Nigeria, that includes your BVN and your NIN. Keep them out of every chat.</p>
+<p><strong>API keys and login links.</strong> These are keys to your accounts. Anyone who holds one can act as you.</p>
+<p><strong>Private client contracts.</strong> If a client trusted you with a document, that trust does not cover pasting it into a tool you have not checked.</p>
+<h2>What is safer to paste</h2>
+<p>Your own lessons and ideas. Public information. A draft you would be happy for anyone to read. And examples where you have removed the names and numbers.</p>
+<p>That last one is the trick. You can almost always get the help you need without the private parts.</p>
+<h2>Swap real details for labels</h2>
+<p>Say you run a small bookkeeping service and you want help writing a polite reminder to a client who has not paid. You do not need the client&#39;s name, phone number or account details.</p>
+<p>Write: &quot;Customer A owes me for work from last month. They have not replied to two messages. Write a polite reminder.&quot; The tool does the same job, and nothing private left your hands.</p>
+<h2>A simple test</h2>
+<p>Ask yourself: would I be happy if this appeared in a screenshot posted online?</p>
+<p>If the answer is no, do not paste it. If you are not sure, leave it out. You can always add a label back later.</p>
+<h2>Check your tool&#39;s settings</h2>
+<p>Different tools handle your chats in different ways, and it can depend on your plan. Many have a setting that controls whether your chats can be used to improve the tool. Find it, read it, and choose on purpose. Do this before you paste anything you care about.</p>
+<h2>If you already pasted something</h2>
+<p>It happens. Do not panic, but do act.</p>
+<p>If you pasted a password or a key, change it now. If you pasted card details, tell your bank. If it was a client&#39;s private document, be honest with the client. Then use the rules above so it does not happen again.</p>
+<h2>The steps</h2>
+<ol>
+<li><strong>Decide what is private.</strong> Passwords, card details, account numbers, ID numbers, keys and contracts.</li>
+<li><strong>Remove names and numbers before you paste.</strong> Use labels like Customer A.</li>
+<li><strong>Paste only what the task needs.</strong> An amount, not an account.</li>
+<li><strong>Check your tool&#39;s data settings.</strong> Read them once, on purpose.</li>
+<li><strong>Use the screenshot test when you are unsure.</strong></li>
+<li><strong>Test any new setup with made-up examples first.</strong> Only use real details once you trust it.</li>
+</ol>
+<p>The Starter Kit puts a test checklist on every page for this reason. You can start with the <a href="https://www.theautomatestack.com/freebies/">free Checklist</a>, or look at the <a href="https://www.theautomatestack.com/starter-kit/">Starter Kit</a>.</p>
+<p>A tool is only as safe as what you give it. Give it less.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>What should my Black Friday auto-reply say?</title>
+      <link>https://www.theautomatestack.com/blog/what-should-my-black-friday-auto-reply-say/</link>
+      <guid isPermaLink="true">https://www.theautomatestack.com/blog/what-should-my-black-friday-auto-reply-say/</guid>
+      <pubDate>Wed, 14 Oct 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Chinenye</dc:creator>
+      <category>black friday</category>
+      <category>instagram dms</category>
+      <category>automation</category>
+      <description>A good auto-reply answers the question the buyer asked, gives them the next step, and sounds like you. Skip the 'we will get back to you' message. Write short replies for the questions you get most, with your price, your delivery details and your checkout link.</description>
+      <content:encoded><![CDATA[<p>Your auto-reply is the first thing a Black Friday buyer reads. So make it do something.</p>
+<p>Most auto-replies say &quot;Thanks for your message, we will get back to you shortly.&quot; That does nothing. The buyer already knows you got the message. What they want to know is simple: is it available, how much is it, and how do I pay.</p>
+<p><img loading="lazy" decoding="async" src="https://www.theautomatestack.com/blog/images/what-should-my-black-friday-auto-reply-say/good-first-reply.png" alt="A good first reply does three things: it answers the question they asked, it gives the next step such as the link, and it sounds like you, not a form letter."></p>
+<h2>What a good first reply does</h2>
+<p>Three things, and only three.</p>
+<p>It answers the question the buyer actually asked. It gives the next step, like the checkout link. And it sounds like you.</p>
+<p>That is the whole job. A reply that does those three things, in seconds, beats a long reply that arrives tomorrow.</p>
+<h2>Replies you can copy</h2>
+<p>Say you run a small shoe brand. These are the questions you will get most, with a reply for each. Swap the brackets for your own details.</p>
+<p><strong>&quot;Is it still available?&quot;</strong></p>
+<blockquote>
+<p>Yes, it is available. Which size do you need? Tell me and I will send you the checkout link.</p>
+</blockquote>
+<p><strong>&quot;How much is this one?&quot;</strong></p>
+<blockquote>
+<p>It is ₦[your price] for Black Friday. It comes in [sizes or colours]. Want me to send the checkout link?</p>
+</blockquote>
+<p><strong>&quot;Can I pay half now?&quot;</strong></p>
+<blockquote>
+<p>Yes. You can pay [half] now and the balance by [date]. Here is how it works: [one short line]. Shall I send the link?</p>
+</blockquote>
+<p><strong>&quot;When will it arrive?&quot;</strong></p>
+<blockquote>
+<p>We deliver to [your area]. It usually arrives in [number] days. For Black Friday, your last order date for delivery is [date].</p>
+</blockquote>
+<p><strong>When you do not know the answer:</strong></p>
+<blockquote>
+<p>Thanks for asking. I do not want to guess, so I will reply properly in the morning.</p>
+</blockquote>
+<p>Read those again. Each one answers, then moves the buyer forward. None of them is a menu.</p>
+<h2>Put your sale details in</h2>
+<p>On Black Friday, buyers want to know when the sale ends and when they must order to get their item in time. So say it. Put your end date and your delivery cut-off in the replies where it fits, before the buyer has to ask.</p>
+<h2>What to leave out</h2>
+<p><strong>A menu of numbers.</strong> &quot;Reply 1 for price, 2 for delivery&quot; breaks the moment someone types a normal sentence. Buyers type like people, with typos and slang.</p>
+<p><strong>A long paragraph.</strong> If it needs a scroll on a phone, shorten it.</p>
+<p><strong>A promise you cannot keep.</strong> If you say &quot;we reply in minutes&quot;, make sure you do.</p>
+<h2>Test before the sale</h2>
+<p>Send your replies ten messy messages. &quot;Price pls.&quot; &quot;Abeg, is it available?&quot; Half sentences. If a reply misses, fix the reply, not the buyer.</p>
+<h2>The steps</h2>
+<ol>
+<li><strong>List the five questions you get most.</strong> Copy them from your real messages.</li>
+<li><strong>Write one short reply for each.</strong> Answer, then give the next step.</li>
+<li><strong>Add your checkout link and your sale details.</strong> End date and delivery cut-off.</li>
+<li><strong>Write the &quot;I do not know&quot; reply.</strong> Honest, and promising a proper answer.</li>
+<li><strong>Set it up so the replies go out without you.</strong> A system that reads the whole message, not a menu.</li>
+<li><strong>Test it with ten messy messages.</strong> Fix whatever it misses.</li>
+</ol>
+<p>If you are still getting your inbox ready, start with <a href="https://www.theautomatestack.com/blog/how-do-i-get-my-instagram-dms-ready-for-black-friday/">how to get your DMs ready for Black Friday</a>. If you want it built for you, <a href="https://www.theautomatestack.com/dm-automation/">see how the DM system works</a>, or <a href="https://www.theautomatestack.com/dm-automation/#consultation">book a one-on-one consultation</a>.</p>
+<p>A reply that moves the buyer forward is the only kind worth sending.</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>How do I get my Instagram DMs ready for Black Friday?</title>
       <link>https://www.theautomatestack.com/blog/how-do-i-get-my-instagram-dms-ready-for-black-friday/</link>

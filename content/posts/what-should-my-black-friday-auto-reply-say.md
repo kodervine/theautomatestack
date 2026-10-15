@@ -9,7 +9,7 @@ tags:
   - black friday
   - instagram dms
   - automation
-status: draft
+status: ready
 image: /blog/images/what-should-my-black-friday-auto-reply-say/good-first-reply.png
 source_post: ""
 medium_url: ""

@@ -8,7 +8,7 @@ updated: 2026-10-16
 tags:
   - ai tools
   - getting started
-status: draft
+status: ready
 image: /blog/images/what-should-i-never-paste-into-an-ai-tool/never-paste.png
 source_post: ""
 medium_url: ""

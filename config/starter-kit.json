@@ -21,10 +21,6 @@
       "answer": "Some setups do. Each page says what it needs, and free options come first where they exist."
     },
     {
-      "question": "Is this the same as the AutoStack Blueprint?",
-      "answer": "No. The Starter Kit teaches you to set things up yourself with AI and no-code tools. The AutoStack Blueprint is a separate product of n8n engine automations for people who want more control."
-    },
-    {
       "question": "Will it work for my business in Nigeria?",
       "answer": "The examples use naira and bank alerts. A few tools are not available in every country. The setup page tells you when that matters."
     },
@@ -38,7 +34,7 @@
     },
     {
       "question": "Can I share the kit with someone?",
-      "answer": "No. The kit is for the person who bought it. You can share your affiliate link and earn 30% when they buy their own."
+      "answer": "No. The kit is for the person who bought it. But when you introduce someone to the community and they join us, you get a 30% partner share, forever, with no limit on how many people you bring."
     }
   ]
 }

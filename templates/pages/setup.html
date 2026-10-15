@@ -1,0 +1,211 @@
+<section class="hero sales-hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">{{eyebrow}}</p>
+    <h1>
+      {{headline_pre}} <span class="em">{{headline_em}}</span> {{headline_post}}
+    </h1>
+    <p class="lead">{{lead}}</p>
+    {{> sales-cta}}
+    <ul class="trust">
+      {{#each trust}}
+      <li>{{label}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+
+<section class="sales-section sales-section--demo">
+  <div class="sales-narrow">
+    <h2>Watch it work</h2>
+    {{{video_html}}}
+    <p class="demo-caption">{{demo_caption}}</p>
+    <p class="cta-row">{{> sales-cta}}</p>
+  </div>
+</section>
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>{{guess_title}}</h2>
+    <ol class="guess-list">
+      {{#each guess}}
+      <li>{{text}}</li>
+      {{/each}}
+    </ol>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <h2>{{truth_title}}</h2>
+    {{#each truth}}
+    <p>{{text}}</p>
+    {{/each}}
+  </div>
+</section>
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>{{cost_title}}</h2>
+    <ul class="cost-list">
+      {{#each costs}}
+      <li><strong>{{head}}</strong>{{text}}</li>
+      {{/each}}
+    </ul>
+    <p class="pull">{{pull}}</p>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <h2>{{fix_title}}</h2>
+    <ul class="fix-list">
+      {{#each fixes}}
+      <li>
+        <span class="fix-when">{{when}}</span
+        ><span class="fix-then">{{then}}</span>
+      </li>
+      {{/each}}
+    </ul>
+    <p class="cta-row">{{> sales-cta}}</p>
+  </div>
+</section>
+
+{{#if proof}}
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>What people say</h2>
+    {{#each proof}}
+    <blockquote class="quote">
+      <p>{{quote}}</p>
+      <cite>{{name}}, {{role}}</cite>
+    </blockquote>
+    {{/each}}
+  </div>
+</section>
+{{/if}}
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>{{inside_title}}</h2>
+    <ul class="tick-list">
+      {{#each inside}}
+      <li>{{text}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <h2>Who built this</h2>
+    <div class="bio">
+      <img
+        src="/assets/img/chinenye-avatar.jpg"
+        width="112"
+        height="112"
+        alt="{{author_full_name}}"
+        loading="lazy"
+      />
+      <div>
+        <p>Hi, I am Chinenye. In my day job I am a software engineer.</p>
+        <p>
+          I was featured by the Association for Computing Machinery (ACM) as an
+          advocate for responsible AI, and I have organized workshops at the
+          Deep Learning Indaba, the biggest AI conference in Africa.
+        </p>
+        <p>
+          I build this setup to do one job, and I put it in front of you so you
+          can start tonight.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>{{math_title}}</h2>
+    <div class="math-box">
+      {{#each math}}
+      <p>{{text}}</p>
+      {{/each}}
+    </div>
+    <p class="demo-caption">{{math_note}}</p>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <div class="price-box">
+      <p class="eyebrow">Simple pricing</p>
+      <p class="price">{{price}}</p>
+      <p class="price-sub">One-time payment. Instant access.</p>
+      {{#if needs}}
+      <p class="price-sub">What you need: {{needs}}</p>
+      {{/if}} {{> sales-cta}}
+      <ul class="trust trust--dark">
+        {{#each trust}}
+        <li>{{label}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{{#if guarantee}}
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>The promise</h2>
+    <p>{{guarantee}}</p>
+  </div>
+</section>
+{{/if}}
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <div class="for-grid">
+      <div class="yes">
+        <h3>Who this is for</h3>
+        <ul>
+          {{#each for_list}}
+          <li>{{text}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="no">
+        <h3>Who this is not for</h3>
+        <ul>
+          {{#each not_for}}
+          <li>{{text}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <h2>{{close_title}}</h2>
+    {{#each close}}
+    <p>{{text}}</p>
+    {{/each}}
+    <p class="cta-row">{{> sales-cta}}</p>
+  </div>
+</section>
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>Questions you probably have</h2>
+    <div class="faq-list">
+      {{#each faqs}}
+      <details>
+        <summary>{{question}}</summary>
+        <p>{{answer}}</p>
+      </details>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<div class="sticky-cta" aria-hidden="false">{{> sales-cta}}</div>

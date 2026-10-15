@@ -1,0 +1,598 @@
+{
+  "note": "Prices live here and nowhere else. status draft = built only in the draft preview. status ready = goes live and needs video_url (an mp4 link) and buy_url (the Selar link for that Setup). notion_url = the published (public) Notion link for that Setup. It shows on the before-you-go page for that slug, only when it is filled in and starts with https://. Selar redirect for each product: https://www.theautomatestack.com/before-you-go/?setup=<slug>. Never add a fake deadline or an invented testimonial. proof stays empty until you have a real quote. guarantee stays empty until you decide what you will promise. needs: one line on what the buyer must already have (for example a paid Claude plan). Leave empty to hide it, but fill it in before going live, since these Setups have no refund. content-pipeline is now the Content Calendar (Notion template plus Canva, no auto-posting). Validate with 5 managers and VAs about the one-Canva, one-Notion account limit before setting it to ready. Income Tracker is chat-based and reads income and expenses; Auto-Edit needs a computer.",
+  "price": "₦5,000",
+    "club": {
+    "name": "The AutoStack Club",
+    "price": "₦10,000",
+    "price_note": "a month",
+    "buy_url": "",
+    "cta_text": "Yes, Join the Community",
+    "partner_cut": "30%",
+    "faqs": [
+      {
+        "question": "Do I have to join?",
+        "answer": "No. Your setup works on its own, and everything you need is in your download. The community is there if you want company and help."
+      },
+      {
+        "question": "What happens in a live class?",
+        "answer": "You bring your screen. I look at what you built, we find what is broken, and we fix it before the class ends."
+      },
+      {
+        "question": "What if I miss a live class?",
+        "answer": "Replays go into your own archive, so you can watch when you have time."
+      },
+      {
+        "question": "Do I need the Starter Kit to join?",
+        "answer": "No. The community is separate. You can join without the kit."
+      },
+      {
+        "question": "Can I pay for the year instead?",
+        "answer": "Yes. Pay ₦100,000 once for the year instead of ₦10,000 a month. That saves you ₦20,000 over twelve months."
+      },
+      {
+        "question": "How does the 30% referral work?",
+        "answer": "You get your own link. When someone you introduce gets the AutoStack through it, you keep 30%. There is no limit on how many people you bring."
+      }
+    ],
+    "annual_price": "₦100,000",
+    "annual_save": "₦20,000",
+    "annual_buy_url": ""
+  },
+  "upsell": {
+    "price": "₦20,000",
+    "per_setup": "₦556",
+    "faqs": [
+      {
+        "question": "I am not technical.",
+        "answer": "Every step is written. Layers 1 to 3 need no code, and the one advanced setup in Layer 4 is optional."
+      },
+      {
+        "question": "What if I get stuck?",
+        "answer": "Bring your screen to the weekend live class, or ask in the private community."
+      },
+      {
+        "question": "Do I need paid tools?",
+        "answer": "Some setups do. Each page says what it needs, and free options come first where they exist."
+      },
+      {
+        "question": "What if it does not work for me?",
+        "answer": "Follow the steps, bring your screen to AutoStack Live, and if it still does not work, send me one email. I refund the ₦20,000 in full and add ₦5,000 for your trouble."
+      },
+      {
+        "question": "How does the 30% partner share work?",
+        "answer": "Inside the Starter Kit you get your own partner link. When you introduce someone to the community and they join us, you get a 30% partner share, forever. There is no limit on how many people you bring."
+      }
+    ],
+    "refund_extra": "₦5,000",
+    "refund_total": "₦25,000",
+    "partner_cut": "30%",
+    "partner_earn": "₦6,000"
+  },
+  "setups": [
+    {
+      "slug": "auto-edit",
+      "status": "draft",
+      "name": "AutoStack Setup: Auto-Edit",
+      "short_name": "Auto-Edit",
+      "eyebrow": "AutoStack Setup: Auto-Edit. For creators who know they have to post more",
+      "headline_pre": "Turn a Raw Recording Into a",
+      "headline_em": "Clean Vertical Video",
+      "headline_post": "Without Giving Up Your Evening.",
+      "lead": "One setup. Raw recording in, clean vertical video out, with the cuts, captions and sound sorted. No editor to hire. No evening gone.",
+      "cta_text": "Yes, Give Me Auto-Edit",
+      "trust": [
+        "Secure payment",
+        "Instant access",
+        "Step-by-step guide"
+      ],
+      "video_url": "",
+      "buy_url": "",
+      "notion_url": "",
+      "demo_caption": "Watch a raw recording become a finished video. Press play.",
+      "guess_title": "Let me guess how your evening goes...",
+      "guess": [
+        {
+          "text": "You record the video at 4 PM. It takes ten minutes, and you feel good about it."
+        },
+        {
+          "text": "Then it sits in your gallery, because you know what editing means. Cutting every pause. Typing the captions. Fixing the sound. Exporting. Exporting again."
+        },
+        {
+          "text": "By 11 PM you are still at it. Or you gave up, and posted nothing."
+        },
+        {
+          "text": "You know you have to create more videos. Everyone says so. You are not short of ideas. You are short of evenings."
+        },
+        {
+          "text": "So you watch other creators post every day and wonder how. Some of them pay an editor. The rest stopped doing it by hand."
+        }
+      ],
+      "truth_title": "Here is the truth nobody tells you:",
+      "truth": [
+        {
+          "text": "It is not that you are slow. It is not that you lack discipline."
+        },
+        {
+          "text": "Editing by hand is a full-time editor's job, and you are doing it after your actual day."
+        },
+        {
+          "text": "You do not need to get faster at it. You need most of it taken off your plate."
+        }
+      ],
+      "cost_title": "What this is costing you",
+      "costs": [
+        {
+          "head": "The video that never got posted.",
+          "text": "Recorded, never edited, still in your gallery. A post that could have reached someone, gone."
+        },
+        {
+          "head": "Your evenings.",
+          "text": "Hours on cuts and captions are hours you did not rest, earn or spend with anyone."
+        },
+        {
+          "head": "Your consistency.",
+          "text": "Three posts one week, nothing the next. Your followers notice before you do."
+        },
+        {
+          "head": "An editor you cannot afford.",
+          "text": "Paying someone per video adds up fast, so you do it yourself, and the cycle repeats."
+        }
+      ],
+      "pull": "None of this is a someday problem. It happens again tonight.",
+      "fix_title": "What changes with Auto-Edit",
+      "fixes": [
+        {
+          "when": "You finish recording.",
+          "then": "You run the setup instead of opening an editor."
+        },
+        {
+          "when": "The video is full of pauses and dead air.",
+          "then": "The cuts are made for you."
+        },
+        {
+          "when": "It needs captions and cleaner sound.",
+          "then": "Both are handled in the same routine."
+        },
+        {
+          "when": "It is 11 PM.",
+          "then": "You are not editing."
+        }
+      ],
+      "inside_title": "What you get",
+      "inside": [
+        {
+          "text": "The skill that edits your video from one request"
+        },
+        {
+          "text": "Install in three steps. Claude checks and sets up anything missing for you"
+        },
+        {
+          "text": "A test example, so you can see it working before you try it on your own footage"
+        }
+      ],
+      "math_title": "Let us do the math on your evenings",
+      "math": [
+        {
+          "text": "Say editing one video takes you 2 hours. At ₦5,000 an hour, that is ₦10,000 of your time per video."
+        },
+        {
+          "text": "Post 3 videos a week and that is ₦30,000 a week. ₦120,000 a month."
+        },
+        {
+          "text": "Auto-Edit is ₦5,000. One time."
+        },
+        {
+          "text": "It pays for itself the first time it saves you half of one edit."
+        }
+      ],
+      "math_note": "Your hour might be worth more or less. Plug in your own number. The maths is hard to argue with either way.",
+      "for_list": [
+        {
+          "text": "Creators who record often and edit late."
+        },
+        {
+          "text": "Anyone with a folder of videos they never got round to editing."
+        },
+        {
+          "text": "Faceless creators who want clips out the same day."
+        }
+      ],
+      "not_for": [
+        {
+          "text": "You already have an editor you are happy with."
+        },
+        {
+          "text": "You want lessons on editing theory. This is a setup you use, not a course you study."
+        }
+      ],
+      "close_title": "Six months from now, one of two things will be true",
+      "close": [
+        {
+          "text": "Either you are still opening an editor at 9 PM and deciding the video is not worth the effort."
+        },
+        {
+          "text": "Or you set this up once, and the editing stopped being the reason you do not post."
+        },
+        {
+          "text": "Same camera. Same ideas. The only difference is who is doing the editing."
+        }
+      ],
+      "proof": [],
+      "guarantee": "",
+      "faqs": [
+        {
+          "question": "Why ₦5,000 and not free?",
+          "answer": "Because people do not value free things. A free guide gets saved and never opened. ₦5,000 is your commitment that you will set this up now, and the setup is built so you can finish it tonight."
+        },
+        {
+          "question": "Do I need to be technical?",
+          "answer": "The setup is written out step by step, and the test example shows you what working looks like before you use it on real footage."
+        },
+        {
+          "question": "How fast do I get it?",
+          "answer": "Right after you pay. Your download is sent to the email you paid with."
+        },
+        {
+          "question": "Can't I just ask Claude or ChatGPT to do this?",
+          "answer": "You can ask. Then you spend your evening working out the steps, the prompts, and what to do when the output is wrong. This setup is those answers, already written, with a test example to check against."
+        },
+        {
+          "question": "Is this the same as the Starter Kit?",
+          "answer": "No. A setup is one job, done. The Starter Kit has 36 setups, a private community and weekend live classes."
+        }
+      ],
+      "needs": ""
+    },
+    {
+      "slug": "content-pipeline",
+      "status": "draft",
+      "name": "AutoStack Setup: Content Calendar",
+      "short_name": "Content Calendar",
+      "eyebrow": "AutoStack Setup: Content Calendar. For social media managers, VAs and creators",
+      "headline_pre": "Handle",
+      "headline_em": "More Clients",
+      "headline_post": "Without Working More Hours.",
+      "lead": "A Notion content calendar that fills itself. Claude writes the hooks and captions, makes the designs in Canva, and you approve. Nothing is ever posted for you.",
+      "cta_text": "Yes, Give Me the Content Calendar",
+      "trust": [
+        "Secure payment",
+        "Instant access",
+        "Step-by-step guide"
+      ],
+      "video_url": "",
+      "buy_url": "",
+      "notion_url": "",
+      "demo_caption": "Watch a week of content land in your Notion calendar. Press play.",
+      "guess_title": "Let me guess what your Sunday looks like...",
+      "guess": [
+        {
+          "text": "Client one needs captions. Client two needs the carousel designed. Client three wants everything scheduled by Monday morning."
+        },
+        {
+          "text": "You have five of them. Each with their own tone, their own brand colours, their own posting times."
+        },
+        {
+          "text": "You jump between five accounts, three tools and a spreadsheet, and lose track of what is done and what is not."
+        },
+        {
+          "text": "A client messages: \"Is this week's content ready?\" It is not. You say it is almost done."
+        },
+        {
+          "text": "You want to take on a sixth client. You cannot. There are no more hours to give."
+        },
+        {
+          "text": "So you do not raise your rates, you do not take more clients, and you stay busy and stuck."
+        }
+      ],
+      "truth_title": "Here is the truth nobody tells you:",
+      "truth": [
+        {
+          "text": "It is not that you manage your time badly. It is that every client's week is built by hand, from scratch, every single week."
+        },
+        {
+          "text": "Hand-made work caps your income at your hours. Take the hand-making out and the cap moves."
+        }
+      ],
+      "cost_title": "What this is costing you",
+      "costs": [
+        {
+          "head": "The sixth client you turn down.",
+          "text": "Every client you cannot take on is income you gave up because you ran out of hours."
+        },
+        {
+          "head": "Your weekend.",
+          "text": "Sunday is not yours. It belongs to Monday's posts."
+        },
+        {
+          "head": "Late content.",
+          "text": "A post that goes up a day late is a client who starts wondering what they are paying for."
+        },
+        {
+          "head": "Your rate.",
+          "text": "Hourly work caps you. When the hours run out, the money does."
+        }
+      ],
+      "pull": "None of this is a someday problem. It happens again next Sunday.",
+      "fix_title": "What changes with the Pipeline",
+      "fixes": [
+        {
+          "when": "A client's week starts.",
+          "then": "You sit down once, and the captions, designs and schedule come out of one sitting."
+        },
+        {
+          "when": "A client asks if the content is ready.",
+          "then": "It is already scheduled."
+        },
+        {
+          "when": "A new client signs.",
+          "then": "You have a process to put them through, not a new pile of hours."
+        },
+        {
+          "when": "Sunday arrives.",
+          "then": "It is yours."
+        }
+      ],
+      "inside_title": "What you get",
+      "inside": [
+        {
+          "text": "The Content Calendar template for Notion, with a calendar view"
+        },
+        {
+          "text": "The skill that plans, writes and designs for you"
+        },
+        {
+          "text": "One setup video, start to finish: how to connect Notion and Canva to Claude"
+        },
+        {
+          "text": "Starter prompts, so you can test it the same day"
+        }
+      ],
+      "math_title": "Let us do the math on your week",
+      "math": [
+        {
+          "text": "Say each client's week of content takes you 3 hours by hand. Five clients is 15 hours. At ₦5,000 an hour, that is ₦75,000 of your week."
+        },
+        {
+          "text": "Say the Pipeline brings each client down to 1 hour. That is 10 hours back every week. ₦50,000 of your time, every week."
+        },
+        {
+          "text": "The Pipeline is ₦5,000. One time."
+        },
+        {
+          "text": "It pays for itself the first time you use it on one client."
+        }
+      ],
+      "math_note": "Your numbers will differ. Plug in your own hours and your own rate.",
+      "for_list": [
+        {
+          "text": "Social media managers handling content for several clients."
+        },
+        {
+          "text": "VAs who want a premium service to offer, not hourly data entry."
+        },
+        {
+          "text": "Freelancers who keep saying yes to clients and no to rest."
+        }
+      ],
+      "not_for": [
+        {
+          "text": "You manage one account and have time to spare."
+        },
+        {
+          "text": "You want a course on content strategy. This is a workflow, not lessons."
+        }
+      ],
+      "close_title": "Six months from now, one of two things will be true",
+      "close": [
+        {
+          "text": "Either you are still building every client's week by hand, and turning down the sixth client."
+        },
+        {
+          "text": "Or you set this up once, and a client's week of posts is one sitting, not one weekend."
+        },
+        {
+          "text": "Same clients. Same tools. The only difference is whether the work is hand-made."
+        }
+      ],
+      "proof": [],
+      "guarantee": "",
+      "faqs": [
+        {
+          "question": "Why ₦5,000 and not free?",
+          "answer": "Because people do not value free things. A free guide gets saved and never opened. ₦5,000 is your commitment that you will set this up now, and the setup is built so you can finish it tonight."
+        },
+        {
+          "question": "Do I need to be technical?",
+          "answer": "The setup is written out step by step, and the test example shows you what working looks like before you use it on a real client."
+        },
+        {
+          "question": "How fast do I get it?",
+          "answer": "Right after you pay. Your download is sent to the email you paid with."
+        },
+        {
+          "question": "Can't I just ask Claude or ChatGPT to do this?",
+          "answer": "You can ask. Then you spend your Sunday working out the steps, the prompts, and what to do when the output is wrong. This setup is those answers, already written, with a test example to check against."
+        },
+        {
+          "question": "Is this the same as the Starter Kit?",
+          "answer": "No. A setup is one job, done. The Starter Kit has 36 setups, a private community and weekend live classes."
+        }
+      ],
+      "needs": ""
+    },
+    {
+      "slug": "income-tracker",
+      "status": "draft",
+      "name": "AutoStack Setup: Income Tracker",
+      "short_name": "Income Tracker",
+      "eyebrow": "AutoStack Setup: Income Tracker. For business owners who get paid by bank transfer",
+      "headline_pre": "Stop Copying Your Bank Alerts",
+      "headline_em": "Into a Sheet by Hand.",
+      "headline_post": "",
+      "lead": "Every payment you receive has to be written down somewhere, and the writing down is the stressful part. This is a spreadsheet that Claude fills from your bank alert emails, so keeping a record of what you made stops being a chore. Works on your phone or your laptop.",
+      "cta_text": "Yes, Give Me the Income Tracker",
+      "trust": [
+        "Secure payment",
+        "Instant access",
+        "Step-by-step guide"
+      ],
+      "video_url": "/assets/video/income-tracker-teaser.mp4",
+      "buy_url": "",
+      "notion_url": "https://flying-moonstone-d60.notion.site/AutoStack-Setup-Income-Tracker-3f991c6290c781c9ab97d29c0cd34a4f?pvs=74",
+      "demo_caption": "Download it. Copy it. Connect Claude. Press play to see it work.",
+      "guess_title": "Let me guess how you keep a record of what you made...",
+      "guess": [
+        {
+          "text": "A payment comes in. You tell yourself you will write it down later."
+        },
+        {
+          "text": "Later becomes a pile. Alerts in your email, screenshots in your gallery, a few numbers in your Notes app."
+        },
+        {
+          "text": "So on a free evening you open a sheet and copy them over, one by one. Amount, who paid, date, bank."
+        },
+        {
+          "text": "You miss one. You type another twice. You stop halfway and promise to finish tomorrow."
+        },
+        {
+          "text": "A week later you are behind again, and the record is still not up to date."
+        }
+      ],
+      "truth_title": "Here is the truth nobody tells you:",
+      "truth": [
+        {
+          "text": "It is not that you are lazy about records. It is that copying every payment by hand is a job nobody keeps up with."
+        },
+        {
+          "text": "The record does not fail because you do not care. It fails because it depends on you remembering, every single time."
+        }
+      ],
+      "cost_title": "What this is costing you",
+      "costs": [
+        {
+          "head": "Copying that never ends.",
+          "text": "Every new payment is another row to type, and the pile grows while you are busy running the business."
+        },
+        {
+          "head": "A record you cannot trust.",
+          "text": "One missed row or one doubled row and the total is wrong, so you check it all again."
+        },
+        {
+          "head": "You do not know your real numbers.",
+          "text": "So you price, spend and hire on a feeling."
+        },
+        {
+          "head": "The stress that sits in the background.",
+          "text": "A record you know is behind is one more thing on your mind."
+        }
+      ],
+      "pull": "None of this is a someday problem. The next payment is already on its way.",
+      "fix_title": "What changes with the Income Tracker",
+      "fixes": [
+        {
+          "when": "A bank alert lands in your inbox.",
+          "then": "Claude copies it into your sheet for you, as income or as an expense."
+        },
+        {
+          "when": "You want your record up to date.",
+          "then": "You ask Claude to read this week's alerts. You do not type a row."
+        },
+        {
+          "when": "Someone asks how business is.",
+          "then": "You open the sheet and you know."
+        },
+        {
+          "when": "It is the 30th.",
+          "then": "Your record is already there."
+        }
+      ],
+      "inside_title": "What you get",
+      "inside": [
+        {
+          "text": "The Income Tracker spreadsheet: money in, money out, what you kept, biggest payments, where the money went, month by month"
+        },
+        {
+          "text": "The skill that reads your bank alerts and fills the sheet"
+        },
+        {
+          "text": "One setup video, start to finish"
+        },
+        {
+          "text": "A test example, so you can see it working before you use your own alerts"
+        }
+      ],
+      "math_title": "Let us do the math on your records",
+      "math": [
+        {
+          "text": "Say copying your alerts into a sheet takes you 2 hours a month. At ₦5,000 an hour, that is ₦10,000 a month."
+        },
+        {
+          "text": "That is ₦120,000 a year, for a record you still have to double-check."
+        },
+        {
+          "text": "The Income Tracker is ₦5,000. One time."
+        },
+        {
+          "text": "It pays for itself in the first month."
+        }
+      ],
+      "math_note": "Your hour might be worth more or less. Plug in your own number.",
+      "for_list": [
+        {
+          "text": "Business owners who get paid by bank transfer."
+        },
+        {
+          "text": "Sellers who copy every payment into a sheet by hand."
+        },
+        {
+          "text": "Freelancers who keep putting off updating their records."
+        }
+      ],
+      "not_for": [
+        {
+          "text": "You already track income in accounting software you trust."
+        },
+        {
+          "text": "Your customers pay in cash and you never get alerts."
+        }
+      ],
+      "close_title": "Six months from now, one of two things will be true",
+      "close": [
+        {
+          "text": "Either you are still copying alerts into a sheet by hand, and still behind."
+        },
+        {
+          "text": "Or you set this up once, and your record kept itself every week."
+        },
+        {
+          "text": "Same business. Same customers. The only difference is who does the copying."
+        }
+      ],
+      "proof": [],
+      "guarantee": "",
+      "faqs": [
+        {
+          "question": "Why ₦5,000 and not free?",
+          "answer": "Because people do not value free things. A free guide gets saved and never opened. ₦5,000 is your commitment that you will set this up now, and the setup is built so you can finish it tonight."
+        },
+        {
+          "question": "Do I need to be technical?",
+          "answer": "The setup is written out step by step, and the test example shows you what working looks like before you use it on your own alerts."
+        },
+        {
+          "question": "How fast do I get it?",
+          "answer": "Right after you pay. Your download is sent to the email you paid with."
+        },
+        {
+          "question": "Can't I just ask Claude or ChatGPT to do this?",
+          "answer": "You can ask. Then you spend your evening working out the steps, the prompts, and what to do when the total is wrong. This setup is those answers, already written, with a test example to check against."
+        },
+        {
+          "question": "Is this the same as the Starter Kit?",
+          "answer": "No. A setup is one job, done. The Starter Kit has 36 setups, a private community and weekend live classes."
+        }
+      ],
+      "needs": ""
+    }
+  ]
+}

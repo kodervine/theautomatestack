@@ -1,0 +1,107 @@
+<section class="hero sales-hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow" id="got-title">Your purchase is confirmed. Check your email for your download.</p>
+    <h1>Wait. <span class="em">Before you go.</span></h1>
+    <p class="lead">Your setup is yours to run on your own, and you can stop right here. Or you can run it with people doing the same thing, and with me live when you get stuck.</p>
+    <p class="cta-row" id="notion-row" hidden><a class="btn btn--big" id="notion-link" href="#" rel="noopener">Open your setup in Notion &rarr;</a></p>
+    {{> sales-cta}}
+    <ul class="trust">{{#each trust}}<li>{{label}}</li>{{/each}}</ul>
+  </div>
+</section>
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>On your own, or with the community</h2>
+    <p>Both work. Here is the difference.</p>
+    <ul class="cost-list">
+      <li><strong>On your own.</strong>Your download, your walkthrough and your setup video. If you get stuck, reply to your delivery email.</li>
+      <li><strong>With the community.</strong>The same setup, plus people to ask, live classes where we fix your setup together, and replays when you cannot make it.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sales-section section--live">
+  <div class="sales-narrow">
+    <p class="eyebrow">Inside the community</p>
+    <h2>AutoStack Live: we fix your setup together</h2>
+    <p>Most people do not quit because a setup is hard. They quit because they got stuck at step four, alone, at 10 PM.</p>
+    <p>So we go live. You bring your screen. I look at what you built, we find what is broken, and we fix it before the class ends.</p>
+    <ul class="tick-list">
+      <li>Stuck on a setup? Bring it to the next live class.</li>
+      <li>Not sure which job to automate next? Ask me live.</li>
+      <li>Something stopped working after a tool update? We fix it together.</li>
+    </ul>
+    <p class="cta-row">{{> sales-cta}}</p>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <h2>What comes with it</h2>
+    <ul class="tick-list">
+      <li>A private community for questions and results</li>
+      <li><strong>AutoStack Live:</strong> classes where we fix your setup together</li>
+      <li>Replays in your own archive</li>
+      <li>Your own referral link: {{partner_cut}} on everyone who gets the AutoStack through you</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <p class="eyebrow">Referral</p>
+    <h2>Keep {{partner_cut}} on everyone you introduce</h2>
+    <p>When someone you introduce gets the AutoStack through your link, you keep {{partner_cut}}. Bring as many people as you like. There is no limit.</p>
+    <p>No tiers, no recruiting, no joining fee.</p>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <div class="price-box">
+      <p class="eyebrow">{{name}}</p>
+      <p class="price">{{price}}</p>
+      <p class="price-sub">{{price_note}}. The community, AutoStack Live and replays.</p>
+      {{> sales-cta}}
+      <p class="price-sub">Or pay {{annual_price}} once for the year and keep {{annual_save}}.</p>
+      <p class="cta-row"><a class="btn" href="{{annual_buy_href}}" rel="noopener">Pay {{annual_price}} for the year &rarr;</a></p>
+      <ul class="trust trust--dark">{{#each trust}}<li>{{label}}</li>{{/each}}</ul>
+    </div>
+    <p class="no-thanks"><a href="/">No thanks, I will run my setup on my own</a></p>
+  </div>
+</section>
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>Questions you probably have</h2>
+    <div class="faq-list">
+{{#each faqs}}      <details>
+        <summary>{{question}}</summary>
+        <p>{{answer}}</p>
+      </details>
+{{/each}}    </div>
+  </div>
+</section>
+
+<div class="sticky-cta" aria-hidden="false">
+  {{> sales-cta}}
+</div>
+
+<script type="application/json" id="setup-names">{{{setup_names_json}}}</script>
+<script type="application/json" id="setup-notion">{{{setup_notion_json}}}</script>
+<script>
+  (function () {
+    try {
+      var names = JSON.parse(document.getElementById("setup-names").textContent);
+      var slug = new URLSearchParams(window.location.search).get("setup");
+      if (slug && Object.prototype.hasOwnProperty.call(names, slug)) {
+        document.getElementById("got-title").textContent = "You just got " + names[slug] + ". Check your email for your download.";
+      }
+      var notion = JSON.parse(document.getElementById("setup-notion").textContent);
+      if (slug && Object.prototype.hasOwnProperty.call(notion, slug)) {
+        document.getElementById("notion-link").href = notion[slug];
+        document.getElementById("notion-row").hidden = false;
+      }
+    } catch (e) { }
+  })();
+</script>

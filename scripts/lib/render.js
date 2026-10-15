@@ -92,12 +92,17 @@ const MENUS = [
   ] },
 ];
 
+// Ready (live) Setups get added to the Products menu. Drafts never appear in the nav.
+let setupNavItems = [];
+export function setSetupNav(items) { setupNavItems = items; }
+
 export function navMarkup(activePath = "", hasBlog = true) {
+  const menus = MENUS.map((g) => (g.label === "Products" ? { ...g, items: [...g.items, ...setupNavItems] } : g));
   const on = (url) => (activePath.startsWith(url) ? ' aria-current="page"' : "");
   const groupOn = (g) => (g.items.some((i) => activePath.startsWith(i.url)) ? " is-current" : "");
   const desktop = [
     `<a href="/freebies/"${on("/freebies/")}>Start here</a>`,
-    ...MENUS.map((g) => `<div class="menu${groupOn(g)}">
+    ...menus.map((g) => `<div class="menu${groupOn(g)}">
         <button type="button" class="menu-btn" aria-haspopup="true">${g.label}</button>
         <ul class="menu-panel">
 ${g.items.map((i) => `          <li><a href="${i.url}"${on(i.url)}><strong>${i.label}</strong><span>${i.note}</span></a></li>`).join("\n")}
@@ -107,7 +112,7 @@ ${g.items.map((i) => `          <li><a href="${i.url}"${on(i.url)}><strong>${i.l
   ].filter(Boolean).join("\n      ");
   const mobile = [
     `<a href="/freebies/">Start here</a>`,
-    ...MENUS.flatMap((g) => g.items.map((i) => `<a href="${i.url}">${i.label}</a>`)),
+    ...menus.flatMap((g) => g.items.map((i) => `<a href="${i.url}">${i.label}</a>`)),
     hasBlog ? `<a href="/blog/">Blog</a>` : "",
     `<a href="/freebies/" class="btn">Free Checklist</a>`,
   ].filter(Boolean).join("\n        ");

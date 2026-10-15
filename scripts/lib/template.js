@@ -53,7 +53,7 @@ export function renderPartial(name, ctx) {
 }
 
 /** Render a page template inside templates/base.html. */
-export function renderPage(templateName, ctx) {
+export function renderPage(templateName, ctx, layout = "base.html") {
   const content = renderTemplate(templateName, ctx);
-  return renderTemplate("base.html", { ...ctx, content });
+  return renderTemplate(layout, { ...ctx, content });
 }

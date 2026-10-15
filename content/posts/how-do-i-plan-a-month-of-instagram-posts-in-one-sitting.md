@@ -8,7 +8,7 @@ updated: 2026-10-19
 tags:
   - content
   - instagram
-status: draft
+status: ready
 image: /blog/images/how-do-i-plan-a-month-of-instagram-posts-in-one-sitting/month-of-posts.png
 source_post: ""
 medium_url: ""
