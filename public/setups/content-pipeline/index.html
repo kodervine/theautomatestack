@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoStack Setup: Content Calendar | The Automate Stack</title>
+  <meta name="description" content="A Notion content calendar that fills itself. Claude writes the hooks and captions, makes the designs in Canva, and you approve. Nothing is ever posted for you.">
+  <link rel="canonical" href="https://www.theautomatestack.com/setups/content-pipeline/">
+  
+  
+  <link rel="icon" type="image/png" href="/assets/img/logo.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="The Automate Stack Blog" href="https://www.theautomatestack.com/blog/rss.xml">
+
+  <meta property="og:site_name" content="The Automate Stack">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AutoStack Setup: Content Calendar | The Automate Stack">
+  <meta property="og:description" content="A Notion content calendar that fills itself. Claude writes the hooks and captions, makes the designs in Canva, and you approve. Nothing is ever posted for you.">
+  <meta property="og:url" content="https://www.theautomatestack.com/setups/content-pipeline/">
+  <meta property="og:image" content="https://www.theautomatestack.com/assets/img/logo.png">
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AutoStack Setup: Content Calendar | The Automate Stack">
+  <meta name="twitter:description" content="A Notion content calendar that fills itself. Claude writes the hooks and captions, makes the designs in Canva, and you approve. Nothing is ever posted for you.">
+  <meta name="twitter:image" content="https://www.theautomatestack.com/assets/img/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Lato:wght@400;700&amp;family=Poppins:wght@700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/brand.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why ₦5,000 and not free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because people do not value free things. A free guide gets saved and never opened. ₦5,000 is your commitment that you will set this up now, and the setup is built so you can finish it tonight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to be technical?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The setup is written out step by step, and the test example shows you what working looks like before you use it on a real client. There is also a short video on connecting Claude and a full walkthrough video, so you can follow along step by step."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast do I get it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Right after you pay. Your download is sent to the email you paid with."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can't I just ask Claude or ChatGPT to do this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can ask. Then you spend your Sunday working out the steps, the prompts, and what to do when the output is wrong. This setup is those answers, already written, with a test example to check against."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this the same as the Starter Kit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A setup is one job, done. The Starter Kit has 36 setups, a private community and weekend live classes."
+      }
+    }
+  ]
+}
+  </script>
+  <script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1067023309651592');
+fbq('track', 'PageView');
+(function () {
+  var data = {"content_ids":["content-pipeline"],"content_name":"Content Calendar","content_type":"product","value":5000,"currency":"NGN"};
+  // A setup page: tell Meta which product is being viewed.
+  if (data.content_ids) fbq('track', 'ViewContent', data);
+  // Someone presses a buy button, on their way to Selar.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a.btn--big');
+    if (a && data.content_ids) fbq('track', 'InitiateCheckout', data);
+  }, { passive: true });
+  // The page Selar sends buyers back to after paying. Counted once per visit, and only when a setup is named in the link.
+  var m = /^\/before-you-go\/?$/.test(location.pathname) && new URLSearchParams(location.search).get('setup');
+  if (m) {
+    try { if (sessionStorage.getItem('px-purchase-' + m)) return; sessionStorage.setItem('px-purchase-' + m, '1'); } catch (x) {}
+    fbq('track', 'Purchase', { content_ids: [m], currency: 'NGN', value: 5000 });
+  }
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1067023309651592&amp;ev=PageView&amp;noscript=1"></noscript>
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  
+  <header class="site-header site-header--sales">
+  <div class="wrap">
+    <span class="brand">
+      <img src="/assets/img/logo.png" alt="The Automate Stack logo" width="36" height="36">
+      <span>theautomatestack</span>
+    </span>
+    <p class="header-price">Content Calendar · ₦5,000 one time</p>
+  </div>
+  <div class="price-band">Content Calendar · ₦5,000 one time</div>
+</header>
+
+  <main id="main">
+<section class="hero sales-hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">AutoStack Setup: Content Calendar. For social media managers, VAs and creators</p>
+    <h1>
+      Handle <span class="em">More Clients</span> Without Working More Hours.
+    </h1>
+    <p class="lead">A Notion content calendar that fills itself. Claude writes the hooks and captions, makes the designs in Canva, and you approve. Nothing is ever posted for you.</p>
+    <a class="btn btn--big" href="https://selar.com/x4h122z884" rel="noopener">Yes, Give Me the Content Calendar &rarr;</a>
+
+    <ul class="trust">
+      
+      <li>Secure payment</li>
+      
+      <li>Instant access</li>
+      
+      <li>Step-by-step guide</li>
+      
+    </ul>
+  </div>
+</section>
+
+<section class="sales-section sales-section--demo">
+  <div class="sales-narrow">
+    <h2>Watch it work</h2>
+    <div class="video-single"><video controls playsinline preload="metadata" aria-label="Content Calendar: the setup working, start to finish"><source src="/assets/video/content-calendar-teaser.mp4" type="video/mp4"></video></div>
+    <p class="demo-caption">Download it. Copy it. Connect Claude. Press play to see it work.</p>
+    <p class="cta-row"><a class="btn btn--big" href="https://selar.com/x4h122z884" rel="noopener">Yes, Give Me the Content Calendar &rarr;</a>
+</p>
+  </div>
+</section>
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>Let me guess what your Sunday looks like...</h2>
+    <ol class="guess-list">
+      
+      <li>Client one needs captions. Client two needs the carousel designed. Client three wants everything scheduled by Monday morning.</li>
+      
+      <li>You have five of them. Each with their own tone, their own brand colours, their own posting times.</li>
+      
+      <li>You jump between five accounts, three tools and a spreadsheet, and lose track of what is done and what is not.</li>
+      
+      <li>A client messages: &quot;Is this week&#39;s content ready?&quot; It is not. You say it is almost done.</li>
+      
+      <li>You want to take on a sixth client. You cannot. There are no more hours to give.</li>
+      
+      <li>So you do not raise your rates, you do not take more clients, and you stay busy and stuck.</li>
+      
+    </ol>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <h2>Here is the truth nobody tells you:</h2>
+    
+    <p>It is not that you manage your time badly. It is that every client&#39;s week is built by hand, from scratch, every single week.</p>
+    
+    <p>Hand-made work caps your income at your hours. Take the hand-making out and the cap moves.</p>
+    
+  </div>
+</section>
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>What this is costing you</h2>
+    <ul class="cost-list">
+      
+      <li><strong>The sixth client you turn down.</strong>Every client you cannot take on is income you gave up because you ran out of hours.</li>
+      
+      <li><strong>Your weekend.</strong>Sunday is not yours. It belongs to Monday&#39;s posts.</li>
+      
+      <li><strong>Late content.</strong>A post that goes up a day late is a client who starts wondering what they are paying for.</li>
+      
+      <li><strong>Your rate.</strong>Hourly work caps you. When the hours run out, the money does.</li>
+      
+    </ul>
+    <p class="pull">None of this is a someday problem. It happens again next Sunday.</p>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <h2>What changes with the Pipeline</h2>
+    <ul class="fix-list">
+      
+      <li>
+        <span class="fix-when">A client&#39;s week starts.</span
+        ><span class="fix-then">You sit down once, and the captions, designs and schedule come out of one sitting.</span>
+      </li>
+      
+      <li>
+        <span class="fix-when">A client asks if the content is ready.</span
+        ><span class="fix-then">It is already scheduled.</span>
+      </li>
+      
+      <li>
+        <span class="fix-when">A new client signs.</span
+        ><span class="fix-then">You have a process to put them through, not a new pile of hours.</span>
+      </li>
+      
+      <li>
+        <span class="fix-when">Sunday arrives.</span
+        ><span class="fix-then">It is yours.</span>
+      </li>
+      
+    </ul>
+    <p class="cta-row"><a class="btn btn--big" href="https://selar.com/x4h122z884" rel="noopener">Yes, Give Me the Content Calendar &rarr;</a>
+</p>
+  </div>
+</section>
+
+
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>What you get</h2>
+    <ul class="tick-list">
+      
+      <li>The Content Calendar template for Notion, with a calendar view</li>
+      
+      <li>The skill that plans, writes and designs for you</li>
+      
+      <li>A step-by-step walkthrough video of the full setup, about 10 minutes, from the download to your first Canva designs</li>
+      
+      <li>A short video on connecting Claude: signing in, projects and connectors (under 3 minutes)</li>
+      
+      <li>Starter prompts, so you can test it the same day</li>
+      
+    </ul>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <h2>Who built this</h2>
+    <div class="bio">
+      <img
+        src="/assets/img/chinenye-avatar.jpg"
+        width="112"
+        height="112"
+        alt="Chinenye"
+        loading="lazy"
+      />
+      <div>
+        <p>Hi, I am Chinenye. In my day job I am a software engineer.</p>
+        <p>
+          I was featured by the Association for Computing Machinery (ACM) as an
+          advocate for responsible AI, and I have organized workshops at the
+          Deep Learning Indaba, the biggest AI conference in Africa.
+        </p>
+        <p>
+          I build this setup to do one job, and I put it in front of you so you
+          can start tonight.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>Let us do the math on your week</h2>
+    <div class="math-box">
+      
+      <p>Say each client&#39;s week of content takes you 3 hours by hand. Five clients is 15 hours. At ₦5,000 an hour, that is ₦75,000 of your week.</p>
+      
+      <p>Say the Pipeline brings each client down to 1 hour. That is 10 hours back every week. ₦50,000 of your time, every week.</p>
+      
+      <p>The Pipeline is ₦5,000. One time.</p>
+      
+      <p>It pays for itself the first time you use it on one client.</p>
+      
+    </div>
+    <p class="demo-caption">Your numbers will differ. Plug in your own hours and your own rate.</p>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <div class="price-box">
+      <p class="eyebrow">Simple pricing</p>
+      <p class="price">₦5,000</p>
+      <p class="price-sub">One-time payment. Instant access.</p>
+      
+      <p class="price-sub">What you need: A Claude account, a Notion account and a Canva account.</p>
+      
+      
+      <p class="price-sub">Stuck on connecting Claude? A short video shows you how to sign in and connect your apps.</p>
+      
+      <a class="btn btn--big" href="https://selar.com/x4h122z884" rel="noopener">Yes, Give Me the Content Calendar &rarr;</a>
+
+      <ul class="trust trust--dark">
+        
+        <li>Secure payment</li>
+        
+        <li>Instant access</li>
+        
+        <li>Step-by-step guide</li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <div class="for-grid">
+      <div class="yes">
+        <h3>Who this is for</h3>
+        <ul>
+          
+          <li>Social media managers handling content for several clients.</li>
+          
+          <li>VAs who want a premium service to offer, not hourly data entry.</li>
+          
+          <li>Freelancers who keep saying yes to clients and no to rest.</li>
+          
+        </ul>
+      </div>
+      <div class="no">
+        <h3>Who this is not for</h3>
+        <ul>
+          
+          <li>You manage one account and have time to spare.</li>
+          
+          <li>You want a course on content strategy. This is a workflow, not lessons.</li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <h2>Six months from now, one of two things will be true</h2>
+    
+    <p>Either you are still building every client&#39;s week by hand, and turning down the sixth client.</p>
+    
+    <p>Or you set this up once, and a client&#39;s week of posts is one sitting, not one weekend.</p>
+    
+    <p>Same clients. Same tools. The only difference is whether the work is hand-made.</p>
+    
+    <p class="cta-row"><a class="btn btn--big" href="https://selar.com/x4h122z884" rel="noopener">Yes, Give Me the Content Calendar &rarr;</a>
+</p>
+  </div>
+</section>
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>Questions you probably have</h2>
+    <div class="faq-list">
+      
+      <details>
+        <summary>Why ₦5,000 and not free?</summary>
+        <p>Because people do not value free things. A free guide gets saved and never opened. ₦5,000 is your commitment that you will set this up now, and the setup is built so you can finish it tonight.</p>
+      </details>
+      
+      <details>
+        <summary>Do I need to be technical?</summary>
+        <p>The setup is written out step by step, and the test example shows you what working looks like before you use it on a real client. There is also a short video on connecting Claude and a full walkthrough video, so you can follow along step by step.</p>
+      </details>
+      
+      <details>
+        <summary>How fast do I get it?</summary>
+        <p>Right after you pay. Your download is sent to the email you paid with.</p>
+      </details>
+      
+      <details>
+        <summary>Can&#39;t I just ask Claude or ChatGPT to do this?</summary>
+        <p>You can ask. Then you spend your Sunday working out the steps, the prompts, and what to do when the output is wrong. This setup is those answers, already written, with a test example to check against.</p>
+      </details>
+      
+      <details>
+        <summary>Is this the same as the Starter Kit?</summary>
+        <p>No. A setup is one job, done. The Starter Kit has 36 setups, a private community and weekend live classes.</p>
+      </details>
+      
+    </div>
+  </div>
+</section>
+
+<div class="sticky-cta" aria-hidden="false"><a class="btn btn--big" href="https://selar.com/x4h122z884" rel="noopener">Yes, Give Me the Content Calendar &rarr;</a>
+</div>
+
+  </main>
+  <footer class="sales-footer">
+  <p>Questions? <a href="mailto:chinenye@theautomatestack.com">chinenye@theautomatestack.com</a></p>
+  <p>&copy; 2026 The Automate Stack. All rights reserved. <a href="/privacy/">Privacy note</a></p>
+  <div class="sales-disclaimer">
+    <p>Any examples of time or money on this page are only illustrations, not promises or estimates of what you will earn or save. Individual results will always vary and depend on your own situation, effort and skills.</p>
+    <p>This site is not a part of the Facebook website or Meta Platforms, Inc. This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of Meta Platforms, Inc.</p>
+    <p>This page uses the Meta Pixel to measure my ads. It saves cookies on your device. See the <a href="/privacy/">privacy note</a> for what it records and how to opt out.</p>
+
+  </div>
+</footer>
+
+</body>
+</html>

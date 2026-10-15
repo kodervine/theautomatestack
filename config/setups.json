@@ -273,7 +273,7 @@
     },
     {
       "slug": "content-pipeline",
-      "status": "draft",
+      "status": "ready",
       "name": "AutoStack Setup: Content Calendar",
       "short_name": "Content Calendar",
       "eyebrow": "AutoStack Setup: Content Calendar. For social media managers, VAs and creators",
@@ -288,7 +288,7 @@
         "Step-by-step guide"
       ],
       "video_url": "/assets/video/content-calendar-teaser.mp4",
-      "buy_url": "",
+      "buy_url": "https://selar.com/x4h122z884",
       "notion_url": "",
       "demo_caption": "Download it. Copy it. Connect Claude. Press play to see it work.",
       "guess_title": "Let me guess what your Sunday looks like...",
@@ -449,12 +449,12 @@
           "answer": "No. A setup is one job, done. The Starter Kit has 36 setups, a private community and weekend live classes."
         }
       ],
-      "needs": "",
+      "needs": "A Claude account, a Notion account and a Canva account.",
       "connect_line": "Stuck on connecting Claude? A short video shows you how to sign in and connect your apps."
     },
     {
       "slug": "income-tracker",
-      "status": "draft",
+      "status": "ready",
       "name": "AutoStack Setup: Income Tracker",
       "short_name": "Income Tracker",
       "eyebrow": "AutoStack Setup: Income Tracker. For business owners who get paid by bank transfer",
@@ -469,7 +469,7 @@
         "Step-by-step guide"
       ],
       "video_url": "/assets/video/income-tracker-teaser.mp4",
-      "buy_url": "",
+      "buy_url": "https://selar.com/9e05xj639y",
       "notion_url": "https://flying-moonstone-d60.notion.site/AutoStack-Setup-Income-Tracker-3f991c6290c781c9ab97d29c0cd34a4f?pvs=74",
       "demo_caption": "Download it. Copy it. Connect Claude. Press play to see it work.",
       "guess_title": "Let me guess how you keep a record of what you made...",
@@ -627,7 +627,7 @@
           "answer": "No. A setup is one job, done. The Starter Kit has 36 setups, a private community and weekend live classes."
         }
       ],
-      "needs": "",
+      "needs": "A Claude account, and a bank that sends you alert emails.",
       "connect_line": "Stuck on connecting Claude? A short video shows you how to sign in and connect your apps."
     }
   ]

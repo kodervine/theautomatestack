@@ -1,0 +1,38 @@
+<section class="hero hero--short">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Privacy</p>
+    <h1>Privacy note</h1>
+    <p class="lead">I keep this short and plain. Here is what I collect, why I collect it, and how you can ask me to delete it.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap read-wide prose">
+    <h2>What I collect, and why</h2>
+    <ul>
+      <li><strong>When you ask for a free resource.</strong> Your first name, your email, and the fact that you agreed to be contacted. I save them in Notion, the tool I use to run my work, so I can follow up about what you asked for and related offers.</li>
+      <li><strong>When you email me.</strong> I keep your message so I can reply to you.</li>
+      <li><strong>When you buy.</strong> Selar takes your payment, not me. I never see your card details. I may see order details such as your name and email, so I can deliver what you bought and help you if you get stuck.</li>
+{{#if meta_pixel_id}}      <li><strong>Tracking on the setup pages.</strong> The setup pages use Meta's tracking tool (the Meta Pixel). It records that you visited the page, looked at a setup and clicked to buy. It saves cookies on your device and shares that with Meta, so I can see which of my ads work and show them to people who may want them.</li>
+{{/if}}      <li><strong>Technical details.</strong> Like any website, the service that hosts these pages (Vercel) may record basic technical information, such as your IP address.</li>
+    </ul>
+
+    <h2>Who else handles your information</h2>
+    <p>Notion stores my list of people who asked for a resource. Selar handles payments and delivery. Vercel hosts the site.{{#if meta_pixel_id}} Meta receives the tracking data from the setup pages.{{/if}} I do not sell your information.</p>
+
+    <h2>Your choices</h2>
+    <ul>
+{{#if meta_pixel_id}}      <li><strong>Opt out of tracking.</strong> Block cookies and trackers in your browser settings, use an ad blocker, or change your ad preferences in your Facebook or Instagram account. Any of these stops the Pixel from following you.</li>
+{{/if}}      <li><strong>Ask to see, fix or delete what I have.</strong> Email <a href="mailto:{{contact_email}}">{{contact_email}}</a> and I will sort it out.</li>
+      <li><strong>Stop hearing from me.</strong> Tell me and I will remove you from my list.</li>
+    </ul>
+
+    <h2>How long I keep it</h2>
+    <p>Until you ask me to delete it.</p>
+
+    <h2>Questions</h2>
+    <p>Write to me at <a href="mailto:{{contact_email}}">{{contact_email}}</a>.</p>
+
+    <p class="note">Last updated: 15 October 2026.</p>
+  </div>
+</section>

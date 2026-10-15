@@ -119,6 +119,8 @@ export function buildPages({ out, site, posts, drafts }) {
         header_note: `${s.short_name} \u00b7 ${setupCfg.price} one time`,
         buy_href: s.buy_url || "#",
         video_html: videoHtml(s),
+        purchase_value: Number(String(setupCfg.price).replace(/[^0-9]/g, "")) || 0,
+        pixel_json: JSON.stringify({ content_ids: [s.slug], content_name: s.short_name, content_type: "product", value: Number(String(setupCfg.price).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\\u003c"),
       },
     })),
     // Draft for now: the Club upsell is built only in the draft preview until the founding buyers are in.
@@ -136,9 +138,17 @@ export function buildPages({ out, site, posts, drafts }) {
         buy_href: setupCfg.club.buy_url || "#",
         annual_buy_href: setupCfg.club.annual_buy_url || "#",
         setup_names_json: setupNamesJson,
+        purchase_value: Number(String(setupCfg.price).replace(/[^0-9]/g, "")) || 0,
+        pixel_json: "{}",
         setup_notion_json: setupNotionJson,
       },
     }] : []),
+    {
+      path: "/privacy/",
+      template: "pages/privacy.html",
+      title: `Privacy note | ${site.publisher_name}`,
+      description: "What The Automate Stack collects, why, and how to ask for it to be deleted. Short and plain.",
+    },
     {
       path: "/404/",
       file: "404.html",

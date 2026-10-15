@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoStack Setup: Income Tracker | The Automate Stack</title>
+  <meta name="description" content="Every payment you receive has to be written down somewhere, and the writing down is the stressful part. This is a spreadsheet that Claude fills from your bank alert emails, so keeping a record of what you made stops being a chore. Works on your phone or your laptop.">
+  <link rel="canonical" href="https://www.theautomatestack.com/setups/income-tracker/">
+  
+  
+  <link rel="icon" type="image/png" href="/assets/img/logo.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="The Automate Stack Blog" href="https://www.theautomatestack.com/blog/rss.xml">
+
+  <meta property="og:site_name" content="The Automate Stack">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AutoStack Setup: Income Tracker | The Automate Stack">
+  <meta property="og:description" content="Every payment you receive has to be written down somewhere, and the writing down is the stressful part. This is a spreadsheet that Claude fills from your bank alert emails, so keeping a record of what you made stops being a chore. Works on your phone or your laptop.">
+  <meta property="og:url" content="https://www.theautomatestack.com/setups/income-tracker/">
+  <meta property="og:image" content="https://www.theautomatestack.com/assets/img/logo.png">
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AutoStack Setup: Income Tracker | The Automate Stack">
+  <meta name="twitter:description" content="Every payment you receive has to be written down somewhere, and the writing down is the stressful part. This is a spreadsheet that Claude fills from your bank alert emails, so keeping a record of what you made stops being a chore. Works on your phone or your laptop.">
+  <meta name="twitter:image" content="https://www.theautomatestack.com/assets/img/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Lato:wght@400;700&amp;family=Poppins:wght@700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/brand.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why ₦5,000 and not free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because people do not value free things. A free guide gets saved and never opened. ₦5,000 is your commitment that you will set this up now, and the setup is built so you can finish it tonight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to be technical?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The setup is written out step by step, and the test example shows you what working looks like before you use it on your own alerts. There is also a short video on connecting Claude and a full walkthrough video, so you can follow along step by step."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast do I get it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Right after you pay. Your download is sent to the email you paid with."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can't I just ask Claude or ChatGPT to do this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can ask. Then you spend your evening working out the steps, the prompts, and what to do when the total is wrong. This setup is those answers, already written, with a test example to check against."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this the same as the Starter Kit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A setup is one job, done. The Starter Kit has 36 setups, a private community and weekend live classes."
+      }
+    }
+  ]
+}
+  </script>
+  <script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1067023309651592');
+fbq('track', 'PageView');
+(function () {
+  var data = {"content_ids":["income-tracker"],"content_name":"Income Tracker","content_type":"product","value":5000,"currency":"NGN"};
+  // A setup page: tell Meta which product is being viewed.
+  if (data.content_ids) fbq('track', 'ViewContent', data);
+  // Someone presses a buy button, on their way to Selar.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a.btn--big');
+    if (a && data.content_ids) fbq('track', 'InitiateCheckout', data);
+  }, { passive: true });
+  // The page Selar sends buyers back to after paying. Counted once per visit, and only when a setup is named in the link.
+  var m = /^\/before-you-go\/?$/.test(location.pathname) && new URLSearchParams(location.search).get('setup');
+  if (m) {
+    try { if (sessionStorage.getItem('px-purchase-' + m)) return; sessionStorage.setItem('px-purchase-' + m, '1'); } catch (x) {}
+    fbq('track', 'Purchase', { content_ids: [m], currency: 'NGN', value: 5000 });
+  }
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1067023309651592&amp;ev=PageView&amp;noscript=1"></noscript>
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  
+  <header class="site-header site-header--sales">
+  <div class="wrap">
+    <span class="brand">
+      <img src="/assets/img/logo.png" alt="The Automate Stack logo" width="36" height="36">
+      <span>theautomatestack</span>
+    </span>
+    <p class="header-price">Income Tracker · ₦5,000 one time</p>
+  </div>
+  <div class="price-band">Income Tracker · ₦5,000 one time</div>
+</header>
+
+  <main id="main">
+<section class="hero sales-hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">AutoStack Setup: Income Tracker. For business owners who get paid by bank transfer</p>
+    <h1>
+      Stop Copying Your Bank Alerts <span class="em">Into a Sheet by Hand.</span> 
+    </h1>
+    <p class="lead">Every payment you receive has to be written down somewhere, and the writing down is the stressful part. This is a spreadsheet that Claude fills from your bank alert emails, so keeping a record of what you made stops being a chore. Works on your phone or your laptop.</p>
+    <a class="btn btn--big" href="https://selar.com/9e05xj639y" rel="noopener">Yes, Give Me the Income Tracker &rarr;</a>
+
+    <ul class="trust">
+      
+      <li>Secure payment</li>
+      
+      <li>Instant access</li>
+      
+      <li>Step-by-step guide</li>
+      
+    </ul>
+  </div>
+</section>
+
+<section class="sales-section sales-section--demo">
+  <div class="sales-narrow">
+    <h2>Watch it work</h2>
+    <div class="video-single"><video controls playsinline preload="metadata" aria-label="Income Tracker: the setup working, start to finish"><source src="/assets/video/income-tracker-teaser.mp4" type="video/mp4"></video></div>
+    <p class="demo-caption">Download it. Copy it. Connect Claude. Press play to see it work.</p>
+    <p class="cta-row"><a class="btn btn--big" href="https://selar.com/9e05xj639y" rel="noopener">Yes, Give Me the Income Tracker &rarr;</a>
+</p>
+  </div>
+</section>
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>Let me guess how you keep a record of what you made...</h2>
+    <ol class="guess-list">
+      
+      <li>A payment comes in. You tell yourself you will write it down later.</li>
+      
+      <li>Later becomes a pile. Alerts in your email, screenshots in your gallery, a few numbers in your Notes app.</li>
+      
+      <li>So on a free evening you open a sheet and copy them over, one by one. Amount, who paid, date, bank.</li>
+      
+      <li>You miss one. You type another twice. You stop halfway and promise to finish tomorrow.</li>
+      
+      <li>A week later you are behind again, and the record is still not up to date.</li>
+      
+    </ol>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <h2>Here is the truth nobody tells you:</h2>
+    
+    <p>It is not that you are lazy about records. It is that copying every payment by hand is a job nobody keeps up with.</p>
+    
+    <p>The record does not fail because you do not care. It fails because it depends on you remembering, every single time.</p>
+    
+  </div>
+</section>
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>What this is costing you</h2>
+    <ul class="cost-list">
+      
+      <li><strong>Copying that never ends.</strong>Every new payment is another row to type, and the pile grows while you are busy running the business.</li>
+      
+      <li><strong>A record you cannot trust.</strong>One missed row or one doubled row and the total is wrong, so you check it all again.</li>
+      
+      <li><strong>You do not know your real numbers.</strong>So you price, spend and hire on a feeling.</li>
+      
+      <li><strong>The stress that sits in the background.</strong>A record you know is behind is one more thing on your mind.</li>
+      
+    </ul>
+    <p class="pull">None of this is a someday problem. The next payment is already on its way.</p>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <h2>What changes with the Income Tracker</h2>
+    <ul class="fix-list">
+      
+      <li>
+        <span class="fix-when">A bank alert lands in your inbox.</span
+        ><span class="fix-then">Claude copies it into your sheet for you, as income or as an expense.</span>
+      </li>
+      
+      <li>
+        <span class="fix-when">You want your record up to date.</span
+        ><span class="fix-then">You ask Claude to read this week&#39;s alerts. You do not type a row.</span>
+      </li>
+      
+      <li>
+        <span class="fix-when">Someone asks how business is.</span
+        ><span class="fix-then">You open the sheet and you know.</span>
+      </li>
+      
+      <li>
+        <span class="fix-when">It is the 30th.</span
+        ><span class="fix-then">Your record is already there.</span>
+      </li>
+      
+    </ul>
+    <p class="cta-row"><a class="btn btn--big" href="https://selar.com/9e05xj639y" rel="noopener">Yes, Give Me the Income Tracker &rarr;</a>
+</p>
+  </div>
+</section>
+
+
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>What you get</h2>
+    <ul class="tick-list">
+      
+      <li>The Income Tracker spreadsheet: money in, money out, what you kept, biggest payments, where the money went, month by month</li>
+      
+      <li>The skill that reads your bank alerts and fills the sheet</li>
+      
+      <li>A step-by-step walkthrough video of the full setup, about 11 minutes</li>
+      
+      <li>A short video on connecting Claude: signing in, projects and connectors (under 3 minutes)</li>
+      
+      <li>A test example, so you can see it working before you use your own alerts</li>
+      
+    </ul>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <h2>Who built this</h2>
+    <div class="bio">
+      <img
+        src="/assets/img/chinenye-avatar.jpg"
+        width="112"
+        height="112"
+        alt="Chinenye"
+        loading="lazy"
+      />
+      <div>
+        <p>Hi, I am Chinenye. In my day job I am a software engineer.</p>
+        <p>
+          I was featured by the Association for Computing Machinery (ACM) as an
+          advocate for responsible AI, and I have organized workshops at the
+          Deep Learning Indaba, the biggest AI conference in Africa.
+        </p>
+        <p>
+          I build this setup to do one job, and I put it in front of you so you
+          can start tonight.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>Let us do the math on your records</h2>
+    <div class="math-box">
+      
+      <p>Say copying your alerts into a sheet takes you 2 hours a month. At ₦5,000 an hour, that is ₦10,000 a month.</p>
+      
+      <p>That is ₦120,000 a year, for a record you still have to double-check.</p>
+      
+      <p>The Income Tracker is ₦5,000. One time.</p>
+      
+      <p>It pays for itself in the first month.</p>
+      
+    </div>
+    <p class="demo-caption">Your hour might be worth more or less. Plug in your own number.</p>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <div class="price-box">
+      <p class="eyebrow">Simple pricing</p>
+      <p class="price">₦5,000</p>
+      <p class="price-sub">One-time payment. Instant access.</p>
+      
+      <p class="price-sub">What you need: A Claude account, and a bank that sends you alert emails.</p>
+      
+      
+      <p class="price-sub">Stuck on connecting Claude? A short video shows you how to sign in and connect your apps.</p>
+      
+      <a class="btn btn--big" href="https://selar.com/9e05xj639y" rel="noopener">Yes, Give Me the Income Tracker &rarr;</a>
+
+      <ul class="trust trust--dark">
+        
+        <li>Secure payment</li>
+        
+        <li>Instant access</li>
+        
+        <li>Step-by-step guide</li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <div class="for-grid">
+      <div class="yes">
+        <h3>Who this is for</h3>
+        <ul>
+          
+          <li>Business owners who get paid by bank transfer.</li>
+          
+          <li>Sellers who copy every payment into a sheet by hand.</li>
+          
+          <li>Freelancers who keep putting off updating their records.</li>
+          
+        </ul>
+      </div>
+      <div class="no">
+        <h3>Who this is not for</h3>
+        <ul>
+          
+          <li>You already track income in accounting software you trust.</li>
+          
+          <li>Your customers pay in cash and you never get alerts.</li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sales-section">
+  <div class="sales-narrow">
+    <h2>Six months from now, one of two things will be true</h2>
+    
+    <p>Either you are still copying alerts into a sheet by hand, and still behind.</p>
+    
+    <p>Or you set this up once, and your record kept itself every week.</p>
+    
+    <p>Same business. Same customers. The only difference is who does the copying.</p>
+    
+    <p class="cta-row"><a class="btn btn--big" href="https://selar.com/9e05xj639y" rel="noopener">Yes, Give Me the Income Tracker &rarr;</a>
+</p>
+  </div>
+</section>
+
+<section class="sales-section section--tint">
+  <div class="sales-narrow">
+    <h2>Questions you probably have</h2>
+    <div class="faq-list">
+      
+      <details>
+        <summary>Why ₦5,000 and not free?</summary>
+        <p>Because people do not value free things. A free guide gets saved and never opened. ₦5,000 is your commitment that you will set this up now, and the setup is built so you can finish it tonight.</p>
+      </details>
+      
+      <details>
+        <summary>Do I need to be technical?</summary>
+        <p>The setup is written out step by step, and the test example shows you what working looks like before you use it on your own alerts. There is also a short video on connecting Claude and a full walkthrough video, so you can follow along step by step.</p>
+      </details>
+      
+      <details>
+        <summary>How fast do I get it?</summary>
+        <p>Right after you pay. Your download is sent to the email you paid with.</p>
+      </details>
+      
+      <details>
+        <summary>Can&#39;t I just ask Claude or ChatGPT to do this?</summary>
+        <p>You can ask. Then you spend your evening working out the steps, the prompts, and what to do when the total is wrong. This setup is those answers, already written, with a test example to check against.</p>
+      </details>
+      
+      <details>
+        <summary>Is this the same as the Starter Kit?</summary>
+        <p>No. A setup is one job, done. The Starter Kit has 36 setups, a private community and weekend live classes.</p>
+      </details>
+      
+    </div>
+  </div>
+</section>
+
+<div class="sticky-cta" aria-hidden="false"><a class="btn btn--big" href="https://selar.com/9e05xj639y" rel="noopener">Yes, Give Me the Income Tracker &rarr;</a>
+</div>
+
+  </main>
+  <footer class="sales-footer">
+  <p>Questions? <a href="mailto:chinenye@theautomatestack.com">chinenye@theautomatestack.com</a></p>
+  <p>&copy; 2026 The Automate Stack. All rights reserved. <a href="/privacy/">Privacy note</a></p>
+  <div class="sales-disclaimer">
+    <p>Any examples of time or money on this page are only illustrations, not promises or estimates of what you will earn or save. Individual results will always vary and depend on your own situation, effort and skills.</p>
+    <p>This site is not a part of the Facebook website or Meta Platforms, Inc. This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of Meta Platforms, Inc.</p>
+    <p>This page uses the Meta Pixel to measure my ads. It saves cookies on your device. See the <a href="/privacy/">privacy note</a> for what it records and how to opt out.</p>
+
+  </div>
+</footer>
+
+</body>
+</html>

@@ -472,3 +472,33 @@ main:has(> section.hero:last-of-type) + .site-footer { margin-top: 0; }
 .section--live h2 { color: var(--alabaster); }
 .section--live .eyebrow { color: var(--bronze); }
 .section--live .tick-list li { color: rgba(251,249,244,.85); }
+
+/* ---------- Setup sales pages: an occasional nudge on the buy buttons ----------
+   Every few seconds the button gives a quick little shake and flares up with a glow, then settles. It is a nudge, not a pulse.
+   Only on pages that use the sales layout. Off for anyone who asks for less motion, and while hovered. */
+@media (prefers-reduced-motion: no-preference) {
+  body:has(.site-header--sales) .btn--big {
+    animation: buy-nudge 4s ease-in-out 0s infinite;
+  }
+  body:has(.site-header--sales) .btn--big:hover,
+  body:has(.site-header--sales) .btn--big:focus-visible { animation: none; }
+}
+@keyframes buy-nudge {
+  0%, 60%, 100% { transform: translateX(0) rotate(0); box-shadow: 0 0 26px rgba(200,153,108,.4); filter: brightness(1); }
+  66% { transform: translateX(-3px) rotate(-.5deg); box-shadow: 0 0 40px 8px rgba(200,153,108,.85), 0 0 80px rgba(200,153,108,.4); filter: brightness(1.12); }
+  71% { transform: translateX(3px) rotate(.5deg); box-shadow: 0 0 40px 8px rgba(200,153,108,.85), 0 0 80px rgba(200,153,108,.4); filter: brightness(1.12); }
+  76% { transform: translateX(-2px) rotate(-.35deg); box-shadow: 0 0 40px 8px rgba(200,153,108,.85), 0 0 80px rgba(200,153,108,.4); filter: brightness(1.12); }
+  81% { transform: translateX(2px) rotate(.35deg); box-shadow: 0 0 40px 8px rgba(200,153,108,.85), 0 0 80px rgba(200,153,108,.4); filter: brightness(1.12); }
+  86% { transform: translateX(0) rotate(0); box-shadow: 0 0 32px 4px rgba(200,153,108,.6); filter: brightness(1.06); }
+}
+
+/* buy-glow-base: a steady soft glow on the setup buttons, and a stronger one when someone reaches for them */
+body:has(.site-header--sales) .btn--big { box-shadow: 0 0 26px rgba(200,153,108,.4); }
+body:has(.site-header--sales) .btn--big:hover,
+body:has(.site-header--sales) .btn--big:focus-visible { box-shadow: 0 0 44px 8px rgba(200,153,108,.75); filter: brightness(1.08); transform: translateY(-2px); }
+
+
+/* ---------- Setup page footer ---------- */
+.sales-footer a { color: var(--bronze); }
+.sales-disclaimer { max-width: 56rem; margin: var(--space-6) auto 0; padding-top: var(--space-4); border-top: 1px solid rgba(251,249,244,.12); }
+.sales-disclaimer p { font-size: .7rem; line-height: 1.6; color: rgba(251,249,244,.5); margin: 0 0 var(--space-2); }
