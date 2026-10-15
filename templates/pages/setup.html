@@ -142,7 +142,11 @@
       <p class="price-sub">One-time payment. Instant access.</p>
       {{#if needs}}
       <p class="price-sub">What you need: {{needs}}</p>
-      {{/if}} {{> sales-cta}}
+      {{/if}}
+      {{#if connect_line}}
+      <p class="price-sub">{{connect_line}}</p>
+      {{/if}}
+      {{> sales-cta}}
       <ul class="trust trust--dark">
         {{#each trust}}
         <li>{{label}}</li>

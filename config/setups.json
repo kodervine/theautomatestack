@@ -78,7 +78,7 @@
       "headline_pre": "Turn a Raw Recording Into a",
       "headline_em": "Clean Vertical Video",
       "headline_post": "Without Giving Up Your Evening.",
-      "lead": "One setup. Raw recording in, clean vertical video out, with the cuts, captions and sound sorted. No editor to hire. No evening gone.",
+      "lead": "One setup. Raw recording in, finished vertical video out. Pick a ready-made look and the cuts, captions, zooms and sound are sorted. No editor to hire. No evening gone.",
       "cta_text": "Yes, Give Me Auto-Edit",
       "trust": [
         "Secure payment",
@@ -154,6 +154,10 @@
           "then": "Both are handled in the same routine."
         },
         {
+          "when": "You want it to look like you, not a template.",
+          "then": "You pick one of six looks after seeing it on your own clip, or match a reel you love."
+        },
+        {
           "when": "It is 11 PM.",
           "then": "You are not editing."
         }
@@ -161,7 +165,16 @@
       "inside_title": "What you get",
       "inside": [
         {
-          "text": "The skill that edits your video from one request"
+          "text": "The skill that edits your video from one request. You drop a clip and say edit it"
+        },
+        {
+          "text": "Six ready-made looks, each previewed on your own clip before you choose. Or match a reel you love"
+        },
+        {
+          "text": "Pauses, filler words and repeated takes cut, with a plan you can approve before it renders"
+        },
+        {
+          "text": "Captions with the key words highlighted, a small push-in on key moments, and sound effects that match"
         },
         {
           "text": "Install in three steps. Claude checks and sets up anything missing for you"
@@ -203,6 +216,9 @@
         },
         {
           "text": "You want lessons on editing theory. This is a setup you use, not a course you study."
+        },
+        {
+          "text": "You want music, b-roll or animated graphics added. Auto-Edit cuts, captions, zooms and places sound effects."
         }
       ],
       "close_title": "Six months from now, one of two things will be true",
@@ -227,6 +243,18 @@
         {
           "question": "Do I need to be technical?",
           "answer": "The setup is written out step by step, and the test example shows you what working looks like before you use it on real footage."
+        },
+        {
+          "question": "Will my videos all look the same?",
+          "answer": "No. You pick from six looks after seeing a preview on your own clip, and your colours, font and logo go on top. You can also drop in a reel you love and have it match that look."
+        },
+        {
+          "question": "What does it cut?",
+          "answer": "Long pauses, filler words like \"um\", stutters and repeated takes. When you say a line twice, it keeps your last take. It shows you the plan, including everything it will remove, before it renders."
+        },
+        {
+          "question": "Does it add music or b-roll?",
+          "answer": "No. It cuts, captions, zooms in on key moments and places a small set of sound effects. For music or b-roll you would add them yourself."
         },
         {
           "question": "How fast do I get it?",
@@ -259,10 +287,10 @@
         "Instant access",
         "Step-by-step guide"
       ],
-      "video_url": "",
+      "video_url": "/assets/video/content-calendar-teaser.mp4",
       "buy_url": "",
       "notion_url": "",
-      "demo_caption": "Watch a week of content land in your Notion calendar. Press play.",
+      "demo_caption": "Download it. Copy it. Connect Claude. Press play to see it work.",
       "guess_title": "Let me guess what your Sunday looks like...",
       "guess": [
         {
@@ -341,7 +369,10 @@
           "text": "The skill that plans, writes and designs for you"
         },
         {
-          "text": "One setup video, start to finish: how to connect Notion and Canva to Claude"
+          "text": "A step-by-step walkthrough video of the full setup, about 10 minutes, from the download to your first Canva designs"
+        },
+        {
+          "text": "A short video on connecting Claude: signing in, projects and connectors (under 3 minutes)"
         },
         {
           "text": "Starter prompts, so you can test it the same day"
@@ -403,7 +434,7 @@
         },
         {
           "question": "Do I need to be technical?",
-          "answer": "The setup is written out step by step, and the test example shows you what working looks like before you use it on a real client."
+          "answer": "The setup is written out step by step, and the test example shows you what working looks like before you use it on a real client. There is also a short video on connecting Claude and a full walkthrough video, so you can follow along step by step."
         },
         {
           "question": "How fast do I get it?",
@@ -418,7 +449,8 @@
           "answer": "No. A setup is one job, done. The Starter Kit has 36 setups, a private community and weekend live classes."
         }
       ],
-      "needs": ""
+      "needs": "",
+      "connect_line": "Stuck on connecting Claude? A short video shows you how to sign in and connect your apps."
     },
     {
       "slug": "income-tracker",
@@ -515,7 +547,10 @@
           "text": "The skill that reads your bank alerts and fills the sheet"
         },
         {
-          "text": "One setup video, start to finish"
+          "text": "A step-by-step walkthrough video of the full setup, about 11 minutes"
+        },
+        {
+          "text": "A short video on connecting Claude: signing in, projects and connectors (under 3 minutes)"
         },
         {
           "text": "A test example, so you can see it working before you use your own alerts"
@@ -577,7 +612,7 @@
         },
         {
           "question": "Do I need to be technical?",
-          "answer": "The setup is written out step by step, and the test example shows you what working looks like before you use it on your own alerts."
+          "answer": "The setup is written out step by step, and the test example shows you what working looks like before you use it on your own alerts. There is also a short video on connecting Claude and a full walkthrough video, so you can follow along step by step."
         },
         {
           "question": "How fast do I get it?",
@@ -592,7 +627,8 @@
           "answer": "No. A setup is one job, done. The Starter Kit has 36 setups, a private community and weekend live classes."
         }
       ],
-      "needs": ""
+      "needs": "",
+      "connect_line": "Stuck on connecting Claude? A short video shows you how to sign in and connect your apps."
     }
   ]
 }
