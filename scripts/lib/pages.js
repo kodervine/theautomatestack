@@ -2,8 +2,8 @@
 // The other pages (dm-automation, services, blueprint) are hand-written HTML in public/.
 import fs from "node:fs";
 import path from "node:path";
-import { ROOT, writeFile, esc } from "./util.js";
-import { renderPage } from "./template.js";
+import { ROOT, PUBLIC, writeFile, esc } from "./util.js";
+import { renderPage, renderPartial } from "./template.js";
 import { ctaItems, navMarkup, setSetupNav, socialLinks, jsonLdScripts } from "./render.js";
 
 export function readFreebies() {
@@ -73,6 +73,7 @@ export function buildPages({ out, site, posts, drafts }) {
   };
   const setupCfg = readSetupsConfig();
   const setups = visibleSetups(setupCfg, drafts);
+  const setupPurchaseValue = Number(String(setupCfg.price).replace(/[^0-9]/g, "")) || 0;
   setSetupNav(setups.filter((s) => s.status === "ready").map((s) => ({ url: `/setups/${s.slug}/`, label: s.short_name, note: "One job done for " + setupCfg.price })));
   // "<" is escaped so the JSON can sit safely inside a script tag.
   const setupNamesJson = JSON.stringify(Object.fromEntries(setups.map((s) => [s.slug, s.name]))).replace(/</g, "\\u003c");
@@ -163,6 +164,8 @@ export function buildPages({ out, site, posts, drafts }) {
   return pages.map((pg) => {
     const html = renderPage(pg.template, {
       ...base,
+      pixel_json: "{}",
+      purchase_value: setupPurchaseValue,
       ...(pg.extra || {}),
       nav_desktop: navMarkup(pg.path === "/" ? "/__home__" : pg.path, posts.length > 0).desktop,
       nav_mobile: navMarkup(pg.path === "/" ? "/__home__" : pg.path, posts.length > 0).mobile,
@@ -176,4 +179,36 @@ export function buildPages({ out, site, posts, drafts }) {
     writeFile(pg.file ? path.join(out, pg.file) : path.join(out, pg.path.slice(1), "index.html"), html);
     return { path: pg.path, title: pg.title, description: pg.description, indexable: !pg.noindex };
   });
+}
+
+const PIXEL_BLOCK = /\n?<!-- meta-pixel:start -->[\s\S]*?<!-- meta-pixel:end -->\n?/g;
+const NOTICE_BLOCK = /\n?<!-- meta-notice:start -->[\s\S]*?<!-- meta-notice:end -->\n?/g;
+
+/**
+ * The pages written by hand (no shared template) get the same Pixel and tracking notice, between markers,
+ * so the one Pixel ID in config/site.json is the only place to change. Runs only for the real build.
+ * With no ID set it removes the blocks again.
+ */
+export function injectIntoHandWrittenPages(site) {
+  const on = Boolean(site.meta_pixel_id);
+  const pixel = on ? renderPartial("meta-pixel", { meta_pixel_id: site.meta_pixel_id, pixel_json: "{}", purchase_value: 0 }).trim() : "";
+  const reg = site.registration_line ? '<p class="text-center text-[11px] text-muted-stone pt-4 px-6">' + site.registration_line + "</p>" : "";
+  const pix = on ? '<p class="text-center text-[11px] text-muted-stone py-4 px-6">This site uses the Meta Pixel to measure my ads. It saves cookies on your device. See the <a href="/privacy/" class="underline">privacy note</a> for what it records and how to opt out.</p>' : "";
+  const notice = [reg, pix].filter(Boolean).join("\n");
+  const changed = [];
+  for (const d of fs.readdirSync(PUBLIC, { withFileTypes: true })) {
+    if (!d.isDirectory() || ["blog", "assets", "api"].includes(d.name) || d.name.startsWith(".")) continue;
+    const file = path.join(PUBLIC, d.name, "index.html");
+    if (!fs.existsSync(file)) continue;
+    const before = fs.readFileSync(file, "utf8");
+    if (before.includes('class="skip-link"')) continue; // generated page, already handled by the layout
+    let h = before.replace(PIXEL_BLOCK, "").replace(NOTICE_BLOCK, "");
+    if (on) h = h.replace("</head>", () => "<!-- meta-pixel:start -->\n" + pixel + "\n<!-- meta-pixel:end -->\n</head>");
+    if (notice) {
+      const i = h.lastIndexOf("</footer>");
+      if (i > -1) h = h.slice(0, i) + "<!-- meta-notice:start -->\n" + notice + "\n<!-- meta-notice:end -->\n" + h.slice(i);
+    }
+    if (h !== before) { fs.writeFileSync(file, h); changed.push("/" + d.name + "/"); }
+  }
+  return changed;
 }

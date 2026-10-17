@@ -502,3 +502,18 @@ body:has(.site-header--sales) .btn--big:focus-visible { box-shadow: 0 0 44px 8px
 .sales-footer a { color: var(--bronze); }
 .sales-disclaimer { max-width: 56rem; margin: var(--space-6) auto 0; padding-top: var(--space-4); border-top: 1px solid rgba(251,249,244,.12); }
 .sales-disclaimer p { font-size: .7rem; line-height: 1.6; color: rgba(251,249,244,.5); margin: 0 0 var(--space-2); }
+
+.footer-notice { grid-column: 1 / -1; max-width: 46rem; margin-top: var(--space-2) !important; }
+.site-footer .footer-bottom { display: grid; gap: var(--space-2); }
+
+/* ---------- Setup sales pages: light hero ----------
+   Cream hero with a dark header bar, so the page opens warm and easy to read. Bronze is too faint as text on cream,
+   so words use a deeper bronze; bronze stays for lines, borders and the button. The Blueprint, Services and DM Automation pages keep their dark hero. */
+.hero.sales-hero { background: var(--alabaster); color: var(--onyx); border-bottom: 1px solid rgba(116,108,97,.25); }
+.hero.sales-hero::before { display: none; }
+.hero.sales-hero .lead { color: rgba(26,17,16,.78); }
+.hero.sales-hero .eyebrow { color: #8a5a2b; }
+.hero.sales-hero .em { color: #8a5a2b; }
+.hero.sales-hero .trust { color: var(--stone); }
+.sales-footer { color: rgba(251,249,244,.8); }
+.sales-disclaimer p { color: rgba(251,249,244,.7); }

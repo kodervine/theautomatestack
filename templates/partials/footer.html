@@ -34,5 +34,8 @@
   </div>
   <div class="wrap footer-bottom">
     <p>&copy; {{year}} {{publisher_name}}. All rights reserved. <a href="/privacy/">Privacy note</a></p>
+{{#if registration_line}}    <p class="footer-notice">{{registration_line}}</p>
+{{/if}}{{#if meta_pixel_id}}    <p class="footer-notice">This site uses the Meta Pixel to measure my ads. It saves cookies on your device. See the <a href="/privacy/">privacy note</a> for what it records and how to opt out.</p>
+{{/if}}
   </div>
 </footer>

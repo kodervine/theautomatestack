@@ -11,7 +11,7 @@ import {
 import { loadAllPosts, sitePosts, tagSlug } from "./lib/posts.js";
 import { renderPage } from "./lib/template.js";
 import { renderMarkdown, ctaItems, faqHtml, articleJsonLd, faqJsonLd, jsonLdScripts, navMarkup } from "./lib/render.js";
-import { buildPages } from "./lib/pages.js";
+import { buildPages, injectIntoHandWrittenPages } from "./lib/pages.js";
 
 const KEEP_IN_BLOG = new Set(["images"]); // downloaded Notion images must survive rebuilds
 const SKIP_DIRS = new Set(["blog", "assets", "api"]);
@@ -42,6 +42,8 @@ export function build({ out = PUBLIC, drafts = false, quiet = false } = {}) {
   const base = {
     ...site,
     year,
+    pixel_json: "{}",
+    purchase_value: 0,
     author_initial: site.author_name.charAt(0).toUpperCase(),
     cta_items: ctaItems(site),
     draft_banner: drafts,
@@ -59,6 +61,7 @@ export function build({ out = PUBLIC, drafts = false, quiet = false } = {}) {
 
   // Home, Starter Kit and Freebies pages come from templates; the other pages are hand-written.
   const generated = buildPages({ out, site, posts, drafts });
+  if (out === PUBLIC) injectIntoHandWrittenPages(site);
   const existing = findExistingPages(generated);
 
   if (posts.length === 0) {

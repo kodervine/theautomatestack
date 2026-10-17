@@ -90,6 +90,15 @@ fbq('track', 'PageView');
     var a = e.target.closest && e.target.closest('a.btn--big');
     if (a && data.content_ids) fbq('track', 'InitiateCheckout', data);
   }, { passive: true });
+  // The free-resource form: someone leaves their details to be contacted. Meta calls that a Lead.
+  document.addEventListener('submit', function (e) {
+    var form = e.target;
+    if (!form.classList || !form.classList.contains('lead-form') || form.__leadSent) return;
+    form.__leadSent = true;
+    e.preventDefault();
+    fbq('track', 'Lead', { content_name: form.elements.freebie ? form.elements.freebie.value : '', content_category: 'free resource' });
+    setTimeout(function () { form.submit(); }, 250); // a moment for the browser to send the event before the page moves on
+  });
   // The page Selar sends buyers back to after paying. Counted once per visit, and only when a setup is named in the link.
   var m = /^\/before-you-go\/?$/.test(location.pathname) && new URLSearchParams(location.search).get('setup');
   if (m) {
@@ -268,8 +277,13 @@ fbq('track', 'PageView');
           Deep Learning Indaba, the biggest AI conference in Africa.
         </p>
         <p>
-          I build this setup to do one job, and I put it in front of you so you
-          can start tonight.
+          I have built workflows like this for six and seven figure (USD)
+          businesses.
+        </p>
+        <p>
+          I am sharing this setup because it is what helps me work my day job,
+          manage my clients and still show up online. It does one job, and I put
+          it in front of you so you can start tonight.
         </p>
       </div>
     </div>
@@ -408,6 +422,7 @@ fbq('track', 'PageView');
   <footer class="sales-footer">
   <p>Questions? <a href="mailto:chinenye@theautomatestack.com">chinenye@theautomatestack.com</a></p>
   <p>&copy; 2026 The Automate Stack. All rights reserved. <a href="/privacy/">Privacy note</a></p>
+  <p>Registered with the Corporate Affairs Commission of Nigeria. Business Name No. 9841634.</p>
   <div class="sales-disclaimer">
     <p>Any examples of time or money on this page are only illustrations, not promises or estimates of what you will earn or save. Individual results will always vary and depend on your own situation, effort and skills.</p>
     <p>This site is not a part of the Facebook website or Meta Platforms, Inc. This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of Meta Platforms, Inc.</p>

@@ -1,7 +1,8 @@
 <footer class="sales-footer">
   <p>Questions? <a href="mailto:{{contact_email}}">{{contact_email}}</a></p>
   <p>&copy; {{year}} {{publisher_name}}. All rights reserved. <a href="/privacy/">Privacy note</a></p>
-  <div class="sales-disclaimer">
+{{#if registration_line}}  <p>{{registration_line}}</p>
+{{/if}}  <div class="sales-disclaimer">
     <p>Any examples of time or money on this page are only illustrations, not promises or estimates of what you will earn or save. Individual results will always vary and depend on your own situation, effort and skills.</p>
     <p>This site is not a part of the Facebook website or Meta Platforms, Inc. This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of Meta Platforms, Inc.</p>
 {{#if meta_pixel_id}}    <p>This page uses the Meta Pixel to measure my ads. It saves cookies on your device. See the <a href="/privacy/">privacy note</a> for what it records and how to opt out.</p>

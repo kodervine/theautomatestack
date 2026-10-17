@@ -109,6 +109,38 @@
   ]
 }
   </script>
+  <script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1067023309651592');
+fbq('track', 'PageView');
+(function () {
+  var data = {};
+  // A setup page: tell Meta which product is being viewed.
+  if (data.content_ids) fbq('track', 'ViewContent', data);
+  // Someone presses a buy button, on their way to Selar.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a.btn--big');
+    if (a && data.content_ids) fbq('track', 'InitiateCheckout', data);
+  }, { passive: true });
+  // The free-resource form: someone leaves their details to be contacted. Meta calls that a Lead.
+  document.addEventListener('submit', function (e) {
+    var form = e.target;
+    if (!form.classList || !form.classList.contains('lead-form') || form.__leadSent) return;
+    form.__leadSent = true;
+    e.preventDefault();
+    fbq('track', 'Lead', { content_name: form.elements.freebie ? form.elements.freebie.value : '', content_category: 'free resource' });
+    setTimeout(function () { form.submit(); }, 250); // a moment for the browser to send the event before the page moves on
+  });
+  // The page Selar sends buyers back to after paying. Counted once per visit, and only when a setup is named in the link.
+  var m = /^\/before-you-go\/?$/.test(location.pathname) && new URLSearchParams(location.search).get('setup');
+  if (m) {
+    try { if (sessionStorage.getItem('px-purchase-' + m)) return; sessionStorage.setItem('px-purchase-' + m, '1'); } catch (x) {}
+    fbq('track', 'Purchase', { content_ids: [m], currency: 'NGN', value: 5000 });
+  }
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1067023309651592&amp;ev=PageView&amp;noscript=1"></noscript>
+
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -390,6 +422,9 @@
   </div>
   <div class="wrap footer-bottom">
     <p>&copy; 2026 The Automate Stack. All rights reserved. <a href="/privacy/">Privacy note</a></p>
+    <p class="footer-notice">Registered with the Corporate Affairs Commission of Nigeria. Business Name No. 9841634.</p>
+    <p class="footer-notice">This site uses the Meta Pixel to measure my ads. It saves cookies on your device. See the <a href="/privacy/">privacy note</a> for what it records and how to opt out.</p>
+
   </div>
 </footer>
 
