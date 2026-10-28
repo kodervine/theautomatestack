@@ -8,11 +8,11 @@ Upload order for the images and videos is listed at the bottom.
 
 ## Connect AI to the tools you already use.
 
-36 setups that plug Claude into Notion, Gmail, your spreadsheets, Canva, and your Instagram, TikTok and YouTube. The repetitive work gets done without you. The prompts are written and every setup has a test checklist. Pick one pain, open one setup, and be done tonight.
+You already have the tools. Notion. Gmail. Canva. A spreadsheet. They sit there while you copy, paste and retype by hand. The Starter Kit shows you how to connect AI to them, so the boring work does itself. 36 setups. Every prompt written. A test checklist on each one. Pick one pain, open one setup, be done tonight.
 
 [IMAGE 1: receipts-70.png]
 
-"It automated the 70 receipts I got from my client. This is something that usually takes me 3 days if I'm lazy."
+"It automated the 70 receipts I got from my client. This is something that usually takes me 3 days..."
 From my community
 
 [IMAGE 2: hours-to-minutes-chat.png]
@@ -38,43 +38,49 @@ After: she connected the spreadsheet she had been updating by hand, and the AI f
 
 Results differ from person to person.
 
-## You already know AI can do this
+## Let me guess how your week goes
 
-Everyone is telling you to start using AI. You have watched the videos. You have saved the posts. You have three tabs open, two half-finished setups, and one question: where do I even start?
+Everyone keeps telling you to start using AI. So you did what everyone does. You watched the videos. You saved the posts. Now you have three tabs open, two half-finished setups, and one question: where do I even start?
 
-The advice never fits. It says download this app, sign up for that tool, learn another dashboard. Then you are moving documents by hand and copying text between five tabs, and the thing that was meant to save you time becomes one more job.
+And every answer starts the same way. Download this app. Sign up for that tool. Learn another dashboard. So you end up moving documents by hand and copying text between five tabs. The thing that was meant to save you time is now one more job.
 
-So you go back to what you know. You still plan your content at 9 PM. You still type the same replies by hand. One video edit still eats your whole Saturday.
+So you go back to what you know. You plan next week's posts at 9 PM. You type the same reply for the tenth time. One video edit eats your whole Saturday.
+
+That is not a you problem. It is a where-do-I-start problem. And it has a simple fix.
 
 ## You do not need another app
 
-You already have the tools. Your plans and notes live in Notion. Your clients write to you in Gmail. Your numbers sit in a spreadsheet. You design in Canva. And your content goes out on Instagram, TikTok and YouTube.
+Here is the part nobody tells you. You already have the tools.
 
-The missing piece was never another app. It is the connection. You need one AI tool, and everything else is what you already use.
+Your notes and plans live in Notion. Your clients write to you in Gmail. Your numbers sit in a spreadsheet. You design in Canva. Your content goes out on Instagram, TikTok and YouTube.
 
-That is what I show you. How to connect AI to Notion, Gmail, your spreadsheets and Canva, so it does the copying, drafting and sorting inside the places your work already lives. Then it prepares the posts you put on Instagram, TikTok and YouTube. The prompts are written and every setup has a test checklist.
+The missing piece was never another app. It is the connection.
 
-## Running a business online quietly makes you 10 employees
+Connect AI to Notion, Gmail, your spreadsheets and Canva, and it does the copying, drafting and sorting right where your work already lives. Then it prepares the posts you put on Instagram, TikTok and YouTube. You need one AI tool. Everything else is what you already use.
 
-Nobody told you this at the start. You are the content planner, the designer, the video editor, the social media manager, the DM support, the bookkeeper, the assistant, and the person who chases unpaid invoices. All before lunch.
+I show you how, step by step. The prompts are written and every setup has a test checklist.
 
-You do not need to hire ten people. You need those ten jobs written down, with the prompts already written, set up in the tools you already use.
+## You are doing ten jobs before lunch
 
-## The AutoStack Starter Kit
+Content planner. Designer. Video editor. Social media manager. DM support. Bookkeeper. Assistant. The person who chases unpaid invoices. Nobody told you it would be like this when you started.
 
-An all-in-one, ready-made kit. 36 setups. Every prompt is written. Every step is laid out in order. You open it, follow along, and tick the test checklist.
+**You do not need to hire ten people. You need those ten jobs written down, with the prompts already written, set up in the tools you already use.**
 
-You do not have to figure anything out from scratch. I already did that part for you.
+## So I did that part for you
+
+The AutoStack Starter Kit is 36 ready-made setups. You open one, follow along, and tick the test checklist when it works.
+
+You do not have to figure anything out from scratch. I already did. And I am technical, so you do not have to be.
 
 ## Picture your next 30 days
 
-Each line is what you can do once you finish that setup.
+Here is what changes, one setup at a time.
 
-- Set up your AI workspace once, and every reply, caption, and newsletter comes back in your own voice.
-- Plan a month of posts in one sitting, and leave your phone alone for a weekend while your page keeps posting.
+- Set up your AI workspace once. Every reply, caption and newsletter comes back in your own voice.
+- Plan a month of posts in one sitting. Leave your phone alone for a weekend while your page keeps posting.
 - Open your phone on Sunday night and see your week's income in one message.
-- Go to sleep while a buyer who comments PRICE gets your price list.
-- Turn a raw recording into a clean vertical video with captions, cutaway clips, and fixed sound, without paying an editor.
+- Go to sleep. A buyer comments PRICE and gets your price list.
+- Turn a raw recording into a clean vertical video with captions, cutaway clips and fixed sound. No editor to pay.
 
 ## The 36 setups, in four layers
 
@@ -137,11 +143,11 @@ Now picture doing that to your own videos, tonight. And within minutes.
 
 ## You are not doing this alone
 
-Most people stall on the same thing: they get stuck on step three, nobody is there, and the setup sits half finished.
+Here is how most people quit. They get stuck on step three. Nobody is there to ask. The setup sits half finished, and they decide AI is not for them.
 
-That is why the community is part of the kit. I am in it with you, and you can ask me when you are stuck. We also fix your setup together in the weekend live classes, so you leave with it working.
+That is why the community is inside the kit. I am in it with you. Stuck? Ask me. And in the weekend live classes we fix your setup together, so you leave with it working.
 
-You are joining as a founding member. While the community is small, you get first-hand help from me. The founding member price will go up later, so the price you see now is the lowest it will be.
+You are joining as a founding member. While the community is small, you get first-hand help from me. The founding member price goes up later, so today's price is the lowest it will be.
 
 [IMAGE 8: founding-member-premium.jpg]
 
@@ -154,7 +160,7 @@ A founding member
 
 A PhD student in my community: hours to minutes. His voice note.
 
-## Everything you get
+## Here is everything you get
 
 - **36 ready-made setups** in a private workspace you can open on your phone. One pain, one setup, done tonight.
 - **A 5-minute onboarding video** that shows you where to start, so you never wonder what to open first.
@@ -166,15 +172,27 @@ A PhD student in my community: hours to minutes. His voice note.
 - **Your own partner link:** a 30% partner share, forever, on everyone you introduce who joins.
 - **The founding member price,** while it lasts.
 
-## Why this is an investment, not an expense
+## The connect-it guarantee
 
-Say you spend five hours a week on planning content, typing the same replies and adding up your money. Over a month, that is 20 hours.
+Here is my promise. Follow the setup. If you cannot get your tools connected to the AI, I do not want you stuck and out of pocket.
 
-The kit gives those hours back, and it keeps giving them back every week after. You set each setup up once. You spend the time you saved on the part only you can do: selling.
+Email support@theautomatestack.com within 30 days with a short screen recording of the steps you followed. And if I cannot give you the solution, I will give you your money back, no questions asked.
+
+Heck, I will send you ₦5,000 extra for wasting your time.
+
+That is how sure of this I am.
+
+I would rather pay you ₦5,000 than watch you sit with a half-finished setup.
+
+## Let us do the maths
+
+Say you spend five hours a week planning content, typing the same replies and adding up your money. That is 20 hours a month.
+
+The kit gives those hours back, and it keeps giving them back every month after. You set each setup up once. Then you spend the time on the one thing only you can do: selling.
 
 ## Keep 30% forever
 
-Know a business owner buried under the same ten jobs? Introduce someone to the community. When they join us, you get a 30% partner share, forever. Bring as many people as you like. There is no limit.
+Know a business owner buried under the same ten jobs? Introduce them to the community. When they join, you get a 30% partner share, forever. No limit on how many people you bring.
 
 After you join, ask in the community and you get your link.
 
@@ -207,6 +225,9 @@ Most setups take 10 to 30 minutes. Do one tonight and you will see for yourself 
 **What if I get stuck?**
 You are not on your own. Bring your screen to the weekend live class and we fix it together, or ask in the private community. I am in there with you.
 
+**What if I cannot connect my tools?**
+Email me within 30 days with a short screen recording of the steps you followed. If I cannot give you the solution, I give you your money back, no questions asked, and send you ₦5,000 extra for wasting your time.
+
 **Do I need to pay for any tools?**
 Some setups do. Each setup page tells you what it needs before you start, and I put the free options first wherever they exist.
 
@@ -229,7 +250,13 @@ The kit is for the person who bought it. But you can share your partner link, an
 
 The AutoStack Starter Kit is going for the founding member price of [CHINENYE: confirm the price on Selar, the old text said ₦20,000], one time. [CHINENYE: say when it goes up, a date or a number of members. Only write what is true.] Click Buy now. After payment, you get the kit link and the community invite.
 
-Pick one pain. Open one setup. Be done tonight. Join as a founding member before the price goes up.
+Pick one pain. Open one setup. Be done tonight.
+
+The founding member price goes up, and today is the cheapest day to start.
+
+And you are covered by the connect-it guarantee. If I cannot get your tools connected, you get your money back plus ₦5,000.
+
+P.S. Not sure where to start? Pick the thing that annoys you most this week and open that setup first. Most setups take 10 to 30 minutes. That is all it takes to see if this is for you.
 
 Results differ from person to person. Examples of time or money are illustrations, not promises.
 

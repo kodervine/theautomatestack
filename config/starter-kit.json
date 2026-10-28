@@ -21,6 +21,10 @@
       "answer": "You are not on your own. Bring your screen to the weekend live class and we fix it together, or ask in the private community. I am in there with you."
     },
     {
+      "question": "What if I cannot connect my tools?",
+      "answer": "Email me within 30 days with a short screen recording of the steps you followed. If I cannot give you the solution, I give you your money back, no questions asked, and send you ₦5,000 extra for wasting your time."
+    },
+    {
       "question": "Do I need to pay for any tools?",
       "answer": "Some setups do. Each setup page tells you what it needs before you start, and I put the free options first wherever they exist."
     },
@@ -44,5 +48,7 @@
       "question": "Can I share the kit with a friend?",
       "answer": "The kit is for the person who bought it. But you can share your partner link, and when someone joins through it, you earn a 30% partner share."
     }
-  ]
+  ],
+  "guarantee_bonus": "₦5,000",
+  "guarantee_days": "30"
 }
