@@ -147,9 +147,15 @@ Here is how most people quit. They get stuck on step three. Nobody is there to a
 
 That is why the community is inside the kit. I am in it with you. Stuck? Ask me. And in the weekend live classes we fix your setup together, so you leave with it working.
 
-You are joining as a founding member. While the community is small, you get first-hand help from me. The founding member price goes up later, so today's price is the lowest it will be.
+You are joining as a founding member. While the community is small, you get first-hand help from me.
+
+The price goes up to ₦50,000, and the community will become a paid membership later. As a founding member, you keep your place without a monthly fee. Free for life.
 
 [IMAGE 8: founding-member-premium.jpg]
+
+[IMAGE 10: founding-usecase-call.jpg]
+
+This is how it looks inside the community.
 
 "It worked. It updated the sheet and my sheet dashboard too."
 A founding member
@@ -167,7 +173,7 @@ A PhD student in my community: hours to minutes. His voice note.
 - **Copy-paste prompts and reply copy,** already written for you.
 - **A test checklist on every setup,** so you know it works before you rely on it.
 - **Weekend live classes** [CHINENYE: weekly or twice a month? Pick one.] where we fix your setup together. Replays go on the matching setup page.
-- **A private community with me in it,** for questions and results. As a founding member, you get first-hand help from me.
+- **A private community with me in it,** for questions and results. As a founding member, you get first-hand help from me and never pay a monthly fee.
 - **New setups added over time,** so the kit keeps growing.
 - **Your own partner link:** a 30% partner share, forever, on everyone you introduce who joins.
 - **The founding member price,** while it lasts.
@@ -217,7 +223,7 @@ Yes. I wrote every step so you can follow along even if you have never done anyt
 That is exactly who I made it for. I tell you what to do first: one pain, one setup, one week. You are not meant to do all 36 at once.
 
 **What does founding member mean?**
-You are joining while the community is small, so you get first-hand help from me. The founding member price will go up later.
+You are joining while the community is small, so you get first-hand help from me. The price goes up later, and the community will become a paid membership. As a founding member, you never pay a monthly fee. Free for life.
 
 **I do not have time. How long does each setup take?**
 Most setups take 10 to 30 minutes. Do one tonight and you will see for yourself what you get back.
@@ -248,7 +254,7 @@ The kit is for the person who bought it. But you can share your partner link, an
 
 ## Start tonight
 
-The AutoStack Starter Kit is going for the founding member price of [CHINENYE: confirm the price on Selar, the old text said ₦20,000], one time. [CHINENYE: say when it goes up, a date or a number of members. Only write what is true.] Click Buy now. After payment, you get the kit link and the community invite.
+The AutoStack Starter Kit is going for the founding member price of ~~₦50,000~~ ₦20,000, one time. The price goes up to ₦50,000. [CHINENYE: say when, a date or a number of members. Only write what is true.] Click Buy now. After payment, you get the kit link and the community invite.
 
 Pick one pain. Open one setup. Be done tonight.
 
@@ -276,5 +282,6 @@ Inside the description (all in public/assets/reviews/):
 7. slide-all-needed.jpg
 8. slide-half-baked.jpg
 9. founding-member-premium.jpg (in the "You are not doing this alone" section)
+10. founding-usecase-call.jpg (in the "You are not doing this alone" section, after image 9)
 Under Layer 4: staying_lean.mp4 and before_you_budget_for_ad.mp4 (your own hosting), and kenya_reel3.mp4 if you want it there too.
 Near the end: sochi-voice-note.mp4

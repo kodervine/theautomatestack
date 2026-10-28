@@ -530,3 +530,24 @@ body:has(.site-header--sales) .btn--big:focus-visible { box-shadow: 0 0 44px 8px
 
 .video-trio { margin: var(--space-6) 0; }
 @media (min-width: 48rem) { .video-trio { grid-template-columns: repeat(3, 1fr); } }
+
+/* ---------- Starter Kit price line: the full price crossed out, the founding member price beside it ---------- */
+.price-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem .9rem; margin: 0 0 var(--space-6); }
+.band .price-line { justify-content: center; }
+.price-line s { color: rgba(251,249,244,.6); font-size: 1.3rem; text-decoration-thickness: 2px; }
+.price-line strong { font-family: var(--font-display); font-size: 2.6rem; line-height: 1; color: var(--bronze); }
+.price-line span { font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(251,249,244,.85); }
+
+/* Hero buttons on phones: the second button fills the row like the first one */
+@media (max-width: 39.99rem) { .hero .actions .btn--ghost { display: block; width: 100%; text-align: center; } }
+
+/* Starter Kit hero on cream, same as the setup pages: price line, small print and the second button need darker colours on a light background */
+.hero.sales-hero .price-line s { color: var(--stone); }
+.hero.sales-hero .price-line strong { color: #8a5a2b; }
+.hero.sales-hero .price-line span { color: var(--onyx); }
+.hero.sales-hero .fine { color: var(--stone); }
+.hero.sales-hero .btn--ghost { color: #8a5a2b; border-color: #8a5a2b; }
+.hero.sales-hero .btn--ghost:hover { background: rgba(138,90,43,.1); }
+
+/* A single card on its own row is centred, not left in half a row */
+@media (min-width: 48rem) { .proof-item--solo { grid-column: 1 / -1; max-width: calc(50% - var(--space-4)); justify-self: center; } }

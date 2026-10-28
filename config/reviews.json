@@ -97,6 +97,15 @@
       "alt": "A WhatsApp chat. A community member writes: It worked. It updated the sheet and my sheet dashboard too. Thank you so much, you are the best. See how I'm getting first-hand premium treatment. Chinenye replies: I know right. Perks of being founding member.",
       "quote": "It worked. It updated the sheet and my sheet dashboard too.",
       "who": "A founding member"
+    },
+    "founding-call": {
+      "type": "image",
+      "src": "/assets/reviews/founding-usecase-call.jpg",
+      "width": 1080,
+      "height": 905,
+      "alt": "A WhatsApp group chat. A member says: Hello Chinenye, I asked the question about deliverables and timeline for a digital product. Another member says: Thank you so much for today's class. I learnt something new. I reply, highlighted: Yeah, that's true. What's your availability for tomorrow? We can have a call so I can understand your usecase better.",
+      "quote": "We can have a call so I can understand your usecase better.",
+      "who": "Perks of being a founding member"
     }
   },
   "starter_kit_top": [
@@ -114,6 +123,7 @@
   ],
   "more_title": "More from my community",
   "starter_kit_community": [
-    "founding-member"
+    "founding-member",
+    "founding-call"
   ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "question": "What does founding member mean?",
-      "answer": "You are joining while the community is small, so you get first-hand help from me. The founding member price will go up later."
+      "answer": "You are joining while the community is small, so you get first-hand help from me. The price goes up later, and the community will become a paid membership. As a founding member, you never pay a monthly fee. Free for life."
     },
     {
       "question": "I do not have time. How long does each setup take?",
@@ -50,5 +50,7 @@
     }
   ],
   "guarantee_bonus": "₦5,000",
-  "guarantee_days": "30"
+  "guarantee_days": "30",
+  "price_was": "₦50,000",
+  "price_now": "₦20,000"
 }

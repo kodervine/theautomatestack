@@ -46,6 +46,14 @@ function reviewsHtml(cfg, ids) {
     return `<figure class="proof-item${r.layout === "card" ? " proof-item--card" : ""}">${media}<figcaption>${quote}<span>${esc(r.who)}</span></figcaption></figure>`;
   });
   if (!figs.length) return "";
+  // A run of cards sits two across. If the run is odd, the last card is centred on its own.
+  let run = 0;
+  figs.forEach((f, i) => {
+    if (f.includes("proof-item--card")) run++;
+    else run = 0;
+    const last = i === figs.length - 1 || !figs[i + 1].includes("proof-item--card");
+    if (f.includes("proof-item--card") && last && run % 2 === 1) figs[i] = f.replace("proof-item--card", "proof-item--card proof-item--solo");
+  });
   return `<div class="proof-list">${figs.join("")}</div>`;
 }
 
@@ -121,7 +129,7 @@ export function buildPages({ out, site, posts, drafts }) {
       title: `The AutoStack Starter Kit | ${site.publisher_name}`,
       description: "36 ready-to-run AI setups for your content, inbox, DMs and video editing, with prompts, a test checklist and community access.",
       jsonld: jsonLdScripts(kitFaqSchema),
-      extra: { faqs: kit.faqs.map((f, i) => ({ ...f, open: i === 0 ? " open" : "" })), header_note: "The AutoStack Starter Kit", guarantee_bonus: kit.guarantee_bonus, guarantee_days: kit.guarantee_days, trust: [], buy_href: site.starter_kit_url, pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product" }).replace(/</g, "\u003c"), reviews_title: reviewsCfg.title, reviews_intro: reviewsCfg.intro, reviews_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_top), reviews_more_title: reviewsCfg.more_title, reviews_more_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_more), reviews_community_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_community) },
+      extra: { faqs: kit.faqs.map((f, i) => ({ ...f, open: i === 0 ? " open" : "" })), header_note: "The AutoStack Starter Kit", guarantee_bonus: kit.guarantee_bonus, guarantee_days: kit.guarantee_days, price_was: kit.price_was, price_now: kit.price_now, trust: [], buy_href: site.starter_kit_url, pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product", value: Number(String(kit.price_now).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\u003c"), reviews_title: reviewsCfg.title, reviews_intro: reviewsCfg.intro, reviews_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_top), reviews_more_title: reviewsCfg.more_title, reviews_more_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_more), reviews_community_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_community) },
     },
     ...setups.map((s) => ({
       path: `/setups/${s.slug}/`,
