@@ -204,11 +204,13 @@ After you join, ask in the community and you get your link.
 
 ## Who built this
 
-Hi, I am Chinenye. In my day job I am a software engineer.
+Hi, I am Chinenye. In my day job, I am a software engineer.
 
-I was featured by the Association for Computing Machinery (ACM), the largest academic computer science organization in the world, as an advocate for responsible AI (https://women.acm.org/u-rise-chinenye-anikwenze-from-an-academic-in-history-to-an-unconventional-advocate-for-responsible-and-inclusive-ai/). I have organized workshops at the Deep Learning Indaba, the biggest AI gathering in Africa (https://www.tonative.org/indaba-2026#:~:text=LinkedIn-,Chinenye%20Anikwenze,-Engineering%20Lead%2C%20Tonative). I was also invited to speak on a panel about AI in Nairobi, fully funded (https://lnkd.in/p/eM7tdH-x).
+On the side, I have built workflows like this for six and seven figure (USD) businesses.
 
-I have built workflows like this for six and seven figure (USD) businesses.
+I was featured by the Association for Computing Machinery (ACM), the largest academic computer science organization in the world, as an advocate for responsible AI (https://women.acm.org/u-rise-chinenye-anikwenze-from-an-academic-in-history-to-an-unconventional-advocate-for-responsible-and-inclusive-ai/). I have organized workshops at the Deep Learning Indaba, the biggest AI gathering in Africa (https://www.tonative.org/indaba-2026#:~:text=LinkedIn-,Chinenye%20Anikwenze,-Engineering%20Lead%2C%20Tonative). I was also invited to speak about AI on a panel at the annual summit of the first independent fact-checking organization in Africa, in Nairobi, fully funded. (https://lnkd.in/p/eM7tdH-x)
+
+Where I'm getting at is this...
 
 I am the technical one, so you do not have to be. I do the technical part and show you only what you need to use it.
 
