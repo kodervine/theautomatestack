@@ -3,12 +3,12 @@ title: "How do I follow up with people who messaged but did not buy?"
 slug: how-do-i-follow-up-with-people-who-messaged-but-did-not-buy
 question: "How do I follow up with people who messaged but did not buy?"
 summary: "Keep a list of everyone who messaged and did not buy. Follow up soon, while they still remember you, with one short message and one clear question. Do not push. If they do not reply after two tries, stop."
-date: 2026-10-29
-updated: 2026-10-29
+date: 2026-10-28
+updated: 2026-10-28
 tags:
   - instagram dms
   - black friday
-status: draft
+status: ready
 image: /blog/images/how-do-i-follow-up-with-people-who-messaged-but-did-not-buy/follow-up.png
 source_post: ""
 medium_url: ""

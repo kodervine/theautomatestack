@@ -5,8 +5,348 @@
     <link>https://www.theautomatestack.com/blog/</link>
     <description>Straight answers on using AI and automation to save time in your business, from The Automate Stack.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Oct 2026 08:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 08:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.theautomatestack.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>How do I test an automation before I trust it?</title>
+      <link>https://www.theautomatestack.com/blog/how-do-i-test-an-automation-before-i-trust-it/</link>
+      <guid isPermaLink="true">https://www.theautomatestack.com/blog/how-do-i-test-an-automation-before-i-trust-it/</guid>
+      <pubDate>Thu, 19 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Chinenye</dc:creator>
+      <category>automation</category>
+      <category>starter kit</category>
+      <description>Run it on five normal examples, add two messy ones, and compare each result with what you would have done by hand. Keep a human check on anything that touches money or customers. Test again after any change.</description>
+      <content:encoded><![CDATA[<p>An automation that fails loudly is easy. You see the error and you fix it.</p>
+<p>The one that fails quietly is the problem. It runs for weeks, looks fine, and sends the wrong thing to the wrong person while you are asleep.</p>
+<p>So you test before you trust. It takes about an hour, once.</p>
+<p><img loading="lazy" decoding="async" src="https://www.theautomatestack.com/blog/images/how-do-i-test-an-automation-before-i-trust-it/test-first.png" alt="Test an automation before you trust it. One, run five normal examples. Two, add two messy ones. Three, compare each result with what you would have done by hand. Anything that touches money or customers gets read by a human first."></p>
+<h2>Test with real cases, not perfect ones</h2>
+<p>Say you set up a reply that sends your price list when someone comments PRICE.</p>
+<p>The easy test is a comment that says PRICE. It works. You feel good and switch it on.</p>
+<p>Then a real customer comments &quot;price pls&quot;. Another types &quot;PRCE&quot;. Another writes &quot;how much&quot; and sends nothing else. If you never tried those, you find out from your customers. I wrote about exactly this in <a href="https://www.theautomatestack.com/blog/why-does-my-instagram-dm-bot-break-when-customers-make-typos/">why does my Instagram DM bot break when customers make typos</a>.</p>
+<p>So your test list needs two kinds of cases.</p>
+<ul>
+<li><strong>Five normal ones.</strong> What a customer would send on a good day.</li>
+<li><strong>Two messy ones.</strong> Typos, capital letters, an empty message, a very long one, a duplicate, anything you did not plan for.</li>
+</ul>
+<h2>Compare it with what you would have done</h2>
+<p>For each test, write down what you expected before you run it. Then look at what happened.</p>
+<p>Any difference is a fault until you prove otherwise. Not &quot;close enough&quot;. If you would have sent the price list and it sent nothing, that is a fault.</p>
+<h2>Decide what a human checks</h2>
+<p>Some jobs are low risk. A weekly summary you read yourself is fine to run without much worry.</p>
+<p>But anything that touches money, a customer&#39;s private details or a promise should be read by a person before it goes out. Start it in draft mode, where it prepares the message and you press send. Move to sending on its own later, if at all.</p>
+<h2>Know how to stop it</h2>
+<p>Before you switch anything on, write down where the off switch is.</p>
+<p>If something goes wrong at 2 AM, you do not want to be searching through menus. One line in your notes is enough: where it lives and how to pause it.</p>
+<h2>Test again when something changes</h2>
+<p>Tools change their menus. You edit a prompt. A free limit runs out. Any of those can change what your automation does.</p>
+<p>Keep your test list, the same seven cases, and run it again after every change. It takes ten minutes, and it is the cheapest insurance you have.</p>
+<h2>The steps</h2>
+<ol>
+<li><strong>Write down what the automation should do.</strong> One sentence.</li>
+<li><strong>List five normal examples.</strong> What a customer sends on a good day.</li>
+<li><strong>Add two messy ones.</strong> Typos, empty, long, duplicate.</li>
+<li><strong>Write down what you expect for each.</strong></li>
+<li><strong>Run them and compare.</strong> Any difference is a fault. Fix it, then run the whole list again.</li>
+<li><strong>Decide what a human reads first.</strong> Anything about money or customers.</li>
+<li><strong>Write down the off switch.</strong> And test again after any change.</li>
+</ol>
+<p>Every setup in the <a href="https://www.theautomatestack.com/starter-kit/">Starter Kit</a> has a test checklist for exactly this, so you do not have to invent one.</p>
+<p>Trust is not a feeling. It is a list of cases that passed.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>What do I need to start using AI in my business?</title>
+      <link>https://www.theautomatestack.com/blog/what-do-i-need-to-start-using-ai-in-my-business/</link>
+      <guid isPermaLink="true">https://www.theautomatestack.com/blog/what-do-i-need-to-start-using-ai-in-my-business/</guid>
+      <pubDate>Thu, 12 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Chinenye</dc:creator>
+      <category>getting started</category>
+      <category>ai tools</category>
+      <description>Less than you think. One AI tool, one task you repeat every week, a few lines about your business and about 30 minutes. You do not need to code or buy anything first. Start with one job, get it working, then add the next.</description>
+      <content:encoded><![CDATA[<p>Most people think they need a plan before they start.</p>
+<p>A tool list. A course. A free weekend. So they wait, and the waiting turns into months.</p>
+<p>You need much less than that. Here is the whole list.</p>
+<p><img loading="lazy" decoding="async" src="https://www.theautomatestack.com/blog/images/what-do-i-need-to-start-using-ai-in-my-business/start-checklist.png" alt="What you need to start using AI in your business. One AI tool. One task you repeat every week. A few lines about your business. About 30 minutes. Start with one task, not your whole business."></p>
+<h2>What you need</h2>
+<ul>
+<li><strong>One AI tool.</strong> Pick one and stay with it for a few weeks. Hopping between five tools is how people end up overwhelmed.</li>
+<li><strong>One task you repeat.</strong> Something you already do every week, like writing captions, replying to the same four questions or adding up your income.</li>
+<li><strong>A few lines about your business.</strong> What you sell, who you sell to and how you talk. Three or four sentences is enough.</li>
+<li><strong>About 30 minutes.</strong> One sitting. Not a month.</li>
+<li><strong>A place to keep your prompts.</strong> Your notes app is fine. When something works, save it.</li>
+</ul>
+<p>That is all.</p>
+<h2>What you do not need</h2>
+<p>You do not need to know how to code. You do not need a perfect prompt. You do not need to understand how the tool works inside.</p>
+<p>You also do not need to move your whole business over. Nobody does that. People start with one small job and add the next one when the first is working.</p>
+<p>And you do not need to paste anything private. An amount and a date are enough for most tasks. The rules in <a href="https://www.theautomatestack.com/blog/what-should-i-never-paste-into-an-ai-tool/">what should I never paste into an AI tool</a> cover what to keep out.</p>
+<h2>Pick a boring first task</h2>
+<p>The best first task is boring and repeated.</p>
+<p>If you do it every week and it makes you groan, it is a good one. Say you write your Instagram captions on Sunday night and you hate it. That is a better start than something clever you will use once.</p>
+<p>Avoid anything where a mistake costs money or reaches your customers before you have read it. Start where you are the one checking the result.</p>
+<h2>The steps</h2>
+<ol>
+<li><strong>Write down what you do by hand every week.</strong> Five or six things is enough.</li>
+<li><strong>Circle the one that annoys you most.</strong></li>
+<li><strong>Describe your business in three or four sentences.</strong> What you sell, who it is for, how you sound.</li>
+<li><strong>Ask the AI to do a first draft of that task.</strong> Paste your description, then say what you want.</li>
+<li><strong>Read it and fix it.</strong> Change anything that is wrong or does not sound like you.</li>
+<li><strong>Save the prompt that worked.</strong> Next week you paste it again and skip steps 3 and 4.</li>
+<li><strong>Repeat next week.</strong> Then pick the next task on your list.</li>
+</ol>
+<p>If you want a starting point, the free <a href="https://www.theautomatestack.com/freebies/">AutoStack Checklist</a> walks you through picking your first task. The <a href="https://www.theautomatestack.com/starter-kit/">Starter Kit</a> has 36 setups once you are ready for more.</p>
+<p>Start small. A task that saves you twenty minutes, done every week, beats a plan you never begin.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>How do I chase unpaid invoices without sounding rude?</title>
+      <link>https://www.theautomatestack.com/blog/how-do-i-chase-unpaid-invoices-without-sounding-rude/</link>
+      <guid isPermaLink="true">https://www.theautomatestack.com/blog/how-do-i-chase-unpaid-invoices-without-sounding-rude/</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Chinenye</dc:creator>
+      <category>automation</category>
+      <category>ai tools</category>
+      <description>Write three reminders once: a friendly nudge, a clear reminder and a firm final notice. Then send the right one on the right day. The same calm words every time means you never chase money while you are annoyed. Let AI draft them in your voice, and read every message before it goes.</description>
+      <content:encoded><![CDATA[<p>Chasing money is awkward because you are afraid of sounding desperate.</p>
+<p>So you wait. A week passes. Then two. And when you finally send the message, it comes out either far too soft or far too sharp, because by then you are already annoyed.</p>
+<p>The problem is not your tone. The problem is that you write the message in the moment, while you are in a mood. Write it once, in a calm hour, and the mood is gone.</p>
+<p><img loading="lazy" decoding="async" src="https://www.theautomatestack.com/blog/images/how-do-i-chase-unpaid-invoices-without-sounding-rude/three-reminders.png" alt="Three reminders for an unpaid invoice. One, a friendly nudge the day after it is due. Two, a clear reminder about a week later. Three, a firm final notice that says what happens next. The same calm words every time."></p>
+<h2>Why it feels rude</h2>
+<p>Asking for money you are owed is not rude. The client agreed to pay. You are reminding them of a date.</p>
+<p>What feels rude is the guessing. Do you mention the amount? Do you say sorry? Do you hint and hope they catch it? Most people end up apologising for the invoice, which is the wrong way round.</p>
+<p>A good reminder does four things and nothing else:</p>
+<ul>
+<li>it names the invoice</li>
+<li>it states the amount and the date it was due</li>
+<li>it says how to pay</li>
+<li>it asks for one thing: payment by a certain day</li>
+</ul>
+<p>That is the whole message.</p>
+<h2>Write three reminders, not one</h2>
+<p>You do not need ten messages. Three is enough, and each has a different job.</p>
+<ul>
+<li><strong>The friendly nudge.</strong> Sent the day after the due date. It assumes they forgot, and it makes that easy to say yes to.</li>
+<li><strong>The clear reminder.</strong> Sent about a week later. Same facts, plainer tone, and a firm date.</li>
+<li><strong>The firm final notice.</strong> Sent after that. It says what happens next, such as pausing the work until the invoice is settled, but only if that is really what you would do.</li>
+</ul>
+<p>Say a client owes you ₦150,000 for a design job that was due on the 1st. The nudge goes out on the 2nd. Same invoice, same amount, calm words. If nothing comes, the clear reminder goes out around the 9th. You never had to decide how you felt about it.</p>
+<h2>Let AI draft them in your voice</h2>
+<p>This is where AI helps. Give it three things: a sample of how you normally write to clients, the facts of one invoice, and the job of each reminder. Ask for the three messages.</p>
+<p>Then read them. Change anything that does not sound like you. Do not send a message you have not read. A reminder with the wrong amount in it is worse than a late one.</p>
+<p>Use the client&#39;s first name and the invoice number. Leave out bank details and anything private. The rules in <a href="https://www.theautomatestack.com/blog/what-should-i-never-paste-into-an-ai-tool/">what should I never paste into an AI tool</a> apply here too.</p>
+<h2>Keep one simple list</h2>
+<p>The messages are the easy part. The hard part is knowing who is overdue.</p>
+<p>Keep one list with five columns: client, invoice number, amount, due date and days late. Look at it once a week. Whoever is past due gets the next reminder in line.</p>
+<h2>The steps</h2>
+<ol>
+<li><strong>List every unpaid invoice.</strong> Client, amount and due date.</li>
+<li><strong>Mark what is overdue today.</strong></li>
+<li><strong>Write your three reminders once.</strong> Or ask AI for a first draft in your voice.</li>
+<li><strong>Read and edit them.</strong> Fix the amount, the date and the payment details.</li>
+<li><strong>Send the right one on the right day.</strong> Nudge, then reminder, then final notice.</li>
+<li><strong>Note the date you sent each one.</strong> So you never send the same message twice.</li>
+<li><strong>Do it weekly.</strong> Pick a day and keep it.</li>
+</ol>
+<p>A list of overdue invoices, with a polite reminder ready for each, is one of the setups in the Automate layer of the <a href="https://www.theautomatestack.com/starter-kit/">Starter Kit</a>.</p>
+<p>You are not chasing anyone. You are following a routine. That is a lot easier to do without feeling rude.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Do I need to know how to code to use AI in my business?</title>
+      <link>https://www.theautomatestack.com/blog/do-i-need-to-know-how-to-code-to-use-ai-in-my-business/</link>
+      <guid isPermaLink="true">https://www.theautomatestack.com/blog/do-i-need-to-know-how-to-code-to-use-ai-in-my-business/</guid>
+      <pubDate>Wed, 28 Oct 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Chinenye</dc:creator>
+      <category>getting started</category>
+      <category>ai tools</category>
+      <description>No. You can use AI in your business without writing any code. What you need is a clear task, plain words, and the patience to test. Code only comes in when you build custom automations, and even then you can start without it.</description>
+      <content:encoded><![CDATA[<p>The people who use AI well in their business are often not the ones who code. They are the ones who can say clearly what they want.</p>
+<p>If you have been holding back because you think you need to learn to code first, you can stop. You do not. Not to start, and not to get real work done.</p>
+<p><img loading="lazy" decoding="async" src="https://www.theautomatestack.com/blog/images/do-i-need-to-know-how-to-code-to-use-ai-in-my-business/no-code.png" alt="A look at the four layers of the Starter Kit. Ask, Create and Automate need no code. Edit has one advanced setup, and it is optional."></p>
+<h2>What you need instead</h2>
+<p>Three things, and none of them is code.</p>
+<p><strong>A clear task.</strong> &quot;Help with my business&quot; is too vague. &quot;Write a polite reminder to a client who has not paid&quot; is clear. The sharper the task, the better the result.</p>
+<p><strong>Plain words.</strong> You talk to the tool the way you would talk to a new assistant. Say what you want, who it is for, and what it should sound like.</p>
+<p><strong>Patience to test.</strong> The first result is a start. You read it, fix it, and try again.</p>
+<p>That is the whole skill. Notice there is no code in it.</p>
+<h2>Where code does show up</h2>
+<p>Code comes in when you want to connect several tools so they work together on their own. For example, a message arrives in one app, gets checked, and triggers a reply in another.</p>
+<p>Even then, many people build these with visual tools where you connect steps instead of writing code. If you are a builder who already uses a tool like n8n, that is where the <a href="https://www.theautomatestack.com/blueprint/">Blueprint</a> fits. If you have never used one, you do not need it to start.</p>
+<h2>A fair picture of the Starter Kit</h2>
+<p>The Starter Kit is built for people who are not technical. It has four layers: Ask, Create, Automate and Edit. Layers 1 to 3 need no code. Layer 4 has one advanced setup, and it is optional.</p>
+<p>Each setup is written out step by step, with the prompt included and a test checklist, so you are never staring at a blank screen.</p>
+<h2>Say you have never touched any of this</h2>
+<p>Say you run a small tailoring business. You answer the same questions in your messages all day. You do not code and you do not plan to.</p>
+<p>You can start by writing down the five questions you get most, and your answer to each. Then you ask an AI tool to turn each answer into a short, friendly reply in your voice. That is it. No code. You read the replies, fix the ones that do not sound like you, and keep them.</p>
+<h2>What about cost?</h2>
+<p>Some setups need a paid tool. That is normal. The better kits tell you what each setup needs before you start, and put the free options first where they exist. Look for that before you commit, so you are never surprised halfway through.</p>
+<h2>The steps</h2>
+<ol>
+<li><strong>Pick one small task.</strong> Not your whole business. One task.</li>
+<li><strong>Write what you want in plain words.</strong> Who it is for, what it should do, how it should sound.</li>
+<li><strong>Try it in an AI tool.</strong> Read what comes back.</li>
+<li><strong>Fix what is wrong.</strong> Change the words you gave it, and try again.</li>
+<li><strong>Test it with real, messy examples.</strong> Typos, half sentences, odd requests.</li>
+<li><strong>Add the next task only when this one works.</strong></li>
+</ol>
+<p>If you want a worksheet for finding your first task, start with the <a href="https://www.theautomatestack.com/freebies/">free Checklist</a>. If you want ready-made setups, look at the <a href="https://www.theautomatestack.com/starter-kit/">Starter Kit</a>.</p>
+<p>You do not need to learn code to begin. You need to begin.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>How do I follow up with people who messaged but did not buy?</title>
+      <link>https://www.theautomatestack.com/blog/how-do-i-follow-up-with-people-who-messaged-but-did-not-buy/</link>
+      <guid isPermaLink="true">https://www.theautomatestack.com/blog/how-do-i-follow-up-with-people-who-messaged-but-did-not-buy/</guid>
+      <pubDate>Wed, 28 Oct 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Chinenye</dc:creator>
+      <category>instagram dms</category>
+      <category>black friday</category>
+      <description>Keep a list of everyone who messaged and did not buy. Follow up soon, while they still remember you, with one short message and one clear question. Do not push. If they do not reply after two tries, stop.</description>
+      <content:encoded><![CDATA[<p>The people who messaged you and did not buy are the warmest list you have.</p>
+<p>They found your page. They liked something enough to ask a question. That is more interest than a thousand silent followers. And then, most of the time, they disappear because nobody followed up.</p>
+<p>It does not have to end there. A short, kind follow-up wins back more than people expect, and it takes very little.</p>
+<p><img loading="lazy" decoding="async" src="https://www.theautomatestack.com/blog/images/how-do-i-follow-up-with-people-who-messaged-but-did-not-buy/follow-up.png" alt="How to follow up after a message. Someone messaged and did not buy. Follow up soon, while they remember. Send one question with no pressure. Stop after two tries."></p>
+<h2>Why people do not buy</h2>
+<p>Most of the time it is not a no. It is a &quot;not right now&quot;.</p>
+<p>They got busy. They wanted to ask someone. Their card was not with them. They meant to come back. A follow-up is not a push. It is a nudge that gives them a reason to return.</p>
+<h2>Keep a list</h2>
+<p>You cannot follow up with people you have lost track of.</p>
+<p>Keep a simple list of everyone who messaged and did not buy. Name, what they asked about, and the date. A note or a sheet is enough. If you are saving customer details in your messages already, you have most of it.</p>
+<h2>Follow up soon</h2>
+<p>Do it while they still remember asking. A day or two later works well. Weeks later, you are a stranger again.</p>
+<p>Say you run a small jewellery brand. Someone asked about a necklace and went quiet. Two days later you send:</p>
+<blockquote>
+<p>Hi [name], you asked about the [item] the other day. Still thinking about it? Happy to answer anything.</p>
+</blockquote>
+<p>That is the whole message. It is short, it is about them, and it asks one thing.</p>
+<h2>What to send</h2>
+<p>One short line. One clear question. No pressure.</p>
+<p>A good question is easy to answer: &quot;Do you still want it?&quot; or &quot;Was there something that stopped you?&quot; The second one is useful, because the answer tells you what to fix.</p>
+<p>Do not paste a sales pitch. Do not repeat the price three times. And do not write a paragraph.</p>
+<h2>Know when to stop</h2>
+<p>Two tries is enough. One gentle nudge, then one last friendly message if they have not replied.</p>
+<p>After that, let it go. Chasing someone damages the goodwill you were trying to keep. You can always speak to them again when you have something new.</p>
+<h2>Check the platform&#39;s rules</h2>
+<p>Instagram has its own rules about messaging people, especially when automation is involved. Check its current messaging rules before you build a follow-up routine, so you do not put your account at risk.</p>
+<h2>What to do when they reply</h2>
+<p>Answer the question they asked, then stop.</p>
+<p>If they say the price is a problem, say what is included, or offer the payment option you have. If they say &quot;later&quot;, ask when would suit them. If they say no, thank them and let it go. A kind goodbye often brings people back.</p>
+<h2>The steps</h2>
+<ol>
+<li><strong>Keep a list.</strong> Name, what they asked about, and the date.</li>
+<li><strong>Follow up within a day or two.</strong></li>
+<li><strong>Send one short line and one clear question.</strong></li>
+<li><strong>Make the question easy to answer.</strong></li>
+<li><strong>Send one last friendly message if there is no reply.</strong> Then stop.</li>
+<li><strong>Note what people say stopped them.</strong> It will tell you what to fix.</li>
+<li><strong>Check the platform&#39;s messaging rules.</strong></li>
+</ol>
+<p>If Black Friday is coming, this is the other half of preparing. You can read <a href="https://www.theautomatestack.com/blog/how-do-i-get-my-instagram-dms-ready-for-black-friday/">how to get your DMs ready</a> before the sale, and then use this list after it. If you want your replies handled while you sleep, <a href="https://www.theautomatestack.com/dm-automation/">see how the DM system works</a>.</p>
+<p>They asked first. Make sure someone answers last.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>How do I get a weekly income summary from my bank alerts?</title>
+      <link>https://www.theautomatestack.com/blog/how-do-i-get-a-weekly-income-summary-from-my-bank-alerts/</link>
+      <guid isPermaLink="true">https://www.theautomatestack.com/blog/how-do-i-get-a-weekly-income-summary-from-my-bank-alerts/</guid>
+      <pubDate>Wed, 28 Oct 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Chinenye</dc:creator>
+      <category>automation</category>
+      <category>ai tools</category>
+      <description>Paste your week's credit alerts into an AI tool, with account numbers and names removed, and ask it to add them up and list them by day. You get one clear summary instead of adding every alert by hand. Check it against your bank or Selar, which stay the source of truth.</description>
+      <content:encoded><![CDATA[<p>Adding up your bank alerts by hand is a small job that eats a big part of your Sunday.</p>
+<p>You scroll your messages. You find the credits. You add them on a calculator. You lose count, and start again. And at the end you are still not sure the number is right.</p>
+<p>There is a quicker way. It does not need any special software, and it does not need you to hand over your bank details.</p>
+<p><img loading="lazy" decoding="async" src="https://www.theautomatestack.com/blog/images/how-do-i-get-a-weekly-income-summary-from-my-bank-alerts/income-summary.png" alt="How to turn bank alerts into a weekly summary. One, paste your bank alerts in. Two, the AI adds them up. Three, you get one message with your week&#39;s income. Remove account numbers before you paste."></p>
+<h2>The idea</h2>
+<p>Your bank already tells you every time money arrives. Those alerts are text. A tool that reads text can add them up.</p>
+<p>So you paste a week of credit alerts in, ask for the total and a list by day, and get one clear message back. Open it on your phone on Sunday night and you can see your week in one glance.</p>
+<h2>Clean the alerts first</h2>
+<p>This step matters more than the rest.</p>
+<p>Before you paste anything, remove what you do not need. Account numbers. Full names. Anything that is not the amount, the date and a short note.</p>
+<p>You can read more about this in the rules for <a href="https://www.theautomatestack.com/blog/what-should-i-never-paste-into-an-ai-tool/">what never to paste into an AI tool</a>. The short version: an amount and a date are enough to add up a week. Nothing else needs to leave your hands.</p>
+<p>Say you sell clothes online. Your alerts for the week might look like a dozen short messages. You tidy each one down to &quot;Mon, ₦[amount], payment for order&quot; and paste the lot.</p>
+<h2>What to ask for</h2>
+<p>Keep the request plain. Ask for three things:</p>
+<ul>
+<li>the total for the week</li>
+<li>the number of credits</li>
+<li>a list by day</li>
+</ul>
+<p>You can also ask it to flag anything that looks odd, like two identical amounts on the same day. It will not know if something is a mistake, but it can point at it so you look.</p>
+<h2>Check it, then trust it a little</h2>
+<p>The tool is adding numbers you gave it. If you pasted a wrong amount, the total will be wrong.</p>
+<p>So treat the summary as a convenient copy. Your bank and your Selar dashboard are the source of truth for your money. Compare the total once or twice at first. When it matches a few weeks in a row, you can rely on it more.</p>
+<h2>Make it a habit</h2>
+<p>Pick one day. Sunday night works for many people. Set a reminder, paste the week&#39;s alerts, read the summary, and file it.</p>
+<p>It takes a few minutes, and you stop carrying the number in your head.</p>
+<h2>The steps</h2>
+<ol>
+<li><strong>Pick a day each week.</strong> Sunday night works well.</li>
+<li><strong>Collect the week&#39;s credit alerts.</strong></li>
+<li><strong>Clean them.</strong> Remove account numbers and names. Keep the amount, the date and a short note.</li>
+<li><strong>Paste them in and ask for three things.</strong> The total, the number of credits, and a list by day.</li>
+<li><strong>Read the summary.</strong> Look at anything it flags.</li>
+<li><strong>Check it against your bank or Selar.</strong> Do this every time at first.</li>
+<li><strong>Save it.</strong> One message per week, in the same place.</li>
+</ol>
+<p>A weekly income check from the alerts you paste is one of the setups in the Automate layer of the <a href="https://www.theautomatestack.com/starter-kit/">Starter Kit</a>, with the prompt and a test checklist written out for you.</p>
+<p>You do not have to add it up by hand. You just have to check it.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Why does my Instagram DM bot break when customers make typos?</title>
+      <link>https://www.theautomatestack.com/blog/why-does-my-instagram-dm-bot-break-when-customers-make-typos/</link>
+      <guid isPermaLink="true">https://www.theautomatestack.com/blog/why-does-my-instagram-dm-bot-break-when-customers-make-typos/</guid>
+      <pubDate>Wed, 28 Oct 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Chinenye</dc:creator>
+      <category>instagram dms</category>
+      <category>chatbots</category>
+      <category>automation</category>
+      <description>Most DM bots look for one exact word. If the customer writes it differently, the bot finds no match and goes silent or repeats a menu. The fix is a setup that reads the whole message, so a typo, slang or a normal sentence still gets the right answer.</description>
+      <content:encoded><![CDATA[<p>Your bot is not broken. It is doing exactly what you told it to do.</p>
+<p>You told it to wait for one word. The customer used a different one.</p>
+<p>That is the whole problem, and it is a very common one. Here is why it happens, and what to do instead.</p>
+<p><img loading="lazy" decoding="async" src="https://www.theautomatestack.com/blog/images/why-does-my-instagram-dm-bot-break-when-customers-make-typos/bot-breaks.png" alt="Why a keyword bot breaks. A buyer types a normal message. The bot looks for one exact word. It finds no match, so nobody replies. The buyer leaves."></p>
+<h2>What is actually happening</h2>
+<p>A keyword bot works from a list. If the message contains a word from the list, it replies. If it does not, it does nothing, or it sends the same menu again.</p>
+<p>That works in a test. You type PRICE, it answers, and you feel good.</p>
+<p>Then real customers arrive.</p>
+<h2>What real messages look like</h2>
+<p>People type fast, on small screens, in the middle of something else.</p>
+<p>&quot;How much be this one.&quot;</p>
+<p>&quot;Price pls.&quot;</p>
+<p>&quot;Is it available abeg.&quot;</p>
+<p>&quot;Hey saw ur ad, can i pay half now&quot;</p>
+<p>None of those is a clean keyword. Some have the word you wanted, spelled differently. Some have no keyword at all, just a normal sentence. A rigid bot looks at each one and finds nothing.</p>
+<h2>What the customer thinks</h2>
+<p>This is the part that costs you money.</p>
+<p>The customer does not think, &quot;this bot has a rule problem.&quot; They think, &quot;nobody is replying.&quot;</p>
+<p>So they wait a moment, then message another seller. You paid for the ad that brought them to your inbox, and they left without ever knowing a rule was the reason.</p>
+<h2>Fixes that do not work</h2>
+<p><strong>Adding more keywords.</strong> You add PRICE, then PRICES, then PRICE PLS, then PRICE OOO. It never ends, because people can always write it a new way.</p>
+<p><strong>Adding a menu.</strong> &quot;Reply 1 for price, 2 for delivery.&quot; It works until someone types a sentence, and then it fails the same way. It also asks serious buyers to do work you should be doing.</p>
+<p><strong>Replying yourself.</strong> It works, but only while you are awake, charged and free.</p>
+<h2>What works instead</h2>
+<p>A setup that reads the whole message and works out what the customer wants. A typo does not stop it. Slang does not stop it. A normal sentence does not stop it.</p>
+<p>It still sends your answers, in your words. It just does not need the customer to say the magic word first. And it runs on a server, so your phone battery and your power do not matter.</p>
+<h2>Why it hurts most during a sale</h2>
+<p>On a normal week, a missed message is one lost sale. During a big sale, the same rule fails again and again, with every buyer typing the way they always do. The more traffic you send, the more of it your bot drops. That is why this is worth fixing before your next push, and not after. If a sale is coming, read <a href="https://www.theautomatestack.com/blog/how-do-i-get-my-instagram-dms-ready-for-black-friday/">how to get your DMs ready</a> too.</p>
+<h2>The steps</h2>
+<ol>
+<li><strong>Open your inbox and read your last twenty messages.</strong> Read what customers really sent, not what you think they send.</li>
+<li><strong>Mark every message your bot ignored.</strong> That list is your fix list.</li>
+<li><strong>Replace exact-word rules with a setup that reads the whole message.</strong></li>
+<li><strong>Keep your own answers for the important questions.</strong> Price, delivery and payment. The system uses your words.</li>
+<li><strong>Add a checkout link and a backup payment option.</strong> If a card fails, the buyer should see another way to pay.</li>
+<li><strong>Test with typos on purpose.</strong> Send it ten bad messages and fix whatever it misses.</li>
+<li><strong>Decide what happens when it does not know.</strong> An honest &quot;I will reply in the morning&quot; beats silence.</li>
+</ol>
+<p>For the replies themselves, read <a href="https://www.theautomatestack.com/blog/what-should-my-black-friday-auto-reply-say/">what a Black Friday auto-reply should say</a>. To see how the whole system works, <a href="https://www.theautomatestack.com/dm-automation/">look at DM automation</a>. If you want to talk it through first, you can <a href="https://www.theautomatestack.com/dm-automation/#consultation">book a one-on-one consultation</a>.</p>
+<p>People type like people. Build for that.</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>How do I plan a month of Instagram posts in one sitting?</title>
       <link>https://www.theautomatestack.com/blog/how-do-i-plan-a-month-of-instagram-posts-in-one-sitting/</link>

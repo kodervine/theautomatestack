@@ -36,26 +36,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "I am not technical.",
+      "name": "I am not technical. Can I still do this?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every step is written. Layers 1 to 3 need no code, and the one advanced setup in Layer 4 is optional."
+        "text": "Yes. I wrote every step so you can follow along even if you have never done anything like this. Layers 1 to 3 need no code at all. The one advanced setup in Layer 4 is optional, so you can leave it for later."
       }
     },
     {
       "@type": "Question",
-      "name": "I tried AI tools and got overwhelmed.",
+      "name": "I have tried AI tools before and got overwhelmed. Will this be different?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The kit is built for that. It tells you what to do first: one pain, one setup, one week."
+        "text": "That is exactly who I made it for. I tell you what to do first: one pain, one setup, one week. You are not meant to do all 36 at once."
       }
     },
     {
       "@type": "Question",
-      "name": "I do not have time.",
+      "name": "What does founding member mean?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most setups take 10 to 30 minutes."
+        "text": "You are joining while the community is small, so you get first-hand help from me. The founding member price will go up later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I do not have time. How long does each setup take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most setups take 10 to 30 minutes. Do one tonight and you will see for yourself what you get back."
       }
     },
     {
@@ -63,15 +71,23 @@
       "name": "What if I get stuck?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Bring your screen to the weekend live class, or ask in the private community."
+        "text": "You are not on your own. Bring your screen to the weekend live class and we fix it together, or ask in the private community. I am in there with you."
       }
     },
     {
       "@type": "Question",
-      "name": "Do I need paid tools?",
+      "name": "Do I need to pay for any tools?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Some setups do. Each page says what it needs, and free options come first where they exist."
+        "text": "Some setups do. Each setup page tells you what it needs before you start, and I put the free options first wherever they exist."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this the same as the AutoStack Blueprint?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Starter Kit teaches you to set things up yourself with AI and no-code tools, and you do not need n8n. The Blueprint is a separate product of n8n engine automations for people who want more control."
       }
     },
     {
@@ -79,15 +95,15 @@
       "name": "Will it work for my business in Nigeria?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The examples use naira and bank alerts. A few tools are not available in every country. The setup page tells you when that matters."
+        "text": "The examples use naira and bank alerts. A few tools are not available in every country, and the setup page tells you when that matters."
       }
     },
     {
       "@type": "Question",
-      "name": "What if a tool changes?",
+      "name": "What if a tool changes its menus?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Tools change their menus and free limits often. When that happens, the setup page is updated and the change is logged on the New This Week page. You can also ask in the community."
+        "text": "They do, often. When it happens I update the setup page and log the change on the New This Week page. You can also ask in the community."
       }
     },
     {
@@ -95,15 +111,15 @@
       "name": "How do I get the kit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "After payment, you get a link to the kit and an invite to the community. Open it on your phone or your laptop."
+        "text": "After you pay, you get a link to the kit and an invite to the community. Open it on your phone or your laptop."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I share the kit with someone?",
+      "name": "Can I share the kit with a friend?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. The kit is for the person who bought it. But when you introduce someone to the community and they join us, you get a 30% partner share, forever, with no limit on how many people you bring."
+        "text": "The kit is for the person who bought it. But you can share your partner link, and when someone joins through it, you earn a 30% partner share."
       }
     }
   ]
@@ -114,7 +130,7 @@
 fbq('init', '1067023309651592');
 fbq('track', 'PageView');
 (function () {
-  var data = {};
+  var data = {"content_ids":["starter-kit"],"content_name":"AutoStack Starter Kit","content_type":"product"};
   // A setup page: tell Meta which product is being viewed.
   if (data.content_ids) fbq('track', 'ViewContent', data);
   // Someone presses a buy button, on their way to Selar.
@@ -145,62 +161,29 @@ fbq('track', 'PageView');
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   
-  <header class="site-header">
+  <header class="site-header site-header--sales">
   <div class="wrap">
-    <a class="brand" href="/">
+    <span class="brand">
       <img src="/assets/img/logo.png" alt="The Automate Stack logo" width="36" height="36">
       <span>theautomatestack</span>
-    </a>
-    <nav class="site-nav" aria-label="Main">
-      <a href="/freebies/">Start here</a>
-      <div class="menu is-current">
-        <button type="button" class="menu-btn" aria-haspopup="true">Products</button>
-        <ul class="menu-panel">
-          <li><a href="/starter-kit/" aria-current="page"><strong>Starter Kit</strong><span>36 AI setups for your business</span></a></li>
-          <li><a href="/blueprint/"><strong>Blueprint</strong><span>50 ready n8n workflows</span></a></li>
-          <li><a href="/setups/content-pipeline/"><strong>Content Calendar</strong><span>One job done for ₦5,000</span></a></li>
-          <li><a href="/setups/income-tracker/"><strong>Income Tracker</strong><span>One job done for ₦5,000</span></a></li>
-        </ul>
-      </div>
-      <div class="menu">
-        <button type="button" class="menu-btn" aria-haspopup="true">Work with me</button>
-        <ul class="menu-panel">
-          <li><a href="/services/"><strong>Consulting</strong><span>Process consultation and audits</span></a></li>
-          <li><a href="/dm-automation/"><strong>DM Automation</strong><span>Replies while you sleep</span></a></li>
-        </ul>
-      </div>
-      <a href="/blog/">Blog</a>
-    </nav>
-    <a class="btn header-cta" href="/freebies/">Free Checklist</a>
-    <details class="mobile-nav">
-      <summary>Menu</summary>
-      <nav aria-label="Mobile">
-        <a href="/freebies/">Start here</a>
-        <a href="/starter-kit/">Starter Kit</a>
-        <a href="/blueprint/">Blueprint</a>
-        <a href="/setups/content-pipeline/">Content Calendar</a>
-        <a href="/setups/income-tracker/">Income Tracker</a>
-        <a href="/services/">Consulting</a>
-        <a href="/dm-automation/">DM Automation</a>
-        <a href="/blog/">Blog</a>
-        <a href="/freebies/" class="btn">Free Checklist</a>
-      </nav>
-    </details>
+    </span>
+    <p class="header-price">The AutoStack Starter Kit</p>
   </div>
+  <div class="price-band">The AutoStack Starter Kit</div>
 </header>
 
   <main id="main">
 <section class="hero">
   <div class="wrap hero-split">
     <div class="hero-copy">
-      <p class="eyebrow">For business owners, creators and operators</p>
-      <h1>The AutoStack Starter Kit</h1>
-      <p class="lead">36 ready-made setups. Every tool is picked. Every prompt is written. Pick one pain, open one setup, and be done tonight.</p>
+      <p class="eyebrow">The AutoStack Starter Kit</p>
+      <h1>Connect AI to the tools you already use.</h1>
+      <p class="lead">36 setups that plug Claude into the tools you already use: Notion, Gmail, your spreadsheets, Canva, and your Instagram, TikTok and YouTube. The repetitive work gets done without you. The prompts are written and every setup has a test checklist. Pick one pain, open one setup, and be done tonight.</p>
       <div class="actions">
-        <a class="btn" href="https://selar.com/6111279119" rel="noopener">Get the Starter Kit</a>
+        <a class="btn btn--big" href="https://selar.com/6111279119" rel="noopener">Get the Starter Kit</a>
         <a class="btn btn--ghost" href="#inside">See what is inside</a>
       </div>
-      <p class="fine">One-time payment. You get the kit link and the community invite right after.</p>
+      <p class="fine">Founding member price while it lasts. One-time payment. You get the kit link and the community invite right after.</p>
     </div>
     <div class="hero-media">
       <div class="portrait">
@@ -212,24 +195,23 @@ fbq('track', 'PageView');
 
 <section class="section">
   <div class="wrap read-wide prose reveal">
-    <h2>Watch this editing</h2>
-    <p>Two example edits. Now picture doing that to your own videos, tonight. And within minutes.</p>
-    <div class="video-pair">
-      <video controls playsinline preload="metadata" aria-label="Example video edit one">
-        <source src="https://share.cysafepath.com/2026/10/staying_lean.mp4" type="video/mp4">
-      </video>
-      <video controls playsinline preload="metadata" aria-label="Example video edit two">
-        <source src="https://share.cysafepath.com/2026/10/before_you_budget_for_ad.mp4" type="video/mp4">
-      </video>
-    </div>
+    <h2>What people in my community say</h2>
+    <p>Real WhatsApp messages and voice notes from people in my community.</p>
+    <div class="proof-list"><figure class="proof-item"><img src="/assets/reviews/receipts-70.png" width="1170" height="681" alt="A WhatsApp chat. The student writes: It automated the 70 receipts I got from my client. This is something that usually takes me 3 days if I&#39;m lazy. For it to even read my dashboard and the charts too. I&#39;m super impressed. Chinenye replies: Yesss, it&#39;s the intelligence for me oo. It knew you already had formulars and it updated accordingly." loading="lazy"><figcaption><q>It automated the 70 receipts I got from my client. This is something that usually takes me 3 days if I&#39;m lazy.</q><span>From my community</span></figcaption></figure><figure class="proof-item proof-item--card"><img src="/assets/reviews/slide-wowed.jpg" width="1080" height="1235" alt="Two WhatsApp messages from my community. One says: Seeing the scheduled posts without opening Instagram. I was wowed. The other says: The fact that I can plan, draft, design and schedule posts all by prompting Claude after connecting the apps was mind blowing for me. To think that I have battled inconsistent content creation in years due to my demanding job, I found a solution today." loading="lazy"><figcaption><q>Seeing the scheduled posts without opening Instagram. I was wowed.</q><span>From my community</span></figcaption></figure><figure class="proof-item proof-item--card"><img src="/assets/reviews/slide-apps-existed.jpg" width="1080" height="1235" alt="Two WhatsApp messages from my community. One says: Thank you soo much for this session. I learnt something entirely new about Automation. Didn&#39;t know those apps existed before. Thanks a million. The other says: Thank you so much for this eye opening session. You are loaded." loading="lazy"><figcaption><q>I learnt something entirely new about Automation. Didn&#39;t know those apps existed before.</q><span>From my community</span></figcaption></figure></div>
   </div>
 </section>
 
 <section class="section section--tint">
   <div class="wrap read-wide prose reveal">
     <h2>You already know AI can do this</h2>
-    <p>You have watched the videos. You have saved the posts. You have three tabs open, two half-finished setups, and one question: where do I even start?</p>
-    <p>There are too many tools, and nobody tells you what to open first. So you still plan your content at 9 PM. You still type the same replies by hand. One video edit still eats your whole Saturday.</p>
+    <p>Everyone is telling you to start using AI. You have watched the videos. You have saved the posts. You have three tabs open, two half-finished setups, and one question: where do I even start?</p>
+    <p>The advice never fits. It says download this app, sign up for that tool, learn another dashboard. Then you are moving documents by hand and copying text between five tabs, and the thing that was meant to save you time becomes one more job.</p>
+    <p>So you go back to what you know. You still plan your content at 9 PM. You still type the same replies by hand. One video edit still eats your whole Saturday.</p>
+
+    <h2>You do not need another app</h2>
+    <p>You already have the tools. Your plans and notes live in Notion. Your clients write to you in Gmail. Your numbers sit in a spreadsheet. You design in Canva. And your content goes out on Instagram, TikTok and YouTube.</p>
+    <p>The missing piece was never another app. It is the connection. You need one AI tool, and everything else is what you already use.</p>
+    <p>That is what I show you. How to connect AI to Notion, Gmail, your spreadsheets and Canva, so it does the copying, drafting and sorting inside the places your work already lives. Then it prepares the posts you put on Instagram, TikTok and YouTube. The prompts are written and every setup has a test checklist.</p>
 
     <h2>Running a business online quietly makes you 10 employees</h2>
     <p>Nobody told you this at the start. You are the content planner, the designer, the video editor, the social media manager, the DM support, the bookkeeper, the assistant, and the person who chases unpaid invoices. All before lunch.</p>
@@ -238,7 +220,7 @@ fbq('track', 'PageView');
     <h2>The kit that does that part for you</h2>
     <p>An all-in-one, ready-made kit. 36 setups. You open it, follow along, and tick the test checklist.</p>
     <p>You do not have to figure anything out from scratch. I already did that part for you.</p>
-    <p class="actions"><a class="btn" href="https://selar.com/6111279119" rel="noopener">Get the Starter Kit</a></p>
+    <p class="actions"><a class="btn btn--big" href="https://selar.com/6111279119" rel="noopener">Get the Starter Kit</a></p>
   </div>
 </section>
 
@@ -291,6 +273,18 @@ fbq('track', 'PageView');
 
     <h3>Layer 4: Edit <span class="count">7 setups</span></h3>
     <p><strong>Videos without hiring an editor.</strong> You go from a raw recording to a clean vertical video in under 30 minutes.</p>
+    <p>Three example edits. Now picture doing that to your own videos, tonight. And within minutes.</p>
+    <div class="video-pair video-trio">
+      <video controls playsinline preload="metadata" aria-label="Example video edit one">
+        <source src="https://share.cysafepath.com/2026/10/staying_lean.mp4" type="video/mp4">
+      </video>
+      <video controls playsinline preload="metadata" aria-label="Example video edit two">
+        <source src="https://share.cysafepath.com/2026/10/before_you_budget_for_ad.mp4" type="video/mp4">
+      </video>
+      <video controls playsinline preload="none" poster="/assets/img/kenya-reel-poster.jpg" aria-label="Example video edit three: a reel from a trip to Kenya">
+        <source src="https://share.cysafepath.com/2026/10/kenya_reel3.mp4" type="video/mp4">
+      </video>
+    </div>
     <ul>
       <li>A clear path, so you know which approach fits which job</li>
       <li>Cutaway clips made from one sentence</li>
@@ -303,24 +297,61 @@ fbq('track', 'PageView');
   </div>
 </section>
 
+<section class="section section--tint">
+  <div class="wrap read-wide prose reveal">
+    <h2>You are not doing this alone</h2>
+    <p>Most people stall on the same thing: they get stuck on step three, nobody is there, and the setup sits half finished.</p>
+    <p>That is why the community is part of the kit. I am in it with you, and you can ask me when you are stuck. We also fix your setup together in the weekend live classes, so you leave with it working.</p>
+    <p>You are joining as a founding member. While the community is small, you get first-hand help from me. The founding member price will go up later, so the price you see now is the lowest it will be.</p>
+    <div class="proof-list"><figure class="proof-item"><img src="/assets/reviews/founding-member-premium.jpg" width="1120" height="702" alt="A WhatsApp chat. A community member writes: It worked. It updated the sheet and my sheet dashboard too. Thank you so much, you are the best. See how I&#39;m getting first-hand premium treatment. Chinenye replies: I know right. Perks of being founding member." loading="lazy"><figcaption><q>It worked. It updated the sheet and my sheet dashboard too.</q><span>A founding member</span></figcaption></figure></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap read-wide prose reveal">
+    <h2>More from my community</h2>
+    <div class="proof-list"><figure class="proof-item"><img src="/assets/reviews/before-claude-laptop.png" width="1234" height="775" alt="A WhatsApp chat. A student writes: This would be better on a laptop sha. How do I use Claude on my laptop? ... I don try am. Make I see wetin go happen. Chinenye replies: This one dey sound like pessimism." loading="lazy"><figcaption><q>Make I see wetin go happen.</q><span>Before she tried it</span></figcaption></figure><figure class="proof-item"><video controls playsinline preload="none" poster="/assets/reviews/ife-voice-note.jpg" width="1000" height="270" aria-label="Voice note from the same community member after she tried it, 1 minute 23 seconds. She connected the spreadsheet she had been updating by hand, and the AI filled in the records."><source src="/assets/reviews/ife-voice-note.mp4" type="video/mp4"></video><figcaption><span>After: she connected the spreadsheet she had been updating by hand, and the AI filled in the records.</span></figcaption></figure><figure class="proof-item proof-item--card"><img src="/assets/reviews/slide-all-needed.jpg" width="1080" height="1235" alt="Two WhatsApp messages from my community. One says: Thanks for today&#39;s class. This is all I needed and am glad I found and joined this training. The other says: Thank you for the class. Even though I know that there are so many things we can do with AI, the class helped streamline and put it in perspective." loading="lazy"><figcaption><q>This is all I needed and am glad I found and joined this training.</q><span>From my community</span></figcaption></figure><figure class="proof-item proof-item--card"><img src="/assets/reviews/slide-half-baked.jpg" width="1080" height="1235" alt="Two WhatsApp messages from my community. One says: The automation I knew all my life was half baked. I got the full grilled chicken tonight. A reply says: What I saw today, I will call it Living Automation." loading="lazy"><figcaption><q>The automation I knew all my life was half baked. I got the full grilled chicken tonight.</q><span>From my community</span></figcaption></figure><figure class="proof-item"><img src="/assets/reviews/hours-to-minutes-chat.png" width="1245" height="829" alt="A WhatsApp chat. A student writes: Omo i am so so happy. I can manage this content work with my studies and still maintain balance. Chinenye replies about finishing 5 videos, scheduling them, and making about 10 carousel posts the day before." loading="lazy"><figcaption><q>I can manage this content work with my studies and still maintain balance.</q><span>A PhD student</span></figcaption></figure><figure class="proof-item"><video controls playsinline preload="none" poster="/assets/reviews/sochi-voice-note.jpg" width="1000" height="290" aria-label="Voice note from a PhD student in my community about going from hours to minutes, 2 minutes 33 seconds"><source src="/assets/reviews/sochi-voice-note.mp4" type="video/mp4"></video><figcaption><span>His voice note: hours to minutes</span></figcaption></figure></div>
+  </div>
+</section>
+
 <section class="section section--dark">
   <div class="wrap read-wide prose prose--dark reveal">
-    <h2>What you get</h2>
+    <h2>Everything you get</h2>
     <ul class="tick-list">
-      <li>36 setups in a private workspace you can open on your phone</li>
-      <li>A 5-minute onboarding video that shows you where to start</li>
-      <li>Copy-paste prompts and reply copy</li>
-      <li>A test checklist on every page</li>
-      <li>Weekend live classes where we fix your setup together. Replays go on the matching setup page.</li>
-      <li>A private community for questions and results</li>
-      <li>New setups added over time</li>
-      <li>Your own partner link: a 30% partner share, forever, on everyone you introduce who joins</li>
+      <li><strong>36 ready-made setups</strong> in a private workspace you can open on your phone. One pain, one setup, done tonight.</li>
+      <li><strong>A 5-minute onboarding video</strong> that shows you where to start, so you never wonder what to open first.</li>
+      <li><strong>Copy-paste prompts and reply copy,</strong> already written for you.</li>
+      <li><strong>A test checklist on every setup,</strong> so you know it works before you rely on it.</li>
+      <li><strong>Weekend live classes</strong> where we fix your setup together. Replays go on the matching setup page.</li>
+      <li><strong>A private community with me in it,</strong> for questions and results. As a founding member, you get first-hand help from me.</li>
+      <li><strong>New setups added over time,</strong> so the kit keeps growing.</li>
+      <li><strong>Your own partner link:</strong> a 30% partner share, forever, on everyone you introduce who joins.</li>
+      <li><strong>The founding member price,</strong> while it lasts.</li>
     </ul>
-    <p class="actions"><a class="btn" href="https://selar.com/6111279119" rel="noopener">Get the Starter Kit</a></p>
+    <h2>Why this is an investment, not an expense</h2>
+    <p>Say you spend five hours a week on planning content, typing the same replies and adding up your money. Over a month, that is 20 hours.</p>
+    <p>The kit gives those hours back, and it keeps giving them back every week after. You set each setup up once. You spend the time you saved on the part only you can do: selling.</p>
+    <p class="actions"><a class="btn btn--big" href="https://selar.com/6111279119" rel="noopener">Get the Starter Kit</a></p>
   </div>
 </section>
 
 <section class="section section--tint">
+  <div class="wrap read-wide reveal">
+    <h2>Who built this</h2>
+    <div class="bio">
+      <img src="/assets/img/chinenye-avatar.jpg" width="112" height="112" alt="Chinenye" loading="lazy">
+      <div class="prose">
+        <p>Hi, I am Chinenye. In my day job I am a software engineer.</p>
+        <p>I was featured by the Association for Computing Machinery (ACM), the largest academic computer science organization in the world, as an <a href="https://women.acm.org/u-rise-chinenye-anikwenze-from-an-academic-in-history-to-an-unconventional-advocate-for-responsible-and-inclusive-ai/" target="_blank" rel="noopener">advocate for responsible AI</a>. I have <a href="https://www.tonative.org/indaba-2026#:~:text=LinkedIn-,Chinenye%20Anikwenze,-Engineering%20Lead%2C%20Tonative" target="_blank" rel="noopener">organized workshops</a> at the Deep Learning Indaba, the biggest AI gathering in Africa. I was also invited to speak on <a href="https://lnkd.in/p/eM7tdH-x" target="_blank" rel="noopener">a panel about AI in Nairobi</a>, fully funded.</p>
+        <p>I have built workflows like this for six and seven figure (USD) businesses.</p>
+        <p>I am the technical one, so you do not have to be. I do the technical part and show you only what you need to use it.</p>
+        <p>I am sharing this because it is what helps me work my day job, manage my clients and still show up online. You can start tonight.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="wrap read-wide prose reveal">
     <h2>Keep 30% forever</h2>
     <p>Know a business owner buried under the same ten jobs? Introduce someone to the community. When they join us, you get a 30% partner share, forever. Bring as many people as you like. There is no limit.</p>
@@ -328,102 +359,79 @@ fbq('track', 'PageView');
   </div>
 </section>
 
-<section class="section">
+<section class="section section--tint">
   <div class="wrap read-wide reveal">
     <h2>Questions you may be asking</h2>
     <div class="faq-list">
-      <details>
-        <summary>I am not technical.</summary>
-        <p>Every step is written. Layers 1 to 3 need no code, and the one advanced setup in Layer 4 is optional.</p>
+      <details open>
+        <summary>I am not technical. Can I still do this?</summary>
+        <p>Yes. I wrote every step so you can follow along even if you have never done anything like this. Layers 1 to 3 need no code at all. The one advanced setup in Layer 4 is optional, so you can leave it for later.</p>
       </details>
       <details>
-        <summary>I tried AI tools and got overwhelmed.</summary>
-        <p>The kit is built for that. It tells you what to do first: one pain, one setup, one week.</p>
+        <summary>I have tried AI tools before and got overwhelmed. Will this be different?</summary>
+        <p>That is exactly who I made it for. I tell you what to do first: one pain, one setup, one week. You are not meant to do all 36 at once.</p>
       </details>
       <details>
-        <summary>I do not have time.</summary>
-        <p>Most setups take 10 to 30 minutes.</p>
+        <summary>What does founding member mean?</summary>
+        <p>You are joining while the community is small, so you get first-hand help from me. The founding member price will go up later.</p>
+      </details>
+      <details>
+        <summary>I do not have time. How long does each setup take?</summary>
+        <p>Most setups take 10 to 30 minutes. Do one tonight and you will see for yourself what you get back.</p>
       </details>
       <details>
         <summary>What if I get stuck?</summary>
-        <p>Bring your screen to the weekend live class, or ask in the private community.</p>
+        <p>You are not on your own. Bring your screen to the weekend live class and we fix it together, or ask in the private community. I am in there with you.</p>
       </details>
       <details>
-        <summary>Do I need paid tools?</summary>
-        <p>Some setups do. Each page says what it needs, and free options come first where they exist.</p>
+        <summary>Do I need to pay for any tools?</summary>
+        <p>Some setups do. Each setup page tells you what it needs before you start, and I put the free options first wherever they exist.</p>
+      </details>
+      <details>
+        <summary>Is this the same as the AutoStack Blueprint?</summary>
+        <p>No. The Starter Kit teaches you to set things up yourself with AI and no-code tools, and you do not need n8n. The Blueprint is a separate product of n8n engine automations for people who want more control.</p>
       </details>
       <details>
         <summary>Will it work for my business in Nigeria?</summary>
-        <p>The examples use naira and bank alerts. A few tools are not available in every country. The setup page tells you when that matters.</p>
+        <p>The examples use naira and bank alerts. A few tools are not available in every country, and the setup page tells you when that matters.</p>
       </details>
       <details>
-        <summary>What if a tool changes?</summary>
-        <p>Tools change their menus and free limits often. When that happens, the setup page is updated and the change is logged on the New This Week page. You can also ask in the community.</p>
+        <summary>What if a tool changes its menus?</summary>
+        <p>They do, often. When it happens I update the setup page and log the change on the New This Week page. You can also ask in the community.</p>
       </details>
       <details>
         <summary>How do I get the kit?</summary>
-        <p>After payment, you get a link to the kit and an invite to the community. Open it on your phone or your laptop.</p>
+        <p>After you pay, you get a link to the kit and an invite to the community. Open it on your phone or your laptop.</p>
       </details>
       <details>
-        <summary>Can I share the kit with someone?</summary>
-        <p>No. The kit is for the person who bought it. But when you introduce someone to the community and they join us, you get a 30% partner share, forever, with no limit on how many people you bring.</p>
+        <summary>Can I share the kit with a friend?</summary>
+        <p>The kit is for the person who bought it. But you can share your partner link, and when someone joins through it, you earn a 30% partner share.</p>
       </details>
     </div>
-    <p class="note">Is this the Blueprint you are after? <a href="/blueprint/">See the AutoStack Blueprint</a>. Not sure yet? <a href="/freebies/">Start with the free Checklist</a>.</p>
   </div>
 </section>
 
 <section class="section section--dark">
   <div class="wrap band">
     <h2>Start tonight</h2>
-    <p>Pick one pain. Open one setup. Be done tonight.</p>
-    <p class="actions"><a class="btn" href="https://selar.com/6111279119" rel="noopener">Get the Starter Kit</a></p>
+    <p>Pick one pain. Open one setup. Be done tonight. Join as a founding member before the price goes up.</p>
+    <p class="actions"><a class="btn btn--big" href="https://selar.com/6111279119" rel="noopener">Get the Starter Kit</a></p>
   </div>
 </section>
 
 <div class="sticky-cta" aria-hidden="false">
-  <a class="btn" href="https://selar.com/6111279119" rel="noopener">Get the Starter Kit</a>
+  <a class="btn btn--big" href="https://selar.com/6111279119" rel="noopener">Get the Starter Kit</a>
 </div>
 
   </main>
-  <footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="footer-brand">
-      <a class="brand" href="/"><span>theautomatestack</span></a>
-      <p class="footer-tagline">AI setups, automation and consulting for business owners and creators.</p>
-      <a class="btn btn--small" href="/freebies/">Get the free Checklist</a>
-    </div>
-    <nav class="footer-col" aria-label="Explore">
-      <h2>Explore</h2>
-      <ul>
-        <li><a href="/freebies/">Free resources</a></li>
-        <li><a href="/starter-kit/">Starter Kit</a></li>
-        <li><a href="/blueprint/">Blueprint</a></li>
-        <li><a href="/blog/">Blog</a></li>
-      </ul>
-    </nav>
-    <nav class="footer-col" aria-label="Work with me">
-      <h2>Work with me</h2>
-      <ul>
-        <li><a href="/services/">Consulting</a></li>
-        <li><a href="/dm-automation/">DM Automation</a></li>
-        <li><a href="https://selar.com/317u425515" rel="noopener">Book a DM consultation</a></li>
-      </ul>
-    </nav>
-    <nav class="footer-col" aria-label="Follow">
-      <h2>Follow</h2>
-      <ul>
-        <li><a href="https://www.instagram.com/kodervine/" rel="noopener">Instagram</a></li>
-        <li><a href="https://www.tiktok.com/@theautomatestack" rel="noopener">TikTok</a></li>
-        <li><a href="https://www.youtube.com/@the_automatestack" rel="noopener">YouTube</a></li>
-        <li><a href="mailto:support@theautomatestack.com">Email me</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="wrap footer-bottom">
-    <p>&copy; 2026 The Automate Stack. All rights reserved. <a href="/privacy/">Privacy note</a></p>
-    <p class="footer-notice">Registered with the Corporate Affairs Commission of Nigeria. Business Name No. 9841634.</p>
-    <p class="footer-notice">This site uses the Meta Pixel to measure my ads. It saves cookies on your device. See the <a href="/privacy/">privacy note</a> for what it records and how to opt out.</p>
+  <footer class="sales-footer">
+  <p>Questions? <a href="mailto:support@theautomatestack.com">support@theautomatestack.com</a></p>
+  <p>&copy; 2026 The Automate Stack. All rights reserved. <a href="/privacy/">Privacy note</a></p>
+  <p>Registered with the Corporate Affairs Commission of Nigeria. Business Name No. 9841634.</p>
+  <div class="sales-disclaimer">
+    <p>Any examples of time or money on this page are only illustrations, not promises or estimates of what you will earn or save. Individual results will always vary and depend on your own situation, effort and skills.</p>
+    <p>This site is not a part of the Facebook website or Meta Platforms, Inc. This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of Meta Platforms, Inc.</p>
+    <p>This page uses the Meta Pixel to measure my ads. It saves cookies on your device. See the <a href="/privacy/">privacy note</a> for what it records and how to opt out.</p>
 
   </div>
 </footer>

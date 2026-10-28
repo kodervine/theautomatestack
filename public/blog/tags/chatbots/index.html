@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>chatbots | The Automate Stack Blog</title>
+  <meta name="description" content="1 post tagged chatbots on The Automate Stack Blog.">
+  <link rel="canonical" href="https://www.theautomatestack.com/blog/tags/chatbots/">
+  
+  
+  <link rel="icon" type="image/png" href="/assets/img/logo.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="The Automate Stack Blog" href="https://www.theautomatestack.com/blog/rss.xml">
+
+  <meta property="og:site_name" content="The Automate Stack">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="chatbots | The Automate Stack Blog">
+  <meta property="og:description" content="1 post tagged chatbots on The Automate Stack Blog.">
+  <meta property="og:url" content="https://www.theautomatestack.com/blog/tags/chatbots/">
+  <meta property="og:image" content="https://www.theautomatestack.com/assets/img/logo.png">
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="chatbots | The Automate Stack Blog">
+  <meta name="twitter:description" content="1 post tagged chatbots on The Automate Stack Blog.">
+  <meta name="twitter:image" content="https://www.theautomatestack.com/assets/img/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Lato:wght@400;700&amp;family=Poppins:wght@700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/brand.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  
+  <script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1067023309651592');
+fbq('track', 'PageView');
+(function () {
+  var data = {};
+  // A setup page: tell Meta which product is being viewed.
+  if (data.content_ids) fbq('track', 'ViewContent', data);
+  // Someone presses a buy button, on their way to Selar.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a.btn--big');
+    if (a && data.content_ids) fbq('track', 'InitiateCheckout', data);
+  }, { passive: true });
+  // The free-resource form: someone leaves their details to be contacted. Meta calls that a Lead.
+  document.addEventListener('submit', function (e) {
+    var form = e.target;
+    if (!form.classList || !form.classList.contains('lead-form') || form.__leadSent) return;
+    form.__leadSent = true;
+    e.preventDefault();
+    fbq('track', 'Lead', { content_name: form.elements.freebie ? form.elements.freebie.value : '', content_category: 'free resource' });
+    setTimeout(function () { form.submit(); }, 250); // a moment for the browser to send the event before the page moves on
+  });
+  // The page Selar sends buyers back to after paying. Counted once per visit, and only when a setup is named in the link.
+  var m = /^\/before-you-go\/?$/.test(location.pathname) && new URLSearchParams(location.search).get('setup');
+  if (m) {
+    try { if (sessionStorage.getItem('px-purchase-' + m)) return; sessionStorage.setItem('px-purchase-' + m, '1'); } catch (x) {}
+    fbq('track', 'Purchase', { content_ids: [m], currency: 'NGN', value: 0 });
+  }
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1067023309651592&amp;ev=PageView&amp;noscript=1"></noscript>
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  
+  <header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <img src="/assets/img/logo.png" alt="The Automate Stack logo" width="36" height="36">
+      <span>theautomatestack</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/freebies/">Start here</a>
+      <div class="menu">
+        <button type="button" class="menu-btn" aria-haspopup="true">Products</button>
+        <ul class="menu-panel">
+          <li><a href="/starter-kit/"><strong>Starter Kit</strong><span>36 AI setups for your business</span></a></li>
+          <li><a href="/blueprint/"><strong>Blueprint</strong><span>50 ready n8n workflows</span></a></li>
+        </ul>
+      </div>
+      <div class="menu">
+        <button type="button" class="menu-btn" aria-haspopup="true">Work with me</button>
+        <ul class="menu-panel">
+          <li><a href="/services/"><strong>Consulting</strong><span>Process consultation and audits</span></a></li>
+          <li><a href="/dm-automation/"><strong>DM Automation</strong><span>Replies while you sleep</span></a></li>
+        </ul>
+      </div>
+      <a href="/blog/" aria-current="page">Blog</a>
+    </nav>
+    <a class="btn header-cta" href="/freebies/">Free Checklist</a>
+    <details class="mobile-nav">
+      <summary>Menu</summary>
+      <nav aria-label="Mobile">
+        <a href="/freebies/">Start here</a>
+        <a href="/starter-kit/">Starter Kit</a>
+        <a href="/blueprint/">Blueprint</a>
+        <a href="/services/">Consulting</a>
+        <a href="/dm-automation/">DM Automation</a>
+        <a href="/blog/">Blog</a>
+        <a href="/freebies/" class="btn">Free Checklist</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+  <main id="main">
+<section class="hero hero--short blog-hero">
+  <div class="wrap">
+    <p class="eyebrow"><a href="/blog/">Blog</a> / Topic</p>
+    <h1>chatbots</h1>
+    <p class="lead">1 post tagged chatbots.</p>
+  </div>
+</section>
+
+<section class="section blog-list">
+  <div class="wrap">
+    <ul class="cards">
+      <li class="card card--post">
+        <a class="card-thumb" href="/blog/why-does-my-instagram-dm-bot-break-when-customers-make-typos/" tabindex="-1" aria-hidden="true"><img src="/blog/images/why-does-my-instagram-dm-bot-break-when-customers-make-typos/bot-breaks.png" alt="Why does my Instagram DM bot break when customers make typos?" width="1200" height="630" loading="lazy"></a>
+        <div class="card-body">
+          <p class="label">instagram dms</p>
+          <h2><a href="/blog/why-does-my-instagram-dm-bot-break-when-customers-make-typos/">Why does my Instagram DM bot break when customers make typos?</a></h2>
+          <p>Most DM bots look for one exact word. If the customer writes it differently, the bot finds no match and goes silent or repeats a menu. The fix is a setup that reads the whole message, so a typo, slang or a normal sentence still gets the right answer.</p>
+          <p class="meta"><time datetime="2026-10-28">28 October 2026</time> &middot; 4 min read</p>
+        </div>
+      </li>
+    </ul>
+    <p class="more"><a href="/blog/">All posts</a></p>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="/"><span>theautomatestack</span></a>
+      <p class="footer-tagline">AI setups, automation and consulting for business owners and creators.</p>
+      <a class="btn btn--small" href="/freebies/">Get the free Checklist</a>
+    </div>
+    <nav class="footer-col" aria-label="Explore">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="/freebies/">Free resources</a></li>
+        <li><a href="/starter-kit/">Starter Kit</a></li>
+        <li><a href="/blueprint/">Blueprint</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Work with me">
+      <h2>Work with me</h2>
+      <ul>
+        <li><a href="/services/">Consulting</a></li>
+        <li><a href="/dm-automation/">DM Automation</a></li>
+        <li><a href="https://selar.com/317u425515" rel="noopener">Book a DM consultation</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Follow">
+      <h2>Follow</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/kodervine/" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@theautomatestack" rel="noopener">TikTok</a></li>
+        <li><a href="https://www.youtube.com/@the_automatestack" rel="noopener">YouTube</a></li>
+        <li><a href="mailto:support@theautomatestack.com">Email me</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>&copy; 2026 The Automate Stack. All rights reserved. <a href="/privacy/">Privacy note</a></p>
+    <p class="footer-notice">Registered with the Corporate Affairs Commission of Nigeria. Business Name No. 9841634.</p>
+    <p class="footer-notice">This site uses the Meta Pixel to measure my ads. It saves cookies on your device. See the <a href="/privacy/">privacy note</a> for what it records and how to opt out.</p>
+
+  </div>
+</footer>
+
+</body>
+</html>

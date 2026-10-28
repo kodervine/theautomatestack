@@ -1,7 +1,7 @@
 {
   "note": "Prices live here and nowhere else. status draft = built only in the draft preview. status ready = goes live and needs video_url (an mp4 link) and buy_url (the Selar link for that Setup). notion_url = the published (public) Notion link for that Setup. It shows on the before-you-go page for that slug, only when it is filled in and starts with https://. Selar redirect for each product: https://www.theautomatestack.com/before-you-go/?setup=<slug>. Never add a fake deadline or an invented testimonial. proof stays empty until you have a real quote. guarantee stays empty until you decide what you will promise. needs: one line on what the buyer must already have (for example a paid Claude plan). Leave empty to hide it, but fill it in before going live, since these Setups have no refund. content-pipeline is now the Content Calendar (Notion template plus Canva, no auto-posting). Validate with 5 managers and VAs about the one-Canva, one-Notion account limit before setting it to ready. Income Tracker is chat-based and reads income and expenses; Auto-Edit needs a computer.",
   "price": "₦5,000",
-    "club": {
+  "club": {
     "name": "The AutoStack Club",
     "price": "₦10,000",
     "price_note": "a month",
@@ -269,7 +269,8 @@
           "answer": "No. A setup is one job, done. The Starter Kit has 36 setups, a private community and weekend live classes."
         }
       ],
-      "needs": ""
+      "needs": "",
+      "review_ids": []
     },
     {
       "slug": "content-pipeline",
@@ -450,7 +451,13 @@
         }
       ],
       "needs": "A Claude account, a Notion account and a Canva account.",
-      "connect_line": "Stuck on connecting Claude? A short video shows you how to sign in and connect your apps."
+      "connect_line": "Stuck on connecting Claude? A short video shows you how to sign in and connect your apps.",
+      "review_ids": [
+        "sochi-chat",
+        "sochi-voice",
+        "apps-existed",
+        "all-needed"
+      ]
     },
     {
       "slug": "income-tracker",
@@ -628,7 +635,12 @@
         }
       ],
       "needs": "A Claude account, and a bank that sends you alert emails.",
-      "connect_line": "Stuck on connecting Claude? A short video shows you how to sign in and connect your apps."
+      "connect_line": "Stuck on connecting Claude? A short video shows you how to sign in and connect your apps.",
+      "review_ids": [
+        "receipts",
+        "before",
+        "ife-voice"
+      ]
     }
   ]
 }

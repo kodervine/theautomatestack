@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">Test it before you trust it</title>
+  <desc id="d">One, run five normal examples. Two, add two messy ones. Three, compare each result with what you would have done by hand. Anything about money or customers gets read by a person first.</desc>
+  <rect width="1200" height="630" fill="#FBF9F4"/>
+  <rect width="1200" height="8" fill="#C8996C"/>
+  <text x="60" y="84" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="50" fill="#1A1110">Test it before you trust it</text>
+  <text x="60" y="124" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#746C61">About an hour, once.</text>
+  <rect x="60" y="170" width="340" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+  <text x="84" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">1</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#1A1110"><tspan x="84" y="280">Run five</tspan><tspan x="84" y="312">normal examples</tspan></text>
+  <rect x="430" y="170" width="340" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+  <text x="454" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">2</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#1A1110"><tspan x="454" y="280">Add two</tspan><tspan x="454" y="312">messy ones</tspan></text>
+  <rect x="800" y="170" width="340" height="230" rx="12" fill="#1A1110"/>
+  <text x="824" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">3</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#FBF9F4"><tspan x="824" y="280">Compare with</tspan><tspan x="824" y="312">doing it by hand</tspan></text>
+  <rect x="60" y="440" width="1080" height="96" rx="12" fill="#1A1110"/>
+  <text x="600" y="499" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="30" fill="#C8996C">Money and customers: a person reads it first.</text>
+  <text x="60" y="600" font-family="Poppins, Arial, Helvetica, sans-serif" font-weight="700" font-size="16" letter-spacing="3" fill="#746C61">THEAUTOMATESTACK</text>
+</svg>

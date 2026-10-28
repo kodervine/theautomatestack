@@ -30,6 +30,25 @@ function visibleSetups(cfg, drafts) {
   return setups.filter((s) => s.status === "ready" || (drafts && s.status === "draft"));
 }
 
+/** Real messages and voice notes from class attendees (names blurred). Config lives in config/reviews.json. */
+export function readReviews() {
+  return JSON.parse(fs.readFileSync(path.join(ROOT, "config", "reviews.json"), "utf8"));
+}
+
+function reviewsHtml(cfg, ids) {
+  const figs = (ids || []).map((id) => {
+    const r = cfg.items[id];
+    if (!r) throw new Error(`reviews.json has no item "${id}".`);
+    const media = r.type === "video"
+      ? `<video controls playsinline preload="none" poster="${esc(r.poster)}" width="${r.width}" height="${r.height}" aria-label="${esc(r.label)}"><source src="${esc(r.src)}" type="video/mp4"></video>`
+      : `<img src="${esc(r.src)}" width="${r.width}" height="${r.height}" alt="${esc(r.alt)}" loading="lazy">`;
+    const quote = r.quote ? `<q>${esc(r.quote)}</q>` : "";
+    return `<figure class="proof-item${r.layout === "card" ? " proof-item--card" : ""}">${media}<figcaption>${quote}<span>${esc(r.who)}</span></figcaption></figure>`;
+  });
+  if (!figs.length) return "";
+  return `<div class="proof-list">${figs.join("")}</div>`;
+}
+
 function videoHtml(s) {
   if (s.video_url) {
     return `<div class="video-single"><video controls playsinline preload="metadata" aria-label="${esc(s.short_name)}: the setup working, start to finish"><source src="${esc(s.video_url)}" type="video/mp4"></video></div>`;
@@ -66,6 +85,7 @@ export function buildPages({ out, site, posts, drafts }) {
   };
 
   const kit = readStarterKit();
+  const reviewsCfg = readReviews();
   const kitFaqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -83,7 +103,7 @@ export function buildPages({ out, site, posts, drafts }) {
       path: "/",
       template: "pages/home.html",
       title: `${site.publisher_name} | AI setups, automation and consulting`,
-      description: "Practical AI setups and automation for your content, inbox and DMs. Start with the free Checklist, then pick the Starter Kit, the Blueprint or a consultation.",
+      description: "I teach non-technical business owners and creators to connect AI to the tools they already use. Start with the free Checklist, then pick the Starter Kit, the Blueprint or a consultation.",
       jsonld: jsonLdScripts(org, { "@context": "https://schema.org", "@type": "WebSite", name: site.publisher_name, url: `${site.site_url}/` }),
       extra: { latest },
     },
@@ -97,10 +117,11 @@ export function buildPages({ out, site, posts, drafts }) {
     {
       path: "/starter-kit/",
       template: "pages/starter-kit.html",
+      layout: "base-sales.html",
       title: `The AutoStack Starter Kit | ${site.publisher_name}`,
       description: "36 ready-to-run AI setups for your content, inbox, DMs and video editing, with prompts, a test checklist and community access.",
       jsonld: jsonLdScripts(kitFaqSchema),
-      extra: { faqs: kit.faqs },
+      extra: { faqs: kit.faqs.map((f, i) => ({ ...f, open: i === 0 ? " open" : "" })), header_note: "The AutoStack Starter Kit", trust: [], buy_href: site.starter_kit_url, pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product" }).replace(/</g, "\u003c"), reviews_title: reviewsCfg.title, reviews_intro: reviewsCfg.intro, reviews_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_top), reviews_more_title: reviewsCfg.more_title, reviews_more_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_more), reviews_community_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_community) },
     },
     ...setups.map((s) => ({
       path: `/setups/${s.slug}/`,
@@ -120,6 +141,10 @@ export function buildPages({ out, site, posts, drafts }) {
         header_note: `${s.short_name} \u00b7 ${setupCfg.price} one time`,
         buy_href: s.buy_url || "#",
         video_html: videoHtml(s),
+        faqs: s.faqs.map((f, i) => ({ ...f, open: i === 0 ? " open" : "" })),
+        reviews_title: reviewsCfg.title,
+        reviews_intro: reviewsCfg.intro,
+        reviews_html: reviewsHtml(reviewsCfg, s.review_ids),
         purchase_value: Number(String(setupCfg.price).replace(/[^0-9]/g, "")) || 0,
         pixel_json: JSON.stringify({ content_ids: [s.slug], content_name: s.short_name, content_type: "product", value: Number(String(setupCfg.price).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\\u003c"),
       },

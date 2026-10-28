@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">What you need to start with AI</title>
+  <desc id="d">One AI tool. One task you repeat every week. A few lines about your business. About 30 minutes. Start with one task, not your whole business.</desc>
+  <rect width="1200" height="630" fill="#FBF9F4"/>
+  <rect width="1200" height="8" fill="#C8996C"/>
+  <text x="60" y="84" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="50" fill="#1A1110">What you need to start with AI</text>
+  <text x="60" y="124" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#746C61">Four things. No coding. No big plan.</text>
+  <rect x="60" y="170" width="243" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+  <text x="84" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">1</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#1A1110"><tspan x="84" y="280">One AI tool</tspan></text>
+  <rect x="337" y="170" width="243" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+  <text x="361" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">2</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#1A1110"><tspan x="361" y="280">One task you</tspan><tspan x="361" y="312">repeat every</tspan><tspan x="361" y="344">week</tspan></text>
+  <rect x="614" y="170" width="243" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+  <text x="638" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">3</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#1A1110"><tspan x="638" y="280">A few lines</tspan><tspan x="638" y="312">about your</tspan><tspan x="638" y="344">business</tspan></text>
+  <rect x="891" y="170" width="243" height="230" rx="12" fill="#1A1110"/>
+  <text x="915" y="226" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="48" fill="#C8996C">4</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#FBF9F4"><tspan x="915" y="280">About 30</tspan><tspan x="915" y="312">minutes</tspan></text>
+  <rect x="60" y="440" width="1080" height="96" rx="12" fill="#1A1110"/>
+  <text x="600" y="499" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="30" fill="#C8996C">Start with one task, not your whole business.</text>
+  <text x="60" y="600" font-family="Poppins, Arial, Helvetica, sans-serif" font-weight="700" font-size="16" letter-spacing="3" fill="#746C61">THEAUTOMATESTACK</text>
+</svg>

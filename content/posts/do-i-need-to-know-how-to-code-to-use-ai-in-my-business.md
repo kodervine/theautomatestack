@@ -3,12 +3,12 @@ title: "Do I need to know how to code to use AI in my business?"
 slug: do-i-need-to-know-how-to-code-to-use-ai-in-my-business
 question: "Do I need to know how to code to use AI in my business?"
 summary: "No. You can use AI in your business without writing any code. What you need is a clear task, plain words, and the patience to test. Code only comes in when you build custom automations, and even then you can start without it."
-date: 2026-10-22
-updated: 2026-10-22
+date: 2026-10-28
+updated: 2026-10-28
 tags:
   - getting started
   - ai tools
-status: draft
+status: ready
 image: /blog/images/do-i-need-to-know-how-to-code-to-use-ai-in-my-business/no-code.png
 source_post: ""
 medium_url: ""

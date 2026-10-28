@@ -3,13 +3,13 @@ title: "Why does my Instagram DM bot break when customers make typos?"
 slug: why-does-my-instagram-dm-bot-break-when-customers-make-typos
 question: "Why does my Instagram DM bot break when customers make typos?"
 summary: "Most DM bots look for one exact word. If the customer writes it differently, the bot finds no match and goes silent or repeats a menu. The fix is a setup that reads the whole message, so a typo, slang or a normal sentence still gets the right answer."
-date: 2026-11-05
-updated: 2026-11-05
+date: 2026-10-28
+updated: 2026-10-28
 tags:
   - instagram dms
   - chatbots
   - automation
-status: draft
+status: ready
 image: /blog/images/why-does-my-instagram-dm-bot-break-when-customers-make-typos/bot-breaks.png
 source_post: ""
 medium_url: ""

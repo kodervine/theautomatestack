@@ -1,0 +1,119 @@
+{
+  "title": "What people in my community say",
+  "intro": "Real WhatsApp messages and voice notes from people in my community.",
+  "items": {
+    "receipts": {
+      "type": "image",
+      "src": "/assets/reviews/receipts-70.png",
+      "width": 1170,
+      "height": 681,
+      "alt": "A WhatsApp chat. The student writes: It automated the 70 receipts I got from my client. This is something that usually takes me 3 days if I'm lazy. For it to even read my dashboard and the charts too. I'm super impressed. Chinenye replies: Yesss, it's the intelligence for me oo. It knew you already had formulars and it updated accordingly.",
+      "quote": "It automated the 70 receipts I got from my client. This is something that usually takes me 3 days if I'm lazy.",
+      "who": "From my community"
+    },
+    "before": {
+      "type": "image",
+      "src": "/assets/reviews/before-claude-laptop.png",
+      "width": 1234,
+      "height": 775,
+      "alt": "A WhatsApp chat. A student writes: This would be better on a laptop sha. How do I use Claude on my laptop? ... I don try am. Make I see wetin go happen. Chinenye replies: This one dey sound like pessimism.",
+      "quote": "Make I see wetin go happen.",
+      "who": "Before she tried it"
+    },
+    "ife-voice": {
+      "type": "video",
+      "src": "/assets/reviews/ife-voice-note.mp4",
+      "poster": "/assets/reviews/ife-voice-note.jpg",
+      "width": 1000,
+      "height": 270,
+      "label": "Voice note from the same community member after she tried it, 1 minute 23 seconds. She connected the spreadsheet she had been updating by hand, and the AI filled in the records.",
+      "quote": "",
+      "who": "After: she connected the spreadsheet she had been updating by hand, and the AI filled in the records."
+    },
+    "sochi-chat": {
+      "type": "image",
+      "src": "/assets/reviews/hours-to-minutes-chat.png",
+      "width": 1245,
+      "height": 829,
+      "alt": "A WhatsApp chat. A student writes: Omo i am so so happy. I can manage this content work with my studies and still maintain balance. Chinenye replies about finishing 5 videos, scheduling them, and making about 10 carousel posts the day before.",
+      "quote": "I can manage this content work with my studies and still maintain balance.",
+      "who": "A PhD student"
+    },
+    "sochi-voice": {
+      "type": "video",
+      "src": "/assets/reviews/sochi-voice-note.mp4",
+      "poster": "/assets/reviews/sochi-voice-note.jpg",
+      "width": 1000,
+      "height": 290,
+      "label": "Voice note from a PhD student in my community about going from hours to minutes, 2 minutes 33 seconds",
+      "quote": "",
+      "who": "His voice note: hours to minutes"
+    },
+    "wowed": {
+      "type": "image",
+      "layout": "card",
+      "src": "/assets/reviews/slide-wowed.jpg",
+      "width": 1080,
+      "height": 1235,
+      "alt": "Two WhatsApp messages from my community. One says: Seeing the scheduled posts without opening Instagram. I was wowed. The other says: The fact that I can plan, draft, design and schedule posts all by prompting Claude after connecting the apps was mind blowing for me. To think that I have battled inconsistent content creation in years due to my demanding job, I found a solution today.",
+      "quote": "Seeing the scheduled posts without opening Instagram. I was wowed.",
+      "who": "From my community"
+    },
+    "apps-existed": {
+      "type": "image",
+      "layout": "card",
+      "src": "/assets/reviews/slide-apps-existed.jpg",
+      "width": 1080,
+      "height": 1235,
+      "alt": "Two WhatsApp messages from my community. One says: Thank you soo much for this session. I learnt something entirely new about Automation. Didn't know those apps existed before. Thanks a million. The other says: Thank you so much for this eye opening session. You are loaded.",
+      "quote": "I learnt something entirely new about Automation. Didn't know those apps existed before.",
+      "who": "From my community"
+    },
+    "all-needed": {
+      "type": "image",
+      "layout": "card",
+      "src": "/assets/reviews/slide-all-needed.jpg",
+      "width": 1080,
+      "height": 1235,
+      "alt": "Two WhatsApp messages from my community. One says: Thanks for today's class. This is all I needed and am glad I found and joined this training. The other says: Thank you for the class. Even though I know that there are so many things we can do with AI, the class helped streamline and put it in perspective.",
+      "quote": "This is all I needed and am glad I found and joined this training.",
+      "who": "From my community"
+    },
+    "half-baked": {
+      "type": "image",
+      "layout": "card",
+      "src": "/assets/reviews/slide-half-baked.jpg",
+      "width": 1080,
+      "height": 1235,
+      "alt": "Two WhatsApp messages from my community. One says: The automation I knew all my life was half baked. I got the full grilled chicken tonight. A reply says: What I saw today, I will call it Living Automation.",
+      "quote": "The automation I knew all my life was half baked. I got the full grilled chicken tonight.",
+      "who": "From my community"
+    },
+    "founding-member": {
+      "type": "image",
+      "src": "/assets/reviews/founding-member-premium.jpg",
+      "width": 1120,
+      "height": 702,
+      "alt": "A WhatsApp chat. A community member writes: It worked. It updated the sheet and my sheet dashboard too. Thank you so much, you are the best. See how I'm getting first-hand premium treatment. Chinenye replies: I know right. Perks of being founding member.",
+      "quote": "It worked. It updated the sheet and my sheet dashboard too.",
+      "who": "A founding member"
+    }
+  },
+  "starter_kit_top": [
+    "receipts",
+    "wowed",
+    "apps-existed"
+  ],
+  "starter_kit_more": [
+    "before",
+    "ife-voice",
+    "all-needed",
+    "half-baked",
+    "sochi-chat",
+    "sochi-voice"
+  ],
+  "more_title": "More from my community",
+  "starter_kit_community": [
+    "founding-member"
+  ]
+}

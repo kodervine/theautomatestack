@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How do I test an automation before I trust it? | The Automate Stack</title>
+  <meta name="description" content="Run it on five normal examples, add two messy ones, and compare each result with what you would have done by hand.">
+  <link rel="canonical" href="https://www.theautomatestack.com/blog/how-do-i-test-an-automation-before-i-trust-it/">
+  
+  
+  <link rel="icon" type="image/png" href="/assets/img/logo.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="The Automate Stack Blog" href="https://www.theautomatestack.com/blog/rss.xml">
+
+  <meta property="og:site_name" content="The Automate Stack">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How do I test an automation before I trust it?">
+  <meta property="og:description" content="Run it on five normal examples, add two messy ones, and compare each result with what you would have done by hand.">
+  <meta property="og:url" content="https://www.theautomatestack.com/blog/how-do-i-test-an-automation-before-i-trust-it/">
+  <meta property="og:image" content="https://www.theautomatestack.com/blog/images/how-do-i-test-an-automation-before-i-trust-it/test-first.png">
+  <meta property="article:published_time" content="2026-11-19">
+  <meta property="article:modified_time" content="2026-11-19">
+  <meta property="article:author" content="Chinenye">
+  <meta property="article:tag" content="automation">
+  <meta property="article:tag" content="starter kit">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How do I test an automation before I trust it?">
+  <meta name="twitter:description" content="Run it on five normal examples, add two messy ones, and compare each result with what you would have done by hand.">
+  <meta name="twitter:image" content="https://www.theautomatestack.com/blog/images/how-do-i-test-an-automation-before-i-trust-it/test-first.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Lato:wght@400;700&amp;family=Poppins:wght@700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/brand.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://www.theautomatestack.com/blog/how-do-i-test-an-automation-before-i-trust-it/#article",
+  "headline": "How do I test an automation before I trust it?",
+  "description": "Run it on five normal examples, add two messy ones, and compare each result with what you would have done by hand. Keep a human check on anything that touches money or customers. Test again after any change.",
+  "datePublished": "2026-11-19",
+  "dateModified": "2026-11-19",
+  "inLanguage": "en",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.theautomatestack.com/blog/how-do-i-test-an-automation-before-i-trust-it/"
+  },
+  "image": [
+    "https://www.theautomatestack.com/blog/images/how-do-i-test-an-automation-before-i-trust-it/test-first.png"
+  ],
+  "keywords": "automation, starter kit",
+  "author": {
+    "@type": "Person",
+    "name": "Chinenye",
+    "url": "https://www.theautomatestack.com/",
+    "sameAs": [
+      "https://www.instagram.com/kodervine/",
+      "https://www.tiktok.com/@theautomatestack",
+      "https://www.youtube.com/@the_automatestack"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Automate Stack",
+    "url": "https://www.theautomatestack.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.theautomatestack.com/assets/img/logo.png"
+    },
+    "sameAs": [
+      "https://www.instagram.com/kodervine/",
+      "https://www.tiktok.com/@theautomatestack",
+      "https://www.youtube.com/@the_automatestack"
+    ]
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.theautomatestack.com/blog/how-do-i-test-an-automation-before-i-trust-it/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many test cases do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven is a good start: five normal ones and two messy ones. Keep the same list so you can run it again whenever something changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as a messy case?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typos, capital letters, an empty message, a very long message, a duplicate, or anything you did not plan for."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I let an automation send messages on its own?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not at first. Let it draft while you read each one. Move to sending on its own only for low-risk tasks, and keep a check on anything about money or customers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I switch it off if it goes wrong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Write down where the off switch is before you turn it on. If you cannot find it in ten seconds, it is not ready."
+      }
+    }
+  ]
+}
+  </script>
+  <script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1067023309651592');
+fbq('track', 'PageView');
+(function () {
+  var data = {};
+  // A setup page: tell Meta which product is being viewed.
+  if (data.content_ids) fbq('track', 'ViewContent', data);
+  // Someone presses a buy button, on their way to Selar.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a.btn--big');
+    if (a && data.content_ids) fbq('track', 'InitiateCheckout', data);
+  }, { passive: true });
+  // The free-resource form: someone leaves their details to be contacted. Meta calls that a Lead.
+  document.addEventListener('submit', function (e) {
+    var form = e.target;
+    if (!form.classList || !form.classList.contains('lead-form') || form.__leadSent) return;
+    form.__leadSent = true;
+    e.preventDefault();
+    fbq('track', 'Lead', { content_name: form.elements.freebie ? form.elements.freebie.value : '', content_category: 'free resource' });
+    setTimeout(function () { form.submit(); }, 250); // a moment for the browser to send the event before the page moves on
+  });
+  // The page Selar sends buyers back to after paying. Counted once per visit, and only when a setup is named in the link.
+  var m = /^\/before-you-go\/?$/.test(location.pathname) && new URLSearchParams(location.search).get('setup');
+  if (m) {
+    try { if (sessionStorage.getItem('px-purchase-' + m)) return; sessionStorage.setItem('px-purchase-' + m, '1'); } catch (x) {}
+    fbq('track', 'Purchase', { content_ids: [m], currency: 'NGN', value: 0 });
+  }
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1067023309651592&amp;ev=PageView&amp;noscript=1"></noscript>
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  
+  <header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <img src="/assets/img/logo.png" alt="The Automate Stack logo" width="36" height="36">
+      <span>theautomatestack</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/freebies/">Start here</a>
+      <div class="menu">
+        <button type="button" class="menu-btn" aria-haspopup="true">Products</button>
+        <ul class="menu-panel">
+          <li><a href="/starter-kit/"><strong>Starter Kit</strong><span>36 AI setups for your business</span></a></li>
+          <li><a href="/blueprint/"><strong>Blueprint</strong><span>50 ready n8n workflows</span></a></li>
+        </ul>
+      </div>
+      <div class="menu">
+        <button type="button" class="menu-btn" aria-haspopup="true">Work with me</button>
+        <ul class="menu-panel">
+          <li><a href="/services/"><strong>Consulting</strong><span>Process consultation and audits</span></a></li>
+          <li><a href="/dm-automation/"><strong>DM Automation</strong><span>Replies while you sleep</span></a></li>
+        </ul>
+      </div>
+      <a href="/blog/" aria-current="page">Blog</a>
+    </nav>
+    <a class="btn header-cta" href="/freebies/">Free Checklist</a>
+    <details class="mobile-nav">
+      <summary>Menu</summary>
+      <nav aria-label="Mobile">
+        <a href="/freebies/">Start here</a>
+        <a href="/starter-kit/">Starter Kit</a>
+        <a href="/blueprint/">Blueprint</a>
+        <a href="/services/">Consulting</a>
+        <a href="/dm-automation/">DM Automation</a>
+        <a href="/blog/">Blog</a>
+        <a href="/freebies/" class="btn">Free Checklist</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+  <main id="main">
+<div class="read">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/blog/">Blog</a> / <span>How do I test an automation before I trust it?</span></nav>
+  <article>
+    <header class="post-head">
+      <p class="eyebrow"><a href="/blog/tags/automation/">automation</a> <a href="/blog/tags/starter-kit/">starter kit</a></p>
+      <h1>How do I test an automation before I trust it?</h1>
+      <p class="meta">By Chinenye &middot; <time datetime="2026-11-19">19 November 2026</time> &middot; 3 min read</p>
+    </header>
+    <section class="answer" aria-labelledby="answer-heading">
+      <h2 id="answer-heading">The short answer</h2>
+      <p>Run it on five normal examples, add two messy ones, and compare each result with what you would have done by hand. Keep a human check on anything that touches money or customers. Test again after any change.</p>
+    </section>
+    <div class="post-body">
+<p>An automation that fails loudly is easy. You see the error and you fix it.</p>
+<p>The one that fails quietly is the problem. It runs for weeks, looks fine, and sends the wrong thing to the wrong person while you are asleep.</p>
+<p>So you test before you trust. It takes about an hour, once.</p>
+<p><img loading="lazy" decoding="async" src="/blog/images/how-do-i-test-an-automation-before-i-trust-it/test-first.png" alt="Test an automation before you trust it. One, run five normal examples. Two, add two messy ones. Three, compare each result with what you would have done by hand. Anything that touches money or customers gets read by a human first."></p>
+<h2>Test with real cases, not perfect ones</h2>
+<p>Say you set up a reply that sends your price list when someone comments PRICE.</p>
+<p>The easy test is a comment that says PRICE. It works. You feel good and switch it on.</p>
+<p>Then a real customer comments &quot;price pls&quot;. Another types &quot;PRCE&quot;. Another writes &quot;how much&quot; and sends nothing else. If you never tried those, you find out from your customers. I wrote about exactly this in <a href="/blog/why-does-my-instagram-dm-bot-break-when-customers-make-typos/">why does my Instagram DM bot break when customers make typos</a>.</p>
+<p>So your test list needs two kinds of cases.</p>
+<ul>
+<li><strong>Five normal ones.</strong> What a customer would send on a good day.</li>
+<li><strong>Two messy ones.</strong> Typos, capital letters, an empty message, a very long one, a duplicate, anything you did not plan for.</li>
+</ul>
+<h2>Compare it with what you would have done</h2>
+<p>For each test, write down what you expected before you run it. Then look at what happened.</p>
+<p>Any difference is a fault until you prove otherwise. Not &quot;close enough&quot;. If you would have sent the price list and it sent nothing, that is a fault.</p>
+<h2>Decide what a human checks</h2>
+<p>Some jobs are low risk. A weekly summary you read yourself is fine to run without much worry.</p>
+<p>But anything that touches money, a customer&#39;s private details or a promise should be read by a person before it goes out. Start it in draft mode, where it prepares the message and you press send. Move to sending on its own later, if at all.</p>
+<h2>Know how to stop it</h2>
+<p>Before you switch anything on, write down where the off switch is.</p>
+<p>If something goes wrong at 2 AM, you do not want to be searching through menus. One line in your notes is enough: where it lives and how to pause it.</p>
+<h2>Test again when something changes</h2>
+<p>Tools change their menus. You edit a prompt. A free limit runs out. Any of those can change what your automation does.</p>
+<p>Keep your test list, the same seven cases, and run it again after every change. It takes ten minutes, and it is the cheapest insurance you have.</p>
+<h2>The steps</h2>
+<ol>
+<li><strong>Write down what the automation should do.</strong> One sentence.</li>
+<li><strong>List five normal examples.</strong> What a customer sends on a good day.</li>
+<li><strong>Add two messy ones.</strong> Typos, empty, long, duplicate.</li>
+<li><strong>Write down what you expect for each.</strong></li>
+<li><strong>Run them and compare.</strong> Any difference is a fault. Fix it, then run the whole list again.</li>
+<li><strong>Decide what a human reads first.</strong> Anything about money or customers.</li>
+<li><strong>Write down the off switch.</strong> And test again after any change.</li>
+</ol>
+<p>Every setup in the <a href="/starter-kit/">Starter Kit</a> has a test checklist for exactly this, so you do not have to invent one.</p>
+<p>Trust is not a feeling. It is a list of cases that passed.</p>
+
+    </div>
+    <section class="faqs" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">Questions people ask</h2>
+    <h3>How many test cases do I need?</h3>
+    <p>Seven is a good start: five normal ones and two messy ones. Keep the same list so you can run it again whenever something changes.</p>
+    <h3>What counts as a messy case?</h3>
+    <p>Typos, capital letters, an empty message, a very long message, a duplicate, or anything you did not plan for.</p>
+    <h3>Should I let an automation send messages on its own?</h3>
+    <p>Not at first. Let it draft while you read each one. Move to sending on its own only for low-risk tasks, and keep a check on anything about money or customers.</p>
+    <h3>How do I switch it off if it goes wrong?</h3>
+    <p>Write down where the off switch is before you turn it on. If you cannot find it in ten seconds, it is not ready.</p>
+    </section>
+    <aside class="cta" aria-labelledby="cta-heading">
+  <h2 id="cta-heading">Want the setup behind this?</h2>
+  <p>The exact setup lives in the Starter Kit. Follow along and you will see the next one first.</p>
+  <ul class="cta-links">
+    <li><a class="btn btn--ghost" href="https://www.instagram.com/kodervine/" rel="noopener">Follow on Instagram</a></li>
+    <li><a class="btn btn--ghost" href="https://www.tiktok.com/@theautomatestack" rel="noopener">Follow on TikTok</a></li>
+    <li><a class="btn btn--ghost" href="https://www.youtube.com/@the_automatestack" rel="noopener">Subscribe on YouTube</a></li>
+    <li><a class="btn" href="https://selar.com/6111279119" rel="noopener">Get the Starter Kit</a></li>
+    <li><a class="btn btn--ghost" href="https://www.theautomatestack.com/">Visit the site</a></li>
+  </ul>
+</aside>
+
+    <aside class="author" aria-labelledby="author-heading">
+  <img class="author-photo" src="/assets/img/chinenye-avatar.jpg" width="96" height="96" alt="Chinenye" loading="lazy">
+  <div class="author-body">
+    <p class="author-kicker">Written by</p>
+    <h2 id="author-heading">Chinenye</h2>
+    <p class="author-role">Software engineer and founder of The Automate Stack</p>
+    <p class="author-bio">I teach non-technical professionals and founders to scale their business operations with AI automation. The AutoStack Starter Kit gives you 36 ready-to-use setups to start with, and I show how it all works on Instagram, TikTok and YouTube.</p>
+    <div class="author-actions">
+      <a class="btn btn--small" href="/freebies/">Get the free Checklist</a>
+      <ul class="author-links" aria-label="Follow Chinenye">
+        <li><a href="https://www.instagram.com/kodervine/" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@theautomatestack" rel="noopener">TikTok</a></li>
+        <li><a href="https://www.youtube.com/@the_automatestack" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+</aside>
+
+  </article>
+  <section class="related" aria-labelledby="related-heading">
+  <h2 id="related-heading">Keep reading</h2>
+  <ul class="cards">
+    <li class="card">
+      <h3><a href="/blog/how-do-i-chase-unpaid-invoices-without-sounding-rude/">How do I chase unpaid invoices without sounding rude?</a></h3>
+      <p>Write three reminders once: a friendly nudge, a clear reminder and a firm final notice. Then send the right one on the right day. The same calm words every time means you never chase money while you are annoyed. Let AI draft them in your voice, and read every message before it goes.</p>
+    </li>
+    <li class="card">
+      <h3><a href="/blog/why-does-my-instagram-dm-bot-break-when-customers-make-typos/">Why does my Instagram DM bot break when customers make typos?</a></h3>
+      <p>Most DM bots look for one exact word. If the customer writes it differently, the bot finds no match and goes silent or repeats a menu. The fix is a setup that reads the whole message, so a typo, slang or a normal sentence still gets the right answer.</p>
+    </li>
+    <li class="card">
+      <h3><a href="/blog/how-do-i-get-a-weekly-income-summary-from-my-bank-alerts/">How do I get a weekly income summary from my bank alerts?</a></h3>
+      <p>Paste your week&#39;s credit alerts into an AI tool, with account numbers and names removed, and ask it to add them up and list them by day. You get one clear summary instead of adding every alert by hand. Check it against your bank or Selar, which stay the source of truth.</p>
+    </li>
+  </ul>
+</section>
+
+</div>
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="/"><span>theautomatestack</span></a>
+      <p class="footer-tagline">AI setups, automation and consulting for business owners and creators.</p>
+      <a class="btn btn--small" href="/freebies/">Get the free Checklist</a>
+    </div>
+    <nav class="footer-col" aria-label="Explore">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="/freebies/">Free resources</a></li>
+        <li><a href="/starter-kit/">Starter Kit</a></li>
+        <li><a href="/blueprint/">Blueprint</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Work with me">
+      <h2>Work with me</h2>
+      <ul>
+        <li><a href="/services/">Consulting</a></li>
+        <li><a href="/dm-automation/">DM Automation</a></li>
+        <li><a href="https://selar.com/317u425515" rel="noopener">Book a DM consultation</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Follow">
+      <h2>Follow</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/kodervine/" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@theautomatestack" rel="noopener">TikTok</a></li>
+        <li><a href="https://www.youtube.com/@the_automatestack" rel="noopener">YouTube</a></li>
+        <li><a href="mailto:support@theautomatestack.com">Email me</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>&copy; 2026 The Automate Stack. All rights reserved. <a href="/privacy/">Privacy note</a></p>
+    <p class="footer-notice">Registered with the Corporate Affairs Commission of Nigeria. Business Name No. 9841634.</p>
+    <p class="footer-notice">This site uses the Meta Pixel to measure my ads. It saves cookies on your device. See the <a href="/privacy/">privacy note</a> for what it records and how to opt out.</p>
+
+  </div>
+</footer>
+
+</body>
+</html>

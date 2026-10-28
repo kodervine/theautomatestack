@@ -3,12 +3,12 @@ title: "How do I get a weekly income summary from my bank alerts?"
 slug: how-do-i-get-a-weekly-income-summary-from-my-bank-alerts
 question: "How do I get a weekly income summary from my bank alerts?"
 summary: "Paste your week's credit alerts into an AI tool, with account numbers and names removed, and ask it to add them up and list them by day. You get one clear summary instead of adding every alert by hand. Check it against your bank or Selar, which stay the source of truth."
-date: 2026-10-26
-updated: 2026-10-26
+date: 2026-10-28
+updated: 2026-10-28
 tags:
   - automation
   - ai tools
-status: draft
+status: ready
 image: /blog/images/how-do-i-get-a-weekly-income-summary-from-my-bank-alerts/income-summary.png
 source_post: ""
 medium_url: ""

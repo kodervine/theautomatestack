@@ -1,14 +1,14 @@
 <section class="hero">
   <div class="wrap hero-split">
     <div class="hero-copy">
-      <p class="eyebrow">For business owners, creators and operators</p>
-      <h1>The AutoStack Starter Kit</h1>
-      <p class="lead">36 ready-made setups. Every tool is picked. Every prompt is written. Pick one pain, open one setup, and be done tonight.</p>
+      <p class="eyebrow">The AutoStack Starter Kit</p>
+      <h1>Connect AI to the tools you already use.</h1>
+      <p class="lead">36 setups that plug Claude into the tools you already use: Notion, Gmail, your spreadsheets, Canva, and your Instagram, TikTok and YouTube. The repetitive work gets done without you. The prompts are written and every setup has a test checklist. Pick one pain, open one setup, and be done tonight.</p>
       <div class="actions">
-        <a class="btn" href="{{starter_kit_url}}" rel="noopener">Get the Starter Kit</a>
+        <a class="btn btn--big" href="{{starter_kit_url}}" rel="noopener">Get the Starter Kit</a>
         <a class="btn btn--ghost" href="#inside">See what is inside</a>
       </div>
-      <p class="fine">One-time payment. You get the kit link and the community invite right after.</p>
+      <p class="fine">Founding member price while it lasts. One-time payment. You get the kit link and the community invite right after.</p>
     </div>
     <div class="hero-media">
       <div class="portrait">
@@ -20,24 +20,23 @@
 
 <section class="section">
   <div class="wrap read-wide prose reveal">
-    <h2>Watch this editing</h2>
-    <p>Two example edits. Now picture doing that to your own videos, tonight. And within minutes.</p>
-    <div class="video-pair">
-      <video controls playsinline preload="metadata" aria-label="Example video edit one">
-        <source src="https://share.cysafepath.com/2026/10/staying_lean.mp4" type="video/mp4">
-      </video>
-      <video controls playsinline preload="metadata" aria-label="Example video edit two">
-        <source src="https://share.cysafepath.com/2026/10/before_you_budget_for_ad.mp4" type="video/mp4">
-      </video>
-    </div>
+    <h2>{{reviews_title}}</h2>
+    <p>{{reviews_intro}}</p>
+    {{{reviews_html}}}
   </div>
 </section>
 
 <section class="section section--tint">
   <div class="wrap read-wide prose reveal">
     <h2>You already know AI can do this</h2>
-    <p>You have watched the videos. You have saved the posts. You have three tabs open, two half-finished setups, and one question: where do I even start?</p>
-    <p>There are too many tools, and nobody tells you what to open first. So you still plan your content at 9 PM. You still type the same replies by hand. One video edit still eats your whole Saturday.</p>
+    <p>Everyone is telling you to start using AI. You have watched the videos. You have saved the posts. You have three tabs open, two half-finished setups, and one question: where do I even start?</p>
+    <p>The advice never fits. It says download this app, sign up for that tool, learn another dashboard. Then you are moving documents by hand and copying text between five tabs, and the thing that was meant to save you time becomes one more job.</p>
+    <p>So you go back to what you know. You still plan your content at 9 PM. You still type the same replies by hand. One video edit still eats your whole Saturday.</p>
+
+    <h2>You do not need another app</h2>
+    <p>You already have the tools. Your plans and notes live in Notion. Your clients write to you in Gmail. Your numbers sit in a spreadsheet. You design in Canva. And your content goes out on Instagram, TikTok and YouTube.</p>
+    <p>The missing piece was never another app. It is the connection. You need one AI tool, and everything else is what you already use.</p>
+    <p>That is what I show you. How to connect AI to Notion, Gmail, your spreadsheets and Canva, so it does the copying, drafting and sorting inside the places your work already lives. Then it prepares the posts you put on Instagram, TikTok and YouTube. The prompts are written and every setup has a test checklist.</p>
 
     <h2>Running a business online quietly makes you 10 employees</h2>
     <p>Nobody told you this at the start. You are the content planner, the designer, the video editor, the social media manager, the DM support, the bookkeeper, the assistant, and the person who chases unpaid invoices. All before lunch.</p>
@@ -46,7 +45,7 @@
     <h2>The kit that does that part for you</h2>
     <p>An all-in-one, ready-made kit. 36 setups. You open it, follow along, and tick the test checklist.</p>
     <p>You do not have to figure anything out from scratch. I already did that part for you.</p>
-    <p class="actions"><a class="btn" href="{{starter_kit_url}}" rel="noopener">Get the Starter Kit</a></p>
+    <p class="actions"><a class="btn btn--big" href="{{starter_kit_url}}" rel="noopener">Get the Starter Kit</a></p>
   </div>
 </section>
 
@@ -99,6 +98,18 @@
 
     <h3>Layer 4: Edit <span class="count">7 setups</span></h3>
     <p><strong>Videos without hiring an editor.</strong> You go from a raw recording to a clean vertical video in under 30 minutes.</p>
+    <p>Three example edits. Now picture doing that to your own videos, tonight. And within minutes.</p>
+    <div class="video-pair video-trio">
+      <video controls playsinline preload="metadata" aria-label="Example video edit one">
+        <source src="https://share.cysafepath.com/2026/10/staying_lean.mp4" type="video/mp4">
+      </video>
+      <video controls playsinline preload="metadata" aria-label="Example video edit two">
+        <source src="https://share.cysafepath.com/2026/10/before_you_budget_for_ad.mp4" type="video/mp4">
+      </video>
+      <video controls playsinline preload="none" poster="/assets/img/kenya-reel-poster.jpg" aria-label="Example video edit three: a reel from a trip to Kenya">
+        <source src="https://share.cysafepath.com/2026/10/kenya_reel3.mp4" type="video/mp4">
+      </video>
+    </div>
     <ul>
       <li>A clear path, so you know which approach fits which job</li>
       <li>Cutaway clips made from one sentence</li>
@@ -111,24 +122,61 @@
   </div>
 </section>
 
+<section class="section section--tint">
+  <div class="wrap read-wide prose reveal">
+    <h2>You are not doing this alone</h2>
+    <p>Most people stall on the same thing: they get stuck on step three, nobody is there, and the setup sits half finished.</p>
+    <p>That is why the community is part of the kit. I am in it with you, and you can ask me when you are stuck. We also fix your setup together in the weekend live classes, so you leave with it working.</p>
+    <p>You are joining as a founding member. While the community is small, you get first-hand help from me. The founding member price will go up later, so the price you see now is the lowest it will be.</p>
+    {{{reviews_community_html}}}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap read-wide prose reveal">
+    <h2>{{reviews_more_title}}</h2>
+    {{{reviews_more_html}}}
+  </div>
+</section>
+
 <section class="section section--dark">
   <div class="wrap read-wide prose prose--dark reveal">
-    <h2>What you get</h2>
+    <h2>Everything you get</h2>
     <ul class="tick-list">
-      <li>36 setups in a private workspace you can open on your phone</li>
-      <li>A 5-minute onboarding video that shows you where to start</li>
-      <li>Copy-paste prompts and reply copy</li>
-      <li>A test checklist on every page</li>
-      <li>Weekend live classes where we fix your setup together. Replays go on the matching setup page.</li>
-      <li>A private community for questions and results</li>
-      <li>New setups added over time</li>
-      <li>Your own partner link: a 30% partner share, forever, on everyone you introduce who joins</li>
+      <li><strong>36 ready-made setups</strong> in a private workspace you can open on your phone. One pain, one setup, done tonight.</li>
+      <li><strong>A 5-minute onboarding video</strong> that shows you where to start, so you never wonder what to open first.</li>
+      <li><strong>Copy-paste prompts and reply copy,</strong> already written for you.</li>
+      <li><strong>A test checklist on every setup,</strong> so you know it works before you rely on it.</li>
+      <li><strong>Weekend live classes</strong> where we fix your setup together. Replays go on the matching setup page.</li>
+      <li><strong>A private community with me in it,</strong> for questions and results. As a founding member, you get first-hand help from me.</li>
+      <li><strong>New setups added over time,</strong> so the kit keeps growing.</li>
+      <li><strong>Your own partner link:</strong> a 30% partner share, forever, on everyone you introduce who joins.</li>
+      <li><strong>The founding member price,</strong> while it lasts.</li>
     </ul>
-    <p class="actions"><a class="btn" href="{{starter_kit_url}}" rel="noopener">Get the Starter Kit</a></p>
+    <h2>Why this is an investment, not an expense</h2>
+    <p>Say you spend five hours a week on planning content, typing the same replies and adding up your money. Over a month, that is 20 hours.</p>
+    <p>The kit gives those hours back, and it keeps giving them back every week after. You set each setup up once. You spend the time you saved on the part only you can do: selling.</p>
+    <p class="actions"><a class="btn btn--big" href="{{starter_kit_url}}" rel="noopener">Get the Starter Kit</a></p>
   </div>
 </section>
 
 <section class="section section--tint">
+  <div class="wrap read-wide reveal">
+    <h2>Who built this</h2>
+    <div class="bio">
+      <img src="/assets/img/chinenye-avatar.jpg" width="112" height="112" alt="{{author_full_name}}" loading="lazy">
+      <div class="prose">
+        <p>Hi, I am Chinenye. In my day job I am a software engineer.</p>
+        <p>I was featured by the Association for Computing Machinery (ACM), the largest academic computer science organization in the world, as an <a href="https://women.acm.org/u-rise-chinenye-anikwenze-from-an-academic-in-history-to-an-unconventional-advocate-for-responsible-and-inclusive-ai/" target="_blank" rel="noopener">advocate for responsible AI</a>. I have <a href="https://www.tonative.org/indaba-2026#:~:text=LinkedIn-,Chinenye%20Anikwenze,-Engineering%20Lead%2C%20Tonative" target="_blank" rel="noopener">organized workshops</a> at the Deep Learning Indaba, the biggest AI gathering in Africa. I was also invited to speak on <a href="https://lnkd.in/p/eM7tdH-x" target="_blank" rel="noopener">a panel about AI in Nairobi</a>, fully funded.</p>
+        <p>I have built workflows like this for six and seven figure (USD) businesses.</p>
+        <p>I am the technical one, so you do not have to be. I do the technical part and show you only what you need to use it.</p>
+        <p>I am sharing this because it is what helps me work my day job, manage my clients and still show up online. You can start tonight.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="wrap read-wide prose reveal">
     <h2>Keep 30% forever</h2>
     <p>Know a business owner buried under the same ten jobs? Introduce someone to the community. When they join us, you get a 30% partner share, forever. Bring as many people as you like. There is no limit.</p>
@@ -136,27 +184,26 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section section--tint">
   <div class="wrap read-wide reveal">
     <h2>Questions you may be asking</h2>
     <div class="faq-list">
-{{#each faqs}}      <details>
+{{#each faqs}}      <details{{{open}}}>
         <summary>{{question}}</summary>
         <p>{{answer}}</p>
       </details>
 {{/each}}    </div>
-    <p class="note">Is this the Blueprint you are after? <a href="/blueprint/">See the AutoStack Blueprint</a>. Not sure yet? <a href="/freebies/">Start with the free Checklist</a>.</p>
   </div>
 </section>
 
 <section class="section section--dark">
   <div class="wrap band">
     <h2>Start tonight</h2>
-    <p>Pick one pain. Open one setup. Be done tonight.</p>
-    <p class="actions"><a class="btn" href="{{starter_kit_url}}" rel="noopener">Get the Starter Kit</a></p>
+    <p>Pick one pain. Open one setup. Be done tonight. Join as a founding member before the price goes up.</p>
+    <p class="actions"><a class="btn btn--big" href="{{starter_kit_url}}" rel="noopener">Get the Starter Kit</a></p>
   </div>
 </section>
 
 <div class="sticky-cta" aria-hidden="false">
-  <a class="btn" href="{{starter_kit_url}}" rel="noopener">Get the Starter Kit</a>
+  <a class="btn btn--big" href="{{starter_kit_url}}" rel="noopener">Get the Starter Kit</a>
 </div>

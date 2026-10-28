@@ -350,7 +350,8 @@ h3 { font-size: 1.25rem; margin: var(--space-8) 0 var(--space-3); }
 
 /* No gap between a dark closing band and the dark footer */
 main:has(> section.section--dark:last-of-type) + .site-footer,
-main:has(> section.hero:last-of-type) + .site-footer { margin-top: 0; }
+main:has(> section.hero:last-of-type) + .site-footer,
+main:has(> section.section--dark:last-of-type) + .sales-footer { margin-top: 0; }
 
 /* Checklist items in posts: checkbox instead of a bullet */
 .post-body ul:has(> li > input[type="checkbox"]) { list-style: none; padding-left: 0; }
@@ -517,3 +518,15 @@ body:has(.site-header--sales) .btn--big:focus-visible { box-shadow: 0 0 44px 8px
 .hero.sales-hero .trust { color: var(--stone); }
 .sales-footer { color: rgba(251,249,244,.8); }
 .sales-disclaimer p { color: rgba(251,249,244,.7); }
+
+/* ---------- Reviews: real messages and voice notes from class attendees ---------- */
+.proof-list { display: grid; gap: var(--space-8); margin-top: var(--space-8); }
+.proof-item { margin: 0; }
+@media (min-width: 48rem) { .proof-list { grid-template-columns: repeat(2, 1fr); } .proof-item { grid-column: 1 / -1; } .proof-item--card { grid-column: auto; } }
+.proof-item img, .proof-item video { display: block; width: 100%; height: auto; background: #111; border: 1px solid rgba(200,153,108,.55); border-radius: var(--radius-lg); }
+.proof-item figcaption { display: grid; gap: .2rem; margin-top: var(--space-3); }
+.proof-item q { font-family: var(--font-display); font-size: 1.1rem; font-style: italic; line-height: 1.4; quotes: "\201C" "\201D"; }
+.proof-item figcaption span { font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--stone); }
+
+.video-trio { margin: var(--space-6) 0; }
+@media (min-width: 48rem) { .video-trio { grid-template-columns: repeat(3, 1fr); } }
