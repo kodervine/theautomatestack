@@ -155,6 +155,8 @@ The price goes up to ₦50,000, and the community will become a paid membership 
 
 [IMAGE 10: founding-usecase-call.jpg]
 
+[IMAGE 11: active-member-support.jpg]
+
 This is how it looks inside the community.
 
 "It worked. It updated the sheet and my sheet dashboard too."
@@ -285,5 +287,6 @@ Inside the description (all in public/assets/reviews/):
 8. slide-half-baked.jpg
 9. founding-member-premium.jpg (in the "You are not doing this alone" section)
 10. founding-usecase-call.jpg (in the "You are not doing this alone" section, after image 9)
+11. active-member-support.jpg (in the "You are not doing this alone" section, after image 10)
 Under Layer 4: staying_lean.mp4 and before_you_budget_for_ad.mp4 (your own hosting), and kenya_reel3.mp4 if you want it there too.
 Near the end: sochi-voice-note.mp4

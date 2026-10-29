@@ -106,6 +106,15 @@
       "alt": "A WhatsApp group chat. A member says: Hello Chinenye, I asked the question about deliverables and timeline for a digital product. Another member says: Thank you so much for today's class. I learnt something new. I reply, highlighted: Yeah, that's true. What's your availability for tomorrow? We can have a call so I can understand your usecase better.",
       "quote": "We can have a call so I can understand your usecase better.",
       "who": "Perks of being a founding member"
+    },
+    "active-support": {
+      "type": "image",
+      "src": "/assets/reviews/active-member-support.jpg",
+      "width": 1248,
+      "height": 588,
+      "alt": "A WhatsApp chat. Chinenye writes: Let me know if you encounter any challenges or have any questions. A community member replies: Alright, thank you so much for your lightning speed support. Chinenye replies: Perks of being a founding member. You're most welcome. Then asks: What aspect of your work or business do you want to automate first.",
+      "quote": "Thank you so much for your lightning speed support.",
+      "who": "Perks of being an active member"
     }
   },
   "starter_kit_top": [
@@ -124,6 +133,7 @@
   "more_title": "More from my community",
   "starter_kit_community": [
     "founding-member",
-    "founding-call"
+    "founding-call",
+    "active-support"
   ]
 }
