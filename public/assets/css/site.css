@@ -551,3 +551,32 @@ body:has(.site-header--sales) .btn--big:focus-visible { box-shadow: 0 0 44px 8px
 
 /* A single card on its own row is centred, not left in half a row */
 @media (min-width: 48rem) { .proof-item--solo { grid-column: 1 / -1; max-width: calc(50% - var(--space-4)); justify-self: center; } }
+
+/* Founding spots left: a small badge under the price */
+.spots-left { display: inline-block; margin: 0 0 var(--space-6); padding: .35rem .85rem; border: 1px solid var(--bronze); border-radius: 999px; font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--bronze); }
+.price-line + .spots-left { margin-top: calc(-1 * var(--space-3)); }
+.band .spots-left { display: table; margin-left: auto; margin-right: auto; }
+.hero.sales-hero .spots-left { color: #8a5a2b; border-color: #8a5a2b; }
+
+/* ---------- Starter Kit offer: the kit, then each bonus in its own block ---------- */
+.core-line { font-size: 1.1rem; }
+.bonus-heading { margin-top: var(--space-8); font-family: var(--font-display); }
+.bonus-card { margin: var(--space-4) 0; padding: var(--space-6); border: 1px solid rgba(200,153,108,.55); border-radius: var(--radius-lg); background: rgba(251,249,244,.05); }
+.bonus-card .bonus-label { margin: 0 0 var(--space-1); color: var(--bronze); font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.bonus-card h3 { margin: 0 0 var(--space-2); font-size: 1.25rem; }
+.bonus-card p { margin: 0 0 var(--space-3); }
+.bonus-card .bonus-value { margin: 0; font-weight: 700; color: var(--bronze); }
+.bonus-total { margin: var(--space-6) 0; padding: var(--space-4) var(--space-6); text-align: center; background: rgba(200,153,108,.14); border: 1px solid rgba(200,153,108,.45); border-radius: var(--radius); }
+.bonus-total p { margin: 0 0 var(--space-2); }
+.bonus-total p:last-child { margin: 0; }
+.bonus-total strong { font-family: var(--font-display); font-size: 1.6rem; color: var(--bronze); }
+
+/* A short beat before the guarantee */
+.not-all { margin: var(--space-12) 0 var(--space-2); font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; color: var(--bronze); }
+
+/* Closing recap: the kit and every bonus once more, right before the button */
+.recap { max-width: 36rem; margin: var(--space-6) auto; text-align: left; }
+.recap .recap-title { margin: 0 0 var(--space-3); font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; }
+.recap .tick-list { margin: 0 0 var(--space-3); }
+.recap .tick-list li span { color: rgba(251,249,244,.7); font-size: .9rem; }
+.recap .recap-total { margin: 0; font-weight: 700; color: var(--bronze); text-align: center; }

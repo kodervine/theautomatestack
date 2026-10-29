@@ -80,7 +80,7 @@
 <h2>What you do not need</h2>
 <p>You do not need to know how to code. You do not need a perfect prompt. You do not need to understand how the tool works inside.</p>
 <p>You also do not need to move your whole business over. Nobody does that. People start with one small job and add the next one when the first is working.</p>
-<p>And you do not need to paste anything private. An amount and a date are enough for most tasks. The rules in <a href="https://www.theautomatestack.com/blog/what-should-i-never-paste-into-an-ai-tool/">what should I never paste into an AI tool</a> cover what to keep out.</p>
+<p>And you do not need to paste anything private. An amount and a date are enough for most tasks.</p>
 <h2>Pick a boring first task</h2>
 <p>The best first task is boring and repeated.</p>
 <p>If you do it every week and it makes you groan, it is a good one. Say you write your Instagram captions on Sunday night and you hate it. That is a better start than something clever you will use once.</p>
@@ -134,7 +134,7 @@
 <h2>Let AI draft them in your voice</h2>
 <p>This is where AI helps. Give it three things: a sample of how you normally write to clients, the facts of one invoice, and the job of each reminder. Ask for the three messages.</p>
 <p>Then read them. Change anything that does not sound like you. Do not send a message you have not read. A reminder with the wrong amount in it is worse than a late one.</p>
-<p>Use the client&#39;s first name and the invoice number. Leave out bank details and anything private. The rules in <a href="https://www.theautomatestack.com/blog/what-should-i-never-paste-into-an-ai-tool/">what should I never paste into an AI tool</a> apply here too.</p>
+<p>Use the client&#39;s first name and the invoice number. Leave out bank details and anything private.</p>
 <h2>Keep one simple list</h2>
 <p>The messages are the easy part. The hard part is knowing who is overdue.</p>
 <p>Keep one list with five columns: client, invoice number, amount, due date and days late. Look at it once a week. Whoever is past due gets the next reminder in line.</p>
@@ -265,7 +265,7 @@
 <h2>Clean the alerts first</h2>
 <p>This step matters more than the rest.</p>
 <p>Before you paste anything, remove what you do not need. Account numbers. Full names. Anything that is not the amount, the date and a short note.</p>
-<p>You can read more about this in the rules for <a href="https://www.theautomatestack.com/blog/what-should-i-never-paste-into-an-ai-tool/">what never to paste into an AI tool</a>. The short version: an amount and a date are enough to add up a week. Nothing else needs to leave your hands.</p>
+<p>The short version: an amount and a date are enough to add up a week. Nothing else needs to leave your hands.</p>
 <p>Say you sell clothes online. Your alerts for the week might look like a dozen short messages. You tidy each one down to &quot;Mon, ₦[amount], payment for order&quot; and paste the lot.</p>
 <h2>What to ask for</h2>
 <p>Keep the request plain. Ask for three things:</p>
@@ -392,52 +392,6 @@
 </ol>
 <p>The Create layer of the <a href="https://www.theautomatestack.com/starter-kit/">Starter Kit</a> is built around this: four weeks of posts, each with a hook and a call to action, and your whole month queued in one sitting.</p>
 <p>Plan once. Then spend the month doing the work, not wondering what to post.</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>What should I never paste into an AI tool?</title>
-      <link>https://www.theautomatestack.com/blog/what-should-i-never-paste-into-an-ai-tool/</link>
-      <guid isPermaLink="true">https://www.theautomatestack.com/blog/what-should-i-never-paste-into-an-ai-tool/</guid>
-      <pubDate>Fri, 16 Oct 2026 08:00:00 GMT</pubDate>
-      <dc:creator>Chinenye</dc:creator>
-      <category>ai tools</category>
-      <category>getting started</category>
-      <description>Never paste passwords, card details, full bank account numbers, ID numbers like your BVN or NIN, API keys, or private client contracts. Paste your own lessons, public information, and examples with the names and numbers removed. When in doubt, leave it out.</description>
-      <content:encoded><![CDATA[<p>Before you ask what AI can do for you, ask what you are about to hand it.</p>
-<p>This is the question people forget. The tool is fast and friendly, so you paste in whatever is in front of you: a customer&#39;s message, a bank alert, a contract. It feels like a private chat. It is not always as private as it feels.</p>
-<p>You do not need to be scared of AI tools. You need a few rules.</p>
-<p><img loading="lazy" decoding="async" src="https://www.theautomatestack.com/blog/images/what-should-i-never-paste-into-an-ai-tool/never-paste.png" alt="What to never paste into an AI tool, on the left: passwords and card details, full bank account numbers, ID numbers such as BVN or NIN, API keys and login links, private client contracts. Safer to paste, on the right: your own lessons and ideas, public information, examples with names removed, amounts without account numbers, drafts you are happy to share."></p>
-<h2>What to never paste</h2>
-<p><strong>Passwords and card details.</strong> There is no task where an AI tool needs these. If something asks for them, stop.</p>
-<p><strong>Full bank account numbers.</strong> You can paste an amount and a short note. You do not need the account number.</p>
-<p><strong>ID numbers.</strong> In Nigeria, that includes your BVN and your NIN. Keep them out of every chat.</p>
-<p><strong>API keys and login links.</strong> These are keys to your accounts. Anyone who holds one can act as you.</p>
-<p><strong>Private client contracts.</strong> If a client trusted you with a document, that trust does not cover pasting it into a tool you have not checked.</p>
-<h2>What is safer to paste</h2>
-<p>Your own lessons and ideas. Public information. A draft you would be happy for anyone to read. And examples where you have removed the names and numbers.</p>
-<p>That last one is the trick. You can almost always get the help you need without the private parts.</p>
-<h2>Swap real details for labels</h2>
-<p>Say you run a small bookkeeping service and you want help writing a polite reminder to a client who has not paid. You do not need the client&#39;s name, phone number or account details.</p>
-<p>Write: &quot;Customer A owes me for work from last month. They have not replied to two messages. Write a polite reminder.&quot; The tool does the same job, and nothing private left your hands.</p>
-<h2>A simple test</h2>
-<p>Ask yourself: would I be happy if this appeared in a screenshot posted online?</p>
-<p>If the answer is no, do not paste it. If you are not sure, leave it out. You can always add a label back later.</p>
-<h2>Check your tool&#39;s settings</h2>
-<p>Different tools handle your chats in different ways, and it can depend on your plan. Many have a setting that controls whether your chats can be used to improve the tool. Find it, read it, and choose on purpose. Do this before you paste anything you care about.</p>
-<h2>If you already pasted something</h2>
-<p>It happens. Do not panic, but do act.</p>
-<p>If you pasted a password or a key, change it now. If you pasted card details, tell your bank. If it was a client&#39;s private document, be honest with the client. Then use the rules above so it does not happen again.</p>
-<h2>The steps</h2>
-<ol>
-<li><strong>Decide what is private.</strong> Passwords, card details, account numbers, ID numbers, keys and contracts.</li>
-<li><strong>Remove names and numbers before you paste.</strong> Use labels like Customer A.</li>
-<li><strong>Paste only what the task needs.</strong> An amount, not an account.</li>
-<li><strong>Check your tool&#39;s data settings.</strong> Read them once, on purpose.</li>
-<li><strong>Use the screenshot test when you are unsure.</strong></li>
-<li><strong>Test any new setup with made-up examples first.</strong> Only use real details once you trust it.</li>
-</ol>
-<p>The Starter Kit puts a test checklist on every page for this reason. You can start with the <a href="https://www.theautomatestack.com/freebies/">free Checklist</a>, or look at the <a href="https://www.theautomatestack.com/starter-kit/">Starter Kit</a>.</p>
-<p>A tool is only as safe as what you give it. Give it less.</p>
 ]]></content:encoded>
     </item>
     <item>

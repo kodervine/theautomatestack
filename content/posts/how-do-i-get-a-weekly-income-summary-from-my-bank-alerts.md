@@ -44,7 +44,7 @@ This step matters more than the rest.
 
 Before you paste anything, remove what you do not need. Account numbers. Full names. Anything that is not the amount, the date and a short note.
 
-You can read more about this in the rules for [what never to paste into an AI tool](/blog/what-should-i-never-paste-into-an-ai-tool/). The short version: an amount and a date are enough to add up a week. Nothing else needs to leave your hands.
+The short version: an amount and a date are enough to add up a week. Nothing else needs to leave your hands.
 
 Say you sell clothes online. Your alerts for the week might look like a dozen short messages. You tidy each one down to "Mon, ₦[amount], payment for order" and paste the lot.
 

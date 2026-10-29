@@ -48,7 +48,7 @@ You do not need to know how to code. You do not need a perfect prompt. You do no
 
 You also do not need to move your whole business over. Nobody does that. People start with one small job and add the next one when the first is working.
 
-And you do not need to paste anything private. An amount and a date are enough for most tasks. The rules in [what should I never paste into an AI tool](/blog/what-should-i-never-paste-into-an-ai-tool/) cover what to keep out.
+And you do not need to paste anything private. An amount and a date are enough for most tasks.
 
 ## Pick a boring first task
 

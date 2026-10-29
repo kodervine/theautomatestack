@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">Five things to write down for every payment</title>
+  <desc id="d">The date, the amount, who paid, what it was for, and how it came in.</desc>
+  <rect width="1200" height="630" fill="#FBF9F4"/>
+  <rect width="1200" height="8" fill="#C8996C"/>
+  <text x="60" y="84" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="50" fill="#1A1110">Five things for every payment</text>
+  <text x="60" y="124" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#746C61">One row each. Never an account number.</text>
+  <rect x="60" y="170" width="196" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+  <text x="82" y="222" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="44" fill="#C8996C">1</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#1A1110"><tspan x="82" y="270">Date</tspan></text>
+  <rect x="281" y="170" width="196" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+  <text x="303" y="222" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="44" fill="#C8996C">2</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#1A1110"><tspan x="303" y="270">Amount</tspan></text>
+  <rect x="502" y="170" width="196" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+  <text x="524" y="222" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="44" fill="#C8996C">3</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#1A1110"><tspan x="524" y="270">Who paid</tspan><tspan x="524" y="302">first name</tspan></text>
+  <rect x="723" y="170" width="196" height="230" rx="12" fill="#FFFFFF" stroke="#746C61" stroke-width="2"/>
+  <text x="745" y="222" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="44" fill="#C8996C">4</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#1A1110"><tspan x="745" y="270">What it</tspan><tspan x="745" y="302">was for</tspan></text>
+  <rect x="944" y="170" width="196" height="230" rx="12" fill="#1A1110"/>
+  <text x="966" y="222" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="44" fill="#C8996C">5</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#FBF9F4"><tspan x="966" y="270">How it</tspan><tspan x="966" y="302">came in</tspan></text>
+  <rect x="60" y="470" width="1080" height="84" rx="12" fill="#1A1110"/>
+  <text x="600" y="523" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="28" fill="#C8996C">A record you keep up beats a perfect one you abandon.</text>
+  <text x="60" y="600" font-family="Poppins, Arial, Helvetica, sans-serif" font-weight="700" font-size="16" letter-spacing="3" fill="#746C61">THEAUTOMATESTACK</text>
+</svg>

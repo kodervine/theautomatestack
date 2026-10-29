@@ -151,6 +151,8 @@ You are joining as a founding member. While the community is small, you get firs
 
 The price goes up to ₦50,000, and the community will become a paid membership later. As a founding member, you keep your place without a monthly fee. Free for life.
 
+**The first 20 founding members also get a one-on-one onboarding call with me, so I understand your use case. 15 are in. 5 spots left.** [CHINENYE: change the 15 and the 5 each time someone joins.]
+
 [IMAGE 8: founding-member-premium.jpg]
 
 [IMAGE 10: founding-usecase-call.jpg]
@@ -170,27 +172,47 @@ A PhD student in my community: hours to minutes. His voice note.
 
 ## Here is everything you get
 
-- **36 ready-made setups** in a private workspace you can open on your phone. One pain, one setup, done tonight.
-- **A 5-minute onboarding video** that shows you where to start, so you never wonder what to open first.
-- **Copy-paste prompts and reply copy,** already written for you.
-- **A test checklist on every setup,** so you know it works before you rely on it.
-- **Weekend live classes** [CHINENYE: weekly or twice a month? Pick one.] where we fix your setup together. Replays go on the matching setup page.
-- **A private community with me in it,** for questions and results. As a founding member, you get first-hand help from me and never pay a monthly fee.
-- **New setups added over time,** so the kit keeps growing.
-- **Your own partner link:** a 30% partner share, forever, on everyone you introduce who joins.
-- **The founding member price,** while it lasts.
+**The AutoStack Starter Kit.** 36 setups that connect AI to the tools you already use. Every prompt is already written. Every setup has a test checklist, so you know it works before you trust it. You open one, follow along, and be done tonight. And I keep adding new setups.
+
+### You are getting in early, so you get these on top. Free.
+
+**BONUS 1: The Where-Do-I-Start Call. One-on-one with me.**
+You get on a call with me. I ask about your business, I understand your use case, and you stop guessing. No more three tabs open and no plan. Only for the first 20 founding members. 15 of 20 spots are gone. 5 left. When they are gone, they are gone.
+Worth ₦25,000. Yours free.
+
+**BONUS 2: Fix-It Live Classes**
+Stuck on a step? Bring your screen to a weekend live class and we fix your setup together. Miss it? The replay goes on the setup page, so you can watch again.
+Worth ₦30,000. Yours free.
+
+**BONUS 3: The Founding Member Community, free for life**
+People who get stuck alone quit. In here you are not alone. Ask me when you hit a wall, and see what other business owners are building. The community becomes a paid membership later. You will never pay a monthly fee.
+Worth ₦25,000. Yours free.
+
+**BONUS 4: The 5-Minute Start Here Video**
+Watch it once. You will know exactly which setup to open first. The "where do I even start?" question is gone in five minutes.
+Worth ₦15,000. Yours free.
+
+**BONUS 5: Your Own Partner Link**
+Know a business owner buried under the same ten jobs? Share your link. Every person who joins through it earns you a 30% partner share, forever. No cap on how many people you bring.
+Worth: Priceless. Yours free.
+
+**Add it up. The bonuses alone are worth ₦95,000.**
+
+You are not paying ₦95,000. You are not even paying the regular ~~₦50,000~~ for the kit.
+
+Today, as a founding member, you pay just **₦20,000**. The kit and every bonus.
+
+**That's not all.**
 
 ## The connect-it guarantee
 
-Here is my promise. Follow the setup. If you cannot get your tools connected to the AI, I do not want you stuck and out of pocket.
+**Connected in 30 days, or I pay you.**
 
-Email support@theautomatestack.com within 30 days with a short screen recording of the steps you followed. And if I cannot give you the solution, I will give you your money back, no questions asked.
+Follow the steps. You have 30 days. If you cannot get your tools connected to the AI, email support@theautomatestack.com with a short screen recording of what you did.
 
-Heck, I will send you ₦5,000 extra for wasting your time.
+If I cannot give you the solution, you get your money back, no questions asked. Heck, I will send you ₦5,000 extra for wasting your time.
 
-That is how sure of this I am.
-
-I would rather pay you ₦5,000 than watch you sit with a half-finished setup.
+That is how sure of this I am. I would rather pay you ₦5,000 than watch you sit with a half-finished setup.
 
 ## Let us do the maths
 
@@ -227,7 +249,7 @@ Yes. I wrote every step so you can follow along even if you have never done anyt
 That is exactly who I made it for. I tell you what to do first: one pain, one setup, one week. You are not meant to do all 36 at once.
 
 **What does founding member mean?**
-You are joining while the community is small, so you get first-hand help from me. The price goes up later, and the community will become a paid membership. As a founding member, you never pay a monthly fee. Free for life.
+You are joining while the community is small, so you get first-hand help from me. The first 20 founding members also get a one-on-one onboarding call with me. The price goes up later, and the community will become a paid membership. As a founding member, you never pay a monthly fee. Free for life.
 
 **I do not have time. How long does each setup take?**
 Most setups take 10 to 30 minutes. Do one tonight and you will see for yourself what you get back.
@@ -262,7 +284,18 @@ The AutoStack Starter Kit is going for the founding member price of ~~₦50,000~
 
 Pick one pain. Open one setup. Be done tonight.
 
-The founding member price goes up, and today is the cheapest day to start.
+**Here is what you get today:**
+
+- **The AutoStack Starter Kit** with all 36 setups
+- **Bonus 1:** The Where-Do-I-Start Call, one-on-one with me (worth ₦25,000, first 20 founding members only)
+- **Bonus 2:** Fix-It Live Classes (worth ₦30,000)
+- **Bonus 3:** The Founding Member Community, free for life (worth ₦25,000)
+- **Bonus 4:** The 5-Minute Start Here Video (worth ₦15,000)
+- **Bonus 5:** Your Own Partner Link (worth Priceless)
+
+**₦95,000 in bonuses. Yours free.**
+
+The founding member price goes up, and today is the cheapest day to start. Only 5 of 20 founding spots left.
 
 And you are covered by the connect-it guarantee. If I cannot get your tools connected, you get your money back plus ₦5,000.
 

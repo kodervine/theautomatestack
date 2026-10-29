@@ -63,7 +63,7 @@ This is where AI helps. Give it three things: a sample of how you normally write
 
 Then read them. Change anything that does not sound like you. Do not send a message you have not read. A reminder with the wrong amount in it is worse than a late one.
 
-Use the client's first name and the invoice number. Leave out bank details and anything private. The rules in [what should I never paste into an AI tool](/blog/what-should-i-never-paste-into-an-ai-tool/) apply here too.
+Use the client's first name and the invoice number. Leave out bank details and anything private.
 
 ## Keep one simple list
 

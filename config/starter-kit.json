@@ -10,7 +10,7 @@
     },
     {
       "question": "What does founding member mean?",
-      "answer": "You are joining while the community is small, so you get first-hand help from me. The price goes up later, and the community will become a paid membership. As a founding member, you never pay a monthly fee. Free for life."
+      "answer": "You are joining while the community is small, so you get first-hand help from me. The first 20 founding members also get a one-on-one onboarding call with me. The price goes up later, and the community will become a paid membership. As a founding member, you never pay a monthly fee. Free for life."
     },
     {
       "question": "I do not have time. How long does each setup take?",
@@ -52,5 +52,43 @@
   "guarantee_bonus": "₦5,000",
   "guarantee_days": "30",
   "price_was": "₦50,000",
-  "price_now": "₦20,000"
+  "price_now": "₦20,000",
+  "founding_cap": 20,
+  "founding_taken": 15,
+  "stack": {
+    "bonuses": [
+      {
+        "title": "The Where-Do-I-Start Call. One-on-one with me.",
+        "text": "You get on a call with me. I ask about your business, I understand your use case, and you stop guessing. No more three tabs open and no plan.",
+        "value": 25000,
+        "only_while_spots": true,
+        "short": "The Where-Do-I-Start Call, one-on-one with me"
+      },
+      {
+        "title": "Fix-It Live Classes",
+        "text": "Stuck on a step? Bring your screen to a weekend live class and we fix your setup together. Miss it? The replay goes on the setup page, so you can watch again.",
+        "value": 30000,
+        "short": "Fix-It Live Classes"
+      },
+      {
+        "title": "The Founding Member Community, free for life",
+        "text": "People who get stuck alone quit. In here you are not alone. Ask me when you hit a wall, and see what other business owners are building. The community becomes a paid membership later. You will never pay a monthly fee.",
+        "value": 25000,
+        "short": "The Founding Member Community, free for life"
+      },
+      {
+        "title": "The 5-Minute Start Here Video",
+        "text": "Watch it once. You will know exactly which setup to open first. The \"where do I even start?\" question is gone in five minutes.",
+        "value": 15000,
+        "short": "The 5-Minute Start Here Video"
+      },
+      {
+        "title": "Your Own Partner Link",
+        "text": "Know a business owner buried under the same ten jobs? Share your link. Every person who joins through it earns you a 30% partner share, forever. No cap on how many people you bring.",
+        "value": "Priceless",
+        "short": "Your Own Partner Link"
+      }
+    ]
+  },
+  "core": "36 setups that connect AI to the tools you already use. Every prompt is already written. Every setup has a test checklist, so you know it works before you trust it. You open one, follow along, and be done tonight. And I keep adding new setups."
 }

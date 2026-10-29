@@ -57,6 +57,32 @@ function reviewsHtml(cfg, ids) {
   return `<div class="proof-list">${figs.join("")}</div>`;
 }
 
+/** The offer: what the kit is, then each bonus in its own block with its worth. Numbers and text come from config/starter-kit.json. */
+function stackHtml(kit, spotsLeft, taken, cap) {
+  const money = (n) => "\u20a6" + Number(n).toLocaleString("en-US");
+  const bonuses = (kit.stack.bonuses || []).filter((b) => !b.only_while_spots || spotsLeft > 0);
+  const total = bonuses.reduce((sum, b) => sum + (typeof b.value === "number" ? b.value : 0), 0);
+  const blocks = bonuses.map((b, i) => {
+    const scarcity = b.only_while_spots ? " Only for the first " + cap + " founding members. " + taken + " of " + cap + " spots are gone. " + spotsLeft + " left. When they are gone, they are gone." : "";
+    const value = typeof b.value === "number" ? money(b.value) : esc(b.value);
+    return `<div class="bonus-card"><p class="bonus-label">Bonus ${i + 1}</p><h3>${esc(b.title)}</h3><p>${esc(b.text)}${esc(scarcity)}</p><p class="bonus-value">Worth ${value}. Yours free.</p></div>`;
+  }).join("");
+  return `<p class="core-line"><strong>The AutoStack Starter Kit.</strong> ${esc(kit.core)}</p><h3 class="bonus-heading">You are getting in early, so you get these on top. Free.</h3>${blocks}<div class="bonus-total"><p>Add it up. The bonuses alone are worth <strong>${money(total)}</strong>.</p><p>You are not paying ${money(total)}. You are not even paying the regular ${esc(kit.price_was)} for the kit.</p><p>Today, as a founding member, you pay just <strong>${esc(kit.price_now)}</strong>. The kit and every bonus.</p></div>`;
+}
+
+/** The closing recap: the kit and every bonus again, with its worth, right before the buy button. */
+function recapHtml(kit, spotsLeft) {
+  const money = (n) => "\u20a6" + Number(n).toLocaleString("en-US");
+  const bonuses = (kit.stack.bonuses || []).filter((b) => !b.only_while_spots || spotsLeft > 0);
+  const total = bonuses.reduce((sum, b) => sum + (typeof b.value === "number" ? b.value : 0), 0);
+  const li = bonuses.map((b, i) => {
+    const worth = typeof b.value === "number" ? money(b.value) : esc(b.value);
+    const only = b.only_while_spots ? ", first 20 founding members only" : "";
+    return `<li><strong>Bonus ${i + 1}:</strong> ${esc(b.short || b.title)} <span>(worth ${worth}${only})</span></li>`;
+  }).join("");
+  return `<div class="recap"><p class="recap-title">Here is what you get today:</p><ul class="tick-list"><li><strong>The AutoStack Starter Kit</strong> with all 36 setups</li>${li}</ul><p class="recap-total">${money(total)} in bonuses. Yours free.</p></div>`;
+}
+
 function videoHtml(s) {
   if (s.video_url) {
     return `<div class="video-single"><video controls playsinline preload="metadata" aria-label="${esc(s.short_name)}: the setup working, start to finish"><source src="${esc(s.video_url)}" type="video/mp4"></video></div>`;
@@ -94,6 +120,14 @@ export function buildPages({ out, site, posts, drafts }) {
 
   const kit = readStarterKit();
   const reviewsCfg = readReviews();
+  // Founding member spots. Update founding_taken in config/starter-kit.json whenever someone joins.
+  const foundingCap = Number(kit.founding_cap) || 0;
+  const foundingTaken = Number(kit.founding_taken) || 0;
+  const spotsLeft = Math.max(0, foundingCap - foundingTaken);
+  const scarcityLine = foundingCap && spotsLeft > 0 ? `Only ${spotsLeft} of ${foundingCap} founding spots left` : "";
+  const onboardingLine = !foundingCap ? "" : spotsLeft > 0
+    ? `The first ${foundingCap} founding members also get a one-on-one onboarding call with me, so I understand your use case. ${foundingTaken} are in. ${spotsLeft} spots left.`
+    : `The first ${foundingCap} founding members got a one-on-one onboarding call with me. Those spots are full.`;
   const kitFaqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -129,7 +163,7 @@ export function buildPages({ out, site, posts, drafts }) {
       title: `The AutoStack Starter Kit | ${site.publisher_name}`,
       description: "36 ready-to-run AI setups for your content, inbox, DMs and video editing, with prompts, a test checklist and community access.",
       jsonld: jsonLdScripts(kitFaqSchema),
-      extra: { faqs: kit.faqs.map((f, i) => ({ ...f, open: i === 0 ? " open" : "" })), header_note: "The AutoStack Starter Kit", guarantee_bonus: kit.guarantee_bonus, guarantee_days: kit.guarantee_days, price_was: kit.price_was, price_now: kit.price_now, trust: [], buy_href: site.starter_kit_url, pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product", value: Number(String(kit.price_now).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\u003c"), reviews_title: reviewsCfg.title, reviews_intro: reviewsCfg.intro, reviews_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_top), reviews_more_title: reviewsCfg.more_title, reviews_more_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_more), reviews_community_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_community) },
+      extra: { faqs: kit.faqs.map((f, i) => ({ ...f, open: i === 0 ? " open" : "" })), header_note: "The AutoStack Starter Kit", guarantee_bonus: kit.guarantee_bonus, guarantee_days: kit.guarantee_days, price_was: kit.price_was, price_now: kit.price_now, scarcity_line: scarcityLine, onboarding_line: onboardingLine, stack_html: stackHtml(kit, spotsLeft, foundingTaken, foundingCap), recap_html: recapHtml(kit, spotsLeft), trust: [], buy_href: site.starter_kit_url, pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product", value: Number(String(kit.price_now).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\u003c"), reviews_title: reviewsCfg.title, reviews_intro: reviewsCfg.intro, reviews_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_top), reviews_more_title: reviewsCfg.more_title, reviews_more_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_more), reviews_community_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_community) },
     },
     ...setups.map((s) => ({
       path: `/setups/${s.slug}/`,
