@@ -1,0 +1,124 @@
+<section class="section" id="inside">
+  <div class="wrap read-wide reveal">
+    <h2>{{pillars_title}}</h2>
+    <p>Here is what that looks like, one job at a time.</p>
+    <div class="pillars">
+{{#each pillars}}      <div class="pillar">
+        <p class="pillar-name">{{name}}</p>
+        <p class="pillar-old"><span>Before</span> {{old}}</p>
+        <p class="pillar-new"><span>After</span> {{new}}</p>
+      </div>
+{{/each}}    </div>
+{{> kit-cta}}
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap read-wide prose reveal">
+    <h2>How it works. It is shorter than you think.</h2>
+    <ol class="steps">
+      <li>Pick the one job that annoys you most this week. Just one.</li>
+      <li>Watch the 5-minute Start Here video. It shows you how to connect your apps, including Notion, Gmail, Canva and Trello. The same steps work for most CRM and database tools.</li>
+      <li>Run the template. Tick the checklist. Most take 10 to 30 minutes.</li>
+    </ol>
+    <p>That is it. No coding. No new dashboard. No month-long course.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap read-wide prose reveal">
+    <h2>Three questions you are about to ask</h2>
+    <ul class="objections">
+      <li><strong>Do I need to code?</strong> No. Layers 1 to 3 need no code at all. If you can copy, paste and follow a 5-minute video, you are qualified.</li>
+      <li><strong>Do I need paid tools?</strong> Some setups do. Each one tells you up front, and the free options come first.</li>
+      <li><strong>What if I get stuck?</strong> You bring your screen to a weekend live class, or you ask in the community. And if it still will not connect, the guarantee below pays you.</li>
+    </ul>
+{{> kit-cta}}
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="wrap read-wide prose prose--dark reveal">
+    <h2>Here is everything you get</h2>
+    {{{stack_html}}}
+    <p class="not-all">That's not all.</p>
+    <h2>The connect-it guarantee</h2>
+    <p><strong>Connected in {{guarantee_days}} days, or I pay you.</strong></p>
+    <p>Here is my promise, and I mean every word.</p>
+    <p>Set it up today. Most templates take 10 to 30 minutes. Busy? Take up to {{guarantee_days}} days. The guarantee covers every one of them.</p>
+    <p>Follow the steps. If your tools still will not connect, email <a href="mailto:{{contact_email}}">{{contact_email}}</a> with a short screen recording of what you did. I will try to fix it with you first. If I cannot, you get every naira back, no questions asked.</p>
+    <p><strong>And you keep the kit.</strong> Every template, every prompt, every checklist. One tool misbehaving does not make the others useless.</p>
+    <p>Heck, I will send you {{guarantee_bonus}} extra for wasting your time.</p>
+    <p>That is how sure I am. I would rather pay you {{guarantee_bonus}} than watch you sit with a half-finished setup.</p>
+    <p class="price-line"><s>{{price_was}}</s> <strong>{{price_now}}</strong> <span>Founding member price, one time</span></p>
+    {{#if scarcity_line}}<p class="spots-left">{{scarcity_line}}</p>{{/if}}
+    <p class="actions"><a class="btn btn--big" href="{{starter_kit_url}}" rel="noopener">{{cta_label}}</a></p>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap read-wide prose reveal">
+    <h2>You will not be left on your own</h2>
+    <p>Here is how most people quit. They hit step three. Nobody is there to ask. The thing sits half finished, and they decide AI is not for them.</p>
+    <p>So I put the community inside the kit, and I am in it. You hit a wall, you ask me. We also fix setups together in the weekend live classes.</p>
+    <p><strong>{{onboarding_line}}</strong></p>
+    <p>The price goes up to {{price_was}}, and the community will become a paid membership later. As a founding member, you never pay a monthly fee. Free for life.</p>
+    {{{reviews_community_html}}}
+    <div class="faq-list">
+      <details>
+        <summary>{{reviews_more_title}}</summary>
+        {{{reviews_more_html}}}
+      </details>
+    </div>
+{{> kit-cta}}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap read-wide reveal">
+    <h2>Who built this</h2>
+    <div class="bio">
+      <img src="/assets/img/chinenye-avatar.jpg" width="112" height="112" alt="{{author_full_name}}" loading="lazy">
+      <div class="prose">
+        <p>Hi, I am Chinenye. In my day job, I am a software engineer.</p>
+        <p>On the side, I have built workflows like this for six and seven figure (USD) businesses.</p>
+        <p>I was featured by the Association for Computing Machinery (ACM), the largest academic computer science organization in the world, as an <a href="https://women.acm.org/u-rise-chinenye-anikwenze-from-an-academic-in-history-to-an-unconventional-advocate-for-responsible-and-inclusive-ai/" target="_blank" rel="noopener">advocate for responsible AI</a>. I have <a href="https://www.tonative.org/indaba-2026#:~:text=LinkedIn-,Chinenye%20Anikwenze,-Engineering%20Lead%2C%20Tonative" target="_blank" rel="noopener">organized workshops</a> at the Deep Learning Indaba, the biggest AI gathering in Africa. I was also invited to speak about AI on <a href="https://lnkd.in/p/eM7tdH-x" target="_blank" rel="noopener">a panel</a> at the annual summit of the first independent fact-checking organization in Africa, in Nairobi, fully funded.</p>
+        <p>Where I'm getting at is this...</p>
+        <p>I am the technical one, so you do not have to be. I do the technical part and show you only what you need to use it.</p>
+        <p>I am sharing this because it is what helps me work my day job, manage my clients and still show up online. You can start tonight.</p>
+      </div>
+    </div>
+{{> kit-cta}}
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap read-wide reveal">
+    <h2>Questions you may be asking</h2>
+    <div class="faq-list">
+{{#each faqs}}      <details{{{open}}}>
+        <summary>{{question}}</summary>
+        <p>{{answer}}</p>
+      </details>
+{{/each}}    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="wrap band">
+    <h2>Here is what you do next</h2>
+    <p>Pick the one job that annoys you most. Open that template. Be done tonight.</p>
+    {{{recap_html}}}
+    <p>The founding member price goes up, and today is the cheapest day to start.</p>
+    <p class="price-line"><s>{{price_was}}</s> <strong>{{price_now}}</strong> <span>Founding member price, one time</span></p>
+    {{#if scarcity_line}}<p class="spots-left">{{scarcity_line}}</p>{{/if}}
+    <p class="actions"><a class="btn btn--big" href="{{starter_kit_url}}" rel="noopener">{{cta_label}}</a></p>
+    <p class="fine">P.S. You risk nothing. If I cannot get your tools connected in {{guarantee_days}} days, you get your money back plus {{guarantee_bonus}}, and you keep the kit.</p>
+    {{#if scarcity_line}}<p class="fine">P.P.S. {{scarcity_line}}. After that, the price goes up to {{price_was}}.</p>{{/if}}
+    <p class="fine">P.P.P.S. Not sure where to start? Pick the thing that annoys you most this week and open that template first. Most take 10 to 30 minutes. That is all it takes to see if this is for you.</p>
+  </div>
+</section>
+
+<div class="sticky-cta" aria-hidden="false">
+  <a class="btn btn--big" href="{{starter_kit_url}}" rel="noopener">{{cta_label}}</a>
+</div>

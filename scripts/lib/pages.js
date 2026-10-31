@@ -11,7 +11,21 @@ export function readFreebies() {
 }
 
 export function readStarterKit() {
-  return JSON.parse(fs.readFileSync(path.join(ROOT, "config", "starter-kit.json"), "utf8"));
+  const kit = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "starter-kit.json"), "utf8"));
+  // FAQ answers can use {price_now}, {price_was}, {guarantee_bonus}, {guarantee_days}, {partner_per} and {founding_cap}.
+  const num = (s) => Number(String(s).replace(/[^0-9]/g, "")) || 0;
+  const naira = (n) => "\u20a6" + Number(n).toLocaleString("en-US");
+  const tokens = {
+    price_now: kit.price_now,
+    price_was: kit.price_was,
+    guarantee_bonus: kit.guarantee_bonus,
+    guarantee_days: kit.guarantee_days,
+    founding_cap: kit.founding_cap,
+    partner_per: naira(Math.round((num(kit.price_now) * (Number(kit.partner_pct) || 0)) / 100)),
+  };
+  const fill = (s) => String(s).replace(/\{(\w+)\}/g, (m, k) => (k in tokens ? tokens[k] : m));
+  kit.faqs = (kit.faqs || []).map((f) => ({ question: fill(f.question), answer: fill(f.answer) }));
+  return kit;
 }
 
 export function readSetupsConfig() {
@@ -65,7 +79,10 @@ function stackHtml(kit, spotsLeft, taken, cap) {
   const blocks = bonuses.map((b, i) => {
     const scarcity = b.only_while_spots ? " Only for the first " + cap + " founding members. " + taken + " of " + cap + " spots are gone. " + spotsLeft + " left. When they are gone, they are gone." : "";
     const value = typeof b.value === "number" ? money(b.value) : esc(b.value);
-    return `<div class="bonus-card"><p class="bonus-label">Bonus ${i + 1}</p><h3>${esc(b.title)}</h3><p>${esc(b.text)}${esc(scarcity)}</p><p class="bonus-value">Worth ${value}. Yours free.</p></div>`;
+    const per = Math.round((Number(String(kit.price_now).replace(/[^0-9]/g, "")) * (Number(kit.partner_pct) || 0)) / 100);
+    const n = per ? Math.ceil(Number(String(kit.price_now).replace(/[^0-9]/g, "")) / per) : 0;
+    const partner = b.partner_math && per ? " At today's price, each person you introduce earns you " + money(per) + ". Say you introduce " + n + " business owners. That is " + money(per * n) + " back, more than you paid for the kit." : "";
+    return `<div class="bonus-card"><p class="bonus-label">Bonus ${i + 1}</p><h3>${esc(b.title)}</h3><p>${esc(b.text)}${esc(partner)}${esc(scarcity)}</p><p class="bonus-value">Worth ${value}. Yours free.</p></div>`;
   }).join("");
   return `<p class="core-line"><strong>The AutoStack Starter Kit.</strong> ${esc(kit.core)}</p><h3 class="bonus-heading">You are getting in early, so you get these on top. Free.</h3>${blocks}<div class="bonus-total"><p>Add it up. The bonuses alone are worth <strong>${money(total)}</strong>.</p><p>You are not paying ${money(total)}. You are not even paying the regular ${esc(kit.price_was)} for the kit.</p><p>Today, as a founding member, you pay just <strong>${esc(kit.price_now)}</strong>. The kit and every bonus.</p></div>`;
 }
@@ -124,6 +141,11 @@ export function buildPages({ out, site, posts, drafts }) {
   const foundingCap = Number(kit.founding_cap) || 0;
   const foundingTaken = Number(kit.founding_taken) || 0;
   const spotsLeft = Math.max(0, foundingCap - foundingTaken);
+  // Partner share maths, worked out from the price so it stays true when the price changes.
+  const priceNum = Number(String(kit.price_now).replace(/[^0-9]/g, "")) || 0;
+  const partnerPer = Math.round((priceNum * (Number(kit.partner_pct) || 0)) / 100);
+  const partnerN = partnerPer ? Math.ceil(priceNum / partnerPer) : 0;
+  const naira = (n) => "\u20a6" + Number(n).toLocaleString("en-US");
   const scarcityLine = foundingCap && spotsLeft > 0 ? `Only ${spotsLeft} of ${foundingCap} founding spots left` : "";
   const onboardingLine = !foundingCap ? "" : spotsLeft > 0
     ? `The first ${foundingCap} founding members also get a one-on-one onboarding call with me, so I understand your use case. ${foundingTaken} are in. ${spotsLeft} spots left.`
@@ -140,6 +162,15 @@ export function buildPages({ out, site, posts, drafts }) {
   // "<" is escaped so the JSON can sit safely inside a script tag.
   const setupNamesJson = JSON.stringify(Object.fromEntries(setups.map((s) => [s.slug, s.name]))).replace(/</g, "\\u003c");
   const setupNotionJson = JSON.stringify(Object.fromEntries(setups.filter((s) => /^https:\/\//.test(s.notion_url || "")).map((s) => [s.slug, s.notion_url]))).replace(/</g, "\\u003c");
+  const kitExtra = { faqs: kit.faqs.map((f, i) => ({ ...f, open: i === 0 ? " open" : "" })), header_note: "The AutoStack Starter Kit", guarantee_bonus: kit.guarantee_bonus, guarantee_days: kit.guarantee_days, price_was: kit.price_was, price_now: kit.price_now, scarcity_line: scarcityLine, partner_per: naira(partnerPer), partner_n: partnerN, partner_back: naira(partnerPer * partnerN), onboarding_line: onboardingLine, stack_html: stackHtml(kit, spotsLeft, foundingTaken, foundingCap), recap_html: recapHtml(kit, spotsLeft), trust: [], buy_href: site.starter_kit_url, pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product", value: Number(String(kit.price_now).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\u003c"), reviews_title: reviewsCfg.title, reviews_intro: reviewsCfg.intro, reviews_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_top), reviews_more_title: reviewsCfg.more_title, reviews_more_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_more), reviews_community_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_community) };
+  const kitPage = (v) => {
+    const c = kit.pages[v];
+    return {
+      hero_eyebrow: c.eyebrow || "", hero_callout: c.callout || "", hero_title: c.title, h1_class: c.title.length > 85 ? "h1-long" : "", hero_sub: c.sub, cta_label: c.cta, hero_loop: c.loop ? "1" : "", hero_card: c.loop ? "" : "1",
+      pillars_title: kit.pillars_title, pillars: kit.pillars,
+      pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product", page_variant: v, value: Number(String(kit.price_now).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\\u003c"),
+    };
+  };
   const pages = [
     {
       path: "/",
@@ -161,9 +192,21 @@ export function buildPages({ out, site, posts, drafts }) {
       template: "pages/starter-kit.html",
       layout: "base-sales.html",
       title: `The AutoStack Starter Kit | ${site.publisher_name}`,
-      description: "36 ready-to-run AI setups for your content, inbox, DMs and video editing, with prompts, a test checklist and community access.",
+      description: "36 ready-made templates that connect AI to the tools you already use: Notion, Gmail, your spreadsheets, Canva and Trello. Prompts written, a test checklist on each one.",
       jsonld: jsonLdScripts(kitFaqSchema),
-      extra: { faqs: kit.faqs.map((f, i) => ({ ...f, open: i === 0 ? " open" : "" })), header_note: "The AutoStack Starter Kit", guarantee_bonus: kit.guarantee_bonus, guarantee_days: kit.guarantee_days, price_was: kit.price_was, price_now: kit.price_now, scarcity_line: scarcityLine, onboarding_line: onboardingLine, stack_html: stackHtml(kit, spotsLeft, foundingTaken, foundingCap), recap_html: recapHtml(kit, spotsLeft), trust: [], buy_href: site.starter_kit_url, pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product", value: Number(String(kit.price_now).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\u003c"), reviews_title: reviewsCfg.title, reviews_intro: reviewsCfg.intro, reviews_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_top), reviews_more_title: reviewsCfg.more_title, reviews_more_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_more), reviews_community_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_community) },
+      extra: { ...kitExtra, ...kitPage("solution") },
+    },
+    // For visitors who feel the pain but have not yet thought of AI as the fix. Hidden from search, reached from ads.
+    {
+      path: "/reclaim-your-time/",
+      template: "pages/starter-kit-problem.html",
+      layout: "base-sales.html",
+      title: `Get 10 hours of your week back | ${site.publisher_name}`,
+      description: "Plug 36 ready-made templates into the apps you already use so your reports, expense tracking and content scheduling happen in one sitting.",
+      noindex: true,
+      canonicalPath: "/starter-kit/",
+      jsonld: jsonLdScripts(kitFaqSchema),
+      extra: { ...kitExtra, ...kitPage("problem") },
     },
     ...setups.map((s) => ({
       path: `/setups/${s.slug}/`,

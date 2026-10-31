@@ -1,0 +1,32 @@
+<section class="hero sales-hero hero--stack">
+  <div class="wrap hero-stack">
+    {{#if hero_eyebrow}}<p class="eyebrow">{{hero_eyebrow}}</p>{{/if}}
+    {{#if hero_callout}}<p class="callout">{{hero_callout}}</p>{{/if}}
+    <h1 class="{{h1_class}}">{{hero_title}}</h1>
+    <p class="lead">{{hero_sub}}</p>
+    <div class="hero-media">
+      {{#if hero_loop}}<video class="hero-loop" autoplay muted loop playsinline preload="metadata" poster="/assets/img/hero-income-loop.jpg" width="720" height="438" aria-label="A short loop. One number is changed in the Income Tracker spreadsheet and the summary updates by itself.">
+        <source src="/assets/img/hero-income-loop.mp4" type="video/mp4">
+      </video>
+      <script>if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) { document.querySelectorAll(".hero-loop").forEach(function (v) { v.removeAttribute("autoplay"); v.pause(); }); }</script>{{/if}}
+      {{#if hero_card}}<div class="portrait">
+        <img src="/assets/img/starter-kit-overview.jpg" width="900" height="1125" alt="The AutoStack Starter Kit: 36 setups in four layers. Ask has 7, Create has 5, Automate has 17 and Edit has 7." fetchpriority="high">
+      </div>{{/if}}
+    </div>
+    <p class="price-line"><s>{{price_was}}</s> <strong>{{price_now}}</strong> <span>Founding member price, one time</span></p>
+    {{#if scarcity_line}}<p class="spots-left">{{scarcity_line}}</p>{{/if}}
+    <div class="actions">
+      <a class="btn btn--big" href="{{starter_kit_url}}" rel="noopener">{{cta_label}}</a>
+      <a class="btn btn--ghost" href="#inside">See the before and after</a>
+    </div>
+    <p class="fine">Kit link and community invite sent to your email right after payment. Connected in {{guarantee_days}} days, or your money back plus {{guarantee_bonus}}.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap read-wide prose reveal">
+    <h2>{{reviews_title}}</h2>
+    {{{reviews_html}}}
+{{> kit-cta}}
+  </div>
+</section>

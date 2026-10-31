@@ -119,16 +119,16 @@
   },
   "starter_kit_top": [
     "receipts",
-    "wowed",
-    "apps-existed"
+    "wowed"
   ],
   "starter_kit_more": [
     "before",
     "ife-voice",
-    "all-needed",
-    "half-baked",
     "sochi-chat",
-    "sochi-voice"
+    "sochi-voice",
+    "apps-existed",
+    "all-needed",
+    "half-baked"
   ],
   "more_title": "More from my community",
   "starter_kit_community": [

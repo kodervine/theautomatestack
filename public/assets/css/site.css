@@ -580,3 +580,45 @@ body:has(.site-header--sales) .btn--big:focus-visible { box-shadow: 0 0 44px 8px
 .recap .tick-list { margin: 0 0 var(--space-3); }
 .recap .tick-list li span { color: rgba(251,249,244,.7); font-size: .9rem; }
 .recap .recap-total { margin: 0; font-weight: 700; color: var(--bronze); text-align: center; }
+
+/* ---------- Starter Kit pages: call-out, before and after, steps, objections ---------- */
+.callout { margin: 0 0 var(--space-3); font-family: var(--font-display); font-size: 1.3rem; font-style: italic; font-weight: 700; color: #8a5a2b; }
+.pillars { display: grid; gap: var(--space-4); margin-top: var(--space-6); }
+@media (min-width: 48rem) { .pillars { grid-template-columns: 1fr 1fr; } }
+.pillar { padding: var(--space-6); border: 1px solid rgba(116,108,97,.3); border-radius: var(--radius-lg); background: var(--white, #fff); }
+.pillar-name { margin: 0 0 var(--space-3); font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; }
+.pillar p { margin: 0 0 var(--space-3); }
+.pillar p span { display: inline-block; min-width: 4.2rem; margin-right: .4rem; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--stone); }
+.pillar-new { font-weight: 700; }
+.pillar-new span { color: #8a5a2b; }
+.steps { padding-left: 1.4rem; display: grid; gap: var(--space-3); }
+.objections { list-style: none; padding: 0; display: grid; gap: var(--space-4); }
+.objections li { padding-left: var(--space-4); border-left: 4px solid var(--bronze); }
+
+/* Problem-aware hero: a short silent loop instead of the kit card */
+.hero-loop { display: block; width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid rgba(116,108,97,.35); box-shadow: 0 12px 40px rgba(26,17,16,.18); background: var(--onyx); }
+
+/* Starter Kit pages: a centred button at the end of several sections. Phones have the fixed button, so these stay hidden there. */
+.kit-cta { display: none; }
+@media (min-width: 48rem) {
+  .kit-cta { display: block; margin: var(--space-10, 2.5rem) 0 0; text-align: center; }
+  .kit-cta .btn--big { animation: none; }
+  .kit-cta-note { margin: var(--space-3) 0 0; font-size: .85rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--stone); }
+}
+
+/* A long headline gets a smaller size, so the button still shows on the first screen */
+.hero.sales-hero h1.h1-long { font-size: clamp(1.7rem, 3.3vw, 2.5rem); line-height: 1.15; max-width: none; }
+
+/* Starter Kit hero, Alex-style: one centred column. Headline, sub-headline, visual, then price and button. */
+.hero.sales-hero.hero--stack { padding: var(--space-10, 2.5rem) 0 var(--space-12); }
+.hero-stack { text-align: center; }
+.hero-stack .eyebrow { justify-content: center; }
+.hero.sales-hero.hero--stack h1 { max-width: 26ch; margin-left: auto; margin-right: auto; font-size: clamp(1.9rem, 4.4vw, 3.1rem); line-height: 1.12; }
+.hero.sales-hero.hero--stack h1.h1-long { max-width: 32ch; font-size: clamp(1.7rem, 3.5vw, 2.6rem); }
+.hero-stack .lead { max-width: 44rem; margin-left: auto; margin-right: auto; }
+.hero-stack .hero-media { max-width: 36rem; margin: var(--space-8) auto; }
+.hero-stack .portrait { max-width: 20rem; margin: 0 auto; }
+.hero-stack .price-line { justify-content: center; }
+.hero-stack .spots-left { display: table; margin-left: auto; margin-right: auto; }
+.hero-stack .actions { justify-content: center; }
+.hero-stack .fine { max-width: 40rem; margin-left: auto; margin-right: auto; }
