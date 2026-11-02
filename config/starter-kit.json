@@ -118,20 +118,67 @@
   ],
   "pages": {
     "problem": {
-      "callout": "Still copying receipts, captions and replies by hand?",
+      "callout": "Are you tired of working 24/7 and losing your weekends to late reports, piling receipts, and next week's posts?",
       "eyebrow": "",
-      "title": "Get 10 hours of your week back by automating the apps you already use, even if you are not technical.",
-      "sub": "Plug 36 ready-made templates into your drive, spreadsheet, email, Canva, Notion and Trello so your reports, expense tracking and content scheduling happen in one sitting. Zero coding required.",
+      "title": "Get 10 hours of your week back by making the apps you already use do the work for you. Even if you are not technical.",
+      "sub": "Connect 36 simple templates to your daily apps so you can finish your reports, money tracking, and posts in one sitting. No coding needed, even if you are not technical.",
       "cta": "Get the 36 templates. Instant access",
       "loop": true
     },
     "solution": {
-      "callout": "",
-      "eyebrow": "The AutoStack Starter Kit",
-      "title": "Turn the apps you already use (Gmail, Drive, Notion, spreadsheets, Trello, Canva) into an automated system tonight. No code required.",
-      "sub": "I built the app connections, wrote the AI prompts, and added a 5-minute test checklist to every setup. Pick the one job that annoys you most, follow the video, and let your tools run the work in under 30 minutes.",
+      "callout": "Tired of using AI, only to still copy and paste everything into your work apps by hand?",
+      "eyebrow": "",
+      "title": "Connect AI directly to the apps you already use tonight. Zero coding needed.",
+      "sub": "Here is the lazy person's shortcut to using AI in 2026: Plug in 36 copy-paste templates where the prompts are already written, and a detailed setup shows you how to turn your Gmail, spreadsheets, Drive, Notion and more into an automated machine tonight.",
       "cta": "Get the 36 templates. Instant access",
       "loop": false
     }
-  }
+  },
+  "apps": [
+    {
+      "name": "Gmail",
+      "icon": "/assets/img/apps/gmail.svg"
+    },
+    {
+      "name": "Google Sheets",
+      "icon": "/assets/img/apps/googlesheets.svg"
+    },
+    {
+      "name": "Google Drive",
+      "icon": "/assets/img/apps/googledrive.svg"
+    },
+    {
+      "name": "Notion",
+      "icon": "/assets/img/apps/notion.svg"
+    },
+    {
+      "name": "Canva",
+      "icon": "/assets/img/apps/canva.svg"
+    },
+    {
+      "name": "Trello",
+      "icon": "/assets/img/apps/trello.svg"
+    },
+    {
+      "name": "Buffer",
+      "icon": "/assets/img/apps/buffer.svg"
+    },
+    {
+      "name": "Slack",
+      "icon": "/assets/img/apps/slack.svg"
+    },
+    {
+      "name": "Microsoft",
+      "icon": "/assets/img/apps/microsoft.svg"
+    },
+    {
+      "name": "Zoom",
+      "icon": "/assets/img/apps/zoom.svg"
+    },
+    {
+      "name": "Google Calendar",
+      "icon": "/assets/img/apps/googlecalendar.svg"
+    }
+  ],
+  "apps_more": "+ most CRM and database apps"
 }

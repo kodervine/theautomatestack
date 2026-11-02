@@ -4,6 +4,10 @@
     {{#if hero_callout}}<p class="callout">{{hero_callout}}</p>{{/if}}
     <h1 class="{{h1_class}}">{{hero_title}}</h1>
     <p class="lead">{{hero_sub}}</p>
+    <ul class="app-row" aria-label="Apps the templates connect">
+{{#each apps}}      <li><img src="{{icon}}" alt="" width="22" height="22"><span>{{name}}</span></li>
+{{/each}}      <li class="app-more">{{apps_more}}</li>
+    </ul>
     <div class="hero-media">
       {{#if hero_loop}}<video class="hero-loop" autoplay muted loop playsinline preload="metadata" poster="/assets/img/hero-income-loop.jpg" width="720" height="438" aria-label="A short loop. One number is changed in the Income Tracker spreadsheet and the summary updates by itself.">
         <source src="/assets/img/hero-income-loop.mp4" type="video/mp4">

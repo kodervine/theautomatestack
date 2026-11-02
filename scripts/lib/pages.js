@@ -166,7 +166,7 @@ export function buildPages({ out, site, posts, drafts }) {
   const kitPage = (v) => {
     const c = kit.pages[v];
     return {
-      hero_eyebrow: c.eyebrow || "", hero_callout: c.callout || "", hero_title: c.title, h1_class: c.title.length > 85 ? "h1-long" : "", hero_sub: c.sub, cta_label: c.cta, hero_loop: c.loop ? "1" : "", hero_card: c.loop ? "" : "1",
+      hero_eyebrow: c.eyebrow || "", hero_callout: c.callout || "", hero_title: c.title, apps: kit.apps, apps_more: kit.apps_more, h1_class: c.title.length > 85 ? "h1-long" : "", hero_sub: c.sub, cta_label: c.cta, hero_loop: c.loop ? "1" : "", hero_card: c.loop ? "" : "1",
       pillars_title: kit.pillars_title, pillars: kit.pillars,
       pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product", page_variant: v, value: Number(String(kit.price_now).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\\u003c"),
     };
@@ -202,7 +202,7 @@ export function buildPages({ out, site, posts, drafts }) {
       template: "pages/starter-kit-problem.html",
       layout: "base-sales.html",
       title: `Get 10 hours of your week back | ${site.publisher_name}`,
-      description: "Plug 36 ready-made templates into the apps you already use so your reports, expense tracking and content scheduling happen in one sitting.",
+      description: "Connect 36 simple templates to the apps you already use so your reports, money tracking and posts get done in one sitting. No coding needed.",
       noindex: true,
       canonicalPath: "/starter-kit/",
       jsonld: jsonLdScripts(kitFaqSchema),
