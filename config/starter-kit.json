@@ -156,6 +156,10 @@
       "icon": "/assets/img/apps/canva.svg"
     },
     {
+      "name": "CapCut",
+      "icon": "/assets/img/apps/capcut.svg"
+    },
+    {
       "name": "Trello",
       "icon": "/assets/img/apps/trello.svg"
     },
