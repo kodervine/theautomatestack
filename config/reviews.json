@@ -115,11 +115,54 @@
       "alt": "A WhatsApp chat. Chinenye writes: Let me know if you encounter any challenges or have any questions. A community member replies: Alright, thank you so much for your lightning speed support. Chinenye replies: Perks of being a founding member. You're most welcome. Then asks: What aspect of your work or business do you want to automate first.",
       "quote": "Thank you so much for your lightning speed support.",
       "who": "Perks of being an active member"
+    },
+    "80-done": {
+      "type": "image",
+      "layout": "card",
+      "src": "/assets/reviews/slide-80-percent-done.jpg",
+      "width": 1080,
+      "height": 1350,
+      "alt": "A WhatsApp group chat. A community member writes: My content creation is 80% done now. I have scheduled post till December 31st. However, they are all text-based but that's a good start for me. I'm hoping to get it all figured out around video, carousel, and image creation. Chinenye replies: Your pace is phenomenal. Love it love it love it.",
+      "quote": "My content creation is 80% done now. I have scheduled post till December 31st.",
+      "who": "From my community"
+    },
+    "buffer-sleek": {
+      "type": "image",
+      "layout": "card",
+      "src": "/assets/reviews/slide-buffer-sleek.jpg",
+      "width": 1080,
+      "height": 1350,
+      "alt": "A WhatsApp group chat. A community member writes: I used buffer to schedule and it was so sleek. Chinenye replies that she went to the market, still prepped some meals, and had 3 posts go out automatically across Instagram and TikTok.",
+      "quote": "I used buffer to schedule and it was so sleek.",
+      "who": "From my community"
+    },
+    "life-saver": {
+      "type": "image",
+      "layout": "card",
+      "src": "/assets/reviews/slide-life-saver.jpg",
+      "width": 1080,
+      "height": 1350,
+      "alt": "A WhatsApp group chat. Chinenye writes: I love your voice over and I can see where it's stalling with the content proper. Give me some time, let me share an efficient way you can go about it. Cos I feel Broll content would work better than the images. A community member replies: You are a life saver. Chinenye then shares a walkthrough video, a free transcript tool and a free site for short video clips (links blurred).",
+      "quote": "You are a life saver.",
+      "who": "From my community"
+    },
+    "miracle": {
+      "type": "video",
+      "layout": "card",
+      "src": "/assets/reviews/miracle-everywhere.mp4",
+      "poster": "/assets/reviews/miracle-everywhere.jpg",
+      "width": 1080,
+      "height": 1350,
+      "label": "Voice note from a community member, 9 seconds. They connected Claude to Gmail, and now it pulls the details it needs from their inbox and updates their calendar automatically.",
+      "quote": "Miracle everywhere.",
+      "who": "A community member",
+      "note": "They connected Claude to Gmail. Now it goes through the inbox, picks out the details it needs and adds them to their Google Calendar, with reminders. No more typing events in by hand."
     }
   },
   "starter_kit_top": [
     "receipts",
-    "wowed"
+    "wowed",
+    "miracle"
   ],
   "starter_kit_more": [
     "before",
@@ -128,7 +171,10 @@
     "sochi-voice",
     "apps-existed",
     "all-needed",
-    "half-baked"
+    "half-baked",
+    "80-done",
+    "buffer-sleek",
+    "life-saver"
   ],
   "more_title": "More from my community",
   "starter_kit_community": [

@@ -57,7 +57,7 @@ function reviewsHtml(cfg, ids) {
       ? `<video controls playsinline preload="none" poster="${esc(r.poster)}" width="${r.width}" height="${r.height}" aria-label="${esc(r.label)}"><source src="${esc(r.src)}" type="video/mp4"></video>`
       : `<img src="${esc(r.src)}" width="${r.width}" height="${r.height}" alt="${esc(r.alt)}" loading="lazy">`;
     const quote = r.quote ? `<q>${esc(r.quote)}</q>` : "";
-    return `<figure class="proof-item${r.layout === "card" ? " proof-item--card" : ""}">${media}<figcaption>${quote}<span>${esc(r.who)}</span></figcaption></figure>`;
+    return `<figure class="proof-item${r.layout === "card" ? " proof-item--card" : ""}">${media}<figcaption>${quote}${r.note ? `<p class="proof-note">${esc(r.note)}</p>` : ""}<span>${esc(r.who)}</span></figcaption></figure>`;
   });
   if (!figs.length) return "";
   // A run of cards sits two across. If the run is odd, the last card is centred on its own.
@@ -106,6 +106,71 @@ function videoHtml(s) {
   }
   // Only reachable in the draft preview: a ready setup cannot build without a video.
   return `<div class="video-placeholder">Demo video goes here. Add video_url in config/setups.json.</div>`;
+}
+
+/**
+ * The cold-traffic masterclass replay: a sales page and a thank-you page (config/replay.json).
+ * ready = live (needs the Selar link, the replay, the refund text and the result media). draft = built only in the draft preview.
+ */
+function replayEntries({ site, drafts }) {
+  const cfg = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "replay.json"), "utf8"));
+  if (cfg.status !== "ready" && !drafts) return [];
+  if (cfg.status === "ready") {
+    const missing = [["buy_url", cfg.buy_url], ["replay_url", cfg.replay_url || cfg.replay_embed_url], ["refund", cfg.refund], ["result_media.src", cfg.result_media && cfg.result_media.src]].filter(([, v]) => !v).map(([k]) => k);
+    if (missing.length) throw new Error(`The replay pages are marked ready but config/replay.json has no ${missing.join(", ")}, so they will not build.`);
+  }
+  const hole = (what) => `[CHINENYE: add ${what}]`;
+  const m = cfg.result_media || {};
+  const price = Number(String(cfg.price).replace(/[^0-9]/g, "")) || 0;
+  const priceLine = cfg.price + (cfg.price_usd ? ` (about ${cfg.price_usd})` : "") + ", one time";
+  const result_html = m.src
+    ? (m.type === "video"
+      ? `<div class="result-media"><video controls playsinline preload="metadata"${m.poster ? ` poster="${esc(m.poster)}"` : ""} aria-label="${esc(m.alt)}"><source src="${esc(m.src)}" type="video/mp4"></video></div>`
+      : `<div class="result-media"><img src="${esc(m.src)}" alt="${esc(m.alt)}" loading="lazy"></div>`)
+    : `<div class="video-placeholder result-media">${esc(hole("a screenshot or short recording of the sheet filling from bank alerts in config/replay.json"))}</div>`;
+  let replay_html;
+  if (/\.(mp4|webm)(\?|$)/i.test(cfg.replay_url || "")) {
+    replay_html = `<div class="replay-player"><video controls playsinline preload="metadata" aria-label="${esc(cfg.class_name)}, masterclass replay"><source src="${esc(cfg.replay_url)}"></video></div>`;
+  } else if (cfg.replay_embed_url) {
+    replay_html = `<div class="replay-player"><iframe src="${esc(cfg.replay_embed_url)}" title="${esc(cfg.class_name)}, masterclass replay" allow="fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`;
+  } else if (cfg.replay_url) {
+    replay_html = `<p class="actions"><a class="btn btn--big" href="${esc(cfg.replay_url)}" rel="noopener">Open the replay</a></p>`;
+  } else {
+    replay_html = `<div class="video-placeholder">${esc(hole("the replay link in config/replay.json"))}</div>`;
+  }
+  const common = {
+    class_name: cfg.class_name,
+    class_date: cfg.class_date,
+    pixel_json: JSON.stringify({ content_ids: [cfg.slug], content_name: cfg.class_name, content_type: "product", value: price, currency: "NGN" }).replace(/</g, "\\u003c"),
+  };
+  const withPage = (page) => ({ ...common, pixel_json: JSON.stringify({ page, ...JSON.parse(common.pixel_json) }).replace(/</g, "\\u003c") });
+  return [
+    {
+      path: `/${cfg.slug}/`,
+      template: "pages/replay.html",
+      layout: "base-replay.html",
+      title: `${cfg.class_name} | ${site.publisher_name}`,
+      description: "The replay of my live masterclass. See Claude read your bank alert emails and fill your sheet with money in and money out.",
+      noindex: true,
+      extra: {
+        ...withPage("sales"),
+        cta_label: `${cfg.cta}, ${cfg.price}`,
+        price_line: priceLine,
+        buy_href: cfg.buy_url || "#",
+        result_html,
+        refund_text: cfg.refund || hole("refund policy in config/replay.json"),
+      },
+    },
+    {
+      path: `/${cfg.slug}/thank-you/`,
+      template: "pages/replay-thanks.html",
+      layout: "base-replay.html",
+      title: `Your replay | ${site.publisher_name}`,
+      description: "Your masterclass replay from The Automate Stack.",
+      noindex: true,
+      extra: { ...withPage("thanks"), replay_html },
+    },
+  ];
 }
 
 export function buildPages({ out, site, posts, drafts }) {
@@ -171,7 +236,9 @@ export function buildPages({ out, site, posts, drafts }) {
       pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product", page_variant: v, value: Number(String(kit.price_now).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\\u003c"),
     };
   };
+  const replayPages = replayEntries({ site, drafts });
   const pages = [
+    ...replayPages,
     {
       path: "/",
       template: "pages/home.html",
