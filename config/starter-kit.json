@@ -98,8 +98,8 @@
       "callout": "Are you tired of working 24/7 and losing your weekends to late reports, piling receipts and next week's posts?",
       "eyebrow": "",
       "title": "Get 10 hours of your week back. Let AI plan your content, edit your videos and track your money, even if you are not technical.",
-      "sub": "Content and video editing, your income and expenses, and client replies. Three jobs you do by hand every week, now done by AI inside the apps you already use. No coding needed.",
-      "cta": "Hand off these 3 jobs. Instant access",
+      "sub": "Content, video editing, your income and expenses, and client replies. Four jobs you do by hand every week, now done by AI inside the apps you already use. No coding needed.",
+      "cta": "Hand off these jobs. Instant access",
       "hero_cta": "Show me how it works",
       "loop": true
     },
@@ -107,8 +107,8 @@
       "callout": "Tired of using AI, only to still copy and paste everything into your work apps by hand?",
       "eyebrow": "",
       "title": "Get 10 hours of your week back, and join the business owners who let AI do the work of a whole team.",
-      "sub": "Content and video editing, your income and expenses, and client replies. Three jobs you do by hand every week, now done by AI inside the apps you already use. No coding needed.",
-      "cta": "Hand off these 3 jobs. Instant access",
+      "sub": "Content, video editing, your income and expenses, and client replies. Four jobs you do by hand every week, now done by AI inside the apps you already use. No coding needed.",
+      "cta": "Hand off these jobs. Instant access",
       "hero_cta": "Show me how it works",
       "loop": false
     }
@@ -179,8 +179,8 @@
     }
   ],
   "hero_tap": "Tap a video to hear it",
-  "groups_title": "Three jobs you can hand off this week",
-  "groups_intro": "Most people who land here want one of these three off their plate. Pick yours. The other two come with it.",
+  "groups_title": "Four jobs you can hand off this week",
+  "groups_intro": "Most people who land here want one of these four off their plate. Pick yours. The rest come with it.",
   "groups": [
     {
       "name": "Content and social",
@@ -193,8 +193,8 @@
       "name": "Video editing",
       "old": "One video edit eating your whole Saturday, or paying an editor for every clip.",
       "new": "Raw clips turned into clean vertical videos with captions, cutaways and fixed sound, in minutes.",
-      "video": "/assets/video/hero-editing.mp4",
-      "poster": "/assets/img/hero-editing-poster.jpg"
+      "video": "/assets/video/kenya-231-clips.mp4",
+      "poster": "/assets/img/kenya-231-poster.jpg"
     },
     {
       "name": "Admin and money",
@@ -206,7 +206,9 @@
     {
       "name": "Clients and communication",
       "old": "Typing the same reply for the tenth time and chasing overdue invoices.",
-      "new": "Replies drafted, overdue invoices flagged and a daily recap sent to you."
+      "new": "Replies drafted, overdue invoices flagged and a daily recap sent to you.",
+      "video": "/assets/video/inbox-followup.mp4",
+      "poster": "/assets/img/inbox-followup-poster.jpg"
     }
   ],
   "price_title": "What it costs"

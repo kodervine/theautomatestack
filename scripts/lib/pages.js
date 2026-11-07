@@ -232,7 +232,7 @@ export function buildPages({ out, site, posts, drafts }) {
     const c = kit.pages[v];
     return {
       hero_eyebrow: c.eyebrow || "", hero_callout: c.callout || "", hero_title: c.title, hero_clips: kit.hero_clips, hero_tap: kit.hero_tap, hero_cta: c.hero_cta, h1_class: c.title.length > 85 ? "h1-long" : "", hero_sub: c.sub, cta_label: c.cta, 
-      groups_title: kit.groups_title, groups_intro: kit.groups_intro, groups: kit.groups, price_title: kit.price_title,
+      groups_title: kit.groups_title, groups_intro: kit.groups_intro, groups: kit.groups.map((g) => ({ ...g, media_html: [[g.video, g.poster], [g.video2, g.poster2]].filter((m) => m[0]).map((m) => `<video class="pillar-video" controls playsinline preload="none" poster="${m[1]}"><source src="${m[0]}" type="video/mp4"></video>`).join("") })), price_title: kit.price_title,
       pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product", page_variant: v, value: Number(String(kit.price_now).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\\u003c"),
     };
   };
