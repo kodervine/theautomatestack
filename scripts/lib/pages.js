@@ -231,8 +231,8 @@ export function buildPages({ out, site, posts, drafts }) {
   const kitPage = (v) => {
     const c = kit.pages[v];
     return {
-      hero_eyebrow: c.eyebrow || "", hero_callout: c.callout || "", hero_title: c.title, apps: kit.apps, apps_more: kit.apps_more, h1_class: c.title.length > 85 ? "h1-long" : "", hero_sub: c.sub, cta_label: c.cta, hero_loop: c.loop ? "1" : "", hero_card: c.loop ? "" : "1",
-      pillars_title: kit.pillars_title, pillars: kit.pillars,
+      hero_eyebrow: c.eyebrow || "", hero_callout: c.callout || "", hero_title: c.title, hero_clips: kit.hero_clips, hero_tap: kit.hero_tap, hero_cta: c.hero_cta, h1_class: c.title.length > 85 ? "h1-long" : "", hero_sub: c.sub, cta_label: c.cta, 
+      groups_title: kit.groups_title, groups_intro: kit.groups_intro, groups: kit.groups, price_title: kit.price_title,
       pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product", page_variant: v, value: Number(String(kit.price_now).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\\u003c"),
     };
   };

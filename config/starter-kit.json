@@ -93,44 +93,23 @@
   },
   "core": "36 setups that connect AI to the tools you already use. Every prompt is already written. Every setup has a test checklist, so you know it works before you trust it. You open one, follow along, and be done tonight. And I keep adding new setups.",
   "partner_pct": 30,
-  "pillars_title": "Your week, before and after",
-  "pillars": [
-    {
-      "name": "Ask",
-      "old": "Staring at a blank page, deciding what to write or where to start.",
-      "new": "AI that already knows your business and your voice, so you start from a draft."
-    },
-    {
-      "name": "Create",
-      "old": "Planning posts at 9 PM and writing every caption from scratch.",
-      "new": "A month of posts planned in one sitting, with hooks and captions in your voice."
-    },
-    {
-      "name": "Automate",
-      "old": "Copying bank alerts, receipts and lead details into spreadsheets line by line.",
-      "new": "Your inbox and spreadsheets connected, so your income summary, overdue invoices and daily recap arrive on their own."
-    },
-    {
-      "name": "Edit",
-      "old": "One video edit eating your whole Saturday.",
-      "new": "A clean vertical video with captions, cutaways and fixed sound in under 30 minutes."
-    }
-  ],
   "pages": {
     "problem": {
-      "callout": "Are you tired of working 24/7 and losing your weekends to late reports, piling receipts, and next week's posts?",
+      "callout": "Are you tired of working 24/7 and losing your weekends to late reports, piling receipts and next week's posts?",
       "eyebrow": "",
-      "title": "Get 10 hours of your week back by making the apps you already use do the work for you. Even if you are not technical.",
-      "sub": "Connect 36 simple templates to your daily apps so you can finish your reports, money tracking, and posts in one sitting. No coding needed, even if you are not technical.",
-      "cta": "Get the 36 templates. Instant access",
+      "title": "Get 10 hours of your week back. Let AI plan your content, edit your videos and track your money, even if you are not technical.",
+      "sub": "Content and video editing, your income and expenses, and client replies. Three jobs you do by hand every week, now done by AI inside the apps you already use. No coding needed.",
+      "cta": "Hand off these 3 jobs. Instant access",
+      "hero_cta": "Show me how it works",
       "loop": true
     },
     "solution": {
       "callout": "Tired of using AI, only to still copy and paste everything into your work apps by hand?",
       "eyebrow": "",
-      "title": "Connect AI directly to the apps you already use tonight. Zero coding needed.",
-      "sub": "Here is the lazy person's shortcut to using AI in 2026: Plug in 36 copy-paste templates where the prompts are already written, and a detailed setup shows you how to turn your Gmail, spreadsheets, Drive, Notion and more into an automated machine tonight.",
-      "cta": "Get the 36 templates. Instant access",
+      "title": "Get 10 hours of your week back, and join the business owners who let AI do the work of a whole team.",
+      "sub": "Content and video editing, your income and expenses, and client replies. Three jobs you do by hand every week, now done by AI inside the apps you already use. No coding needed.",
+      "cta": "Hand off these 3 jobs. Instant access",
+      "hero_cta": "Show me how it works",
       "loop": false
     }
   },
@@ -184,5 +163,51 @@
       "icon": "/assets/img/apps/googlecalendar.svg"
     }
   ],
-  "apps_more": "+ most CRM and database apps"
+  "apps_more": "+ most CRM and database apps",
+  "hero_clips": [
+    {
+      "src": "/assets/video/hero-scheduling.mp4",
+      "poster": "/assets/img/hero-scheduling-poster.jpg",
+      "label": "Plan your month in one sitting",
+      "alt": "A short demo. AI plans, drafts and queues a month of posts without opening Instagram."
+    },
+    {
+      "src": "/assets/video/hero-editing.mp4",
+      "poster": "/assets/img/hero-editing-poster.jpg",
+      "label": "Edit the video in minutes",
+      "alt": "A short demo. AI edits a batch of raw videos with captions, so no editor is needed."
+    }
+  ],
+  "hero_tap": "Tap a video to hear it",
+  "groups_title": "Three jobs you can hand off this week",
+  "groups_intro": "Most people who land here want one of these three off their plate. Pick yours. The other two come with it.",
+  "groups": [
+    {
+      "name": "Content and social",
+      "old": "Planning posts at 9 PM and writing every caption from scratch.",
+      "new": "A month of posts planned, drafted and queued in one sitting, without opening Instagram.",
+      "video": "/assets/video/hero-scheduling.mp4",
+      "poster": "/assets/img/hero-scheduling-poster.jpg"
+    },
+    {
+      "name": "Video editing",
+      "old": "One video edit eating your whole Saturday, or paying an editor for every clip.",
+      "new": "Raw clips turned into clean vertical videos with captions, cutaways and fixed sound, in minutes.",
+      "video": "/assets/video/hero-editing.mp4",
+      "poster": "/assets/img/hero-editing-poster.jpg"
+    },
+    {
+      "name": "Admin and money",
+      "old": "Copying bank alerts, receipts and lead details into spreadsheets line by line.",
+      "new": "Bank alerts and expenses sorted into one sheet, with your income summary arriving on its own.",
+      "video": "/assets/video/income-tracker-teaser.mp4",
+      "poster": "/assets/img/hero-income-loop.jpg"
+    },
+    {
+      "name": "Clients and communication",
+      "old": "Typing the same reply for the tenth time and chasing overdue invoices.",
+      "new": "Replies drafted, overdue invoices flagged and a daily recap sent to you."
+    }
+  ],
+  "price_title": "What it costs"
 }

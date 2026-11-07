@@ -1,15 +1,26 @@
 <section class="section" id="inside">
   <div class="wrap read-wide reveal">
-    <h2>{{pillars_title}}</h2>
-    <p>Here is what that looks like, one job at a time.</p>
+    <h2>{{groups_title}}</h2>
+    <p>{{groups_intro}}</p>
     <div class="pillars">
-{{#each pillars}}      <div class="pillar">
+{{#each groups}}      <div class="pillar">
         <p class="pillar-name">{{name}}</p>
         <p class="pillar-old"><span>Before</span> {{old}}</p>
         <p class="pillar-new"><span>After</span> {{new}}</p>
+        {{#if video}}<video class="pillar-video" controls playsinline preload="none" poster="{{poster}}"><source src="{{video}}" type="video/mp4"></video>{{/if}}
       </div>
 {{/each}}    </div>
-{{> kit-cta}}
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="wrap read-wide prose prose--dark reveal">
+    <h2>{{price_title}}</h2>
+    <p>Everything above, one time, and the founding member community is free for life.</p>
+    <p class="price-line"><s>{{price_was}}</s> <strong>{{price_now}}</strong> <span>Founding member price, one time</span></p>
+    {{#if scarcity_line}}<p class="spots-left">{{scarcity_line}}</p>{{/if}}
+    <p class="actions"><a class="btn btn--big" href="{{starter_kit_url}}" rel="noopener">{{cta_label}}</a></p>
+    <p class="fine">Kit link and community invite sent to your email right after payment. Connected in {{guarantee_days}} days, or your money back plus {{guarantee_bonus}}.</p>
   </div>
 </section>
 
