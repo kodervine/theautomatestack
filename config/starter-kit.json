@@ -193,8 +193,8 @@
       "name": "Video editing",
       "old": "One video edit eating your whole Saturday, or paying an editor for every clip.",
       "new": "Raw clips turned into clean vertical videos with captions, cutaways and fixed sound, in minutes.",
-      "video": "/assets/video/kenya-231-clips.mp4",
-      "poster": "/assets/img/kenya-231-poster.jpg"
+      "video": "/assets/video/raw-to-clean.mp4",
+      "poster": "/assets/img/raw-to-clean-poster.jpg"
     },
     {
       "name": "Admin and money",

@@ -247,7 +247,7 @@ fbq('track', 'PageView');
         <p class="pillar-name">Video editing</p>
         <p class="pillar-old"><span>Before</span> One video edit eating your whole Saturday, or paying an editor for every clip.</p>
         <p class="pillar-new"><span>After</span> Raw clips turned into clean vertical videos with captions, cutaways and fixed sound, in minutes.</p>
-        <video class="pillar-video" controls playsinline preload="none" poster="/assets/img/kenya-231-poster.jpg"><source src="/assets/video/kenya-231-clips.mp4" type="video/mp4"></video>
+        <video class="pillar-video" controls playsinline preload="none" poster="/assets/img/raw-to-clean-poster.jpg"><source src="/assets/video/raw-to-clean.mp4" type="video/mp4"></video>
       </div>
       <div class="pillar">
         <p class="pillar-name">Admin and money</p>
@@ -437,6 +437,14 @@ fbq('track', 'PageView');
 <div class="sticky-cta" aria-hidden="false">
   <a class="btn btn--big" href="https://selar.com/6111279119" rel="noopener">Hand off these jobs. Instant access</a>
 </div>
+
+<script>/* one-at-a-time: when one video plays with sound, the others pause or go quiet */
+(function(){
+  function others(v){return Array.prototype.filter.call(document.querySelectorAll("video"),function(o){return o!==v;});}
+  function quiet(v){others(v).forEach(function(o){if(o.hasAttribute("controls")){o.pause();}else{o.muted=true;}});}
+  document.addEventListener("play",function(e){var v=e.target;if(v.tagName==="VIDEO"&&(v.hasAttribute("controls")||!v.muted)){quiet(v);}},true);
+  document.addEventListener("volumechange",function(e){var v=e.target;if(v.tagName==="VIDEO"&&!v.muted){quiet(v);}},true);
+})();</script>
 
 
   </main>

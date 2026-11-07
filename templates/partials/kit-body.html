@@ -129,3 +129,11 @@
 <div class="sticky-cta" aria-hidden="false">
   <a class="btn btn--big" href="{{starter_kit_url}}" rel="noopener">{{cta_label}}</a>
 </div>
+
+<script>/* one-at-a-time: when one video plays with sound, the others pause or go quiet */
+(function(){
+  function others(v){return Array.prototype.filter.call(document.querySelectorAll("video"),function(o){return o!==v;});}
+  function quiet(v){others(v).forEach(function(o){if(o.hasAttribute("controls")){o.pause();}else{o.muted=true;}});}
+  document.addEventListener("play",function(e){var v=e.target;if(v.tagName==="VIDEO"&&(v.hasAttribute("controls")||!v.muted)){quiet(v);}},true);
+  document.addEventListener("volumechange",function(e){var v=e.target;if(v.tagName==="VIDEO"&&!v.muted){quiet(v);}},true);
+})();</script>
