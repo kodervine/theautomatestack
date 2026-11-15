@@ -662,3 +662,17 @@ body:has(.site-header--sales) .btn--big:focus-visible { box-shadow: 0 0 44px 8px
   .hero-clip { flex: 0 0 62%; scroll-snap-align: center; }
 }
 .pillar-video { display: block; width: 100%; max-width: 15rem; height: auto; aspect-ratio: 9 / 16; margin: var(--space-4) 0 0; border-radius: var(--radius-lg); background: var(--onyx); }
+
+/* ---------- Self-serve buy block ---------- */
+.buy-block { margin: var(--space-6) 0 0; }
+.buy-regular { margin: 0 0 var(--space-2); color: rgba(251,249,244,.7); font-weight: 700; }
+.buy-regular s { text-decoration-thickness: 2px; }
+.buy-price { margin: 0 0 var(--space-4); font-weight: 700; }
+.buy-price strong { display: block; font-family: var(--font-display); font-size: 2.8rem; line-height: 1.1; color: var(--bronze); }
+.buy-price span { font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; color: rgba(251,249,244,.85); }
+.buy-block .actions { margin: 0 0 var(--space-4); }
+.buy-assure { list-style: none; padding: 0; margin: 0; font-size: .92rem; line-height: 1.5; text-align: left; max-width: 34rem; }
+.buy-assure li { position: relative; padding-left: 1.7rem; margin-bottom: var(--space-2); }
+.buy-assure li::before { content: "✓"; position: absolute; left: 0; top: 0; font-weight: 700; color: var(--bronze); }
+.band .buy-block { text-align: center; }
+.band .buy-assure { margin-left: auto; margin-right: auto; }

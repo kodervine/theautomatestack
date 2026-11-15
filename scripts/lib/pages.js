@@ -21,6 +21,7 @@ export function readStarterKit() {
     guarantee_bonus: kit.guarantee_bonus,
     guarantee_days: kit.guarantee_days,
     founding_cap: kit.founding_cap,
+    community_yearly: naira((kit.stack.bonuses.find((b) => b.community) || {}).value || 0),
     partner_per: naira(Math.round((num(kit.price_now) * (Number(kit.partner_pct) || 0)) / 100)),
   };
   const fill = (s) => String(s).replace(/\{(\w+)\}/g, (m, k) => (k in tokens ? tokens[k] : m));
@@ -82,7 +83,7 @@ function stackHtml(kit, spotsLeft, taken, cap) {
     const per = Math.round((Number(String(kit.price_now).replace(/[^0-9]/g, "")) * (Number(kit.partner_pct) || 0)) / 100);
     const n = per ? Math.ceil(Number(String(kit.price_now).replace(/[^0-9]/g, "")) / per) : 0;
     const partner = b.partner_math && per ? " At today's price, each person you introduce earns you " + money(per) + ". Say you introduce " + n + " business owners. That is " + money(per * n) + " back, more than you paid for the kit." : "";
-    return `<div class="bonus-card"><p class="bonus-label">Bonus ${i + 1}</p><h3>${esc(b.title)}</h3><p>${esc(b.text)}${esc(partner)}${esc(scarcity)}</p><p class="bonus-value">Worth ${value}. Yours free.</p></div>`;
+    return `<div class="bonus-card"><p class="bonus-label">Bonus ${i + 1}</p><h3>${esc(b.title)}</h3><p>${esc(b.text)}${esc(partner)}${esc(scarcity)}</p><p class="bonus-value">Worth ${value}${b.value_note ? " " + esc(b.value_note) : ""}. Yours free.</p></div>`;
   }).join("");
   return `<p class="core-line"><strong>The AutoStack Starter Kit.</strong> ${esc(kit.core)}</p><h3 class="bonus-heading">You are getting in early, so you get these on top. Free.</h3>${blocks}<div class="bonus-total"><p>Add it up. The bonuses alone are worth <strong>${money(total)}</strong>.</p><p>You are not paying ${money(total)}. You are not even paying the regular ${esc(kit.price_was)} for the kit.</p><p>Today, as a founding member, you pay just <strong>${esc(kit.price_now)}</strong>. The kit and every bonus.</p></div>`;
 }
@@ -95,7 +96,7 @@ function recapHtml(kit, spotsLeft) {
   const li = bonuses.map((b, i) => {
     const worth = typeof b.value === "number" ? money(b.value) : esc(b.value);
     const only = b.only_while_spots ? ", first 20 founding members only" : "";
-    return `<li><strong>Bonus ${i + 1}:</strong> ${esc(b.short || b.title)} <span>(worth ${worth}${only})</span></li>`;
+    return `<li><strong>Bonus ${i + 1}:</strong> ${esc(b.short || b.title)} <span>(worth ${worth}${b.value_note ? " " + esc(b.value_note) : ""}${only})</span></li>`;
   }).join("");
   return `<div class="recap"><p class="recap-title">Here is what you get today:</p><ul class="tick-list"><li><strong>The AutoStack Starter Kit</strong> with all 36 setups</li>${li}</ul><p class="recap-total">${money(total)} in bonuses. Yours free.</p></div>`;
 }
@@ -227,7 +228,7 @@ export function buildPages({ out, site, posts, drafts }) {
   // "<" is escaped so the JSON can sit safely inside a script tag.
   const setupNamesJson = JSON.stringify(Object.fromEntries(setups.map((s) => [s.slug, s.name]))).replace(/</g, "\\u003c");
   const setupNotionJson = JSON.stringify(Object.fromEntries(setups.filter((s) => /^https:\/\//.test(s.notion_url || "")).map((s) => [s.slug, s.notion_url]))).replace(/</g, "\\u003c");
-  const kitExtra = { faqs: kit.faqs.map((f, i) => ({ ...f, open: i === 0 ? " open" : "" })), header_note: "The AutoStack Starter Kit", guarantee_bonus: kit.guarantee_bonus, guarantee_days: kit.guarantee_days, price_was: kit.price_was, price_now: kit.price_now, scarcity_line: scarcityLine, partner_per: naira(partnerPer), partner_n: partnerN, partner_back: naira(partnerPer * partnerN), onboarding_line: onboardingLine, stack_html: stackHtml(kit, spotsLeft, foundingTaken, foundingCap), recap_html: recapHtml(kit, spotsLeft), trust: [], buy_href: site.starter_kit_url, pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product", value: Number(String(kit.price_now).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\u003c"), reviews_title: reviewsCfg.title, reviews_intro: reviewsCfg.intro, reviews_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_top), reviews_more_title: reviewsCfg.more_title, reviews_more_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_more), reviews_community_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_community) };
+  const kitExtra = { faqs: kit.faqs.map((f, i) => ({ ...f, open: i === 0 ? " open" : "" })), header_note: "The AutoStack Starter Kit", guarantee_bonus: kit.guarantee_bonus, guarantee_days: kit.guarantee_days, price_was: kit.price_was, price_now: kit.price_now, scarcity_line: scarcityLine, community_yearly: naira((kit.stack.bonuses.find((b) => b.community) || {}).value || 0), partner_per: naira(partnerPer), partner_n: partnerN, partner_back: naira(partnerPer * partnerN), onboarding_line: onboardingLine, stack_html: stackHtml(kit, spotsLeft, foundingTaken, foundingCap), recap_html: recapHtml(kit, spotsLeft), trust: [], buy_href: site.starter_kit_url, pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product", value: Number(String(kit.price_now).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\u003c"), reviews_title: reviewsCfg.title, reviews_intro: reviewsCfg.intro, reviews_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_top), reviews_more_title: reviewsCfg.more_title, reviews_more_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_more), reviews_community_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_community) };
   const kitPage = (v) => {
     const c = kit.pages[v];
     return {

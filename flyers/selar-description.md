@@ -43,11 +43,11 @@ A PhD student in my community went from hours to minutes. [His voice note](https
 
 - One-on-one onboarding call with me. First 20 only, 15 are in, 5 spots left. Worth ₦25,000.
 - Fix-It Live Classes, with replays. Worth ₦30,000.
-- The community, free for life. Worth ₦25,000.
+- The community, free for life. Worth ₦100,000 a year.
 - The 5-Minute Start Here video. Worth ₦15,000.
 - Your own partner link, 30% forever.
 
-The bonuses alone are worth ₦95,000.
+The bonuses alone are worth ₦170,000.
 
 **Connected in 30 days, or I pay you.**
 Follow the steps. If I cannot get your tools connected, you get your money back, no questions asked, plus ₦5,000 for wasting your time. And you keep the kit.

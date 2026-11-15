@@ -16,11 +16,8 @@
 <section class="section section--dark">
   <div class="wrap read-wide prose prose--dark reveal">
     <h2>{{price_title}}</h2>
-    <p>Everything above, one time, and the founding member community is free for life.</p>
-    <p class="price-line"><s>{{price_was}}</s> <strong>{{price_now}}</strong> <span>Founding member price, one time</span></p>
-    {{#if scarcity_line}}<p class="spots-left">{{scarcity_line}}</p>{{/if}}
-    <p class="actions"><a class="btn btn--big" href="{{starter_kit_url}}" rel="noopener">{{cta_label}}</a></p>
-    <p class="fine">Kit link and community invite sent to your email right after payment. Connected in {{guarantee_days}} days, or your money back plus {{guarantee_bonus}}.</p>
+    <p>Everything above, one time. The community alone becomes {{community_yearly}} a year later, and it is free for life for founding members.</p>
+{{> kit-buy}}
   </div>
 </section>
 
@@ -61,9 +58,7 @@
     <p><strong>And you keep the kit.</strong> Every template, every prompt, every checklist. One tool misbehaving does not make the others useless.</p>
     <p>Heck, I will send you {{guarantee_bonus}} extra for wasting your time.</p>
     <p>That is how sure I am. I would rather pay you {{guarantee_bonus}} than watch you sit with a half-finished setup.</p>
-    <p class="price-line"><s>{{price_was}}</s> <strong>{{price_now}}</strong> <span>Founding member price, one time</span></p>
-    {{#if scarcity_line}}<p class="spots-left">{{scarcity_line}}</p>{{/if}}
-    <p class="actions"><a class="btn btn--big" href="{{starter_kit_url}}" rel="noopener">{{cta_label}}</a></p>
+{{> kit-buy}}
   </div>
 </section>
 
@@ -73,7 +68,7 @@
     <p>Here is how most people quit. They hit step three. Nobody is there to ask. The thing sits half finished, and they decide AI is not for them.</p>
     <p>So I put the community inside the kit, and I am in it. You hit a wall, you ask me. We also fix setups together in the weekend live classes.</p>
     <p><strong>{{onboarding_line}}</strong></p>
-    <p>The price goes up to {{price_was}}, and the community will become a paid membership later. As a founding member, you never pay a monthly fee. Free for life.</p>
+    <p>The price goes up to {{price_was}}, and the community will become a paid membership later at {{community_yearly}} a year. As a founding member, you never pay for it. Free for life.</p>
     {{{reviews_community_html}}}
     <h3>{{reviews_more_title}}</h3>
     {{{reviews_more_html}}}
@@ -117,11 +112,7 @@
     <p>Pick the one job that annoys you most. Open that template. Be done tonight.</p>
     {{{recap_html}}}
     <p>The founding member price goes up, and today is the cheapest day to start.</p>
-    <p class="price-line"><s>{{price_was}}</s> <strong>{{price_now}}</strong> <span>Founding member price, one time</span></p>
-    {{#if scarcity_line}}<p class="spots-left">{{scarcity_line}}</p>{{/if}}
-    <p class="actions"><a class="btn btn--big" href="{{starter_kit_url}}" rel="noopener">{{cta_label}}</a></p>
-    <p class="fine">P.S. You risk nothing. If I cannot get your tools connected in {{guarantee_days}} days, you get your money back plus {{guarantee_bonus}}, and you keep the kit.</p>
-    {{#if scarcity_line}}<p class="fine">P.P.S. {{scarcity_line}}. After that, the price goes up to {{price_was}}.</p>{{/if}}
+{{> kit-buy}}
     <p class="fine">P.P.P.S. Not sure where to start? Pick the thing that annoys you most this week and open that template first. Most take 10 to 30 minutes. That is all it takes to see if this is for you.</p>
   </div>
 </section>

@@ -26,7 +26,7 @@
     },
     {
       "question": "What does founding member mean?",
-      "answer": "You are joining while the group is small, so you get direct help from me. The first {founding_cap} founding members also get a 1-on-1 onboarding call. The kit price goes up to {price_was} later, and the community will become a paid monthly membership. Founding members never pay a monthly fee."
+      "answer": "You are joining while the group is small, so you get direct help from me. The first {founding_cap} founding members also get a 1-on-1 onboarding call. The kit price goes up to {price_was} later, and the community will become a paid membership at {community_yearly} a year. Founding members never pay for it."
     },
     {
       "question": "What if I get stuck on a step?",
@@ -72,9 +72,11 @@
       },
       {
         "title": "The Founding Member Community, free for life",
-        "text": "People who get stuck alone quit. In here you are not alone. Ask me when you hit a wall, and see what other business owners are building. The community becomes a paid membership later. You will never pay a monthly fee.",
-        "value": 25000,
-        "short": "The Founding Member Community, free for life"
+        "text": "People who get stuck alone quit. In here you are not alone. Ask me when you hit a wall, and see what other business owners are building. The community becomes a paid membership later. As a founding member, you never pay for it.",
+        "value": 100000,
+        "short": "The Founding Member Community, free for life",
+        "value_note": "a year",
+        "community": true
       },
       {
         "title": "The 5-Minute Start Here Video",
@@ -99,7 +101,7 @@
       "eyebrow": "",
       "title": "Get 10 hours of your week back. Let AI plan your content, edit your videos and track your money, even if you are not technical.",
       "sub": "Content, video editing, your income and expenses, and client replies. Four jobs you do by hand every week, now done by AI inside the apps you already use. No coding needed.",
-      "cta": "Hand off these jobs. Instant access",
+      "cta": "Get Instant Access Now",
       "hero_cta": "Show me how it works",
       "loop": true
     },
@@ -108,7 +110,7 @@
       "eyebrow": "",
       "title": "Get 10 hours of your week back, and join the business owners who let AI do the work of a whole team.",
       "sub": "Content, video editing, your income and expenses, and client replies. Four jobs you do by hand every week, now done by AI inside the apps you already use. No coding needed.",
-      "cta": "Hand off these jobs. Instant access",
+      "cta": "Get Instant Access Now",
       "hero_cta": "Show me how it works",
       "loop": false
     }

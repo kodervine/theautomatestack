@@ -1,0 +1,11 @@
+    <div class="buy-block">
+      <p class="buy-regular">Regular Price: <s>{{price_was}}</s></p>
+      <p class="buy-price">Founding Member Price: <strong>{{price_now}}</strong> <span>(One-Time Payment)</span></p>
+      {{#if scarcity_line}}<p class="spots-left">{{scarcity_line}}</p>{{/if}}
+      <p class="actions"><a class="btn btn--big" href="{{starter_kit_url}}" rel="noopener">{{cta_label}}</a></p>
+      <ul class="buy-assure">
+        <li>Supports Instant Automated Bank Transfer, Card &amp; USSD at checkout</li>
+        <li>Kit link + community invite sent automatically to your email the second payment clears</li>
+        <li>Backed by the {{guarantee_days}}-Day Connect-It Guarantee (100% refund + {{guarantee_bonus}})</li>
+      </ul>
+    </div>

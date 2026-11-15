@@ -157,6 +157,25 @@
       "quote": "Miracle everywhere.",
       "who": "A community member",
       "note": "He connected Claude to Gmail. Now it goes through the inbox, picks out the details it needs and adds them to their Google Calendar, with reminders. No more typing events in by hand."
+    },
+    "daily-9pm": {
+      "type": "image",
+      "src": "/assets/reviews/daily-9pm-tracker.png",
+      "width": 802,
+      "height": 418,
+      "alt": "A WhatsApp chat. A community member says it now runs automatically every 9 pm, pulls all the receipts for the day and sends a notification that it is done. She adds a phone notification from the AI and writes: This is what AI automation can do. I scheduled with ChatGPT, and it updated my client's tracker from email to sheets. I only go through to ensure things are in order.",
+      "quote": "I scheduled with ChatGPT, and it updated my client's tracker from email to sheets. I only go through to ensure things are in order.",
+      "who": "A member in my community"
+    },
+    "receipts-9pm": {
+      "type": "image",
+      "layout": "card",
+      "src": "/assets/reviews/slide-receipts-9pm.jpg",
+      "width": 1080,
+      "height": 1350,
+      "alt": "A WhatsApp group chat. A community member writes: Yes, every 9 pm, it pulls all the receipts for the day and sends me a notification that it's done. They share a notification and write: This is what AI automation can do. I scheduled with ChatGPT, and it updated my client's tracker from email to sheets. I only go through to ensure things are in order.",
+      "quote": "Every 9 pm, it pulls all the receipts for the day and sends me a notification that it's done.",
+      "who": "From my community"
     }
   },
   "starter_kit_top": [
@@ -168,13 +187,15 @@
     "before",
     "ife-voice",
     "sochi-chat",
+    "daily-9pm",
     "sochi-voice",
     "apps-existed",
     "all-needed",
     "half-baked",
     "80-done",
     "buffer-sleek",
-    "life-saver"
+    "life-saver",
+    "receipts-9pm"
   ],
   "more_title": "More from my community",
   "starter_kit_community": [
