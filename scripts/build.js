@@ -11,7 +11,7 @@ import {
 import { loadAllPosts, sitePosts, tagSlug } from "./lib/posts.js";
 import { renderPage } from "./lib/template.js";
 import { renderMarkdown, ctaItems, faqHtml, articleJsonLd, faqJsonLd, jsonLdScripts, navMarkup } from "./lib/render.js";
-import { buildPages, injectIntoHandWrittenPages, readPositioning } from "./lib/pages.js";
+import { buildPages, injectIntoHandWrittenPages, readPositioning, orgSchema } from "./lib/pages.js";
 
 const KEEP_IN_BLOG = new Set(["images"]); // downloaded Notion images must survive rebuilds
 const SKIP_DIRS = new Set(["blog", "assets", "api"]);
@@ -92,7 +92,7 @@ export function build({ out = PUBLIC, drafts = false, quiet = false } = {}) {
   const noindex = drafts ? "noindex, nofollow" : "";
   const pageCommon = (extra) => ({
     ...base, robots: noindex, og_type: "website", og_image: `${site.site_url}${site.default_og_image}`,
-    prev_next_links: "", article_meta: "", jsonld: "", ...extra,
+    prev_next_links: "", article_meta: "", jsonld: noindex ? "" : jsonLdScripts(orgSchema(site)), ...extra,
   });
 
   // Posts
@@ -125,7 +125,7 @@ export function build({ out = PUBLIC, drafts = false, quiet = false } = {}) {
       og_type: "article",
       og_image: image,
       article_meta: articleMeta,
-      jsonld: jsonLdScripts(articleJsonLd(p, site, canonical, image), p.faqs.length ? faqJsonLd(p, canonical) : null),
+      jsonld: jsonLdScripts(orgSchema(site), articleJsonLd(p, site, canonical, image), p.faqs.length ? faqJsonLd(p, canonical) : null),
       title: p.title,
       summary: p.summary,
       date: p.date,

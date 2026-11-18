@@ -26,7 +26,7 @@ export function ctaItems(site) {
 }
 
 export function socialLinks(site) {
-  return [site.instagram_url, site.tiktok_url, site.youtube_url].filter((u) => u && !/^TODO/i.test(u));
+  return [...new Set([site.instagram_url, site.tiktok_url, site.youtube_url, ...(site.same_as_extra || [])])].filter((u) => u && !/^TODO/i.test(u));
 }
 
 export function faqHtml(faqs) {

@@ -29,6 +29,23 @@ export function readStarterKit() {
   return kit;
 }
 
+/** The Organization JSON-LD block, put on every page so each one names the same entity. */
+export function orgSchema(site) {
+  const pos = readPositioning();
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${site.site_url}/#organization`,
+    name: site.publisher_name,
+    url: `${site.site_url}/`,
+    logo: `${site.site_url}${site.logo_path}`,
+    description: pos.entity_statement,
+    knowsAbout: pos.knows_about,
+    founder: { "@type": "Person", name: site.founder_name || site.author_full_name },
+    sameAs: socialLinks(site),
+  };
+}
+
 /** Entity statement, the four service pillars and the buyer FAQs for the home page and the Organization schema. */
 export function readPositioning() {
   return JSON.parse(fs.readFileSync(path.join(ROOT, "config", "positioning.json"), "utf8"));
@@ -198,16 +215,7 @@ export function buildPages({ out, site, posts, drafts }) {
 
   const latest = posts.slice(0, 3).map((p) => ({ url: `/blog/${p.slug}/`, title: p.title, summary: p.summary }));
   const pos = readPositioning();
-  const org = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: site.publisher_name,
-    url: `${site.site_url}/`,
-    logo: `${site.site_url}${site.logo_path}`,
-    description: pos.entity_statement,
-    knowsAbout: pos.knows_about,
-    sameAs: socialLinks(site),
-  };
+  const org = orgSchema(site);
   const resolveHref = (h) => (String(h).startsWith("site:") ? site[String(h).slice(5)] : h);
   const linkHtml = (l) => {
     if (!l) return "";
@@ -377,7 +385,7 @@ export function buildPages({ out, site, posts, drafts }) {
       og_title: pg.title,
       description: pg.description,
       canonical: `${site.site_url}${pg.canonicalPath || pg.path}`,
-      jsonld: pg.jsonld || "",
+      jsonld: pg.noindex || pg.path === "/" ? pg.jsonld || "" : jsonLdScripts(org) + (pg.jsonld ? "\n  " + pg.jsonld : ""),
       robots: pg.noindex ? "noindex, nofollow" : base.robots,
     }, pg.layout);
     writeFile(pg.file ? path.join(out, pg.file) : path.join(out, pg.path.slice(1), "index.html"), html);
@@ -386,6 +394,7 @@ export function buildPages({ out, site, posts, drafts }) {
 }
 
 const PIXEL_BLOCK = /\n?<!-- meta-pixel:start -->[\s\S]*?<!-- meta-pixel:end -->\n?/g;
+const ORG_BLOCK = /\n?<!-- org-schema:start -->[\s\S]*?<!-- org-schema:end -->\n?/g;
 const NOTICE_BLOCK = /\n?<!-- meta-notice:start -->[\s\S]*?<!-- meta-notice:end -->\n?/g;
 
 /**
@@ -406,7 +415,8 @@ export function injectIntoHandWrittenPages(site) {
     if (!fs.existsSync(file)) continue;
     const before = fs.readFileSync(file, "utf8");
     if (before.includes('class="skip-link"')) continue; // generated page, already handled by the layout
-    let h = before.replace(PIXEL_BLOCK, "").replace(NOTICE_BLOCK, "");
+    let h = before.replace(PIXEL_BLOCK, "").replace(NOTICE_BLOCK, "").replace(ORG_BLOCK, "");
+    h = h.replace("</head>", () => "<!-- org-schema:start -->\n" + jsonLdScripts(orgSchema(site)) + "\n<!-- org-schema:end -->\n</head>");
     if (on) h = h.replace("</head>", () => "<!-- meta-pixel:start -->\n" + pixel + "\n<!-- meta-pixel:end -->\n</head>");
     if (notice) {
       const i = h.lastIndexOf("</footer>");
