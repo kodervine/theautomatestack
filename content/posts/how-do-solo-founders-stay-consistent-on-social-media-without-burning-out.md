@@ -20,11 +20,11 @@ faqs:
     answer: "Yes. You read and edit every piece before it goes out."
 ---
 
-Posting on three platforms is a full-time job that nobody is paying you for.
+Posting on three platforms is a full-time job nobody is paying you for.
 
-So you post for a week, get tired, disappear, feel guilty, and start again. If that is you, I am not judging. It is a very common way to burn out.
+So you post for a week, get tired, disappear, feel guilty, and start again. Low-key a cycle, abi?
 
-The problem is not discipline. It is that you are creating the same idea from scratch three times.
+I am not judging. But the problem is not discipline. You are creating the same idea from scratch three times.
 
 ![One idea or voice note branches into an Instagram caption, a LinkedIn post and a newsletter paragraph.](/blog/images/how-do-solo-founders-stay-consistent-on-social-media-without-burning-out/one-idea-many-posts.png)
 

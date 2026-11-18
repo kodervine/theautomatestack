@@ -20,11 +20,11 @@ faqs:
     answer: "That depends on your business. Many sellers share the price and a link, then ask what the buyer needs."
 ---
 
-Someone sends: "How much?" You are in the middle of packing an order, so you reply three hours later.
+Someone sends: "How much?" You are packing an order, so you reply three hours later.
 
-They say nothing. You never hear from them again.
+Silence. You never hear from them again.
 
-You think they were not serious. Most of the time, they were. They just asked someone else while you were busy.
+So you tell yourself they were not serious. Now stay with me. Most of the time they were. They just asked somebody else while you were busy.
 
 ![Three steps: a buyer asks the price, an instant reply sends a link and asks one question, you step in when they are ready.](/blog/images/why-do-people-ask-for-my-price-in-the-dms-and-never-reply-again/speed-to-lead.png)
 

@@ -56,4 +56,4 @@ See [what should happen the second a client pays you](/blog/what-should-happen-t
 4. **Automate the top three.** Start with confirmation and onboarding.
 5. **Watch for new bottlenecks.** Fix the next one.
 
-More customers should feel like progress. If they feel like punishment, check the workflow.
+More customers should feel like progress. If they feel like punishment, check the workflow, not yourself.

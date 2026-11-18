@@ -58,4 +58,4 @@ Decisions, creating, relationships, anything where your judgment is the product.
 
 To find where to start, read [how to know which tasks to automate first](/blog/how-do-i-know-which-tasks-in-my-business-to-automate-first/).
 
-Busy is not the same as productive. Your calendar will not tell you the difference. Your head will.
+Busy is not the same as productive. Your calendar will not tell you the difference. Your head will, tbh.

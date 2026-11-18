@@ -20,11 +20,9 @@ faqs:
     answer: "Your voice rules, your offers, who you serve, examples of writing you like, and things to never say."
 ---
 
-You open a blank chat. You type: "I run a small business that sells..." Again.
+You open a blank chat. "I run a small business that sells..." Again.
 
-Then you explain your tone. Your audience. What you do not want it to say. You paste an example.
-
-Twenty minutes later you have a draft that still sounds a bit generic, and you edit it for another twenty.
+Then your tone. Your audience. What it should not say. You paste an example. Twenty minutes later the draft sounds like everybody's draft, and you edit for another twenty.
 
 That is not AI being slow. That is you training a stranger every single morning.
 
@@ -56,4 +54,4 @@ The first draft will be closer. It will not be perfect. You still read it, cut w
 
 The Starter Kit has ready setups for this, with the prompts already written, if you would rather not start from nothing.
 
-You would not re-introduce yourself to a colleague every morning. Do not do it to your tools.
+You would not re-introduce yourself to a colleague every morning. Abeg, do not do it to your tools.

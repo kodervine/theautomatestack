@@ -20,11 +20,11 @@ faqs:
     answer: "Yes. That is why you check the sheet once a week. A setup that reads receipts still needs a human to glance at it."
 ---
 
-It is ten at night. You are scrolling through your bank alerts, a photo of a receipt, and three chats, trying to work out what you spent today.
+Ten at night. You should be resting. Instead you are scrolling through bank alerts, a receipt photo and three chats, trying to remember what you spent today.
 
-And the question you would ask is: why am I still doing this by hand?
+Why are you still doing this by hand? Okay oo, I know why.
 
-Most people do it by hand because the numbers come from everywhere. Bank alerts by email. Receipts on WhatsApp. A supplier's invoice as a photo. Nothing lines up, so you type it all in, one line at a time, and it eats your evening.
+The numbers come from everywhere. Bank alerts by email. Receipts on WhatsApp. A supplier's invoice as a photo. Nothing lines up, so you type it all in, one line at a time, and your evening goes.
 
 ![Three steps: a receipt or bank alert arrives, AI reads the amount and label, a row is added to your sheet.](/blog/images/how-do-i-keep-track-of-daily-expenses-and-profit-without-spreadsheet-hours/receipt-to-row.png)
 
@@ -61,4 +61,4 @@ Test it on a week of old receipts first. If it gets those right, you can trust i
 
 The Starter Kit has an Admin and money setup that does exactly this from your bank alerts. If you want it built around your own tools, [that is what a consultation is for](/services/).
 
-The sheet should work for you. If you are working for the sheet, something is wrong.
+Abeg, the sheet should work for you. Not the other way round.

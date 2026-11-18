@@ -20,11 +20,11 @@ faqs:
     answer: "The system should hand them to you. Do not let it guess on anything it does not know."
 ---
 
-Is it still available? How much is delivery? Do you ship to Abuja? How do I pay?
+"Is it still available?" "How much is delivery?" "Do you ship to Abuja?" "How do I pay?"
 
-By lunchtime you have typed those same answers many times, and you are tired of your own voice.
+By lunchtime you have typed those answers many times and you are tired of your own voice.
 
-Here is the quiet truth. Most of your customer messages are the same ten questions in different clothes.
+Here is the quiet truth. Most of your messages are the same ten questions wearing different clothes.
 
 ![Three steps: list your top ten repeat questions, write each answer once, reuse it in DMs, an FAQ page and automatic replies.](/blog/images/how-do-i-stop-answering-the-same-customer-questions-twenty-times-a-day/repeat-questions.png)
 
@@ -61,4 +61,4 @@ When a question does not match, the message should come to you with a tag. Bette
 5. **Set up saved replies.** Then a basic FAQ page.
 6. **Automate the first response.** Only for the safe ones.
 
-Your voice is worth more on the new questions than on the old ones.
+Save your voice for the new questions. The old ones can answer themselves.

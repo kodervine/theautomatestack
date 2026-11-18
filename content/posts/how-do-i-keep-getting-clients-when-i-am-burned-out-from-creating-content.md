@@ -59,4 +59,4 @@ Your best three posts from last quarter still work. Share them again with a new 
 
 The [DM automation page](/dm-automation/) explains how the capture part works.
 
-Content should start conversations. Not take your weekends.
+Content should start conversations. It should not take your weekends.

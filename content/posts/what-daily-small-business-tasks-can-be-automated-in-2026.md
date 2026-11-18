@@ -22,9 +22,9 @@ faqs:
 
 Most people think automation is for big companies with developers.
 
-Then they hear that someone's receipts file themselves, their invoices chase themselves and their first DM replies go out while they are asleep, and they wonder what else they have been doing by hand.
+Then they hear that somebody's receipts file themselves, invoices chase themselves, and first replies go out while she sleeps. And they start wondering what else they have been doing by hand.
 
-Here is a short, honest list. Seven boring tasks that can usually be put on autopilot.
+So here is a short, honest list. Seven boring tasks that can usually go on autopilot.
 
 ![Seven tasks that can run on autopilot grouped into money, messages and content.](/blog/images/what-daily-small-business-tasks-can-be-automated-in-2026/seven-tasks.png)
 

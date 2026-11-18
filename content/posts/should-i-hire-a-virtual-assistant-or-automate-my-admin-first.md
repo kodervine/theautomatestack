@@ -20,11 +20,11 @@ faqs:
     answer: "Write down everything you do for two days. The tasks you do the same way each time are the ones to automate."
 ---
 
-You are overwhelmed, so you think: I need an assistant.
+Personally, I think most people hire an assistant too early.
 
-Fair. But before you hire one, ask what you would hand over on day one.
+You are overwhelmed, so the answer looks obvious: get help. But before you hire, ask what you would hand over on day one.
 
-If the answer is "copy this from here to there, send the same message, update the sheet", you are about to pay a person to do robot work. And you will have to teach them first.
+If it is "copy this from here to there, send the same message, update the sheet", you are about to pay a person to do robot work. And you will have to teach them first.
 
 ![A simple chart. Same steps every time goes to software. Tasks that change every time go to a person.](/blog/images/should-i-hire-a-virtual-assistant-or-automate-my-admin-first/human-or-software.png)
 
@@ -60,4 +60,4 @@ It also helps to hire into a clean setup. A new assistant in a business with wri
 
 Not sure which tasks to start with? [Here is how I would pick the first one](/blog/how-do-i-know-which-tasks-in-my-business-to-automate-first/).
 
-Hire for judgment. Automate the rest. Your future assistant will thank you.
+Hire for judgment. Automate the rest. Your future assistant will thank you, trust me.

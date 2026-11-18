@@ -55,4 +55,4 @@ For the money side, what to write down every time a customer pays is a good firs
 5. **Check a daily view.** Unpaid and undelivered.
 6. **Keep chats for conversation.** Nothing else.
 
-Your memory is not a database. Stop using it as one.
+Your memory is not a database. Abeg, stop using it as one.

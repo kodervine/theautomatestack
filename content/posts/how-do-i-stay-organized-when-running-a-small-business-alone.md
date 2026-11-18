@@ -56,4 +56,4 @@ Do not build a grand system. One sheet for open orders, one for leads, a calenda
 4. **Set reminders.** Email or a calendar alert on that date.
 5. **Review once a day.** Five minutes, same time.
 
-Forgetting is not a character flaw. It is a design problem.
+Forgetting is not a character flaw. It is a design problem. Abeg, be kind to yourself.

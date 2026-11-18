@@ -20,11 +20,11 @@ faqs:
     answer: "The chain can start from the bank alert email, or from a button you press once you confirm the money."
 ---
 
-A client pays you. You see the alert. You feel good for about four seconds.
+A client pays. You see the alert. You feel good for about four seconds.
 
-Then the scramble starts. Send the welcome message. Where is the intake form? Create her folder. Add her to the sheet. Share a booking link. Oh, and reply to her question from earlier.
+Then the scramble. Send the welcome message. Where is the intake form? Create her folder. Add her to the sheet. Share the booking link. Oh, and reply to the question she asked earlier.
 
-Half of those things will happen late. One might not happen at all. And she notices.
+Half of those will happen late. One might not happen at all. And she notices.
 
 ![Payment triggers a welcome email, an intake form, a client folder, a sheet row and a booking link.](/blog/images/what-should-happen-the-second-a-client-pays-you/after-payment-chain.png)
 

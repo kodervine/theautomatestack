@@ -26,8 +26,8 @@
   "pillars": [
     {
       "id": "operations",
-      "title": "Business process automation",
-      "text": "Multi-step backend workflows that connect n8n, Make, Zapier, Google Drive, Sheets and Gmail, Klaviyo and custom webhooks, so the admin stops landing on you.",
+      "title": "Admin eating your day",
+      "text": "Business process automation: multi-step backend workflows that connect n8n, Make, Zapier, Google Drive, Sheets and Gmail, Klaviyo and custom webhooks, so the admin stops landing on you.",
       "link": {
         "label": "Book a consultation",
         "href": "site:process_consultation_url"
@@ -35,8 +35,8 @@
     },
     {
       "id": "payments",
-      "title": "Payments and money tracking",
-      "text": "Stripe, Paystack, Flutterwave, Selar and bank transfer alerts matched to the right customer and logged in Sheets or Xero. Failed payments, refunds and receipts included.",
+      "title": "Not sure where your money went",
+      "text": "Payments and money tracking: Stripe, Paystack, Flutterwave, Selar and bank transfer alerts matched to the right customer and logged in Sheets or Xero. Failed payments, refunds and receipts included.",
       "link": {
         "label": "Book a consultation",
         "href": "site:process_consultation_url"
@@ -44,8 +44,8 @@
     },
     {
       "id": "workspaces",
-      "title": "AI agents and custom workspaces",
-      "text": "Custom AI workspaces and assistants in Claude, ChatGPT and Gemini: Claude Projects, custom GPTs, Gemini Gems, plus Model Context Protocol (MCP) connectors and plugins that link them to your tools.",
+      "title": "Re-explaining your business to AI every day",
+      "text": "AI agents and custom workspaces: assistants that already know your business, in Claude, ChatGPT or Gemini. Claude Projects, custom GPTs, Gemini Gems, plus Model Context Protocol (MCP) connectors and plugins that link them to your tools.",
       "link": {
         "label": "Book a consultation",
         "href": "site:process_consultation_url"
@@ -53,8 +53,8 @@
     },
     {
       "id": "lead-capture",
-      "title": "Lead capture and onboarding",
-      "text": "Instagram DM funnels with ManyChat, plus automated checkout and client onboarding sequences from the moment someone pays.",
+      "title": "Customers ask, then disappear",
+      "text": "Lead capture and onboarding: Instagram DM funnels with ManyChat, plus automated checkout and client onboarding sequences from the moment someone pays.",
       "link": {
         "label": "See DM automation",
         "href": "/dm-automation/"
@@ -62,8 +62,8 @@
     },
     {
       "id": "websites-aeo",
-      "title": "Websites and AEO",
-      "text": "A fast business website, deployed for you, with the structured data, FAQs, robots.txt and llms.txt that help ChatGPT, Claude, Gemini and Perplexity understand and cite your business.",
+      "title": "Customers cannot find you online",
+      "text": "Websites and AEO: a fast business website, deployed for you, with the structured data, FAQs, robots.txt and llms.txt that help ChatGPT, Claude, Gemini and Perplexity understand and cite your business.",
       "link": {
         "label": "Book a consultation",
         "href": "site:process_consultation_url"
@@ -71,8 +71,8 @@
     },
     {
       "id": "education",
-      "title": "Starter kits, masterclasses and templates",
-      "text": "The AutoStack Starter Kit, live AI automation masterclasses and operational templates for founders and operators who want to set these systems up themselves.",
+      "title": "Want to set it up yourself?",
+      "text": "Starter kits, masterclasses and templates: the AutoStack Starter Kit, live AI automation masterclasses and operational templates for founders and operators who want to set these systems up themselves.",
       "link": {
         "label": "See the Starter Kit",
         "href": "/starter-kit/"

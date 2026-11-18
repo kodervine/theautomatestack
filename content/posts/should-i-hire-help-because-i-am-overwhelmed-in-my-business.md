@@ -54,4 +54,4 @@ Read [should I hire an assistant or automate first](/blog/should-i-hire-a-virtua
 4. **Run it yourself for a month.** Fix the gaps.
 5. **Then hire.** For judgment, not for copying.
 
-Do not pay someone to learn your chaos.
+Do not pay someone to learn your chaos. Fix it first, then hire. All right, anyways.

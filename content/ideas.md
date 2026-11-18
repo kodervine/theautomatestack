@@ -130,3 +130,45 @@ These were home page FAQs. Each is a better blog post.
 | How do I stop double entry across my payment app, my sheet and my accounts? | idea |
 | How do I know my business can run if I am sick, offline or travelling for a week? | idea |
 | Where is my business information stored, and what if I lose my phone or lock myself out? | idea |
+
+## Batch 4: ads, making money, AEO, running the day, starting out (drafted, voice pass applied to titles in the question form)
+One per day from 8 Dec 2026 to 9 Jan 2027, all `draft`.
+
+| Date | Question |
+|---|---|
+| 2026-12-08 | I boosted a post and got likes but no sales. What went wrong? |
+| 2026-12-09 | How do I stop wasting money on Instagram ads? |
+| 2026-12-10 | How do I keep a record of my income when customers pay by bank transfer? |
+| 2026-12-10 | People click my ad and message me, but I reply too late. How do I fix that? |
+| 2026-12-11 | How do I know which ad actually made me sales? |
+| 2026-12-12 | How do I write ad copy that sells when I am not a writer? |
+| 2026-12-13 | How can I make ad images without paying a designer every time? |
+| 2026-12-14 | How much should a small business spend on ads before it sees a result? |
+| 2026-12-15 | How do I test two ads without wasting my budget? |
+| 2026-12-16 | Can AI run my ads for me, and what should I never hand over? |
+| 2026-12-17 | How do I keep track of content for several clients without missing anything? |
+| 2026-12-17 | What should I do with the people who messaged from my ad but did not buy? |
+| 2026-12-18 | Why am I getting inquiries but few payments? |
+| 2026-12-19 | How do I get customers to pay on time without chasing them? |
+| 2026-12-20 | How do I get repeat customers instead of always looking for new ones? |
+| 2026-12-21 | How do I price my product when costs keep rising? |
+| 2026-12-22 | How do I follow up with customers after they buy so they buy again? |
+| 2026-12-23 | How do customers find my business when they ask ChatGPT or Google instead of scrolling Instagram? |
+| 2026-12-24 | How do I get my business mentioned by ChatGPT, Claude, Gemini and Perplexity? |
+| 2026-12-24 | Is it safe to let AI write and design my clients' content? |
+| 2026-12-25 | What should be on my website so AI tools understand what my business does? |
+| 2026-12-26 | Do I need a website if my customers find me on Instagram and WhatsApp? |
+| 2026-12-27 | How do I get customers from Google without paying for ads? |
+| 2026-12-28 | What questions should my business answer on its website so customers find me? |
+| 2026-12-29 | How do I check if AI tools are recommending my business? |
+| 2026-12-30 | How do I track money from transfers, POS and cash in one place? |
+| 2026-12-31 | Why is my account balance not matching my sales? |
+| 2027-01-01 | How do I know what to pay myself from my business? |
+| 2027-01-02 | How do I separate business money from personal money? |
+| 2027-01-03 | How do I run my business from my phone without things falling apart? |
+| 2027-01-04 | What do I do when my staff is not following my process? |
+| 2027-01-05 | How do I keep my business running when there is no light or the network is bad? |
+| 2027-01-06 | Is AI only for people who can code? |
+| 2027-01-07 | I do not have time to learn new tools. Where do I start? |
+| 2027-01-08 | Will using AI make my business look fake? |
+| 2027-01-09 | What is the cheapest way to start using AI in my business this week? |

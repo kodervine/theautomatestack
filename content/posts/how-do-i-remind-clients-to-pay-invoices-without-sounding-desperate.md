@@ -20,11 +20,11 @@ faqs:
     answer: "The same idea applies. A short message with a fresh payment link, sent soon after, recovers some of them."
 ---
 
-You sent the invoice. It is now late. You open WhatsApp to write a reminder and stare at the screen.
+The invoice is late. You open WhatsApp to write a reminder and just stare at the screen.
 
-How do you say "please pay me" without sounding desperate, or rude, or like you are about to cry?
+How do you say "please pay me" without sounding desperate, or rude, or like somebody about to cry?
 
-The honest answer: you do not write it that day. You write it once, when you are calm.
+You do not write it that day. You write it once, when you are calm.
 
 ![A timeline with three reminders. Day 1 a friendly nudge, day 7 a clear reminder, day 14 a firm final notice.](/blog/images/how-do-i-remind-clients-to-pay-invoices-without-sounding-desperate/reminder-timeline.png)
 
@@ -57,4 +57,4 @@ Keep it light. "Looks like you did not finish. Here is the link if you still wan
 5. **Stop it when paid.** The sequence must end the moment payment lands.
 6. **Read the last one yourself.** Firm notices deserve a human check.
 
-Getting paid is not begging. It is business.
+Getting paid is not begging. It is business. Say it with me.

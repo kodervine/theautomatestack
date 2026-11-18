@@ -57,4 +57,4 @@ If you need help choosing, read [how to know which tasks to automate first](/blo
 5. **Write the steps.** As if teaching a new assistant.
 6. **Automate it.** Then check it weekly.
 
-You do not need more hours. You need fewer robot tasks.
+You do not need more hours. You need fewer robot tasks. Heck, even one fewer would help.

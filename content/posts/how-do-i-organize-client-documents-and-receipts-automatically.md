@@ -22,9 +22,9 @@ faqs:
 
 A client says she paid last Tuesday. You know she did. You just cannot find the proof.
 
-So you scroll. WhatsApp, then email, then your gallery, then a different WhatsApp. Ten minutes later you find a screenshot called IMG_4471.
+So you scroll. WhatsApp, then email, then the gallery, then the other WhatsApp. Ten minutes later you find a screenshot called IMG_4471. Is that the one? Who knows.
 
-That is not a memory problem. That is a filing problem, and it is fixable.
+That is not a memory problem. It is a filing problem, and a filing problem is fixable.
 
 ![Three steps: a file arrives, it is renamed with the date and client, it is filed in the right folder and logged in a sheet.](/blog/images/how-do-i-organize-client-documents-and-receipts-automatically/file-routing.png)
 
@@ -59,4 +59,4 @@ It is also worth asking clients to send files to one place. Chats are where file
 
 If the money side is the bigger mess, read about what to write down every time a customer pays first. Then let the filing follow.
 
-A tidy folder will never excite anyone. It will, however, save your Tuesday.
+A tidy folder will never excite anybody. But it will save your Tuesday.

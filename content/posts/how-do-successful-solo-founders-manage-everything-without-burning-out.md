@@ -54,4 +54,4 @@ You also check the systems now and then, because they are only as good as their 
 
 If you want to build this yourself, the [Starter Kit](/starter-kit/) gives you the setups. If you would rather have it built around your business, [work with me](/services/).
 
-A calm workday is not luck. It is design.
+A calm workday is not luck. It is design. And yes, it is slow to build. Start with one.
