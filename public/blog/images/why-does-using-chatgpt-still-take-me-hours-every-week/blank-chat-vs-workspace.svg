@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#FBF9F4"/>
+<rect x="0" y="0" width="14" height="630" fill="#C8996C"/>
+<text x="70" y="70" font-family="Arial, Lato, sans-serif" font-size="20" letter-spacing="4" fill="#C8996C" font-weight="700">THE AUTOMATE STACK</text>
+<text x="70" y="150" font-family="Georgia, 'Libre Baskerville', serif" font-size="58" font-weight="700" fill="#1A1110">Stop briefing</text>
+<text x="70" y="218" font-family="Georgia, 'Libre Baskerville', serif" font-size="58" font-weight="700" fill="#1A1110">a stranger.</text>
+<rect x="70" y="350" width="300" height="170" rx="10" fill="#FFFFFF" stroke="#C8996C" stroke-width="3"/>
+<text x="94" y="394" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#C8996C">1</text>
+<text x="94" y="434" font-family="Arial, Lato, sans-serif" font-size="24" fill="#746C61">Blank chat:</text>
+<text x="94" y="464" font-family="Arial, Lato, sans-serif" font-size="24" fill="#746C61">explain everything</text>
+<path d="M378 435 H420 M410 425 L422 435 L410 445" stroke="#C8996C" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="430" y="350" width="300" height="170" rx="10" fill="#FFFFFF" stroke="#C8996C" stroke-width="3"/>
+<text x="454" y="394" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#C8996C">2</text>
+<text x="454" y="434" font-family="Arial, Lato, sans-serif" font-size="24" fill="#746C61">Workspace:</text>
+<text x="454" y="464" font-family="Arial, Lato, sans-serif" font-size="24" fill="#746C61">context is saved</text>
+<path d="M738 435 H780 M770 425 L782 435 L770 445" stroke="#C8996C" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="790" y="350" width="300" height="170" rx="10" fill="#FFFFFF" stroke="#C8996C" stroke-width="3"/>
+<text x="814" y="394" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#C8996C">3</text>
+<text x="814" y="434" font-family="Arial, Lato, sans-serif" font-size="24" fill="#746C61">Start from a</text>
+<text x="814" y="464" font-family="Arial, Lato, sans-serif" font-size="24" fill="#746C61">good first draft</text>
+<text x="70" y="590" font-family="Arial, Lato, sans-serif" font-size="20" fill="#746C61">theautomatestack.com</text>
+</svg>

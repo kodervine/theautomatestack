@@ -5,8 +5,8 @@
       <h1>Use AI and automation in your business. No tech background needed.</h1>
       <p class="lead">I am a software engineer, and I teach business owners and creators to connect AI to the tools they already use, so the repetitive work gets done without them. Start free. Buy only when you are ready.</p>
       <div class="actions">
-        <a class="btn" href="/freebies/">Get the free Checklist</a>
-        <a class="btn btn--ghost" href="/starter-kit/">See the Starter Kit</a>
+        <a class="btn" href="/starter-kit/">See the Starter Kit</a>
+        <a class="btn btn--ghost" href="/freebies/">Get the free Checklist</a>
       </div>
     </div>
     <div class="hero-media">
@@ -23,6 +23,49 @@
     <li><strong>50</strong> n8n workflows</li>
     <li><strong>1</strong> free Checklist to start</li>
   </ul>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap showcase reveal">
+    <div class="showcase-media showcase-media--tall">
+      <img src="/assets/img/starter-kit-overview.jpg" width="1080" height="1350" loading="lazy" alt="The AutoStack Starter Kit overview. Get 10 hours of your week back. Four jobs handed off to AI: content and social, video editing, admin and money, clients and communication. Also included: a private community, a 5-minute Start Here video and weekend live classes.">
+    </div>
+    <div class="showcase-copy">
+      <p class="eyebrow">Do it yourself</p>
+      <h2>The AutoStack Starter Kit</h2>
+      <p class="label-line">For business owners, creators and operators</p>
+      <p>36 ready-made setups. One page each. Pick one and finish it tonight.</p>
+      <ul class="job-list">
+{{#each kit_jobs}}        <li><strong>{{name}}</strong><span>{{new}}</span></li>
+{{/each}}      </ul>
+      <p>It comes as a Private workspace, with a 5-minute onboarding video and a private community.</p>
+      <p class="actions"><a class="btn" href="{{starter_kit_url}}" rel="noopener">Get the Starter Kit</a> <a class="btn btn--ghost btn--dark" href="/starter-kit/">About the Starter Kit</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reviews">
+  <div class="wrap reveal">
+    <p class="eyebrow">Proof</p>
+    <h2>{{home_reviews_title}}</h2>
+    <p class="section-intro">{{home_reviews_intro}}</p>
+    {{{home_reviews_html}}}
+  </div>
+</section>
+
+<section class="section section--tint" id="what-we-automate">
+  <div class="wrap reveal">
+    <p class="eyebrow">What we automate</p>
+    <h2>Six things, one stack</h2>
+    <p class="section-intro">{{entity_statement}}</p>
+    <ul class="cards cards--3">
+{{#each pillars}}      <li class="card">
+        <h3>{{title}}</h3>
+        <p>{{text}}</p>
+        <p class="card-link">{{{link_html}}}</p>
+      </li>
+{{/each}}    </ul>
+  </div>
 </section>
 
 <section class="section">
@@ -47,28 +90,6 @@
         <p class="card-link"><a href="/services/">Consulting</a> &middot; <a href="/dm-automation/">DM Automation</a></p>
       </li>
     </ul>
-  </div>
-</section>
-
-<section class="section section--tint">
-  <div class="wrap showcase reveal">
-    <div class="showcase-media showcase-media--tall">
-      <img src="/assets/img/starter-kit-overview.jpg" width="900" height="1125" loading="lazy" alt="The AutoStack Starter Kit: 36 setups in four layers. Ask has 7, Create has 5, Automate has 17 and Edit has 7.">
-    </div>
-    <div class="showcase-copy">
-      <p class="eyebrow">Do it yourself</p>
-      <h2>The AutoStack Starter Kit</h2>
-      <p class="label-line">For business owners, creators and operators</p>
-      <p>36 ready-made setups. One page each. Pick one and finish it tonight.</p>
-      <ul class="layer-list">
-        <li><strong>Ask</strong><span>7 setups</span></li>
-        <li><strong>Create</strong><span>5 setups</span></li>
-        <li><strong>Automate</strong><span>17 setups</span></li>
-        <li><strong>Edit</strong><span>7 setups</span></li>
-      </ul>
-      <p>It comes as a Private workspace, with a 5-minute onboarding video and a private community.</p>
-      <p class="actions"><a class="btn" href="{{starter_kit_url}}" rel="noopener">Get the Starter Kit</a> <a class="btn btn--ghost btn--dark" href="/starter-kit/">About the Starter Kit</a></p>
-    </div>
   </div>
 </section>
 
@@ -117,9 +138,9 @@
     <h2>Work with me</h2>
     <ul class="cards cards--3">
       <li class="card">
-        <h3>Automate Your DMs on Autopilot</h3>
-        <p>A one-on-one consultation on automating your DMs.</p>
-        <p class="card-link"><a href="{{dm_consultation_url}}" rel="noopener">Book the DM consultation</a></p>
+        <h3>One-on-one consultation</h3>
+        <p>Talk through your business with me and leave knowing what to fix first and what to automate.</p>
+        <p class="card-link"><a href="{{dm_consultation_url}}" rel="noopener">Book a consultation</a></p>
       </li>
       <li class="card">
         <h3>End-to-end process consultation</h3>
@@ -136,7 +157,20 @@
   </div>
 </section>
 
-{{#if latest}}<section class="section">
+<section class="section" id="buyer-questions">
+  <div class="wrap reveal">
+    <p class="eyebrow">Straight answers</p>
+    <h2>{{faq_title}}</h2>
+    <div class="faq-list">
+{{#each home_faqs}}      <details{{open}}>
+        <summary>{{question}}</summary>
+        <p>{{answer}}{{{link_html}}}</p>
+      </details>
+{{/each}}    </div>
+  </div>
+</section>
+
+{{#if latest}}<section class="section section--tint">
   <div class="wrap reveal">
     <p class="eyebrow">From the blog</p>
     <h2>Straight answers</h2>

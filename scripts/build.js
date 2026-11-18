@@ -11,7 +11,7 @@ import {
 import { loadAllPosts, sitePosts, tagSlug } from "./lib/posts.js";
 import { renderPage } from "./lib/template.js";
 import { renderMarkdown, ctaItems, faqHtml, articleJsonLd, faqJsonLd, jsonLdScripts, navMarkup } from "./lib/render.js";
-import { buildPages, injectIntoHandWrittenPages } from "./lib/pages.js";
+import { buildPages, injectIntoHandWrittenPages, readPositioning } from "./lib/pages.js";
 
 const KEEP_IN_BLOG = new Set(["images"]); // downloaded Notion images must survive rebuilds
 const SKIP_DIRS = new Set(["blog", "assets", "api"]);
@@ -288,9 +288,22 @@ ${urls.map((x) => `  <url>\n    <loc>${xmlEscape(x.loc)}</loc>${x.lastmod ? `\n 
 </urlset>
 `, MARK, warnings);
 
+  // AI search and assistant crawlers, named so the permission is explicit. Only user agents the companies publish are listed.
+  const AI_BOTS = [
+    "GPTBot", "OAI-SearchBot", "ChatGPT-User",
+    "ClaudeBot", "Claude-User", "Claude-SearchBot", "anthropic-ai",
+    "Google-Extended", "Googlebot",
+    "PerplexityBot", "Perplexity-User",
+    "Bingbot", "Applebot", "Applebot-Extended",
+    "Meta-ExternalAgent", "Meta-ExternalFetcher",
+    "Amazonbot", "DuckAssistBot", "MistralAI-User", "cohere-ai", "YouBot", "CCBot", "Bytespider",
+  ];
   writeOwned(out, "robots.txt", `# ${MARK}
 User-agent: *
 Allow: /
+
+# AI crawlers and assistants: welcome
+${AI_BOTS.map((b) => `User-agent: ${b}\nAllow: /`).join("\n\n")}
 
 Sitemap: ${u("/sitemap.xml")}
 `, MARK, warnings);
@@ -298,7 +311,7 @@ Sitemap: ${u("/sitemap.xml")}
   const pageLine = (e) => `- [${e.title || e.path}](${u(e.path)})${e.description ? `: ${e.description}` : ""}`;
   writeOwned(out, "llms.txt", `# ${site.publisher_name}
 
-> ${site.blog_description}
+> ${readPositioning().entity_statement}
 
 <!-- ${MARK} -->
 

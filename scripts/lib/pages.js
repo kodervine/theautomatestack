@@ -29,6 +29,11 @@ export function readStarterKit() {
   return kit;
 }
 
+/** Entity statement, the four service pillars and the buyer FAQs for the home page and the Organization schema. */
+export function readPositioning() {
+  return JSON.parse(fs.readFileSync(path.join(ROOT, "config", "positioning.json"), "utf8"));
+}
+
 export function readSetupsConfig() {
   return JSON.parse(fs.readFileSync(path.join(ROOT, "config", "setups.json"), "utf8"));
 }
@@ -192,13 +197,34 @@ export function buildPages({ out, site, posts, drafts }) {
   };
 
   const latest = posts.slice(0, 3).map((p) => ({ url: `/blog/${p.slug}/`, title: p.title, summary: p.summary }));
+  const pos = readPositioning();
   const org = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: site.publisher_name,
     url: `${site.site_url}/`,
     logo: `${site.site_url}${site.logo_path}`,
+    description: pos.entity_statement,
+    knowsAbout: pos.knows_about,
     sameAs: socialLinks(site),
+  };
+  const resolveHref = (h) => (String(h).startsWith("site:") ? site[String(h).slice(5)] : h);
+  const linkHtml = (l) => {
+    if (!l) return "";
+    const href = resolveHref(l.href);
+    return `<a href="${esc(href)}"${/^https?:/.test(href) ? ' rel="noopener"' : ""}>${esc(l.label)}</a>`;
+  };
+  const homePillars = pos.pillars.map((p) => ({ title: p.title, text: p.text, link_html: linkHtml(p.link) }));
+  const homeFaqs = pos.faqs.map((f, i) => ({
+    question: f.question,
+    answer: f.answer,
+    open: i === 0 ? " open" : "",
+    link_html: f.link ? ` ${linkHtml(f.link)}` : "",
+  }));
+  const homeFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: pos.faqs.map((f) => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })),
   };
 
   const kit = readStarterKit();
@@ -244,9 +270,9 @@ export function buildPages({ out, site, posts, drafts }) {
       path: "/",
       template: "pages/home.html",
       title: `${site.publisher_name} | AI setups, automation and consulting`,
-      description: "I teach non-technical business owners and creators to connect AI to the tools they already use. Start with the free Checklist, then pick the Starter Kit, the Blueprint or a consultation.",
-      jsonld: jsonLdScripts(org, { "@context": "https://schema.org", "@type": "WebSite", name: site.publisher_name, url: `${site.site_url}/` }),
-      extra: { latest },
+      description: pos.meta_description,
+      jsonld: jsonLdScripts(org, { "@context": "https://schema.org", "@type": "WebSite", name: site.publisher_name, url: `${site.site_url}/` }, homeFaqSchema),
+      extra: { latest, kit_jobs: kit.groups.map((g) => ({ name: g.name, new: g.new })), home_reviews_title: reviewsCfg.home_title, home_reviews_intro: reviewsCfg.home_intro, home_reviews_html: reviewsHtml(reviewsCfg, reviewsCfg.home), entity_statement: pos.entity_statement, pillars: homePillars, faq_title: pos.faq_title, home_faqs: homeFaqs },
     },
     {
       path: "/freebies/",

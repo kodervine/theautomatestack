@@ -183,6 +183,10 @@ h3 { font-size: 1.25rem; margin: var(--space-8) 0 var(--space-3); }
 .layer-list { list-style: none; margin: var(--space-4) 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-2) var(--space-4); }
 .layer-list li { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(116,108,97,.3); padding: var(--space-2) 0; }
 .layer-list span { color: var(--stone); font-size: .9rem; }
+.job-list { list-style: none; margin: var(--space-4) 0; padding: 0; }
+.job-list li { padding: var(--space-3) 0; border-bottom: 1px solid rgba(116,108,97,.3); }
+.job-list strong { display: block; }
+.job-list span { color: var(--stone); font-size: .95rem; }
 .btn--dark { color: var(--onyx); border-color: var(--onyx); }
 .btn--dark:hover { background: rgba(26,17,16,.08); }
 

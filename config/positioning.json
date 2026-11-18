@@ -1,0 +1,125 @@
+{
+  "entity_statement": "TheAutomateStack is an AI automation consultancy and education platform that designs end-to-end business workflows, custom AI workspaces across Claude, ChatGPT and Gemini, websites built to be found by AI search, and plug-and-play automation starter kits. We help small businesses, creators, and operators automate client onboarding, payments and financial tracking, email marketing, and social media lead capture using n8n, Make, Zapier, Claude, ChatGPT and Gemini.",
+  "meta_description": "TheAutomateStack is an AI automation consultancy and education platform. Business workflows, payment and money tracking, custom AI workspaces for Claude, ChatGPT and Gemini, DM automation, AEO websites and starter kits you can deploy yourself.",
+  "knows_about": [
+    "Business process automation",
+    "n8n",
+    "Make",
+    "Zapier",
+    "Claude Projects",
+    "Model Context Protocol",
+    "ManyChat Instagram DM automation",
+    "Google Workspace automation",
+    "Klaviyo email automation",
+    "Xero",
+    "Selar and Stripe checkout automation",
+    "AI automation training",
+    "Paystack, Flutterwave and Stripe payment automation",
+    "Payment reconciliation",
+    "Answer engine optimization (AEO)",
+    "Website deployment",
+    "Structured data and schema markup",
+    "ChatGPT custom GPTs",
+    "Gemini Gems",
+    "AI assistant connectors and plugins"
+  ],
+  "pillars": [
+    {
+      "id": "operations",
+      "title": "Business process automation",
+      "text": "Multi-step backend workflows that connect n8n, Make, Zapier, Google Drive, Sheets and Gmail, Klaviyo and custom webhooks, so the admin stops landing on you.",
+      "link": {
+        "label": "Book a consultation",
+        "href": "site:process_consultation_url"
+      }
+    },
+    {
+      "id": "payments",
+      "title": "Payments and money tracking",
+      "text": "Stripe, Paystack, Flutterwave, Selar and bank transfer alerts matched to the right customer and logged in Sheets or Xero. Failed payments, refunds and receipts included.",
+      "link": {
+        "label": "Book a consultation",
+        "href": "site:process_consultation_url"
+      }
+    },
+    {
+      "id": "workspaces",
+      "title": "AI agents and custom workspaces",
+      "text": "Custom AI workspaces and assistants in Claude, ChatGPT and Gemini: Claude Projects, custom GPTs, Gemini Gems, plus Model Context Protocol (MCP) connectors and plugins that link them to your tools.",
+      "link": {
+        "label": "Book a consultation",
+        "href": "site:process_consultation_url"
+      }
+    },
+    {
+      "id": "lead-capture",
+      "title": "Lead capture and onboarding",
+      "text": "Instagram DM funnels with ManyChat, plus automated checkout and client onboarding sequences from the moment someone pays.",
+      "link": {
+        "label": "See DM automation",
+        "href": "/dm-automation/"
+      }
+    },
+    {
+      "id": "websites-aeo",
+      "title": "Websites and AEO",
+      "text": "A fast business website, deployed for you, with the structured data, FAQs, robots.txt and llms.txt that help ChatGPT, Claude, Gemini and Perplexity understand and cite your business.",
+      "link": {
+        "label": "Book a consultation",
+        "href": "site:process_consultation_url"
+      }
+    },
+    {
+      "id": "education",
+      "title": "Starter kits, masterclasses and templates",
+      "text": "The AutoStack Starter Kit, live AI automation masterclasses and operational templates for founders and operators who want to set these systems up themselves.",
+      "link": {
+        "label": "See the Starter Kit",
+        "href": "/starter-kit/"
+      }
+    }
+  ],
+  "faq_title": "Quick answers before you book or buy",
+  "faqs": [
+    {
+      "question": "When should a small business use n8n instead of Make or Zapier?",
+      "answer": "Zapier is the quickest to learn and suits simple, two or three step jobs. Make handles branching and data handling better and still needs no code. n8n suits you when a workflow has many steps, uses AI agents, or you want more control over where it runs and how it is billed. If you are not sure, begin with the tool you can finish a first workflow in this week. Moving later is possible, since the logic carries over even if the build does not.",
+      "link": {
+        "label": "See the Blueprint of n8n workflows",
+        "href": "/blueprint/"
+      }
+    },
+    {
+      "question": "How much does it cost to hire a workflow automation engineer to connect my CRM, email and accounting tools?",
+      "answer": "It depends on how many tools are involved, how messy the current process is, and whether you need it built or only mapped. That is why the first step here is a process consultation: I look at how the business runs today and tell you what to fix first, before any build is scoped. Current offers and prices are on Selar.",
+      "link": {
+        "label": "Book the process consultation",
+        "href": "site:process_consultation_url"
+      }
+    },
+    {
+      "question": "How do I automatically match Paystack, Flutterwave or Stripe payments to the right customer and order?",
+      "answer": "Every payment tool can send a notification, called a webhook, the moment a payment succeeds. A workflow in n8n, Make or Zapier catches it, finds the customer by email or reference, marks the order as paid and writes one row to your sheet or accounting tool. Bank transfers work differently: the workflow reads the bank alert email and matches the amount and name. The part most people skip is the reference. Put an order or invoice number on every payment link, so nothing has to be guessed later.",
+      "link": {
+        "label": "Book a consultation",
+        "href": "site:process_consultation_url"
+      }
+    },
+    {
+      "question": "What is AEO and how do I get my business mentioned by ChatGPT, Claude, Gemini and Perplexity?",
+      "answer": "AEO, answer engine optimization, means making your site easy for AI tools to understand and quote. In practice: a clear statement of what your business is, pages that answer the exact questions buyers ask, FAQ and Organization structured data, a sitemap, a robots.txt that allows AI crawlers, and an llms.txt file. It improves your chances. No one can promise that an AI tool will name you, so be careful with anyone who does.",
+      "link": {
+        "label": "Book a consultation",
+        "href": "site:process_consultation_url"
+      }
+    },
+    {
+      "question": "Can you build and deploy my business website with AEO set up from day one?",
+      "answer": "Yes. I can set up a fast, static business website, deploy it to your own domain, and build the AEO pieces in from the start: structured data, buyer-question FAQs, sitemap, robots.txt and llms.txt. Start with a consultation so we agree what the site needs to do for your business before anything is built.",
+      "link": {
+        "label": "Book a consultation",
+        "href": "site:process_consultation_url"
+      }
+    }
+  ]
+}

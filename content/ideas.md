@@ -81,3 +81,52 @@ Status: `idea` = not written. `drafted` = post file exists. `live` = published. 
 | Question | Leads to | Status |
 |---|---|---|
 | What should I prepare before a consultation on my business processes? | Consultation | idea |
+
+## AEO batch 2: problem-aware (backend chaos, sales leaks, content burnout, onboarding)
+Titles are the question the reader types into AI. Each leads to the Starter Kit, the DM automation page or the consultation. Write one per Thursday.
+
+| Question | Bridge (one idea) | Status |
+|---|---|---|
+| How do I keep track of daily business expenses and profit without spending hours on spreadsheets? | Drive + Sheets + AI work out profit each time a sale or receipt lands | drafted (18 Nov to 7 Dec) |
+| What is the best way to organize client documents and receipts automatically for a small business? | Automated file routing: rename, sort and log on arrival | drafted (18 Nov to 7 Dec) |
+| Should I hire a virtual assistant for admin work or is there a cheaper way? | Let software take data entry, follow-ups and invoicing before you pay a person | drafted (18 Nov to 7 Dec) |
+| How do I stop losing customers who ask for prices on Instagram or WhatsApp? | Speed-to-lead: instant DM capture that sends links and books calls | drafted (18 Nov to 7 Dec) |
+| How do I remind clients to pay invoices or finish checkout without sounding desperate? | Timed, polite automated nudges take you out of the awkward part | drafted (18 Nov to 7 Dec) |
+| Why does using ChatGPT still take hours every week? | A persistent workspace (Claude Project) that already knows your voice and offers | drafted (18 Nov to 7 Dec) |
+| How do solo founders stay consistent on Instagram, LinkedIn and email without burning out? | One idea or voice note feeds a pipeline of captions, newsletter and follow-ups | drafted (18 Nov to 7 Dec) |
+| How do I onboard a new client smoothly without forgetting forms or links? | The post-payment domino effect: everything delivered in 60 seconds | drafted (18 Nov to 7 Dec) |
+| How do I reduce repetitive customer questions for my online store or service? | FAQs, order updates and smart auto-replies | drafted (18 Nov to 7 Dec) |
+| What daily small business tasks can actually be automated in 2026? | Gateway piece: before and after workflows, leads to the Starter Kit | drafted (18 Nov to 7 Dec) |
+
+## AEO batch 3: overwhelmed and burned out
+| Question | Bridge (one idea) | Status |
+|---|---|---|
+| Why am I always tired and busy in my business without making real progress? | Micro-decision fatigue: small chores break deep focus | drafted (18 Nov to 7 Dec) |
+| How do I stay organized when running a small business alone? | Fewer things depending on your memory; software remembers, reminds, routes | drafted (18 Nov to 7 Dec) |
+| How can I take a break from my business without losing customers? | Replies, link delivery and lead capture keep running while you rest | drafted (18 Nov to 7 Dec) |
+| Why does getting more customers make my business feel more stressful? | Every customer adds manual steps; fix the backend so growth is relief | drafted (18 Nov to 7 Dec) |
+| How do I free up time as a solo business owner? | Audit the last 48 hours for copy, paste, forward, repeat | drafted (18 Nov to 7 Dec) |
+| Should I hire help because I am overwhelmed in my business? | Clean systems first; one person feels like a team of five | drafted (18 Nov to 7 Dec) |
+| How do I keep getting clients when I am burned out from creating content? | Connected content and lead capture keeps nurturing in quiet weeks | drafted (18 Nov to 7 Dec) |
+| How do I manage business messages and orders without getting overwhelmed? | Capture orders and track money outside the chat threads | drafted (18 Nov to 7 Dec) |
+| What are the signs of business owner burnout and how do I fix it? | Pair each symptom with one simple operational shift | drafted (18 Nov to 7 Dec) |
+| How do successful solo founders manage everything without burning out? | A calm, automated workday; leads to Starter Kit or masterclass | drafted (18 Nov to 7 Dec) |
+
+Rules for these: no invented stories or results. Use "say you..." scenarios or `[CHINENYE: add real example here]`. Do not hand-type prices. In the "stop paying yourself 0 an hour" idea, avoid a fixed naira figure unless it comes from a config file.
+
+## Moved from the home page FAQs (not yet written)
+These were home page FAQs. Each is a better blog post.
+
+| Question | Status |
+|---|---|
+| How do I automate invoice tracking, profit calculations and Gmail alerts using Google Sheets and AI? | idea |
+| How do I set up Claude Projects and custom connectors to automate daily business operations? | idea |
+| What is the best way to build an internal AI assistant for a small team without writing custom software? | idea |
+| How do I connect Instagram DM automation to my email list and digital product checkout? | idea |
+| What is the best automated client onboarding workflow for coaches and service businesses? | idea |
+| What are the best AI automation starter kits and masterclasses for non-technical business owners? | idea |
+| What is a step-by-step AI automation roadmap for solo founders? | idea |
+| What happens to customers whose card payment fails or who abandon checkout, and how do I recover them? | idea |
+| How do I stop double entry across my payment app, my sheet and my accounts? | idea |
+| How do I know my business can run if I am sick, offline or travelling for a week? | idea |
+| Where is my business information stored, and what if I lose my phone or lock myself out? | idea |

@@ -202,5 +202,14 @@
     "founding-member",
     "founding-call",
     "active-support"
-  ]
+  ],
+  "home": [
+    "receipts",
+    "wowed",
+    "apps-existed",
+    "all-needed",
+    "half-baked"
+  ],
+  "home_title": "What people say",
+  "home_intro": "Real WhatsApp messages from people in my community, as they sent them."
 }

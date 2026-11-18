@@ -20,6 +20,7 @@ export function ctaItems(site) {
     { label: "Follow on TikTok", url: site.tiktok_url, class: " btn--ghost", attrs: ext },
     { label: "Subscribe on YouTube", url: site.youtube_url, class: " btn--ghost", attrs: ext },
     { label: "Get the Starter Kit", url: site.starter_kit_url, class: "", attrs: ext },
+    { label: "Get the free Checklist", url: "https://selar.com/t94191r128", class: " btn--ghost", attrs: ext },
     { label: "Visit the site", url: `${site.site_url}/`, class: " btn--ghost", attrs: "" },
   ];
 }
