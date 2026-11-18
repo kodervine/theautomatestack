@@ -71,7 +71,7 @@
         border: 1px solid rgba(251, 249, 244, 0.2);
       }
     </style>
-  <!-- meta-pixel:start -->
+  <!-- meta-pixel:start -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1067023309651592');
@@ -2167,33 +2167,42 @@ fbq('track', 'PageView');
     </main>
 
     <!-- ===================== FOOTER ===================== -->
-    <footer
-      class="w-full bg-primary-dark text-neutral-light border-t border-muted-stone/20 py-16"
-    >
-      <div class="max-w-7xl mx-auto px-6 lg:px-12">
-        <div
-          class="flex flex-col md:flex-row justify-between items-center gap-6 mb-12"
-        >
-          <a
-            href="#"
-            class="flex items-center gap-3 opacity-80 hover:opacity-100 transition-opacity"
-          >
-            <img
-              src="/assets/img/logo.png"
-              alt="The Automate Stack Logo"
-              class="h-7 w-auto object-contain"
-            />
-            <span
-              class="font-poppins font-bold tracking-widest text-sm lowercase"
-              >theautomatestack</span
-            >
-          </a>
-          <p class="font-lato text-xs text-neutral-light/50 tracking-wide">
-            &copy; <span id="current-year"></span> The Automate Stack. All
-            rights reserved. Data pipelines secured.
-          </p>
+    <footer class="w-full bg-primary-dark text-neutral-light border-t border-accent-bronze/30">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.5fr_repeat(3,1fr)] gap-10">
+          <div>
+            <a href="/" class="font-poppins font-bold tracking-widest text-lg lowercase text-neutral-light">theautomatestack</a>
+            <p class="font-lato text-[0.95rem] leading-relaxed text-neutral-light/75 mt-3 mb-5 max-w-xs">AI setups, automation and consulting for business owners and creators.</p>
+            <a href="/freebies/" class="inline-block bg-accent-bronze text-primary-dark font-sans font-bold text-xs uppercase tracking-wide py-3 px-5 rounded-lg hover:opacity-90 transition-opacity">Get the free Checklist</a>
+          </div>
+          <nav aria-label="Explore">
+            <h2 class="font-sans font-bold text-xs uppercase tracking-widest text-accent-bronze mb-4">Explore</h2>
+            <ul class="space-y-2 font-lato text-[0.95rem]">
+              <li><a href="/freebies/" class="text-neutral-light/85 hover:text-accent-bronze hover:underline underline-offset-4 transition-colors">Free resources</a></li>
+              <li><a href="/starter-kit/" class="text-neutral-light/85 hover:text-accent-bronze hover:underline underline-offset-4 transition-colors">Starter Kit</a></li>
+              <li><a href="/blueprint/" class="text-neutral-light/85 hover:text-accent-bronze hover:underline underline-offset-4 transition-colors">Blueprint</a></li>
+              <li><a href="/blog/" class="text-neutral-light/85 hover:text-accent-bronze hover:underline underline-offset-4 transition-colors">Blog</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Work with me">
+            <h2 class="font-sans font-bold text-xs uppercase tracking-widest text-accent-bronze mb-4">Work with me</h2>
+            <ul class="space-y-2 font-lato text-[0.95rem]">
+              <li><a href="/services/" class="text-neutral-light/85 hover:text-accent-bronze hover:underline underline-offset-4 transition-colors">Consulting</a></li>
+              <li><a href="/dm-automation/" class="text-neutral-light/85 hover:text-accent-bronze hover:underline underline-offset-4 transition-colors">DM Automation</a></li>
+              <li><a href="https://selar.com/1r07r0f120" rel="noopener" class="text-neutral-light/85 hover:text-accent-bronze hover:underline underline-offset-4 transition-colors">Book a consultation</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Follow">
+            <h2 class="font-sans font-bold text-xs uppercase tracking-widest text-accent-bronze mb-4">Follow</h2>
+            <ul class="space-y-2 font-lato text-[0.95rem]">
+              <li><a href="https://www.instagram.com/kodervine/" rel="noopener" class="text-neutral-light/85 hover:text-accent-bronze hover:underline underline-offset-4 transition-colors">Instagram</a></li>
+              <li><a href="https://www.tiktok.com/@theautomatestack" rel="noopener" class="text-neutral-light/85 hover:text-accent-bronze hover:underline underline-offset-4 transition-colors">TikTok</a></li>
+              <li><a href="https://www.youtube.com/@the_automatestack" rel="noopener" class="text-neutral-light/85 hover:text-accent-bronze hover:underline underline-offset-4 transition-colors">YouTube</a></li>
+              <li><a href="mailto:support@theautomatestack.com" class="text-neutral-light/85 hover:text-accent-bronze hover:underline underline-offset-4 transition-colors">Email me</a></li>
+            </ul>
+          </nav>
         </div>
-
+        <div class="mt-10">
         <!-- Disclaimer -->
         <div class="border-t border-muted-stone/20 pt-8 text-center">
           <h4
@@ -2224,8 +2233,11 @@ fbq('track', 'PageView');
             <a href="/privacy/" class="underline hover:text-accent-bronze">Privacy note</a>
           </p>
         </div>
-      </div>
-    <!-- meta-notice:start -->
+        </div>
+        <div class="mt-10 pt-5 border-t border-neutral-light/10">
+          <p class="font-lato text-sm text-neutral-light/60">&copy; <span id="current-year"></span> The Automate Stack. All rights reserved. <a href="/privacy/" class="text-accent-bronze">Privacy note</a></p>
+        </div>
+      </div><!-- meta-notice:start -->
 <p class="text-center text-[11px] text-muted-stone pt-4 px-6">Registered with the Corporate Affairs Commission of Nigeria. Business Name No. 9841634.</p>
 <p class="text-center text-[11px] text-muted-stone py-4 px-6">This site uses the Meta Pixel to measure my ads. It saves cookies on your device. See the <a href="/privacy/" class="underline">privacy note</a> for what it records and how to opt out.</p>
 <!-- meta-notice:end -->
