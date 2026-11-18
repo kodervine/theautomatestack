@@ -42,6 +42,7 @@ export function orgSchema(site) {
     description: pos.entity_statement,
     knowsAbout: pos.knows_about,
     founder: { "@type": "Person", name: site.founder_name || site.author_full_name },
+    areaServed: ["Nigeria", "Africa", "Worldwide"],
     sameAs: socialLinks(site),
   };
 }
@@ -405,9 +406,10 @@ const NOTICE_BLOCK = /\n?<!-- meta-notice:start -->[\s\S]*?<!-- meta-notice:end 
 export function injectIntoHandWrittenPages(site) {
   const on = Boolean(site.meta_pixel_id);
   const pixel = on ? renderPartial("meta-pixel", { meta_pixel_id: site.meta_pixel_id, pixel_json: "{}", purchase_value: 0 }).trim() : "";
+  const loc = site.location_line ? '<p class="text-center text-[11px] text-muted-stone pt-4 px-6">' + site.location_line + "</p>" : "";
   const reg = site.registration_line ? '<p class="text-center text-[11px] text-muted-stone pt-4 px-6">' + site.registration_line + "</p>" : "";
   const pix = on ? '<p class="text-center text-[11px] text-muted-stone py-4 px-6">This site uses the Meta Pixel to measure my ads. It saves cookies on your device. See the <a href="/privacy/" class="underline">privacy note</a> for what it records and how to opt out.</p>' : "";
-  const notice = [reg, pix].filter(Boolean).join("\n");
+  const notice = [loc, reg, pix].filter(Boolean).join("\n");
   const changed = [];
   for (const d of fs.readdirSync(PUBLIC, { withFileTypes: true })) {
     if (!d.isDirectory() || ["blog", "assets", "api"].includes(d.name) || d.name.startsWith(".")) continue;
