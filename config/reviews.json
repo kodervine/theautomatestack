@@ -176,6 +176,16 @@
       "alt": "A WhatsApp group chat. A community member writes: Yes, every 9 pm, it pulls all the receipts for the day and sends me a notification that it's done. They share a notification and write: This is what AI automation can do. I scheduled with ChatGPT, and it updated my client's tracker from email to sheets. I only go through to ensure things are in order.",
       "quote": "Every 9 pm, it pulls all the receipts for the day and sends me a notification that it's done.",
       "who": "From my community"
+    },
+    "applications-easier": {
+      "type": "image",
+      "layout": "card",
+      "src": "/assets/reviews/slide-applications-easier.jpg",
+      "width": 1080,
+      "height": 1350,
+      "alt": "A WhatsApp group chat. A community member writes: Thank you, this is a life saver. I've started using Claude to design carousels and it's very exciting what it can do. The applications stuff, I've been using Claude to do that and these days, applications are easier because I only have to tweak a few things myself. In a reply they say they use it for scholarship applications, give it roles, and it helps them build competitive SOPs. Chinenye's tips are blurred.",
+      "quote": "Applications are easier because I only have to tweak a few things myself.",
+      "who": "From my community"
     }
   },
   "starter_kit_top": [
@@ -195,7 +205,8 @@
     "80-done",
     "buffer-sleek",
     "life-saver",
-    "receipts-9pm"
+    "receipts-9pm",
+    "applications-easier"
   ],
   "more_title": "More from my community",
   "starter_kit_community": [
