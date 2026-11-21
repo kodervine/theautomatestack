@@ -35,6 +35,7 @@ Nothing outside `public/` is published, so drafts, scripts and config stay priva
 |---|---|
 | `npm run build` | Rebuilds the generated pages, blog, sitemap, robots.txt and llms.txt into `public/` |
 | `npm run dev` | Local preview at http://localhost:3000, rebuilds on save. The freebie form works here too. Add `-- --drafts` to see drafts |
+| `npm test` | Tests the Markdown negotiation (middleware.js) and the generated output. Run `npm run build` first |
 | `npm run check` | Checks the pages: structure, SEO tags, JSON-LD, sitemap, RSS and broken links |
 | `npm run new -- "post title"` | Starts a new blog post |
 | `npm run sync` | Pulls Ready posts from Notion |
@@ -43,6 +44,10 @@ Nothing outside `public/` is published, so drafts, scripts and config stay priva
 | `npm run medium` | Makes Medium export files in `dist/medium/` |
 
 Always run `npm run build` and `npm run check` before you push. The build output in `public/` is committed.
+
+## Agents: Markdown and llms.txt
+
+`npm run build` writes a Markdown copy of every indexable page into `public/md/`. `middleware.js` (Vercel Routing Middleware) serves it when a request sends `Accept: text/markdown`, with `Content-Type: text/markdown` and `Vary: Accept`. Browsers still get HTML. An unknown path with that header gets a 404 with a Markdown body that links to `llms.txt` and the sitemap. `vercel.json` adds `Vary: Accept` to every page. The "when to use this site" part of `llms.txt` comes from `agent_guidance` in `config/positioning.json`.
 
 ## Change links once
 

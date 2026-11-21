@@ -6,6 +6,7 @@ import http from "node:http";
 import path from "node:path";
 import { ROOT, PUBLIC, loadEnv } from "./lib/util.js";
 import { spawnSync } from "node:child_process";
+import { negotiate } from "./lib/negotiate.js";
 
 const args = process.argv.slice(2);
 const drafts = args.includes("--drafts");
@@ -51,17 +52,33 @@ async function runApi(req, res) {
   await handler(req, res);
 }
 
-http.createServer((req, res) => {
+/** Same Markdown negotiation as middleware.js, so Accept: text/markdown works locally too. */
+async function serveMarkdown(req, res) {
+  const pathname = req.url.split("?")[0];
+  if (pathname.startsWith("/api/") || pathname.startsWith("/md/") || /\.[a-z0-9]+$/i.test(pathname)) return false;
+  const request = new Request(`http://localhost:${port}${req.url}`, { method: req.method, headers: { accept: req.headers.accept || "" } });
+  const response = await negotiate(request, async (assetPath) => {
+    const file = resolveFile(assetPath);
+    return file ? new Response(fs.readFileSync(file, "utf8")) : new Response("", { status: 404 });
+  });
+  if (!response) return false;
+  res.writeHead(response.status, Object.fromEntries(response.headers));
+  res.end(Buffer.from(await response.arrayBuffer()));
+  return true;
+}
+
+http.createServer(async (req, res) => {
+  if (await serveMarkdown(req, res).catch(() => false)) return;
   if (req.url.split("?")[0] === "/api/lead") {
     return runApi(req, res).catch((err) => { console.error(err); res.statusCode = 500; res.end("Server error"); });
   }
   const file = resolveFile(req.url);
   if (!file || file.startsWith(path.join(ROOT, "node_modules")) || file.startsWith(path.join(ROOT, ".git"))) {
     const notFound = [OUT, PUBLIC].map((b) => path.join(b, "404.html")).find((f) => fs.existsSync(f));
-    res.writeHead(404, { "content-type": notFound ? "text/html; charset=utf-8" : "text/plain" });
+    res.writeHead(404, { "content-type": notFound ? "text/html; charset=utf-8" : "text/plain", vary: "Accept" });
     return res.end(notFound ? fs.readFileSync(notFound) : "Not found");
   }
-  res.writeHead(200, { "content-type": TYPES[path.extname(file).toLowerCase()] || "application/octet-stream", "cache-control": "no-store" });
+  res.writeHead(200, { "content-type": TYPES[path.extname(file).toLowerCase()] || "application/octet-stream", "cache-control": "no-store", vary: "Accept" });
   fs.createReadStream(file).pipe(res);
 }).on("error", (err) => {
   if (err.code === "EADDRINUSE") {

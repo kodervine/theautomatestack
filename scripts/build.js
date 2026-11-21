@@ -11,10 +11,11 @@ import {
 import { loadAllPosts, sitePosts, tagSlug } from "./lib/posts.js";
 import { renderPage } from "./lib/template.js";
 import { renderMarkdown, ctaItems, faqHtml, articleJsonLd, faqJsonLd, jsonLdScripts, navMarkup } from "./lib/render.js";
+import { buildMarkdownMirror } from "./lib/markdown.js";
 import { buildPages, injectIntoHandWrittenPages, readPositioning, orgSchema } from "./lib/pages.js";
 
 const KEEP_IN_BLOG = new Set(["images"]); // downloaded Notion images must survive rebuilds
-const SKIP_DIRS = new Set(["blog", "assets", "api"]);
+const SKIP_DIRS = new Set(["blog", "assets", "api", "md"]);
 
 export function build({ out = PUBLIC, drafts = false, quiet = false } = {}) {
   const log = quiet ? () => {} : console.log;
@@ -226,6 +227,8 @@ ${rssItems.join("\n")}
 `);
 
   writeSiteFiles(out, site, posts, existing, warnings, tags);
+  const mdPages = buildMarkdownMirror(out, site);
+  log(`Wrote ${mdPages.length} Markdown page(s) into ${path.relative(ROOT, path.join(out, "md"))}/ for Accept: text/markdown.`);
   log(`Built ${posts.length} post(s), ${tags.length} tag page(s), ${pages} index page(s) into ${path.relative(ROOT, blogDir)}/`);
   if (skipped && !drafts) log(`Skipped ${skipped} draft/other post(s).`);
   const unpublished = posts.filter((p) => p.status === "ready" && p.notion_id);
@@ -308,13 +311,37 @@ ${AI_BOTS.map((b) => `User-agent: ${b}\nAllow: /`).join("\n\n")}
 Sitemap: ${u("/sitemap.xml")}
 `, MARK, warnings);
 
+  const bullets = (list) => list.map((x) => `- ${x}`).join("\n");
+  const g = readPositioning().agent_guidance;
+  const guidance = g ? `
+## When to use this site
+
+${g.intro}
+
+Use it when:
+
+${bullets(g.use_for)}
+
+Do not use it for:
+
+${bullets(g.not_for)}
+
+## How an agent should engage
+
+${bullets(g.how_to_engage)}
+- Consultation: ${site.process_consultation_url}
+- DM automation: ${u("/dm-automation/")}
+- Starter Kit: ${site.starter_kit_url}
+- Blueprint: ${site.blueprint_url}
+- Contact: ${site.contact_email}
+` : "";
   const pageLine = (e) => `- [${e.title || e.path}](${u(e.path)})${e.description ? `: ${e.description}` : ""}`;
   writeOwned(out, "llms.txt", `# ${site.publisher_name}
 
 > ${readPositioning().entity_statement}
 
 <!-- ${MARK} -->
-
+${guidance}
 ## Site
 
 ${existing.map(pageLine).join("\n")}

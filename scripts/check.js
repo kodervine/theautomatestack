@@ -158,6 +158,10 @@ for (const f of ["robots.txt", "llms.txt"]) if (!fs.existsSync(path.join(dir, f)
 const robots = fs.existsSync(path.join(dir, "robots.txt")) && fs.readFileSync(path.join(dir, "robots.txt"), "utf8");
 if (robots && !robots.includes(`Sitemap: ${site.site_url}/sitemap.xml`)) fail("robots.txt", "missing Sitemap line");
 
+const llms = fs.existsSync(path.join(dir, "llms.txt")) && fs.readFileSync(path.join(dir, "llms.txt"), "utf8");
+if (llms && !/^## When to use this site$/m.test(llms)) fail("llms.txt", "missing the 'When to use this site' section for agents");
+if (!fs.existsSync(path.join(dir, "md", "index.md"))) fail("md/index.md", "missing Markdown mirror of the home page (needed for Accept: text/markdown)");
+
 console.log(`Checked ${checked} HTML page(s).`);
 if (problems.length) {
   console.log(`\n${problems.length} problem(s):`);
