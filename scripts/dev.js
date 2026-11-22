@@ -1,6 +1,8 @@
 // npm run dev [-- --drafts] [-- --port 3000]
 // Builds into dist/dev (never into public/), serves the whole site, rebuilds on change.
-// Also runs api/lead.js for POST /api/lead, so you can test the freebie form locally.
+// Also runs api/lead.js for POST /api/lead, so you can test the freebie form locally,
+// and the Quick Class functions. If the N8N_* webhook URLs are not in .env, they point at a fake n8n here
+// that prints each payload in this terminal, so you can test without sending anything to the real workflow.
 import fs from "node:fs";
 import http from "node:http";
 import path from "node:path";
@@ -43,12 +45,27 @@ function resolveFile(urlPath) {
 
 loadEnv();
 
-async function runApi(req, res) {
+const API_ROUTES = { "/api/lead": "lead.js", "/api/quickclass-register": "quickclass-register.js", "/api/quickclass-watched": "quickclass-watched.js" };
+for (const [k, hook] of [["N8N_REGISTER_WEBHOOK_URL", "register"], ["N8N_WATCHED_WEBHOOK_URL", "watched"]]) {
+  if (!process.env[k]) process.env[k] = `http://localhost:${port}/__mock-n8n/${hook}`;
+}
+
+async function readRaw(req) {
   const chunks = [];
   for await (const c of req) chunks.push(c);
-  req.body = Object.fromEntries(new URLSearchParams(Buffer.concat(chunks).toString()));
+  return Buffer.concat(chunks).toString();
+}
+
+async function runApi(req, res, file) {
+  const raw = await readRaw(req);
+  // Like Vercel: JSON bodies are parsed as JSON, form posts as form fields.
+  if (/application\/json/i.test(req.headers["content-type"] || "")) {
+    try { req.body = JSON.parse(raw || "{}"); } catch { req.body = {}; }
+  } else {
+    req.body = Object.fromEntries(new URLSearchParams(raw));
+  }
   res.status = (code) => { res.statusCode = code; return res; };
-  const { default: handler } = await import(`../api/lead.js?t=${Date.now()}`);
+  const { default: handler } = await import(`../api/${file}?t=${Date.now()}`);
   await handler(req, res);
 }
 
@@ -69,8 +86,18 @@ async function serveMarkdown(req, res) {
 
 http.createServer(async (req, res) => {
   if (await serveMarkdown(req, res).catch(() => false)) return;
-  if (req.url.split("?")[0] === "/api/lead") {
-    return runApi(req, res).catch((err) => { console.error(err); res.statusCode = 500; res.end("Server error"); });
+  const route = API_ROUTES[req.url.split("?")[0]];
+  if (route) {
+    return runApi(req, res, route).catch((err) => { console.error(err); res.statusCode = 500; res.end("Server error"); });
+  }
+  if (req.url.startsWith("/__mock-n8n/") && req.method === "POST") {
+    const raw = await readRaw(req);
+    console.log(`
+[mock n8n] ${req.url.slice(12)} ${new Date().toLocaleTimeString()}
+${raw}
+`);
+    res.writeHead(200, { "content-type": "application/json" });
+    return res.end('{"message":"Workflow was started"}');
   }
   const file = resolveFile(req.url);
   if (!file || file.startsWith(path.join(ROOT, "node_modules")) || file.startsWith(path.join(ROOT, ".git"))) {

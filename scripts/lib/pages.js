@@ -197,6 +197,85 @@ function replayEntries({ site, drafts }) {
   ];
 }
 
+/**
+ * AutoStack Quick Class (config/classes.json): one registration page per class at /class/<classId>/,
+ * and one shared watch page at /watch/ that reads ?class=<classId>.
+ * ready = live (needs youtubeVideoId and ctaUrl). draft = built only in the draft preview.
+ */
+function quickClassEntries({ site, drafts }) {
+  const cfg = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "classes.json"), "utf8"));
+  const kit = readStarterKit();
+  const fill = (s) => String(s || "").replace(/\{(price_now|guarantee_days)\}/g, (_, k) => kit[k]);
+  const resolve = (u) => (String(u || "").startsWith("site:") ? site[String(u).slice(5)] || "" : String(u || ""));
+  const classes = [];
+  for (const [classId, c] of Object.entries(cfg.classes)) {
+    if (!/^[a-z0-9-]+$/.test(classId)) throw new Error(`config/classes.json: "${classId}" is not a valid classId. Use lowercase letters, numbers and dashes.`);
+    if (c.status === "ready") {
+      const missing = [["youtubeVideoId", c.youtubeVideoId], ["ctaUrl", resolve(c.ctaUrl)], ["pitchSeconds", Number(c.pitchSeconds) > 0]].filter(([, v]) => !v).map(([k]) => k);
+      if (missing.length) throw new Error(`Quick Class "${classId}" is marked ready but config/classes.json has no ${missing.join(", ")}, so it will not build.`);
+    }
+    if (c.status === "ready" || (drafts && c.status === "draft")) classes.push({ classId, ...c });
+  }
+
+  const ctaHref = (c) => {
+    const raw = resolve(c.ctaUrl);
+    if (!raw) return "#";
+    const u = new URL(raw, site.site_url);
+    u.searchParams.set("utm_source", "quickclass");
+    u.searchParams.set("utm_medium", "watchpage");
+    u.searchParams.set("utm_campaign", c.classId);
+    return u.toString();
+  };
+  const offerHtml = (c) => {
+    const o = c.offer || {};
+    const faq = (o.faq || []).map((f) => `<details><summary>${esc(f.question)}</summary><p>${esc(fill(f.answer))}</p></details>`).join("");
+    return `<template id="qc-offer-${c.classId}"><section class="qc-offer" aria-labelledby="qc-offer-h-${c.classId}">
+  <h2 id="qc-offer-h-${c.classId}">${esc(o.heading || "The AutoStack Starter Kit")}</h2>
+  <ul class="tick-list">${(o.kitSummary || []).map((l) => `<li>${esc(fill(l))}</li>`).join("")}</ul>
+  <p class="qc-price"><strong>${esc(fill(o.priceText))}</strong></p>
+  ${o.foundingLine ? `<p>${esc(fill(o.foundingLine))}</p>` : ""}
+  ${o.refundNote ? `<p>${esc(fill(o.refundNote))}${o.refundUrl ? ` <a href="${esc(o.refundUrl)}">${esc(o.refundLinkText || "How the guarantee works")}</a>` : ""}</p>` : ""}
+  ${faq ? `<h3>Questions</h3><div class="faq-list">${faq}</div>` : ""}
+</section></template>`;
+  };
+  const testimonialsHtml = (c) => {
+    // Slot for real testimonials only. Leave "testimonials" empty in config/classes.json until you have them.
+    const list = (c.testimonials || []).filter((t) => t && t.quote && t.name);
+    if (!list.length) return "<!-- testimonials slot: add real ones to config/classes.json -->";
+    return `<section class="section"><div class="wrap read-wide"><h2>What people said</h2>${list.map((t) => `<blockquote class="qc-quote"><p>${esc(t.quote)}</p><footer>${esc(t.name)}</footer></blockquote>`).join("")}</div></section>`;
+  };
+
+  // Only what the watch page script needs. "<" is escaped so the JSON can sit safely inside a script tag.
+  const classesJson = JSON.stringify(Object.fromEntries(classes.map((c) => [c.classId, {
+    title: c.title, videoId: c.youtubeVideoId || "", pitchSeconds: Number(c.pitchSeconds) || 0,
+    ctaText: c.ctaText || "Get the Starter Kit", ctaHref: ctaHref(c),
+  }]))).replace(/</g, "\\u003c");
+
+  return [
+    ...classes.map((c) => ({
+      path: `/class/${c.classId}/`,
+      template: "pages/class.html",
+      layout: "base-quickclass.html",
+      title: `${c.title}: free AutoStack Quick Class | ${site.publisher_name}`,
+      description: `${c.headline} A free AutoStack Quick Class.`,
+      noindex: c.status !== "ready",
+      extra: {
+        class_id: c.classId, title: c.title, headline: c.headline, subhead: c.subhead, for_whom: c.forWhom,
+        learn: (c.learn || []).map((text) => ({ text })), testimonials_html: testimonialsHtml(c),
+      },
+    })),
+    {
+      path: "/watch/",
+      template: "pages/watch.html",
+      layout: "base-quickclass.html",
+      title: `AutoStack Quick Class | ${site.publisher_name}`,
+      description: "Watch your free AutoStack Quick Class.",
+      noindex: true,
+      extra: { classes_json: classesJson, offer_templates: classes.map(offerHtml).join("\n") },
+    },
+  ];
+}
+
 export function buildPages({ out, site, posts, drafts }) {
   const freebies = readFreebies();
   const ogImage = `${site.site_url}${site.default_og_image}`;
@@ -275,6 +354,7 @@ export function buildPages({ out, site, posts, drafts }) {
   const replayPages = replayEntries({ site, drafts });
   const pages = [
     ...replayPages,
+    ...quickClassEntries({ site, drafts }),
     {
       path: "/",
       template: "pages/home.html",

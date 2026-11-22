@@ -1,0 +1,65 @@
+<section class="hero hero--short qc-hero">
+  <div class="wrap hero-inner">
+    <p class="callout">{{for_whom}}</p>
+    <h1>{{headline}}</h1>
+    <p class="lead">{{subhead}}</p>
+    <p class="qc-free">Free AutoStack Quick Class. Watch it on your phone whenever you like.</p>
+  </div>
+</section>
+
+<section class="section qc-section" id="register">
+  <div class="wrap qc-grid">
+    <div class="prose">
+      <h2>What you will see</h2>
+      <ul class="tick-list">
+{{#each learn}}        <li>{{text}}</li>
+{{/each}}      </ul>
+      <p>It's free. At the end, I show you the AutoStack Starter Kit, in case you want the full setup. You can stop the video there.</p>
+    </div>
+
+    <div class="qc-card">
+      <h2>Watch the class</h2>
+      <form class="qc-form" id="qc-register" method="post" action="/api/quickclass-register" novalidate>
+        <input type="hidden" name="classId" value="{{class_id}}">
+        <div class="qc-hp" aria-hidden="true">
+          <label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <label for="qc-name">Your name
+          <input id="qc-name" type="text" name="name" autocomplete="given-name" maxlength="100" required aria-describedby="qc-name-error">
+        </label>
+        <p class="qc-field-error" id="qc-name-error" hidden></p>
+        <label for="qc-email">Your email
+          <input id="qc-email" type="email" name="email" autocomplete="email" inputmode="email" maxlength="200" required aria-describedby="qc-email-error">
+        </label>
+        <p class="qc-field-error" id="qc-email-error" hidden></p>
+        <button class="btn" type="submit">Watch the class</button>
+        <p class="qc-status" id="qc-status" role="status" aria-live="polite"></p>
+        <p class="qc-fine">I'll email you the link to the class and a few short follow-ups. Unsubscribe any time. I never ask for passwords, PINs, OTPs or card details. <a href="/privacy/">Privacy note</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+{{{testimonials_html}}}
+
+<section class="section section--tint">
+  <div class="wrap read-wide">
+    <h2>Who is teaching this</h2>
+    <div class="bio">
+      <img src="/assets/img/chinenye-avatar.jpg" width="112" height="112" alt="{{author_full_name}}" loading="lazy">
+      <div class="prose">
+        <p>Hi, I'm Chinenye. In my day job, I'm a software engineer.</p>
+        <p>I have <a href="https://www.tonative.org/indaba-2026#:~:text=LinkedIn-,Chinenye%20Anikwenze,-Engineering%20Lead%2C%20Tonative" target="_blank" rel="noopener">organised a workshop</a> at the Deep Learning Indaba. The ACM featured me for my <a href="https://women.acm.org/u-rise-chinenye-anikwenze-from-an-academic-in-history-to-an-unconventional-advocate-for-responsible-and-inclusive-ai/" target="_blank" rel="noopener">work on responsible AI</a>.</p>
+        <p>My first degree was History and International Studies. So you don't need a technical background for this.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="wrap band">
+    <h2>{{title}}, free</h2>
+    <p>Name and email, then you watch.</p>
+    <p class="actions"><a class="btn" href="#register">Watch the class</a></p>
+  </div>
+</section>

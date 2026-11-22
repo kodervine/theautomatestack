@@ -1,0 +1,52 @@
+/* AutoStack Quick Class: registration and watch pages. Builds on brand.css and site.css. Mobile first. */
+main [hidden] { display: none !important; }
+.qc-hero .callout { color: var(--bronze); font-size: 1.05rem; }
+.qc-hero .lead { margin-bottom: var(--space-4); }
+.qc-free { margin: 0; color: rgba(251,249,244,.85); font-weight: 700; }
+
+.qc-section { padding-top: var(--space-12); }
+.qc-grid { display: grid; gap: var(--space-8); align-items: start; }
+.qc-card { order: -1; }
+@media (min-width: 56rem) { .qc-grid { grid-template-columns: 1fr 1fr; gap: var(--space-12); } .qc-card { order: 0; } }
+
+.qc-card { background: var(--white); border: 1px solid rgba(116,108,97,.25); border-radius: var(--radius-lg); padding: var(--space-6); }
+.qc-card h2 { margin: 0 0 var(--space-2); }
+
+.qc-form { display: grid; gap: var(--space-3); margin-top: var(--space-4); }
+.qc-form label { display: grid; gap: var(--space-1); font-weight: 700; font-size: .95rem; }
+.qc-form input[type="text"], .qc-form input[type="email"] { font: inherit; font-size: 1rem; font-weight: 400; padding: .8rem 1rem; border: 1px solid rgba(116,108,97,.6); border-radius: var(--radius); background: var(--white); color: var(--onyx); width: 100%; }
+.qc-form input:focus-visible { outline: 3px solid var(--bronze); outline-offset: 1px; }
+.qc-form input[aria-invalid="true"] { border-color: #a1261b; }
+.qc-form .btn { cursor: pointer; font-family: var(--font-body); width: 100%; margin-top: var(--space-2); }
+.qc-form .btn:disabled { opacity: .6; cursor: wait; }
+.qc-field-error { margin: 0; color: #a1261b; font-size: .9rem; }
+.qc-status { margin: 0; min-height: 1.5em; font-size: .95rem; color: var(--onyx); }
+.qc-status[data-error="1"] { color: #a1261b; font-weight: 700; }
+.qc-fine { margin: 0; font-size: .85rem; color: var(--stone); }
+.qc-fine a { color: inherit; }
+/* Honeypot: kept off-screen for people, still filled by bots. */
+.qc-hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+.qc-quote { margin: var(--space-4) 0; padding: var(--space-4) var(--space-6); border-left: 4px solid var(--bronze); background: rgba(200,153,108,.1); }
+.qc-quote footer { color: var(--stone); font-size: .9rem; }
+
+/* Watch page */
+.qc-watch { padding-top: var(--space-8); }
+.qc-kicker { font-size: 1rem; margin-bottom: var(--space-1); }
+.qc-watch h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); margin: 0 0 var(--space-6); }
+.qc-player-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; background: var(--onyx); border-radius: var(--radius-lg); overflow: hidden; }
+.qc-player, .qc-player-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.qc-resume { margin: var(--space-4) 0 0; }
+.qc-note { margin: var(--space-6) 0 0; color: var(--stone); }
+.qc-cta { margin: var(--space-6) 0; }
+.qc-cta-btn { width: 100%; text-align: center; font-size: 1rem; padding: 1rem 1.5rem; }
+@media (min-width: 40rem) { .qc-cta-btn { width: auto; } }
+.qc-offer { border-top: 1px solid rgba(116,108,97,.3); padding-top: var(--space-6); }
+.qc-offer h2 { margin-top: 0; }
+.qc-offer h3 { margin-top: var(--space-8); }
+.qc-price { font-size: 1.15rem; }
+.qc-missing { background: rgba(200,153,108,.1); border-radius: var(--radius-lg); padding: var(--space-6); }
+.qc-missing p:last-child { margin-bottom: 0; }
+.qc-debug { margin-top: var(--space-8); padding: var(--space-4); border: 2px dashed var(--bronze); border-radius: var(--radius); font-size: .9rem; display: grid; gap: var(--space-2); }
+.qc-debug p { margin: 0; }
+.qc-debug .btn { cursor: pointer; font-family: var(--font-body); }

@@ -1,0 +1,55 @@
+{
+  "_help": "AutoStack Quick Class. One entry per class, keyed by classId. To add a class: copy the income-tracker entry, give it a new key, fill it in, set status to ready, run npm run build. status: draft = built only in the draft preview (npm run dev -- --drafts). ready = live, and needs youtubeVideoId and ctaUrl. ctaUrl can be a full URL or site:<key> from config/site.json. Offer text can use {price_now} and {guarantee_days} from config/starter-kit.json, so the price is only typed in one place.",
+  "classes": {
+    "income-tracker": {
+      "status": "draft",
+      "title": "Income Tracker",
+      "headline": "Know what's left in your account without scrolling your bank app.",
+      "subhead": "Every transfer you get already sends you a bank alert email. In this class I show you how those emails can fill one Google Sheet, so you see money in and money out in one place.",
+      "forWhom": "For Nigerian online business owners whose customers pay by transfer.",
+      "learn": [
+        "Where your bank alert emails already hold every transfer in and out",
+        "How those alerts land in one Google Sheet on their own",
+        "How to read that sheet in a minute and know what is left"
+      ],
+      "youtubeVideoId": "",
+      "pitchSeconds": 1140,
+      "_pitchSecondsTodo": "Placeholder. Set the real second the offer starts after the final edit.",
+      "ctaText": "Get the Starter Kit",
+      "ctaUrl": "site:starter_kit_url",
+      "testimonials": [],
+      "offer": {
+        "heading": "Want the exact setup from the class?",
+        "kitSummary": [
+          "36 setups, the Income Tracker from this class included",
+          "The exact Google Sheet I used in the class",
+          "Help connecting a sheet you already use",
+          "The community, plus AutoStack Live on weekends"
+        ],
+        "priceText": "{price_now}, community included.",
+        "foundingLine": "You join as a founding member, so the community stays free for you when it becomes a paid membership later.",
+        "refundNote": "It is backed by the {guarantee_days}-day Connect-It Guarantee. If a setup will not connect and we cannot fix it together, you get your money back.",
+        "refundLinkText": "Read how the guarantee works",
+        "refundUrl": "/starter-kit/",
+        "faq": [
+          {
+            "question": "Do I have to buy the kit to use what you showed?",
+            "answer": "No. You can build it yourself from the class. The kit saves you the setup time, and you get help when you get stuck."
+          },
+          {
+            "question": "I am not technical. Can I still do this?",
+            "answer": "Yes. 35 of the 36 setups need no code, and every step is written out so you can follow along."
+          },
+          {
+            "question": "What if it will not connect?",
+            "answer": "Bring your screen to AutoStack Live on the weekend, or ask in the community. If we still cannot get it working, the guarantee gives you your money back."
+          },
+          {
+            "question": "How do I get it after paying?",
+            "answer": "Selar emails you the link to the kit and your community invite right after payment."
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+<section class="section qc-watch">
+  <div class="wrap read-wide">
+    <p class="callout qc-kicker">AutoStack Quick Class</p>
+    <h1 id="qc-title">Your class</h1>
+
+    <div id="qc-missing" class="qc-missing" hidden>
+      <p>This class isn't available. The link may be old, or the class may have moved.</p>
+      <p><a href="/">Go to the home page</a> or email <a href="mailto:{{contact_email}}">{{contact_email}}</a> and I'll send you the right link.</p>
+    </div>
+
+    <div id="qc-class" hidden>
+      <div class="qc-player-frame">
+        <div id="qc-player" class="qc-player"></div>
+      </div>
+      <p class="qc-resume" id="qc-resume" hidden><button type="button" class="btn btn--ghost" id="qc-resume-btn">Continue where you stopped</button></p>
+
+      <p class="qc-note" id="qc-note">Near the end, I show you the AutoStack Starter Kit. The link to it appears here when we get there.</p>
+
+      <div id="qc-offer-slot" hidden>
+        <p class="qc-cta"><a class="btn qc-cta-btn" id="qc-cta" href="#" target="_blank" rel="noopener">
+          <span id="qc-cta-text"></span><span class="visually-hidden"> (opens in a new tab)</span>
+        </a></p>
+      </div>
+
+      <div id="qc-debug" class="qc-debug" hidden>
+        <p><strong>Debug mode.</strong> Events are logged to the console.</p>
+        <button type="button" class="btn btn--ghost" id="qc-debug-jump">Jump to 5 seconds before the pitch</button>
+        <button type="button" class="btn btn--ghost" id="qc-debug-reset">Reset this class in this browser</button>
+        <p id="qc-debug-state"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{{offer_templates}}}
+<script type="application/json" id="qc-data">{{{classes_json}}}</script>

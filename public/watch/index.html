@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoStack Quick Class | The Automate Stack</title>
+  <meta name="description" content="Watch your free AutoStack Quick Class.">
+  <link rel="canonical" href="https://www.theautomatestack.com/watch/">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script>
+  // Runs before anything else on the page, including the Meta Pixel: move the email out of the address bar
+  // so it is never sent to Meta, YouTube or Selar inside a page URL.
+  (function () {
+    try {
+      var u = new URL(location.href), e = u.searchParams.get('e');
+      if (e === null) return;
+      e = e.trim().toLowerCase();
+      if (e.length <= 200 && /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e)) { try { localStorage.setItem('qc_email', e); } catch (x) {} }
+      u.searchParams.delete('e');
+      history.replaceState(null, '', u.pathname + u.search + u.hash);
+    } catch (x) {}
+  })();
+  </script>
+  
+  <link rel="icon" type="image/png" href="/assets/img/logo.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <meta property="og:site_name" content="The Automate Stack">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AutoStack Quick Class | The Automate Stack">
+  <meta property="og:description" content="Watch your free AutoStack Quick Class.">
+  <meta property="og:url" content="https://www.theautomatestack.com/watch/">
+  <meta property="og:image" content="https://www.theautomatestack.com/assets/img/logo.png">
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AutoStack Quick Class | The Automate Stack">
+  <meta name="twitter:description" content="Watch your free AutoStack Quick Class.">
+  <meta name="twitter:image" content="https://www.theautomatestack.com/assets/img/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Lato:wght@400;700&amp;family=Poppins:wght@700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/brand.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/quickclass.css">
+  
+  <script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1067023309651592');
+fbq('track', 'PageView');
+(function () {
+  var data = {};
+  // A setup page: tell Meta which product is being viewed.
+  if (data.content_ids) fbq('track', 'ViewContent', data);
+  // Someone presses a buy button, on their way to Selar.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a.btn--big');
+    if (a && data.content_ids) fbq('track', 'InitiateCheckout', data);
+  }, { passive: true });
+  // The free-resource form: someone leaves their details to be contacted. Meta calls that a Lead.
+  document.addEventListener('submit', function (e) {
+    var form = e.target;
+    if (!form.classList || !form.classList.contains('lead-form') || form.__leadSent) return;
+    form.__leadSent = true;
+    e.preventDefault();
+    fbq('track', 'Lead', { content_name: form.elements.freebie ? form.elements.freebie.value : '', content_category: 'free resource' });
+    setTimeout(function () { form.submit(); }, 250); // a moment for the browser to send the event before the page moves on
+  });
+  // The page Selar sends buyers back to after paying. Counted once per visit, and only when a setup is named in the link.
+  var m = /^\/before-you-go\/?$/.test(location.pathname) && new URLSearchParams(location.search).get('setup');
+  if (m) {
+    try { if (sessionStorage.getItem('px-purchase-' + m)) return; sessionStorage.setItem('px-purchase-' + m, '1'); } catch (x) {}
+    fbq('track', 'Purchase', { content_ids: [m], currency: 'NGN', value: 5000 });
+  }
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1067023309651592&amp;ev=PageView&amp;noscript=1"></noscript>
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  
+  <header class="site-header site-header--sales">
+  <div class="wrap">
+    <span class="brand">
+      <img src="/assets/img/logo.png" alt="The Automate Stack logo" width="36" height="36">
+      <span>theautomatestack</span>
+    </span>
+  </div>
+</header>
+
+  <main id="main">
+<section class="section qc-watch">
+  <div class="wrap read-wide">
+    <p class="callout qc-kicker">AutoStack Quick Class</p>
+    <h1 id="qc-title">Your class</h1>
+
+    <div id="qc-missing" class="qc-missing" hidden>
+      <p>This class isn't available. The link may be old, or the class may have moved.</p>
+      <p><a href="/">Go to the home page</a> or email <a href="mailto:support@theautomatestack.com">support@theautomatestack.com</a> and I'll send you the right link.</p>
+    </div>
+
+    <div id="qc-class" hidden>
+      <div class="qc-player-frame">
+        <div id="qc-player" class="qc-player"></div>
+      </div>
+      <p class="qc-resume" id="qc-resume" hidden><button type="button" class="btn btn--ghost" id="qc-resume-btn">Continue where you stopped</button></p>
+
+      <p class="qc-note" id="qc-note">Near the end, I show you the AutoStack Starter Kit. The link to it appears here when we get there.</p>
+
+      <div id="qc-offer-slot" hidden>
+        <p class="qc-cta"><a class="btn qc-cta-btn" id="qc-cta" href="#" target="_blank" rel="noopener">
+          <span id="qc-cta-text"></span><span class="visually-hidden"> (opens in a new tab)</span>
+        </a></p>
+      </div>
+
+      <div id="qc-debug" class="qc-debug" hidden>
+        <p><strong>Debug mode.</strong> Events are logged to the console.</p>
+        <button type="button" class="btn btn--ghost" id="qc-debug-jump">Jump to 5 seconds before the pitch</button>
+        <button type="button" class="btn btn--ghost" id="qc-debug-reset">Reset this class in this browser</button>
+        <p id="qc-debug-state"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script type="application/json" id="qc-data">{}</script>
+
+  </main>
+  <footer class="sales-footer">
+  <p>Questions? <a href="mailto:support@theautomatestack.com">support@theautomatestack.com</a></p>
+  <p>&copy; 2026 The Automate Stack. All rights reserved. <a href="/privacy/">Privacy note</a></p>
+  <p>Registered with the Corporate Affairs Commission of Nigeria. Business Name No. 9841634.</p>
+  <div class="sales-disclaimer">
+    <p>Any examples of time or money on this page are only illustrations, not promises or estimates of what you will earn or save. Individual results will always vary and depend on your own situation, effort and skills.</p>
+    <p>Product names and logos belong to their owners. This page is not affiliated with or endorsed by them.</p>
+    <p>This site is not a part of the Facebook website or Meta Platforms, Inc. This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of Meta Platforms, Inc.</p>
+    <p>This page uses the Meta Pixel to measure my ads. It saves cookies on your device. See the <a href="/privacy/">privacy note</a> for what it records and how to opt out.</p>
+
+  </div>
+</footer>
+
+  <script type="module" src="/assets/js/quickclass.js"></script>
+</body>
+</html>
