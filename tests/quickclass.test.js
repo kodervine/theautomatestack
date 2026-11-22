@@ -2,6 +2,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { tick, crossedQuarters } from "../public/assets/js/qc-progress.js";
+import kit from "../config/starter-kit.json" with { type: "json" };
 import { findClass, registerPayload, watchedPayload, offerUrl, cleanEmail } from "../api/_quickclass.js";
 import register from "../api/quickclass-register.js";
 
@@ -43,11 +44,14 @@ test("payloads carry the fields the n8n workflow reads, with links built from co
   const cls = findClass("income-tracker", { allowDrafts: true });
   assert.ok(cls);
   const reg = registerPayload(cls, "Ada", "ada@example.com");
-  assert.deepEqual(Object.keys(reg).sort(), ["classId", "classTitle", "email", "name", "offerUrl", "watchUrl"]);
+  const emailKeys = ["classId", "classLength", "classPromise", "classTitle", "email", "offerName", "offerNote", "offerPrice", "offerSummary", "offerUrl", "watchUrl"];
+  assert.deepEqual(Object.keys(reg).sort(), [...emailKeys, "name"].sort());
+  assert.equal(reg.offerPrice, kit.price_now);
+  assert.ok(!/{[a-z_]+}/.test(JSON.stringify(reg)), "no unfilled {tokens} reach the email");
   assert.match(reg.watchUrl, /\/watch\/\?class=income-tracker&e=ada%40example\.com$/);
   assert.match(reg.offerUrl, /utm_source=quickclass&utm_medium=email&utm_campaign=income-tracker/);
   const w = watchedPayload(cls, "ada@example.com");
-  assert.deepEqual(Object.keys(w).sort(), ["classId", "email", "offerUrl", "watchUrl"]);
+  assert.deepEqual(Object.keys(w).sort(), [...emailKeys, "email"].filter((k, i, a) => a.indexOf(k) === i).sort());
   assert.match(offerUrl(cls, "watchpage"), /utm_medium=watchpage/);
 });
 

@@ -251,6 +251,10 @@ function quickClassEntries({ site, drafts }) {
 
   const previewHtml = (c) => {
     const v = c.preview || {};
+    if (v.video) {
+      // A short phone recording: silent, looping, narrow. The poster shows first and when motion is switched off.
+      return `<figure class="qc-preview qc-preview--phone"><video src="${esc(v.video)}" poster="${esc(v.src || "")}" width="${Number(v.width) || 432}" height="${Number(v.height) || 960}" muted loop playsinline autoplay preload="metadata" aria-label="${esc(v.alt || "")}"></video>${v.caption ? `<figcaption>${esc(v.caption)}</figcaption>` : ""}</figure>`;
+    }
     if (!v.src) return "";
     return `<figure class="qc-preview"><img src="${esc(v.src)}" width="${Number(v.width) || 720}" height="${Number(v.height) || 438}" alt="${esc(v.alt || "")}" loading="lazy">${v.caption ? `<figcaption>${esc(v.caption)}</figcaption>` : ""}</figure>`;
   };

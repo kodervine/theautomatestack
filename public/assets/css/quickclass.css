@@ -54,3 +54,19 @@ main [hidden] { display: none !important; }
 .qc-preview { margin: var(--space-6) 0; }
 .qc-preview img { display: block; width: 100%; height: auto; border: 1px solid rgba(200,153,108,.55); border-radius: var(--radius-lg); }
 .qc-preview figcaption { margin-top: var(--space-2); font-size: .85rem; color: var(--stone); }
+
+/* Phone recording: keep it narrow so it reads like a phone, not a banner. */
+.qc-preview--phone { max-width: 17rem; margin-inline: auto; }
+.qc-preview--phone video { display: block; width: 100%; height: auto; border: 1px solid rgba(200,153,108,.55); border-radius: var(--radius-lg); background: var(--ink, #1A1110); }
+.qc-preview--phone figcaption { text-align: center; }
+@media (prefers-reduced-motion: reduce) { .qc-preview--phone video { animation: none; } }
+
+/* Hero: text on the left, the phone recording on the right (below the text on a phone). */
+.qc-hero-grid { display: grid; gap: var(--space-8); align-items: center; }
+.qc-hero .qc-preview { margin: 0; }
+.qc-hero .qc-preview figcaption { color: rgba(251,249,244,.7); }
+.qc-hero .qc-preview--phone { max-width: 15rem; }
+@media (min-width: 56rem) {
+  .qc-hero-grid { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: var(--space-12); }
+  .qc-hero .qc-preview--phone { max-width: 17rem; justify-self: center; }
+}

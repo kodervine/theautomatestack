@@ -1,9 +1,13 @@
 <section class="hero hero--short qc-hero">
-  <div class="wrap hero-inner">
-    <p class="callout">{{for_whom}}</p>
-    <h1>{{headline}}</h1>
-    <p class="lead">{{subhead}}</p>
-    <p class="qc-free">Free AutoStack Quick Class. Watch it on your phone whenever you like.</p>
+  <div class="wrap hero-inner qc-hero-grid">
+    <div class="qc-hero-text">
+      <p class="callout">{{for_whom}}</p>
+      <h1>{{headline}}</h1>
+      <p class="lead">{{subhead}}</p>
+      <p class="qc-free">Free AutoStack Quick Class. Watch it on your phone whenever you like.</p>
+      <p class="actions"><a class="btn" href="#register">Watch the class</a></p>
+    </div>
+{{{preview_html}}}
   </div>
 </section>
 
@@ -14,8 +18,6 @@
       <ul class="tick-list">
 {{#each learn}}        <li>{{text}}</li>
 {{/each}}      </ul>
-{{{preview_html}}}
-      <p>It's free. At the end, I show you the AutoStack Starter Kit, in case you want the full setup. You can stop the video there.</p>
     </div>
 
     <div class="qc-card">
@@ -35,7 +37,7 @@
         <p class="qc-field-error" id="qc-email-error" hidden></p>
         <button class="btn" type="submit">Watch the class</button>
         <p class="qc-status" id="qc-status" role="status" aria-live="polite"></p>
-        <p class="qc-fine">I'll email you the link to the class and a few short follow-ups. Unsubscribe any time. I never ask for passwords, PINs, OTPs or card details. <a href="/privacy/">Privacy note</a></p>
+        <p class="qc-fine">I'll also email you the link to the class and a few short follow-ups. Unsubscribe any time. I never ask for passwords, PINs, OTPs or card details. <a href="/privacy/">Privacy note</a></p>
       </form>
     </div>
   </div>

@@ -3,6 +3,7 @@
 // so nobody can post a different link and have it emailed out under your name.
 import classesData from "../config/classes.json" with { type: "json" };
 import site from "../config/site.json" with { type: "json" };
+import kit from "../config/starter-kit.json" with { type: "json" };
 
 export const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -45,12 +46,29 @@ export function watchPath(classId, email) {
 
 export const watchUrl = (classId, email) => site.site_url + watchPath(classId, email);
 
+/** Fills {price_now} and {guarantee_days} from config/starter-kit.json, so a price is never typed into a class. */
+export const fillKit = (s) => String(s || "").replace(/\{(price_now|guarantee_days)\}/g, (_, k) => kit[k] ?? "");
+
+/** Fields the emails use to describe the class and the offer. Built from config, never from the browser. */
+function emailFields(cls) {
+  return {
+    classTitle: cls.title,
+    classLength: fillKit(cls.classLength),
+    classPromise: fillKit(cls.classPromise),
+    offerName: fillKit(cls.offerName),
+    offerPrice: fillKit(cls.offerPrice),
+    offerSummary: fillKit(cls.offerSummary),
+    offerNote: fillKit(cls.offerNote),
+    offerUrl: offerUrl(cls, "email"),
+  };
+}
+
 export function registerPayload(cls, name, email) {
-  return { name, email, classId: cls.classId, classTitle: cls.title, watchUrl: watchUrl(cls.classId, email), offerUrl: offerUrl(cls, "email") };
+  return { name, email, classId: cls.classId, ...emailFields(cls), watchUrl: watchUrl(cls.classId, email) };
 }
 
 export function watchedPayload(cls, email) {
-  return { email, classId: cls.classId, offerUrl: offerUrl(cls, "email"), watchUrl: watchUrl(cls.classId, email) };
+  return { email, classId: cls.classId, ...emailFields(cls), watchUrl: watchUrl(cls.classId, email) };
 }
 
 // Best-effort rate limit per IP. Memory lives only as long as a warm function instance, which is enough to stop a burst.
