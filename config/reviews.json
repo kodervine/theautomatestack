@@ -186,12 +186,27 @@
       "alt": "A WhatsApp group chat. A community member writes: Thank you, this is a life saver. I've started using Claude to design carousels and it's very exciting what it can do. The applications stuff, I've been using Claude to do that and these days, applications are easier because I only have to tweak a few things myself. In a reply they say they use it for scholarship applications, give it roles, and it helps them build competitive SOPs. Chinenye's tips are blurred.",
       "quote": "Applications are easier because I only have to tweak a few things myself.",
       "who": "From my community"
+    },
+    "amazing-session": {
+      "type": "image",
+      "layout": "card",
+      "src": "/assets/reviews/slide-amazing-session.jpg",
+      "width": 1080,
+      "height": 1350,
+      "alt": "Two WhatsApp messages from people after a session. One says: Thank you so much Chinenye. It was an amazing session. The other says: Thanks Chinenye, I love how you handhold your circle. Names are blurred.",
+      "quote": "It was an amazing session.",
+      "who": "From my community"
     }
   },
   "starter_kit_top": [
     "receipts",
     "wowed",
     "miracle"
+  ],
+  "buy_title": "From my community",
+  "starter_kit_buy": [
+    "all-needed",
+    "half-baked"
   ],
   "starter_kit_more": [
     "before",
@@ -206,13 +221,22 @@
     "buffer-sleek",
     "life-saver",
     "receipts-9pm",
-    "applications-easier"
+    "applications-easier",
+    "amazing-session"
   ],
   "more_title": "More from my community",
   "starter_kit_community": [
     "founding-member",
     "founding-call",
     "active-support"
+  ],
+  "watch_title": "Inside the community",
+  "watch_page": [
+    "founding-member",
+    "founding-call",
+    "active-support",
+    "amazing-session",
+    "applications-easier"
   ],
   "home": [
     "receipts",

@@ -92,6 +92,16 @@ Only 5 of 20 founding spots left
 -   Kit link + community invite sent automatically to your email the second payment clears
 -   Backed by the 30-Day Connect-It Guarantee (100% refund + ₦5,000)
 
+From my community
+
+Two WhatsApp messages from my community. One says: Thanks for today's class. This is all I needed and am glad I found and joined this training. The other says: Thank you for the class. Even though I know that there are so many things we can do with AI, the class helped streamline and put it in perspective.
+
+This is all I needed and am glad I found and joined this training.From my community
+
+Two WhatsApp messages from my community. One says: The automation I knew all my life was half baked. I got the full grilled chicken tonight. A reply says: What I saw today, I will call it Living Automation.
+
+The automation I knew all my life was half baked. I got the full grilled chicken tonight.From my community
+
 ## How it works. It is shorter than you think.
 
 1.  Pick the one job that annoys you most this week. Just one.
@@ -192,6 +202,16 @@ Only 5 of 20 founding spots left
 -   Kit link + community invite sent automatically to your email the second payment clears
 -   Backed by the 30-Day Connect-It Guarantee (100% refund + ₦5,000)
 
+From my community
+
+Two WhatsApp messages from my community. One says: Thanks for today's class. This is all I needed and am glad I found and joined this training. The other says: Thank you for the class. Even though I know that there are so many things we can do with AI, the class helped streamline and put it in perspective.
+
+This is all I needed and am glad I found and joined this training.From my community
+
+Two WhatsApp messages from my community. One says: The automation I knew all my life was half baked. I got the full grilled chicken tonight. A reply says: What I saw today, I will call it Living Automation.
+
+The automation I knew all my life was half baked. I got the full grilled chicken tonight.From my community
+
 ## You will not be left on your own
 
 Here is how most people quit. They hit step three. Nobody is there to ask. The thing sits half finished, and they decide AI is not for them.
@@ -263,6 +283,10 @@ Every 9 pm, it pulls all the receipts for the day and sends me a notification th
 A WhatsApp group chat. A community member writes: Thank you, this is a life saver. I've started using Claude to design carousels and it's very exciting what it can do. The applications stuff, I've been using Claude to do that and these days, applications are easier because I only have to tweak a few things myself. In a reply they say they use it for scholarship applications, give it roles, and it helps them build competitive SOPs. Chinenye's tips are blurred.
 
 Applications are easier because I only have to tweak a few things myself.From my community
+
+Two WhatsApp messages from people after a session. One says: Thank you so much Chinenye. It was an amazing session. The other says: Thanks Chinenye, I love how you handhold your circle. Names are blurred.
+
+It was an amazing session.From my community
 
 [Get Instant Access Now](https://selar.com/6111279119)
 
@@ -366,6 +390,16 @@ Only 5 of 20 founding spots left
 -   Supports Instant Automated Bank Transfer, Card & USSD at checkout
 -   Kit link + community invite sent automatically to your email the second payment clears
 -   Backed by the 30-Day Connect-It Guarantee (100% refund + ₦5,000)
+
+From my community
+
+Two WhatsApp messages from my community. One says: Thanks for today's class. This is all I needed and am glad I found and joined this training. The other says: Thank you for the class. Even though I know that there are so many things we can do with AI, the class helped streamline and put it in perspective.
+
+This is all I needed and am glad I found and joined this training.From my community
+
+Two WhatsApp messages from my community. One says: The automation I knew all my life was half baked. I got the full grilled chicken tonight. A reply says: What I saw today, I will call it Living Automation.
+
+The automation I knew all my life was half baked. I got the full grilled chicken tonight.From my community
 
 P.P.P.S. Not sure where to start? Pick the thing that annoys you most this week and open that template first. Most take 10 to 30 minutes. That is all it takes to see if this is for you.
 

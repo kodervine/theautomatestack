@@ -687,3 +687,9 @@ body:has(.site-header--sales) .btn--big:focus-visible { box-shadow: 0 0 44px 8px
   #what-we-automate .card { grid-column: span 1; }
   #what-we-automate .card:nth-child(1), #what-we-automate .card:nth-child(6) { grid-column: span 2; }
 }
+
+/* Reviews under each payment block */
+.buy-reviews { margin-top: var(--space-8); text-align: left; }
+.buy-reviews-title { margin: 0; font-weight: 700; }
+.buy-reviews .proof-list { margin-top: var(--space-4); }
+.section--dark .buy-reviews .proof-item figcaption span { color: inherit; opacity: .75; }

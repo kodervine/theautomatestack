@@ -5,15 +5,23 @@
       "status": "draft",
       "title": "Income Tracker",
       "headline": "Know what's left in your account without scrolling your bank app.",
-      "subhead": "Every transfer you get already sends you a bank alert email. In this class I show you how those emails can fill one Google Sheet, so you see money in and money out in one place.",
-      "forWhom": "For Nigerian online business owners whose customers pay by transfer.",
+      "subhead": "Your bank already sends you an alert every time money moves. In this class I show you how those alerts fill one Google Sheet on their own, so your income and expenses track themselves.",
+      "forWhom": "For business owners who get bank alerts and want to track their expenses automatically.",
       "learn": [
         "Where your bank alert emails already hold every transfer in and out",
-        "How those alerts land in one Google Sheet on their own",
+        "How those alerts land in one Google Sheet on their own, with your expenses sorted",
         "How to read that sheet in a minute and know what is left"
       ],
-      "youtubeVideoId": "",
-      "pitchSeconds": 1140,
+      "preview": {
+        "_help": "Optional picture of the result, shown on the registration page. Swap src for a screenshot of your real dashboard. Leave src empty to hide it.",
+        "src": "/assets/img/hero-income-loop.jpg",
+        "width": 720,
+        "height": 438,
+        "alt": "The Summary tab of the Income Tracker Google Sheet, showing money in, money out and what is left over for the month.",
+        "caption": "A look at the sheet you will see in the class."
+      },
+      "youtubeVideoId": "M7lc1UVf-VE",
+      "pitchSeconds": 30,
       "_pitchSecondsTodo": "Placeholder. Set the real second the offer starts after the final edit.",
       "ctaText": "Get the Starter Kit",
       "ctaUrl": "site:starter_kit_url",

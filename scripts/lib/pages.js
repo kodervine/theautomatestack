@@ -226,8 +226,11 @@ function quickClassEntries({ site, drafts }) {
     u.searchParams.set("utm_campaign", c.classId);
     return u.toString();
   };
+  const reviewsCfg = readReviews();
   const offerHtml = (c) => {
     const o = c.offer || {};
+    // Community wins, shared by every class (watch_page in config/reviews.json).
+    const proof = (reviewsCfg.watch_page || []).length ? reviewsHtml(reviewsCfg, reviewsCfg.watch_page) : "";
     const faq = (o.faq || []).map((f) => `<details><summary>${esc(f.question)}</summary><p>${esc(fill(f.answer))}</p></details>`).join("");
     return `<template id="qc-offer-${c.classId}"><section class="qc-offer" aria-labelledby="qc-offer-h-${c.classId}">
   <h2 id="qc-offer-h-${c.classId}">${esc(o.heading || "The AutoStack Starter Kit")}</h2>
@@ -235,6 +238,7 @@ function quickClassEntries({ site, drafts }) {
   <p class="qc-price"><strong>${esc(fill(o.priceText))}</strong></p>
   ${o.foundingLine ? `<p>${esc(fill(o.foundingLine))}</p>` : ""}
   ${o.refundNote ? `<p>${esc(fill(o.refundNote))}${o.refundUrl ? ` <a href="${esc(o.refundUrl)}">${esc(o.refundLinkText || "How the guarantee works")}</a>` : ""}</p>` : ""}
+  ${proof ? `<h3>${esc(reviewsCfg.watch_title || "Inside the community")}</h3>${proof}` : ""}
   ${faq ? `<h3>Questions</h3><div class="faq-list">${faq}</div>` : ""}
 </section></template>`;
   };
@@ -243,6 +247,12 @@ function quickClassEntries({ site, drafts }) {
     const list = (c.testimonials || []).filter((t) => t && t.quote && t.name);
     if (!list.length) return "<!-- testimonials slot: add real ones to config/classes.json -->";
     return `<section class="section"><div class="wrap read-wide"><h2>What people said</h2>${list.map((t) => `<blockquote class="qc-quote"><p>${esc(t.quote)}</p><footer>${esc(t.name)}</footer></blockquote>`).join("")}</div></section>`;
+  };
+
+  const previewHtml = (c) => {
+    const v = c.preview || {};
+    if (!v.src) return "";
+    return `<figure class="qc-preview"><img src="${esc(v.src)}" width="${Number(v.width) || 720}" height="${Number(v.height) || 438}" alt="${esc(v.alt || "")}" loading="lazy">${v.caption ? `<figcaption>${esc(v.caption)}</figcaption>` : ""}</figure>`;
   };
 
   // Only what the watch page script needs. "<" is escaped so the JSON can sit safely inside a script tag.
@@ -261,7 +271,7 @@ function quickClassEntries({ site, drafts }) {
       noindex: c.status !== "ready",
       extra: {
         class_id: c.classId, title: c.title, headline: c.headline, subhead: c.subhead, for_whom: c.forWhom,
-        learn: (c.learn || []).map((text) => ({ text })), testimonials_html: testimonialsHtml(c),
+        learn: (c.learn || []).map((text) => ({ text })), testimonials_html: testimonialsHtml(c), preview_html: previewHtml(c),
       },
     })),
     {
@@ -342,7 +352,7 @@ export function buildPages({ out, site, posts, drafts }) {
   // "<" is escaped so the JSON can sit safely inside a script tag.
   const setupNamesJson = JSON.stringify(Object.fromEntries(setups.map((s) => [s.slug, s.name]))).replace(/</g, "\\u003c");
   const setupNotionJson = JSON.stringify(Object.fromEntries(setups.filter((s) => /^https:\/\//.test(s.notion_url || "")).map((s) => [s.slug, s.notion_url]))).replace(/</g, "\\u003c");
-  const kitExtra = { faqs: kit.faqs.map((f, i) => ({ ...f, open: i === 0 ? " open" : "" })), header_note: "The AutoStack Starter Kit", guarantee_bonus: kit.guarantee_bonus, guarantee_days: kit.guarantee_days, price_was: kit.price_was, price_now: kit.price_now, scarcity_line: scarcityLine, community_yearly: naira((kit.stack.bonuses.find((b) => b.community) || {}).value || 0), partner_per: naira(partnerPer), partner_n: partnerN, partner_back: naira(partnerPer * partnerN), onboarding_line: onboardingLine, stack_html: stackHtml(kit, spotsLeft, foundingTaken, foundingCap), recap_html: recapHtml(kit, spotsLeft), trust: [], buy_href: site.starter_kit_url, pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product", value: Number(String(kit.price_now).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\u003c"), reviews_title: reviewsCfg.title, reviews_intro: reviewsCfg.intro, reviews_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_top), reviews_more_title: reviewsCfg.more_title, reviews_more_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_more), reviews_community_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_community) };
+  const kitExtra = { faqs: kit.faqs.map((f, i) => ({ ...f, open: i === 0 ? " open" : "" })), header_note: "The AutoStack Starter Kit", guarantee_bonus: kit.guarantee_bonus, guarantee_days: kit.guarantee_days, price_was: kit.price_was, price_now: kit.price_now, scarcity_line: scarcityLine, community_yearly: naira((kit.stack.bonuses.find((b) => b.community) || {}).value || 0), partner_per: naira(partnerPer), partner_n: partnerN, partner_back: naira(partnerPer * partnerN), onboarding_line: onboardingLine, stack_html: stackHtml(kit, spotsLeft, foundingTaken, foundingCap), recap_html: recapHtml(kit, spotsLeft), trust: [], buy_href: site.starter_kit_url, pixel_json: JSON.stringify({ content_ids: ["starter-kit"], content_name: "AutoStack Starter Kit", content_type: "product", value: Number(String(kit.price_now).replace(/[^0-9]/g, "")) || 0, currency: "NGN" }).replace(/</g, "\u003c"), reviews_title: reviewsCfg.title, reviews_intro: reviewsCfg.intro, reviews_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_top), reviews_more_title: reviewsCfg.more_title, reviews_buy_title: reviewsCfg.buy_title, reviews_buy_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_buy), reviews_more_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_more), reviews_community_html: reviewsHtml(reviewsCfg, reviewsCfg.starter_kit_community) };
   const kitPage = (v) => {
     const c = kit.pages[v];
     return {

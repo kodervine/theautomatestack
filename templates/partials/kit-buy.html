@@ -8,4 +8,8 @@
         <li>Kit link + community invite sent automatically to your email the second payment clears</li>
         <li>Backed by the {{guarantee_days}}-Day Connect-It Guarantee (100% refund + {{guarantee_bonus}})</li>
       </ul>
-    </div>
+{{#if reviews_buy_html}}      <div class="buy-reviews">
+        <p class="buy-reviews-title">{{reviews_buy_title}}</p>
+{{{reviews_buy_html}}}
+      </div>
+{{/if}}    </div>
