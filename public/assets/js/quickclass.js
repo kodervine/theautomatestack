@@ -88,6 +88,21 @@ function initRegister(form) {
   });
 }
 
+/** Every "Watch the class" button opens the same small form. Without JS the form just shows on the page. */
+function initModal(dialog, form) {
+  if (!dialog || typeof dialog.showModal !== "function") return;
+  const open = (e) => {
+    e.preventDefault();
+    if (!dialog.open) dialog.showModal();
+    form.elements.name.focus();
+  };
+  document.querySelectorAll("[data-qc-open]").forEach((el) => el.addEventListener("click", open));
+  dialog.querySelector("[data-qc-close]")?.addEventListener("click", () => dialog.close());
+  // A click on the dark backdrop (outside the box) closes it.
+  dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
+  if (location.hash === "#register") dialog.showModal();
+}
+
 // ---------------------------------------------------------------- watch page
 function loadYouTubeApi() {
   if (window.YT && window.YT.Player) return Promise.resolve(window.YT);
@@ -290,6 +305,9 @@ function initWatch(dataEl) {
 }
 
 const form = document.getElementById("qc-register");
-if (form) initRegister(form);
+if (form) {
+  initRegister(form);
+  initModal(document.getElementById("register"), form);
+}
 const data = document.getElementById("qc-data");
 if (data) initWatch(data);

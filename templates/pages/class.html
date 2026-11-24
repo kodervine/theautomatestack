@@ -1,68 +1,81 @@
-<section class="hero hero--short qc-hero">
+<section class="hero hero--short qc-hero sales-hero">
   <div class="wrap hero-inner qc-hero-grid">
-    <div class="qc-hero-text">
-      <p class="callout">{{for_whom}}</p>
-      <h1>{{headline}}</h1>
-      <p class="lead">{{subhead}}</p>
-      <p class="qc-free">Free AutoStack Quick Class. Watch it on your phone whenever you like.</p>
-      <p class="actions"><a class="btn" href="#register">Watch the class</a></p>
-    </div>
+    <p class="qc-badge"><span class="qc-dot" aria-hidden="true"></span>{{for_whom}}</p>
+    <h1>{{{headline_html}}}</h1>
+    <p class="lead">{{subhead}}</p>
+{{#if subhead2}}    <p class="lead lead--strong">{{subhead2}}</p>
+{{/if}}{{{intro_html}}}
 {{{preview_html}}}
+    <p class="actions"><a class="btn qc-big-btn" href="#register" data-qc-open>Register to watch the free class now</a></p>
+{{#if urgent_text}}    <p class="qc-urgent"><strong>Read this before you scroll:</strong> {{urgent_text}}</p>
+{{/if}}  </div>
+</section>
+
+<section class="section section--tint qc-why">
+  <div class="wrap read-wide">
+    <p class="callout">{{why_eyebrow}}</p>
+    <h2>{{why_heading}}</h2>
+    <div class="bio">
+      <img src="/assets/img/chinenye-avatar.jpg" width="112" height="112" alt="{{author_full_name}}" loading="lazy">
+      <div class="prose">
+{{#each why_paragraphs}}        <p>{{{text}}}</p>
+{{/each}}      </div>
+    </div>
+    <div class="prose">
+      <p><strong>{{why_changes_intro}}</strong></p>
+      <ul class="tick-list">
+{{#each why_changes}}        <li>{{text}}</li>
+{{/each}}      </ul>
+    </div>
   </div>
 </section>
 
-<section class="section qc-section" id="register">
-  <div class="wrap qc-grid">
-    <div class="prose">
-      <h2>What you will see</h2>
-      <ul class="tick-list">
-{{#each learn}}        <li>{{text}}</li>
-{{/each}}      </ul>
-    </div>
+{{{proof_html}}}
 
-    <div class="qc-card">
-      <h2>Watch the class</h2>
-      <form class="qc-form" id="qc-register" method="post" action="/api/quickclass-register" novalidate>
-        <input type="hidden" name="classId" value="{{class_id}}">
-        <div class="qc-hp" aria-hidden="true">
-          <label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-        </div>
-        <label for="qc-name">Your name
-          <input id="qc-name" type="text" name="name" autocomplete="given-name" maxlength="100" required aria-describedby="qc-name-error">
-        </label>
-        <p class="qc-field-error" id="qc-name-error" hidden></p>
-        <label for="qc-email">Your email
-          <input id="qc-email" type="email" name="email" autocomplete="email" inputmode="email" maxlength="200" required aria-describedby="qc-email-error">
-        </label>
-        <p class="qc-field-error" id="qc-email-error" hidden></p>
-        <button class="btn" type="submit">Watch the class</button>
-        <p class="qc-status" id="qc-status" role="status" aria-live="polite"></p>
-        <p class="qc-fine">I'll also email you the link to the class and a few short follow-ups. Unsubscribe any time. I never ask for passwords, PINs, OTPs or card details. <a href="/privacy/">Privacy note</a></p>
-      </form>
-    </div>
+<section class="section qc-section">
+  <div class="wrap read-wide prose">
+    <p class="callout">{{learn_eyebrow}}</p>
+    <h2>{{learn_heading}}</h2>
+    <p>{{learn_intro}}</p>
+    <ul class="tick-list">
+{{#each learn}}      <li>{{#if title}}<strong>{{title}}</strong> {{/if}}{{text}}</li>
+{{/each}}    </ul>
+    <p class="actions"><a class="btn" href="#register" data-qc-open>Register to watch the free class now</a></p>
   </div>
 </section>
 
 {{{testimonials_html}}}
 
-<section class="section section--tint">
-  <div class="wrap read-wide">
-    <h2>Who is teaching this</h2>
-    <div class="bio">
-      <img src="/assets/img/chinenye-avatar.jpg" width="112" height="112" alt="{{author_full_name}}" loading="lazy">
-      <div class="prose">
-        <p>Hi, I'm Chinenye. In my day job, I'm a software engineer.</p>
-        <p>I have <a href="https://www.tonative.org/indaba-2026#:~:text=LinkedIn-,Chinenye%20Anikwenze,-Engineering%20Lead%2C%20Tonative" target="_blank" rel="noopener">organised a workshop</a> at the Deep Learning Indaba. The ACM featured me for my <a href="https://women.acm.org/u-rise-chinenye-anikwenze-from-an-academic-in-history-to-an-unconventional-advocate-for-responsible-and-inclusive-ai/" target="_blank" rel="noopener">work on responsible AI</a>.</p>
-        <p>My first degree was History and International Studies. So you don't need a technical background for this.</p>
-      </div>
-    </div>
-  </div>
-</section>
+{{{faq_html}}}
 
 <section class="section section--dark">
   <div class="wrap band">
-    <h2>{{title}}, free</h2>
-    <p>Name and email, then you watch.</p>
-    <p class="actions"><a class="btn" href="#register">Watch the class</a></p>
+    <h2>{{final_heading}}</h2>
+    <p>{{final_text}}</p>
+    <p class="actions"><a class="btn" href="#register" data-qc-open>Register to watch the free class now</a></p>
   </div>
 </section>
+
+<dialog class="qc-modal" id="register" aria-labelledby="qc-modal-title">
+  <button class="qc-modal-close" type="button" data-qc-close aria-label="Close">&times;</button>
+  <h2 id="qc-modal-title">Register to watch the class</h2>
+  <p class="qc-modal-sub">I'll email you the link too, so you can always find it.</p>
+  <form class="qc-form" id="qc-register" method="post" action="/api/quickclass-register" novalidate>
+    <input type="hidden" name="classId" value="{{class_id}}">
+    <div class="qc-hp" aria-hidden="true">
+      <label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+    </div>
+    <label for="qc-name">Your name
+      <input id="qc-name" type="text" name="name" autocomplete="given-name" maxlength="100" required aria-describedby="qc-name-error">
+    </label>
+    <p class="qc-field-error" id="qc-name-error" hidden></p>
+    <label for="qc-email">Your email
+      <input id="qc-email" type="email" name="email" autocomplete="email" inputmode="email" maxlength="200" required aria-describedby="qc-email-error">
+    </label>
+    <p class="qc-field-error" id="qc-email-error" hidden></p>
+    <button class="btn" type="submit">Register to watch the free class now</button>
+    <p class="qc-status" id="qc-status" role="status" aria-live="polite"></p>
+    <p class="qc-fine">You'll get the link and a few short follow-ups. Unsubscribe any time. I never ask for passwords, PINs, OTPs or card details. <a href="/privacy/">Privacy note</a></p>
+  </form>
+</dialog>
+<noscript><style>dialog.qc-modal{display:block;position:static;margin:2rem auto;max-width:28rem}.qc-modal-close{display:none}</style></noscript>

@@ -249,6 +249,31 @@ function quickClassEntries({ site, drafts }) {
     return `<section class="section"><div class="wrap read-wide"><h2>What people said</h2>${list.map((t) => `<blockquote class="qc-quote"><p>${esc(t.quote)}</p><footer>${esc(t.name)}</footer></blockquote>`).join("")}</div></section>`;
   };
 
+  // Plain text with optional [text](https://...) links. Everything else is escaped.
+  const inline = (t) => esc(String(t || "")).replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  // Headline markup: **words** get the accent colour, __words__ get an underline. Everything else is escaped.
+  const headlineHtml = (t) => esc(String(t || "")).replace(/\*\*(.+?)\*\*/g, '<span class="qc-hl">$1</span>').replace(/__(.+?)__/g, '<span class="qc-ul">$1</span>');
+  const plainHeadline = (t) => String(t || "").replace(/\*\*|__/g, "");
+  const introHtml = (c) => {
+    // Optional short "register" video in her own voice. Leave introVideoId empty to hide it. Plays from YouTube only when clicked.
+    const id = String(c.introVideoId || "");
+    if (!id) return "";
+    if (!/^[A-Za-z0-9_-]{6,20}$/.test(id)) throw new Error(`config/classes.json: introVideoId for "${c.classId}" is not a valid YouTube ID.`);
+    return `<div class="qc-intro"><iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0&modestbranding=1&playsinline=1" title="A quick note before you register" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>`;
+  };
+  const proofHtml = (c) => {
+    // Real community messages from config/reviews.json. Each class lists which ones to show.
+    const pr = c.proof || {};
+    const ids = pr.reviews || reviewsCfg.watch_page || [];
+    if (!ids.length) return "";
+    return `<section class="section section--tint qc-proof"><div class="wrap"><h2>${esc(pr.heading || reviewsCfg.watch_title || "Inside the community")}</h2>${pr.intro ? `<p>${esc(pr.intro)}</p>` : ""}${reviewsHtml(reviewsCfg, ids)}${pr.caption ? `<p class="qc-proof-note">${esc(pr.caption)}</p>` : ""}${pr.close ? `<p class="qc-proof-close">${esc(pr.close)}</p>` : ""}</div></section>`;
+  };
+  const faqHtml = (c) => {
+    const list = (c.faq || []).filter((f) => f && f.question && f.answer);
+    if (!list.length) return "";
+    return `<section class="section"><div class="wrap read-wide"><h2>${esc(c.faqTitle || "Questions")}</h2><div class="faq-list">${list.map((f) => `<details><summary>${esc(f.question)}</summary><p>${esc(fill(f.answer))}</p></details>`).join("")}</div></div></section>`;
+  };
+
   const previewHtml = (c) => {
     const v = c.preview || {};
     if (v.video) {
@@ -271,11 +296,17 @@ function quickClassEntries({ site, drafts }) {
       template: "pages/class.html",
       layout: "base-quickclass.html",
       title: `${c.title}: free AutoStack Quick Class | ${site.publisher_name}`,
-      description: `${c.headline} A free AutoStack Quick Class.`,
+      description: `${plainHeadline(c.headline)} A free AutoStack Quick Class.`,
       noindex: c.status !== "ready",
       extra: {
-        class_id: c.classId, title: c.title, headline: c.headline, subhead: c.subhead, for_whom: c.forWhom,
-        learn: (c.learn || []).map((text) => ({ text })), testimonials_html: testimonialsHtml(c), preview_html: previewHtml(c),
+        class_id: c.classId, title: c.title, headline: plainHeadline(c.headline), headline_html: headlineHtml(c.headline), subhead: c.subhead, for_whom: c.forWhom,
+        learn: (c.learn || []).map((l) => (typeof l === "string" ? { text: l } : { title: l.title || "", text: l.text || "" })),
+        subhead2: c.subhead2 || "", urgent_text: c.urgent || "",
+        why_eyebrow: (c.why || {}).eyebrow || "", why_heading: (c.why || {}).heading || "",
+        why_paragraphs: ((c.why || {}).paragraphs || []).map((t) => ({ text: inline(t) })),
+        why_changes_intro: (c.why || {}).changesIntro || "", why_changes: ((c.why || {}).changes || []).map((text) => ({ text })),
+        learn_eyebrow: c.learnEyebrow || "", learn_heading: c.learnHeading || "What you will see", learn_intro: c.learnIntro || "",
+        final_heading: c.finalHeading || `${c.title}, free`, final_text: c.finalText || "", testimonials_html: testimonialsHtml(c), preview_html: previewHtml(c), proof_html: proofHtml(c), intro_html: introHtml(c), faq_html: faqHtml(c),
       },
     })),
     {

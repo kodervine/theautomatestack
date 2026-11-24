@@ -1,17 +1,30 @@
 {
   "_help": "AutoStack Quick Class. One entry per class, keyed by classId. To add a class: copy the income-tracker entry, give it a new key, fill it in, set status to ready, run npm run build. status: draft = built only in the draft preview (npm run dev -- --drafts). ready = live, and needs youtubeVideoId and ctaUrl. ctaUrl can be a full URL or site:<key> from config/site.json. Offer text can use {price_now} and {guarantee_days} from config/starter-kit.json, so the price is only typed in one place.",
+  "_headlineHelp": "In headline: **words** are coloured, __words__ are underlined.",
   "classes": {
     "income-tracker": {
       "status": "draft",
       "title": "Income Tracker",
-      "headline": "How to turn scattered bank alerts into one clean profit dashboard",
-      "subhead": "Customers pay you by transfer, and at month-end you still guess where the money went. In this class I show you how AI reads your bank alerts, puts every transfer in Google Sheets, and shows what you made on one screen. No coding.",
-      "forWhom": "For business owners who get bank alerts and want to track their expenses automatically.",
+      "headline": "Here is a simple way to turn your __scattered bank alerts__ into **one clean profit dashboard**, even if you hate spreadsheets and cannot write a single line of code",
+      "subhead": "Customers pay you by transfer. Your bank already emails you every single alert. Yet at the end of the month, you still look at your account balance and wonder where the money went.",
+      "forWhom": "Free quick class for business owners",
       "learn": [
-        "Your records already exist. Your bank emails you every credit and debit alert. I show you how AI reads them, so you stop typing transfers at midnight.",
-        "Three numbers is all you need: money in, money out, and what is left. No accounting words.",
-        "A full month of transfers turning into a clean Google Sheet, step by step.",
-        "Zero coding. If you can copy and paste, you can do this."
+        {
+          "title": "Why your financial records already exist right now.",
+          "text": "Your bank already sends you an email for every transfer in and out. See how to use what you already have, with zero manual data entry."
+        },
+        {
+          "title": "The only three numbers you need to run a profitable business.",
+          "text": "Stop drowning in complex accounting sheets. Track money in, money out, and what is left on a single clean view."
+        },
+        {
+          "title": "How AI reads your bank alerts for you automatically.",
+          "text": "See how your bank alerts turn into rows in a Google Sheet, step by step, without touching a single line of code."
+        },
+        {
+          "title": "The copy-and-paste workflow built for non-technical founders.",
+          "text": "See the exact tools involved and how they connect safely, using free accounts you likely already have on your phone or laptop."
+        }
       ],
       "preview": {
         "_help": "Optional picture or phone recording of the result, shown on the registration page. video is a short silent mp4 (H.264), src is its poster image. With no video, src alone is shown as a picture. Leave both empty to hide it.",
@@ -19,15 +32,17 @@
         "width": 432,
         "height": 960,
         "alt": "A phone recording of the Income Tracker dashboard showing money in, money out and what is left.",
-        "caption": "Money in, money out and what is left, on one screen.",
+        "caption": "Money in, money out, and what is left, on one clean screen.",
         "video": "/assets/video/income-tracker-demo.mp4"
       },
-      "youtubeVideoId": "M7lc1UVf-VE",
-      "pitchSeconds": 30,
+      "_introHelp": "Optional. A short unlisted YouTube video of you (30 to 60 seconds) that asks people to register. Put its ID here. Empty = hidden.",
+      "introVideoId": "",
+      "youtubeVideoId": "",
+      "pitchSeconds": 1140,
       "_pitchSecondsTodo": "Placeholder. Set the real second the offer starts after the final edit.",
       "_emailHelp": "Sent to n8n for the emails only, never shown on the pages. offerPrice can use {price_now}, so the price is only typed in config/starter-kit.json. offerSummary is plain text, no HTML. offerNote is optional, leave it empty if none.",
       "classLength": "about 20 minutes",
-      "classPromise": "how AI reads your bank alerts, puts every transfer in Google Sheets, and shows what you made on one screen.",
+      "classPromise": "how AI reads your bank email alerts and updates your Google Sheet automatically.",
       "offerName": "the AutoStack Starter Kit",
       "offerPrice": "{price_now}",
       "offerSummary": "36 setups with the Income Tracker from this class included, the exact Google Sheet from the class, help connecting a sheet you already use, and the community with AutoStack Live on weekends.",
@@ -66,7 +81,65 @@
             "answer": "Selar emails you the link to the kit and your community invite right after payment."
           }
         ]
-      }
+      },
+      "faqTitle": "Frequently asked questions",
+      "faq": [
+        {
+          "question": "Is this class really free?",
+          "answer": "Yes. You put in your name and email, then you watch."
+        },
+        {
+          "question": "I am not technical at all. Can I really do this?",
+          "answer": "Yes. Zero coding. If you can copy and paste, you can do this."
+        },
+        {
+          "question": "Is it safe? Do I have to give AI my bank password or BVN?",
+          "answer": "No. Nobody needs your bank password, PIN, OTP or BVN, and I will never ask for them. The tracker only reads the alert emails your bank already sends you."
+        },
+        {
+          "question": "Do I have to buy anything at the end?",
+          "answer": "No. At the end of the class, I show you the AutoStack Starter Kit in case you want the full done-with-you setup. If you do not want it, you can close the video right there and keep everything you learned."
+        },
+        {
+          "question": "What if I cannot watch it right now?",
+          "answer": "When you register, the watch link is sent straight to your email, so you never lose the page. Open it whenever you have time."
+        }
+      ],
+      "subhead2": "In this free class, I show you how to let AI read your bank email alerts and update your Google Sheet automatically. Watch it on your phone, anytime.",
+      "urgent": "Every month you guess your profit is another month money leaks out of your business unnoticed. I do not run ads for this class all the time. If you close this page without registering, you may never see this link again.",
+      "why": {
+        "eyebrow": "Why I built this",
+        "heading": "You should not have to sit up at midnight typing transfers into a notebook.",
+        "paragraphs": [
+          "If you run a business in Nigeria, you know the stress. Transfers come in all day. You pay dispatch riders, suppliers, data, and restocking fees from the same account. When month-end arrives, you feel busy, you feel broke, and you have no clear number for what you actually kept.",
+          "My first degree was History and International Studies. Today, I work as a software engineer. I have [organised a workshop](https://www.tonative.org/indaba-2026#:~:text=LinkedIn-,Chinenye%20Anikwenze,-Engineering%20Lead%2C%20Tonative) at the Deep Learning Indaba, and the ACM [featured my work on responsible AI](https://women.acm.org/u-rise-chinenye-anikwenze-from-an-academic-in-history-to-an-unconventional-advocate-for-responsible-and-inclusive-ai/).",
+          "I mention my History degree for one reason. I know how confusing technical tools look from the outside. When I built this bank-alert system, I stripped out every complicated step so any business owner who can copy and paste can set it up."
+        ],
+        "changesIntro": "Here is what changes once your tracker is live:",
+        "changes": [
+          "Every credit and debit alert logs itself into your Google Sheet automatically",
+          "You see your total revenue, total expenses, and actual profit on one screen",
+          "You stop scrolling through 400 bank emails every Sunday night",
+          "You keep full control of your bank account because the system only reads your email alerts"
+        ]
+      },
+      "proof": {
+        "heading": "Real business owners are already running this system.",
+        "intro": "These are real messages from people inside my community who set this up and got their dashboards working.",
+        "caption": "Real WhatsApp messages from founding community members. Shared with permission.",
+        "close": "You get a clear system that works quietly in the background while you focus on making sales.",
+        "reviews": [
+          "founding-member",
+          "active-support",
+          "amazing-session",
+          "founding-call"
+        ]
+      },
+      "learnEyebrow": "Inside this free quick class",
+      "learnHeading": "See the exact step-by-step setup turning messy bank emails into a clean profit dashboard",
+      "learnIntro": "This beginner-friendly class skips the tech jargon. I show you how the setup works, and what it looks like once it is running.",
+      "finalHeading": "One short class. One clean dashboard. Finally know how much your business actually makes.",
+      "finalText": "You already do the hard work of getting customers to pay you. Stop letting scattered bank alerts hide your real profit. Register now and get the link sent straight to your inbox before you lose this page."
     }
   }
 }
