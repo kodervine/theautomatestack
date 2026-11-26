@@ -32,12 +32,12 @@ export default async function handler(req, res) {
   // Hidden field only bots fill in. Act like it worked and send nothing.
   if (clean(body.website, 50)) return done(watchPath(cls.classId));
 
-  if (rateLimited(req)) return fail(429, "Too many tries. Please wait a few minutes and try again.");
-
   const name = clean(body.name, 100);
   const email = cleanEmail(body.email);
   if (!name) return fail(400, "Please add your name.");
   if (!email) return fail(400, "Please check your email address.");
+
+  if (rateLimited(req, { email })) return fail(429, "Too many tries. Please wait a few minutes and try again.");
 
   try {
     await postToN8n("N8N_REGISTER_WEBHOOK_URL", registerPayload(cls, name, email));

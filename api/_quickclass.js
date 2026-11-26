@@ -71,16 +71,31 @@ export function watchedPayload(cls, email) {
   return { email, classId: cls.classId, ...emailFields(cls), watchUrl: watchUrl(cls.classId, email) };
 }
 
-// Best-effort rate limit per IP. Memory lives only as long as a warm function instance, which is enough to stop a burst.
+// Best-effort rate limits. Memory lives only as long as a warm function instance, which is enough to stop a burst.
+// Nigerian mobile networks put many phones behind one public IP, so the per-IP cap is loose
+// and the tight cap is per email address: one person retrying, not everyone on MTN.
 const hits = new Map();
-export function rateLimited(req, { bucket = "register", limit = 5, windowMs = 10 * 60 * 1000 } = {}) {
-  const ip = bucket + ":" + String(req.headers["x-forwarded-for"] || req.socket?.remoteAddress || "unknown").split(",")[0].trim();
+export function tooMany(key, limit, windowMs = 10 * 60 * 1000) {
   const now = Date.now();
-  const list = (hits.get(ip) || []).filter((t) => now - t < windowMs);
+  const list = (hits.get(key) || []).filter((t) => now - t < windowMs);
   list.push(now);
-  hits.set(ip, list);
+  hits.set(key, list);
   if (hits.size > 5000) hits.clear();
   return list.length > limit;
+}
+
+export function clientIp(req) {
+  return String(req.headers["x-forwarded-for"] || req.socket?.remoteAddress || "unknown").split(",")[0].trim();
+}
+
+export function rateLimited(req, { bucket = "register", email = "", ipLimit = 60, emailLimit = 5 } = {}) {
+  const ipHit = tooMany(`${bucket}:ip:${clientIp(req)}`, ipLimit);
+  const emailHit = email ? tooMany(`${bucket}:email:${email}`, emailLimit) : false;
+  return ipHit || emailHit;
+}
+
+export function resetRateLimits() {
+  hits.clear();
 }
 
 export async function postToN8n(envName, payload) {

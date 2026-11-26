@@ -3,7 +3,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { tick, crossedQuarters } from "../public/assets/js/qc-progress.js";
 import kit from "../config/starter-kit.json" with { type: "json" };
-import { findClass, registerPayload, watchedPayload, offerUrl, cleanEmail } from "../api/_quickclass.js";
+import { findClass, registerPayload, watchedPayload, offerUrl, cleanEmail, resetRateLimits } from "../api/_quickclass.js";
 import register from "../api/quickclass-register.js";
 
 const play = (state, times) => times.reduce((s, t) => tick(s, t), state);
@@ -99,6 +99,28 @@ test("a real signup posts once to n8n and answers with the watch link", async ()
     assert.equal(JSON.parse(res.body).redirect, "/watch/?class=income-tracker&e=ada%40example.com");
   } finally {
     globalThis.fetch = realFetch;
+  }
+});
+
+test("rate limit: many people on one shared mobile IP can all register, one email retrying is stopped", async () => {
+  const realFetch = globalThis.fetch;
+  globalThis.fetch = async () => new Response("{}");
+  process.env.N8N_REGISTER_WEBHOOK_URL = "https://n8n.invalid/webhook/quickclass-register";
+  resetRateLimits();
+  const signup = async (email) => {
+    const res = fakeRes();
+    await register({ method: "POST", headers: { "content-type": "application/json", "x-forwarded-for": "102.89.0.1" }, body: { name: "Ada", email, classId: "income-tracker", website: "" } }, res);
+    return res.statusCode;
+  };
+  try {
+    // 30 different people behind the same carrier IP.
+    for (let i = 0; i < 30; i++) assert.equal(await signup(`person${i}@example.com`), 200);
+    // One person retrying: 5 tries are fine, the 6th is stopped.
+    for (let i = 0; i < 5; i++) assert.equal(await signup("retry@example.com"), 200);
+    assert.equal(await signup("retry@example.com"), 429);
+  } finally {
+    globalThis.fetch = realFetch;
+    resetRateLimits();
   }
 });
 

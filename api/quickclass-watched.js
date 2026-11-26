@@ -13,7 +13,7 @@ export default async function handler(req, res) {
   const cls = findClass(body.classId);
   const email = cleanEmail(body.email);
   if (!cls || !email) return sendJson(res, 400, { ok: false });
-  if (rateLimited(req, { bucket: "watched", limit: 10 })) return sendJson(res, 429, { ok: false });
+  if (rateLimited(req, { bucket: "watched", email, emailLimit: 10 })) return sendJson(res, 429, { ok: false });
 
   try {
     await postToN8n("N8N_WATCHED_WEBHOOK_URL", watchedPayload(cls, email));
