@@ -124,6 +124,59 @@ test("rate limit: many people on one shared mobile IP can all register, one emai
   }
 });
 
+test("n8n down: the signup is saved to Notion and the visitor still gets the class", async () => {
+  const calls = [];
+  const realFetch = globalThis.fetch;
+  globalThis.fetch = async (url, opts) => {
+    calls.push({ url: String(url), body: JSON.parse(opts.body) });
+    if (String(url).includes("n8n")) return new Response("blocked", { status: 403 });
+    return new Response("{}");
+  };
+  process.env.N8N_REGISTER_WEBHOOK_URL = "https://n8n.invalid/webhook/quickclass-register";
+  process.env.NOTION_LEADS_TOKEN = "test-token";
+  resetRateLimits();
+  const realError = console.error;
+  console.error = () => {};
+  try {
+    const res = fakeRes();
+    await register({ method: "POST", headers: { "content-type": "application/json", "x-forwarded-for": "203.0.113.20" }, body: { name: "Ada", email: "ada@example.com", classId: "income-tracker", website: "" } }, res);
+    assert.equal(res.statusCode, 200);
+    assert.equal(JSON.parse(res.body).redirect, "/watch/?class=income-tracker&e=ada%40example.com");
+    const saved = calls.find((c) => c.url === "https://api.notion.com/v1/pages");
+    assert.ok(saved, "a Notion row was created");
+    assert.equal(saved.body.properties.Email.email, "ada@example.com");
+    assert.equal(saved.body.properties.Source.select.name, "Webinar");
+    assert.match(saved.body.properties.Notes.rich_text[0].text.content, /n8n failed.*Add to Kit by hand/);
+  } finally {
+    globalThis.fetch = realFetch;
+    console.error = realError;
+    delete process.env.NOTION_LEADS_TOKEN;
+    resetRateLimits();
+  }
+});
+
+test("n8n and Notion both down: the visitor still gets the class and the details are logged", async () => {
+  const realFetch = globalThis.fetch;
+  globalThis.fetch = async () => new Response("down", { status: 500 });
+  process.env.N8N_REGISTER_WEBHOOK_URL = "https://n8n.invalid/webhook/quickclass-register";
+  process.env.NOTION_LEADS_TOKEN = "test-token";
+  resetRateLimits();
+  const logged = [];
+  const realError = console.error;
+  console.error = (...a) => logged.push(a.join(" "));
+  try {
+    const res = fakeRes();
+    await register({ method: "POST", headers: { "content-type": "application/json", "x-forwarded-for": "203.0.113.21" }, body: { name: "Ada", email: "ada@example.com", classId: "income-tracker", website: "" } }, res);
+    assert.equal(res.statusCode, 200);
+    assert.ok(logged.some((l) => l.includes("LOST") && l.includes("ada@example.com")));
+  } finally {
+    globalThis.fetch = realFetch;
+    console.error = realError;
+    delete process.env.NOTION_LEADS_TOKEN;
+    resetRateLimits();
+  }
+});
+
 test("background tab: a long gap of real playback counts, a scrub does not", async () => {
   const { allowedStep } = await import("../public/assets/js/qc-progress.js");
   // Playing in a background tab: one tick a minute, video moved 60 s in 60 s of real time.
