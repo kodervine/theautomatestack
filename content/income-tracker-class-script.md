@@ -165,6 +165,16 @@ If you can't,
 it's because nobody ever showed you
 how to automate that.
 
+[NEW: PAUSE MOMENT]
+
+Pause the video if you need to.
+
+Write down what you think
+you made last month.
+
+Keep that number.
+We'll check it in a minute.
+
 [SHOW: INBOX ALERTS -> CLEAN TABLE]
 
 ---
@@ -238,6 +248,14 @@ And down here,
 every transaction, sorted.
 
 I didn't type any of it.
+
+[NEW: CALLBACK]
+
+Look at the number you wrote down.
+Now look at this screen.
+
+That gap is why
+you need this automated.
 
 Now you're probably wondering
 if this thing is hacking your account.

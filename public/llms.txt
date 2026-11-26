@@ -40,6 +40,7 @@ Do not use it for:
 
 ## Site
 
+- [Income Tracker: free AutoStack Quick Class | The Automate Stack](https://www.theautomatestack.com/class/income-tracker/): Here is a simple way to turn your scattered bank alerts into one clean profit dashboard, even if you hate spreadsheets and cannot write a single line of code A free AutoStack Quick Class.
 - [The Automate Stack | AI setups, automation and consulting](https://www.theautomatestack.com/): TheAutomateStack is an AI automation consultancy and education platform. Business workflows, payment and money tracking, custom AI workspaces for Claude, ChatGPT and Gemini, DM automation, AEO websites and starter kits you can deploy yourself.
 - [Free resources | The Automate Stack](https://www.theautomatestack.com/freebies/): Free resources from The Automate Stack. Start with the AutoStack Checklist and get your lost hours back.
 - [The AutoStack Starter Kit | The Automate Stack](https://www.theautomatestack.com/starter-kit/): 36 ready-made templates that connect AI to the tools you already use: Notion, Gmail, your spreadsheets, Canva and Trello. Prompts written, a test checklist on each one.

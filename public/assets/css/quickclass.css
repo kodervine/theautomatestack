@@ -89,8 +89,12 @@ main [hidden] { display: none !important; }
 .qc-hero.sales-hero .qc-urgent { color: var(--onyx); background: rgba(200,153,108,.14); padding: var(--space-3) var(--space-4); border-radius: 0 var(--radius) var(--radius) 0; }
 .qc-hero.sales-hero .qc-preview figcaption { color: var(--stone); }
 .qc-hero.sales-hero .qc-preview--phone video { box-shadow: 0 12px 40px rgba(26,17,16,.22); }
-.qc-intro { position: relative; aspect-ratio: 16 / 9; margin: var(--space-4) 0; border-radius: var(--radius-lg); overflow: hidden; background: var(--onyx); box-shadow: 0 12px 40px rgba(26,17,16,.22); }
+.qc-intro { position: relative; aspect-ratio: 9 / 16; margin: var(--space-4) 0; border-radius: var(--radius-lg); overflow: hidden; background: var(--onyx); box-shadow: 0 12px 40px rgba(26,17,16,.22); }
 .qc-intro iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+/* "Tap for sound" over a muted autoplaying video. Sits near the top so it does not cover YouTube's controls. */
+.qc-sound { position: absolute; top: var(--space-3); left: 50%; transform: translateX(-50%); z-index: 2; padding: .6rem 1.1rem; border: 0; border-radius: 999px; background: var(--bronze); color: var(--onyx); font: inherit; font-weight: 700; font-size: .95rem; cursor: pointer; box-shadow: 0 6px 20px rgba(26,17,16,.35); }
+.qc-sound:hover, .qc-sound:focus-visible { background: #d9ab7f; }
+.qc-sound[hidden] { display: none; }
 
 /* Long headline, proof notes, story section */
 .qc-hero h1 { font-size: clamp(1.7rem, 4.2vw, 2.7rem); line-height: 1.15; }
@@ -108,7 +112,7 @@ main [hidden] { display: none !important; }
 .qc-hero .lead { margin-bottom: var(--space-3); }
 .qc-hero .lead--strong { font-weight: 700; }
 .qc-hero .qc-intro, .qc-hero .qc-preview { margin: var(--space-6) auto; }
-.qc-hero .qc-intro { max-width: 36rem; }
+.qc-hero .qc-intro { max-width: 20rem; } /* Portrait: the intro is a YouTube Short. */
 .qc-hero .qc-preview--phone { max-width: 15rem; }
 .qc-hero .actions { justify-content: center; margin: var(--space-6) 0 var(--space-4); }
 .qc-big-btn { width: 100%; max-width: 26rem; text-align: center; font-size: 1.05rem; padding: 1.1rem 1.5rem; }

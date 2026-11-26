@@ -3,10 +3,10 @@
   "_headlineHelp": "In headline: **words** are coloured, __words__ are underlined.",
   "classes": {
     "income-tracker": {
-      "status": "draft",
+      "status": "ready",
       "title": "Income Tracker",
       "headline": "Here is a simple way to turn your __scattered bank alerts__ into **one clean profit dashboard**, even if you hate spreadsheets and cannot write a single line of code",
-      "subhead": "Customers pay you by transfer. Your bank already emails you every single alert. Yet at the end of the month, you still look at your account balance and wonder where the money went.",
+      "subhead": "If at month end you look at your account balance and wonder where the money went, this is for you.",
       "forWhom": "Free quick class for business owners",
       "learn": [
         {
@@ -36,10 +36,10 @@
         "video": "/assets/video/income-tracker-demo.mp4"
       },
       "_introHelp": "Optional. A short unlisted YouTube video of you (30 to 60 seconds) that asks people to register. Put its ID here. Empty = hidden.",
-      "introVideoId": "",
-      "youtubeVideoId": "",
-      "pitchSeconds": 1140,
-      "_pitchSecondsTodo": "Placeholder. Set the real second the offer starts after the final edit.",
+      "introVideoId": "Oic-FGWYRv4",
+      "youtubeVideoId": "s2Kj1UUNdfs",
+      "pitchSeconds": 528,
+      "_pitchSecondsNote": "528 = 8:48 in the video, where the AutoStack Starter Kit is first named.",
       "_emailHelp": "Sent to n8n for the emails only, never shown on the pages. offerPrice can use {price_now}, so the price is only typed in config/starter-kit.json. offerSummary is plain text, no HTML. offerNote is optional, leave it empty if none.",
       "classLength": "about 20 minutes",
       "classPromise": "how AI reads your bank email alerts and updates your Google Sheet automatically.",
@@ -106,7 +106,7 @@
         }
       ],
       "subhead2": "In this free class, I show you how to let AI read your bank email alerts and update your Google Sheet automatically. Watch it on your phone, anytime.",
-      "urgent": "Every month you guess your profit is another month money leaks out of your business unnoticed. I do not run ads for this class all the time. If you close this page without registering, you may never see this link again.",
+      "urgent": "You know how the Instagram algorithm works. Close this page and it may never show me to you again. Register now, and I will send the class link to your email so you can watch it whenever you are free. Every month you guess your profit is another month money leaks out of your business unnoticed.",
       "why": {
         "eyebrow": "Why I built this",
         "heading": "You should not have to sit up at midnight typing transfers into a notebook.",

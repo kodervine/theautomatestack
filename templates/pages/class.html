@@ -2,11 +2,10 @@
   <div class="wrap hero-inner qc-hero-grid">
     <p class="qc-badge"><span class="qc-dot" aria-hidden="true"></span>{{for_whom}}</p>
     <h1>{{{headline_html}}}</h1>
+{{{intro_html}}}
     <p class="lead">{{subhead}}</p>
 {{#if subhead2}}    <p class="lead lead--strong">{{subhead2}}</p>
-{{/if}}{{{intro_html}}}
-{{{preview_html}}}
-    <p class="actions"><a class="btn qc-big-btn" href="#register" data-qc-open>Register to watch the free class now</a></p>
+{{/if}}    <p class="actions"><a class="btn qc-big-btn" href="#register" data-qc-open>Register to watch the free class now</a></p>
 {{#if urgent_text}}    <p class="qc-urgent"><strong>Read this before you scroll:</strong> {{urgent_text}}</p>
 {{/if}}  </div>
 </section>
@@ -40,6 +39,7 @@
     <ul class="tick-list">
 {{#each learn}}      <li>{{#if title}}<strong>{{title}}</strong> {{/if}}{{text}}</li>
 {{/each}}    </ul>
+{{{preview_html}}}
     <p class="actions"><a class="btn" href="#register" data-qc-open>Register to watch the free class now</a></p>
   </div>
 </section>

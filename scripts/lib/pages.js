@@ -255,11 +255,12 @@ function quickClassEntries({ site, drafts }) {
   const headlineHtml = (t) => esc(String(t || "")).replace(/\*\*(.+?)\*\*/g, '<span class="qc-hl">$1</span>').replace(/__(.+?)__/g, '<span class="qc-ul">$1</span>');
   const plainHeadline = (t) => String(t || "").replace(/\*\*|__/g, "");
   const introHtml = (c) => {
-    // Optional short "register" video in her own voice. Leave introVideoId empty to hide it. Plays from YouTube only when clicked.
+    // Optional short "register" video in her own voice. Leave introVideoId empty to hide it. Autoplays muted (browsers block sound until a tap); the button restarts it with sound.
     const id = String(c.introVideoId || "");
     if (!id) return "";
     if (!/^[A-Za-z0-9_-]{6,20}$/.test(id)) throw new Error(`config/classes.json: introVideoId for "${c.classId}" is not a valid YouTube ID.`);
-    return `<div class="qc-intro"><iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0&modestbranding=1&playsinline=1" title="A quick note before you register" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>`;
+    const src = `https://www.youtube-nocookie.com/embed/${id}?rel=0&modestbranding=1&playsinline=1&autoplay=1`;
+    return `<div class="qc-intro"><iframe src="${src}&mute=1" title="A quick note before you register" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe><button type="button" class="qc-sound" data-qc-sound="${src}&mute=0">Tap for sound</button></div>`;
   };
   const proofHtml = (c) => {
     // Real community messages from config/reviews.json. Each class lists which ones to show.

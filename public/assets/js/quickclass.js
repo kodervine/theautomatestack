@@ -103,6 +103,15 @@ function initModal(dialog, form) {
   if (location.hash === "#register") dialog.showModal();
 }
 
+// Intro video: it autoplays muted. A tap reloads it from the start with sound.
+// The tap counts as the visitor's permission, so the browser lets the sound play.
+document.querySelectorAll("[data-qc-sound]").forEach((btn) => btn.addEventListener("click", () => {
+  const iframe = btn.parentElement.querySelector("iframe");
+  if (iframe) iframe.src = btn.dataset.qcSound;
+  btn.hidden = true;
+  log("intro: sound on");
+}));
+
 // ---------------------------------------------------------------- watch page
 function loadYouTubeApi() {
   if (window.YT && window.YT.Player) return Promise.resolve(window.YT);
@@ -231,6 +240,8 @@ function initWatch(dataEl) {
       : allowedStep(0);
     lastPollAt = now;
     wasPlaying = player.getPlayerState && window.YT && player.getPlayerState() === window.YT.PlayerState.PLAYING;
+    // Sound turned on from YouTube's own controls: the button is no longer needed.
+    if (player.isMuted && !player.isMuted()) document.getElementById("qc-sound").hidden = true;
     const before = state.maxWatched;
     state = tick(state, player.getCurrentTime(), allowed);
     if (state.maxWatched !== before) store.set(K.max, state.maxWatched.toFixed(1));
@@ -241,11 +252,20 @@ function initWatch(dataEl) {
   // Returning viewer: show what they already unlocked, and retry the watched event if it never got through.
   if (store.get(K.revealed) === "1" || state.maxWatched >= pitch) reveal({ first: store.get(K.revealed) !== "1" });
 
+  // Returning viewer: autoplay picks up a couple of seconds before where they stopped.
+  const startAt = state.maxWatched > 10 ? Math.floor(state.maxWatched - 2) : 0;
   const resume = document.getElementById("qc-resume");
-  if (state.maxWatched > 10) {
-    resume.hidden = false;
-    document.getElementById("qc-resume-btn").textContent = `Continue where you stopped (${fmt(state.maxWatched)})`;
-  }
+
+  // Browsers only autoplay muted video. The button turns the sound on (and plays, if autoplay was blocked).
+  const sound = document.getElementById("qc-sound");
+  sound.addEventListener("click", () => {
+    if (!player || !player.unMute) return;
+    player.unMute();
+    player.setVolume(100);
+    player.playVideo();
+    sound.hidden = true;
+    log("sound on");
+  });
 
   loadYouTubeApi().then((YT) => {
     player = new YT.Player("qc-player", {
@@ -253,12 +273,22 @@ function initWatch(dataEl) {
       videoId: cls.videoId,
       width: "100%",
       height: "100%",
-      playerVars: { rel: 0, modestbranding: 1, playsinline: 1, origin: location.origin },
+      playerVars: { rel: 0, modestbranding: 1, playsinline: 1, autoplay: 1, mute: 1, start: startAt, origin: location.origin },
       events: {
         onReady: () => {
           const iframe = player.getIframe && player.getIframe();
           if (iframe) iframe.title = `${cls.title}, AutoStack Quick Class video`;
-          log("player ready", { duration: player.getDuration() });
+          log("player ready", { duration: player.getDuration(), startAt });
+          // Some phones block even muted autoplay. Then the viewer taps play, and the resume button still helps.
+          player.mute();
+          player.playVideo();
+          sound.hidden = false;
+          setTimeout(() => {
+            if (startAt && player.getPlayerState() !== YT.PlayerState.PLAYING) {
+              resume.hidden = false;
+              document.getElementById("qc-resume-btn").textContent = `Continue where you stopped (${fmt(state.maxWatched)})`;
+            }
+          }, 1500);
         },
         onStateChange: (e) => {
           // The last position is kept across pauses: resuming continues from it, and a seek shows up as a jump.
