@@ -36,7 +36,7 @@
         "video": "/assets/video/income-tracker-demo.mp4"
       },
       "_introHelp": "Optional. A short unlisted YouTube video of you (30 to 60 seconds) that asks people to register. Put its ID here. Empty = hidden.",
-      "introVideoId": "Oic-FGWYRv4",
+      "introVideoId": "19oEwDaAs3c",
       "youtubeVideoId": "s2Kj1UUNdfs",
       "pitchSeconds": 528,
       "_pitchSecondsNote": "528 = 8:48 in the video, where the AutoStack Starter Kit is first named.",
