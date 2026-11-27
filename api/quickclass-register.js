@@ -37,7 +37,7 @@ export default async function handler(req, res) {
 
   const name = clean(body.name, 100);
   const email = cleanEmail(body.email);
-  if (!name) return fail(400, "Please add your name.");
+  if (!name) return fail(400, "Please add your first name.");
   if (!email) return fail(400, "Please check your email address.");
 
   if (rateLimited(req, { email })) return fail(429, "Too many tries. Please wait a few minutes and try again.");

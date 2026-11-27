@@ -49,7 +49,7 @@ function initRegister(form) {
   const validate = () => {
     const name = fields.name.input.value.trim();
     const email = fields.email.input.value.trim().toLowerCase();
-    setFieldError(fields.name, name ? "" : "Please add your name.");
+    setFieldError(fields.name, name ? "" : "Please add your first name.");
     setFieldError(fields.email, EMAIL_RE.test(email) ? "" : "Please check your email address.");
     if (!name) fields.name.input.focus();
     else if (!EMAIL_RE.test(email)) fields.email.input.focus();
