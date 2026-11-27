@@ -86,10 +86,6 @@ Is it safe? Do I have to give AI my bank password or BVN?
 
 No. Nobody needs your bank password, PIN, OTP or BVN, and I will never ask for them. The tracker only reads the alert emails your bank already sends you.
 
-Do I have to buy anything at the end?
-
-No. At the end of the class, I show you the AutoStack Starter Kit in case you want the full done-with-you setup. If you do not want it, you can close the video right there and keep everything you learned.
-
 What if I cannot watch it right now?
 
 When you register, the watch link is sent straight to your email, so you never lose the page. Open it whenever you have time.
